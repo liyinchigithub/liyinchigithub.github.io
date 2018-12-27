@@ -66,6 +66,108 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-express-mongodb-restfulAPI" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/27/express-mongodb-restfulAPI/" class="article-date">
+  <time datetime="2018-12-27T13:43:20.000Z" itemprop="datePublished">2018-12-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/27/express-mongodb-restfulAPI/">express-mongodb-restfulAPI</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>【服务诞生原因】测试人员、开发人员常使用postman进行接口测试，但postman自身无法对mysql数据库进行操作，为了方便测试人员日常使用postman进行接口功能测试、接口自动回归测试，可以通过postman调用操作数据库清除测试数据。其次市面上目前没有针对postman调用mongoDB数据库的工具。由此诞生express-mongodb-restfulAPI，我为其命名为omongoDB</p>
+<p>你可以从这里下载使用<a href="https://github.com/liyinchigithub/express-mongodb-restfulAPI" target="_blank" rel="noopener">express-mongodb-restfulAPI</a></p>
+<p>====Version 版本</p>
+<p>V1.0.0</p>
+<p>====Run Environment 运行环境依赖</p>
+<p>1.安装配置node环境</p>
+<p>node 10及以上</p>
+<p>参考：</p>
+<p>windows<br><a href="https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html</a></p>
+<p>mac<br><a href="https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html</a></p>
+<p>2.所运用到的依赖包及版本</p>
+<p>“body-parser”: “^1.18.3”</p>
+<p>“express”: “^4.16.4”</p>
+<p>“mongodb”: “^3.1.10”</p>
+<p>“multer”: “^1.4.1”</p>
+<p>====Deployment steps 部署步骤</p>
+<ol>
+<li><p>npm install  //Installation node operation environment 安装node运行环境</p>
+</li>
+<li><p>npm server.js   //Start 启动</p>
+</li>
+</ol>
+<p>#目录结构描述</p>
+<p>├── README.md                   // help</p>
+<p>├── server.js                   // server</p>
+<p>├── mongoDB_demo.js             // mongdb</p>
+<p>====V1.0.0 版本内容更新</p>
+<p>——-中文</p>
+<ol>
+<li>功能   创建集合</li>
+</ol>
+<p>请求方法：POST</p>
+<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/CreateCollection/" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/CreateCollection/</a></p>
+<p>请求body：{<br>    “db_url”:”mongodb://localhost:27017/“,<br>    “db_name”:”Express_API_DB”,<br>    “collection_name”:”Express_API_Collection1”<br>}</p>
+<ol start="2">
+<li>功能   删除数据库集合中的数据</li>
+</ol>
+<p>请求方法：DELETE</p>
+<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/delete" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/delete</a></p>
+<p>请求body：{<br>    “db_url”:”mongodb://localhost:27017/“,<br>    “db_name”:”Express_API_DB”,<br>    “collection_name”:”Express_API_Collection1”,<br>    “whereStr”:<br>        {<br>            “name”:”网易”<br>        }<br>}</p>
+<ol start="3">
+<li>功能   删除集合</li>
+</ol>
+<p>请求方法：DELETE</p>
+<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/drop" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/drop</a></p>
+<p>请求body：{<br>    “db_url”:”mongodb://localhost:27017/“,<br>    “db_name”:”Express_API_DB”,<br>    “collection_name”:”Express_API_Collection5”<br>}</p>
+<ol start="4">
+<li>功能   插入数据到数据库集合中</li>
+</ol>
+<p>请求方法：PUT</p>
+<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/insert_data/" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/insert_data/</a></p>
+<p>请求body：{<br>    “db_url”:”mongodb://localhost:27017/“,<br>    “db_name”:”Express_API_DB”,<br>    “collection_name”:”Express_API_Collection1”,<br>    “obj”:{<br>        “name”: “网易”,<br>        “url”: “<a href="http://www.162.com&quot;" target="_blank" rel="noopener">www.162.com&quot;</a><br>        }<br>}</p>
+<ol start="5">
+<li>功能   查询数据库集合中的数据</li>
+</ol>
+<p>请求方法：POST</p>
+<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/find" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/find</a></p>
+<p>请求body：{<br>        “db_url”:”mongodb://localhost:27017/“,<br>        “db_name”:”Express_API_DB”,<br>        “collection_name”:”Express_API_Collection1”<br>}</p>
+<p>6 功能   查询数据库集合中的数据</p>
+<p>请求方法：GET</p>
+<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/find" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/find</a></p>
+<p>请求参数：</p>
+<p>db_name数据库名称</p>
+<p>collection_name集合名称</p>
+<p>7.备注<br>如果你的mongoDB设置了账号密码，url参数可以使用此格式：</p>
+<p>mongoose.connect(‘mongodb://账号:密码@localhost:27017/‘);</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/12/27/express-mongodb-restfulAPI/" data-id="cjq6o1v230001ldfy1aq00ens" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-express-mysql-restfulAPI" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/12/27/express-mysql-restfulAPI/" class="article-date">
@@ -174,7 +276,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/27/express-mysql-restfulAPI/" data-id="cjq6nppc50000lffy1e0t1azq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/27/express-mysql-restfulAPI/" data-id="cjq6o1v250002ldfywtzyqglp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -217,7 +319,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/27/webdriverIO/" data-id="cjq6nppc90001lffykhuxoevk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/27/webdriverIO/" data-id="cjq6o1v1z0000ldfyfk1ulz27" class="article-share-link">Share</a>
       
       
     </footer>
@@ -256,6 +358,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/12/27/express-mongodb-restfulAPI/">express-mongodb-restfulAPI</a>
+          </li>
         
           <li>
             <a href="/2018/12/27/express-mysql-restfulAPI/">express-mysql-restfulAPI</a>
