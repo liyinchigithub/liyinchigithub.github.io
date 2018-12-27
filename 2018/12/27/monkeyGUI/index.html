@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>monkeyGUI | liyinchi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Welcome to the monkeyGUI wiki! monkeyGUIandroid monkey界面工具，快速为测试机界面压力测试。====Version 版本 V1.0.0（后续会在V2.0.0整合adb常用命令） ====Run Environment 运行环境依赖 本地电脑已配置android SDK及其环境 参考： https://jingyan.baidu.com/artic">
+<meta name="keywords" content="test autotest java JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="monkeyGUI">
+<meta property="og:url" content="http://yoursite.com/2018/12/27/monkeyGUI/index.html">
+<meta property="og:site_name" content="liyinchi">
+<meta property="og:description" content="Welcome to the monkeyGUI wiki! monkeyGUIandroid monkey界面工具，快速为测试机界面压力测试。====Version 版本 V1.0.0（后续会在V2.0.0整合adb常用命令） ====Run Environment 运行环境依赖 本地电脑已配置android SDK及其环境 参考： https://jingyan.baidu.com/artic">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://thyrsi.com/t6/629/1544283640x2890211750.jpg">
+<meta property="og:image" content="http://thyrsi.com/t6/629/1544283712x2890211750.jpg">
+<meta property="og:image" content="http://thyrsi.com/t6/629/1544283738x2890211750.jpg">
+<meta property="og:updated_time" content="2018-12-27T14:04:27.857Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="monkeyGUI">
+<meta name="twitter:description" content="Welcome to the monkeyGUI wiki! monkeyGUIandroid monkey界面工具，快速为测试机界面压力测试。====Version 版本 V1.0.0（后续会在V2.0.0整合adb常用命令） ====Run Environment 运行环境依赖 本地电脑已配置android SDK及其环境 参考： https://jingyan.baidu.com/artic">
+<meta name="twitter:image" content="http://thyrsi.com/t6/629/1544283640x2890211750.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="liyinchi" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">liyinchi</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-monkeyGUI" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/27/monkeyGUI/" class="article-date">
+  <time datetime="2018-12-27T14:02:33.000Z" itemprop="datePublished">2018-12-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      monkeyGUI
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to the monkeyGUI wiki!</p>
+<h1 id="monkeyGUI"><a href="#monkeyGUI" class="headerlink" title="monkeyGUI"></a>monkeyGUI</h1><p>android monkey界面工具，快速为测试机界面压力测试。<br>====Version 版本</p>
+<p>V1.0.0（后续会在V2.0.0整合adb常用命令）</p>
+<p>====Run Environment 运行环境依赖</p>
+<p>本地电脑已配置android SDK及其环境</p>
+<p>参考：</p>
+<p><a href="https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html</a></p>
+<p><strong>安装依赖</strong></p>
+<p>npm install</p>
+<p><strong>运行程序</strong></p>
+<p>npm start 或npm run start</p>
+<p><strong>打包</strong></p>
+<p>npm run pack</p>
+<p><strong>package.json设置</strong></p>
+<p>scripts==》pack</p>
+<p>electron-packager . monkeyGUI –all –out ./打包monkeyGUI –app-version=1.0.0 –electron-version=3.0.7</p>
+<p>–all表示打包所有平台的包（含linux、windows、mac）</p>
+<p><img src="http://thyrsi.com/t6/629/1544283640x2890211750.jpg" alt=""></p>
+<p><img src="http://thyrsi.com/t6/629/1544283712x2890211750.jpg" alt=""></p>
+<p><img src="http://thyrsi.com/t6/629/1544283738x2890211750.jpg" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/12/27/monkeyGUI/" data-id="cjq6ojfep0002h9fyrne38utt" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/27/express-mongodb-restfulAPI/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">express-mongodb-restfulAPI</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/12/27/monkeyGUI/">monkeyGUI</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/27/express-mongodb-restfulAPI/">express-mongodb-restfulAPI</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/27/express-mysql-restfulAPI/">express-mysql-restfulAPI</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/27/webdriverIO/">webdriverIO</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Jack Li<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
