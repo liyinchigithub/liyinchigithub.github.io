@@ -740,17 +740,18 @@
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Given</span>('I have loaded Google', function() &#123;&#125;);</span><br><span class="line"><span class="keyword">When</span>('I search for &#123;stringInDoubleQuotes&#125;', function() &#123;&#125;);</span><br><span class="line"><span class="keyword">Then</span>('the first result is &#123;stringInDoubleQuotes&#125;', function() &#123;&#125;);</span><br></pre></td></tr></table></figure>
 <p>不用担心这些代码的含义 – 稍后会详细解释。本质上，它定义了一些Cucumber.js将代码绑定到Gherkin文件中的步骤的方法。</p>
 <p>将Cucumber.js添加到你的版本中<br>在版本中加入Cucumber.js，只需要添加cucumber模块，然后配置并运行。第一部分如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save-dev cucumber</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install cucumber 用于项目中的本地安装。</span><br><span class="line"></span><br><span class="line">npm install -g cucumber 用于全局安装。</span><br><span class="line"></span><br><span class="line">npm install --save-dev cucumber安装Cucumber.js作为开发依赖项</span><br></pre></td></tr></table></figure>
 <p>其中的第二个参数取决于你执行构建的方式。</p>
 <h2 id="手动执行"><a href="#手动执行" class="headerlink" title="手动执行"></a>手动执行</h2><p>手动执行Cucumber是相对容易的，最好是先确保你能做到这一点，因为以下解决方案都是自动执行相同的方法。</p>
-<p>安装后，可执行文件将为./node_modules/.bin/cucumber.js。当你运行它时，它需要知道文件系统上的哪个地方可以找到它所需的所有文件。这些文件都是Gherkin文件和要执行的JavaScript代码。</p>
+<p>安装后，可执行文件将为./node_modules/.bin/cucumber-js。当你运行它时，它需要知道文件系统上的哪个地方可以找到它所需的所有文件。这些文件都是Gherkin文件和要执行的JavaScript代码。</p>
 <p>按照惯例，所有的Gherkin文件都将保存在features目录中，如果不指定，那么Cucumber将在同一个目录中查找要执行的JavaScript代码。指定Cucumber在哪里查找这些文件是一个明智的做法，因为这样可以更好地控制构建过程。</p>
 <p>例如，如果将所有的Gherkin文件保存在myFeatures目录中，并将所有JavaScript代码保存在mySteps中，则可以执行以下操作：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./node_modules/.bin/cucumber.js ./myFeatures -r ./mySteps</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./node_modules/.bin/cucumber-js ./myFeatures -r ./mySteps</span><br></pre></td></tr></table></figure>
 <p>-r标志是一个包含JavaScript文件的目录，以便为自动测试所需。还有其他一些标志可能会引起关注 — 请阅读帮助文本以了解它们的工作原理： $ ./node_modules/.bin/cucumber.js –help。</p>
 <p>这些目录以递归方式进行扫描，因此你可以根据特定情况对文件进行浅层或深层嵌套。</p>
+<p>如果你是全局安装cucumber模块，就可以直接使用下面命令，而无需在进入./node_modules/.bin/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cucumber-js</span><br></pre></td></tr></table></figure></p>
 <h2 id="npm-脚本"><a href="#npm-脚本" class="headerlink" title="npm 脚本"></a>npm 脚本</h2><p>一旦手动运行Cucumber，将它作为npm脚本添加到构建中是一件小事。你只需要添加下面的命令 — 路径并不是限定的，因为npm会为你处理  — 在你的package.json中，如下所示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;cucumber&quot;: &quot;cucumber.js ./myFeatures -r ./mySteps&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;cucumber&quot;: &quot;cucumber-js ./myFeatures -r ./mySteps&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这些做完了，你就可以执行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm run cucumber</span><br></pre></td></tr></table></figure>
 <p>它就会像之前一样执行你的Cucumber测试。</p>
