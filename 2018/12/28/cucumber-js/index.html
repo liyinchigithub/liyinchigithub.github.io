@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="#JavaScript 中的 BDD : Cucumber 和 Gherkin 入门 每个人都听说过测试驱动开发（TDD），以及它将对整个产品和开发周期带来的好处。这些都是显而易见的。每次你为一段代码编写测试，你将知道代码是否正常运行。而且，更重要的是，以后你将第一时间知道代码是否发生中断。 行为驱动开发（BDD）是对此理念的扩展，但不同的是它并不是测试代码，而是测试产品，特别是产品是否按照你的期">
+<meta name="description" content="JavaScript 中的 BDD : Cucumber 和 Gherkin 入门每个人都听说过测试驱动开发（TDD），以及它将对整个产品和开发周期带来的好处。这些都是显而易见的。每次你为一段代码编写测试，你将知道代码是否正常运行。而且，更重要的是，以后你将第一时间知道代码是否发生中断。 行为驱动开发（BDD）是对此理念的扩展，但不同的是它并不是测试代码，而是测试产品，特别是产品是否按照你的期望行">
 <meta name="keywords" content="test autotest java JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cucumber.js">
 <meta property="og:url" content="http://yoursite.com/2018/12/28/cucumber-js/index.html">
 <meta property="og:site_name" content="liyinchi">
-<meta property="og:description" content="#JavaScript 中的 BDD : Cucumber 和 Gherkin 入门 每个人都听说过测试驱动开发（TDD），以及它将对整个产品和开发周期带来的好处。这些都是显而易见的。每次你为一段代码编写测试，你将知道代码是否正常运行。而且，更重要的是，以后你将第一时间知道代码是否发生中断。 行为驱动开发（BDD）是对此理念的扩展，但不同的是它并不是测试代码，而是测试产品，特别是产品是否按照你的期">
+<meta property="og:description" content="JavaScript 中的 BDD : Cucumber 和 Gherkin 入门每个人都听说过测试驱动开发（TDD），以及它将对整个产品和开发周期带来的好处。这些都是显而易见的。每次你为一段代码编写测试，你将知道代码是否正常运行。而且，更重要的是，以后你将第一时间知道代码是否发生中断。 行为驱动开发（BDD）是对此理念的扩展，但不同的是它并不是测试代码，而是测试产品，特别是产品是否按照你的期望行">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-28T02:49:47.892Z">
+<meta property="og:updated_time" content="2018-12-28T05:58:37.890Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cucumber.js">
-<meta name="twitter:description" content="#JavaScript 中的 BDD : Cucumber 和 Gherkin 入门 每个人都听说过测试驱动开发（TDD），以及它将对整个产品和开发周期带来的好处。这些都是显而易见的。每次你为一段代码编写测试，你将知道代码是否正常运行。而且，更重要的是，以后你将第一时间知道代码是否发生中断。 行为驱动开发（BDD）是对此理念的扩展，但不同的是它并不是测试代码，而是测试产品，特别是产品是否按照你的期">
+<meta name="twitter:description" content="JavaScript 中的 BDD : Cucumber 和 Gherkin 入门每个人都听说过测试驱动开发（TDD），以及它将对整个产品和开发周期带来的好处。这些都是显而易见的。每次你为一段代码编写测试，你将知道代码是否正常运行。而且，更重要的是，以后你将第一时间知道代码是否发生中断。 行为驱动开发（BDD）是对此理念的扩展，但不同的是它并不是测试代码，而是测试产品，特别是产品是否按照你的期望行">
 
 
 
@@ -300,22 +300,19 @@
       
 
       
-        <p>#JavaScript 中的 BDD : Cucumber 和 Gherkin 入门</p>
-<p>每个人都听说过测试驱动开发（TDD），以及它将对整个产品和开发周期带来的好处。这些都是显而易见的。每次你为一段代码编写测试，你将知道代码是否正常运行。而且，更重要的是，以后你将第一时间知道代码是否发生中断。</p>
+        <h1 id="JavaScript-中的-BDD-Cucumber-和-Gherkin-入门"><a href="#JavaScript-中的-BDD-Cucumber-和-Gherkin-入门" class="headerlink" title="JavaScript 中的 BDD : Cucumber 和 Gherkin 入门"></a>JavaScript 中的 BDD : Cucumber 和 Gherkin 入门</h1><p>每个人都听说过测试驱动开发（TDD），以及它将对整个产品和开发周期带来的好处。这些都是显而易见的。每次你为一段代码编写测试，你将知道代码是否正常运行。而且，更重要的是，以后你将第一时间知道代码是否发生中断。</p>
 <p>行为驱动开发（BDD）是对此理念的扩展，但不同的是它并不是测试代码，而是测试产品，特别是产品是否按照你的期望行为去运行。(场景实例化)</p>
 <p>在本文中，我将向你介绍如何搭建并运行Cucumber，该框架被用来运行以BDD风格编写的自动化验收测试。这种测试的优势在于，它们可以用简单的英文/中文（支持多国语言）来编写，因此参与项目中的非技术人员也可以理解它。在阅读本文完毕后，你可以决定Cucumber是否适用与你以及你的团队，并开始编写你自己的验收测试。</p>
-<p>#BDD vs TDD — 有什么不同?</p>
-<p>【区别主要是在测试的结构和写法上】</p>
+<h1 id="BDD-vs-TDD-—-有什么不同"><a href="#BDD-vs-TDD-—-有什么不同" class="headerlink" title="BDD vs TDD — 有什么不同?"></a>BDD vs TDD — 有什么不同?</h1><p>【区别主要是在测试的结构和写法上】</p>
 <p>在TDD的设定里，测试由编写被测代码的开发人员编写、维护和理解。一般来说不需要其他人去理解测试，这很棒。</p>
 <p>在BDD的设定里，测试需要被除了编写功能的开发人员之外的更多人理解。 有更多的项目参与者对产品的功能感兴趣。</p>
 <p>这些人员可能包括质量保证人员、产品分析师、销售人员，甚至是高级管理人员。</p>
 <p>这是两者之间的区别：</p>
-<p>##TDD<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> assert = <span class="built_in">require</span>(<span class="string">'assert'</span>);</span><br><span class="line"><span class="keyword">const</span> webdriver = <span class="built_in">require</span>(<span class="string">'selenium-webdriver'</span>);</span><br><span class="line"><span class="keyword">const</span> browser = <span class="keyword">new</span> webdriver.Builder()</span><br><span class="line">  .usingServer()</span><br><span class="line">  .withCapabilities(&#123;<span class="string">'browserName'</span>: <span class="string">'chrome'</span> &#125;)</span><br><span class="line">  .build();</span><br><span class="line"></span><br><span class="line">browser.get(<span class="string">'http://en.wikipedia.org/wiki/Wiki'</span>);</span><br><span class="line">browser.findElements(webdriver.By.css(<span class="string">'[href^="/wiki/"]'</span>))</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params">links</span>)</span>&#123;</span><br><span class="line">  assert.equal(<span class="number">19</span>, links.length); <span class="comment">// Made up number</span></span><br><span class="line">  browser.quit();</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>##BDD<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Given</span> I have opened a Web Browser</span><br><span class="line"><span class="keyword">When</span> I load the Wikipedia article on <span class="string">"Wiki"</span></span><br><span class="line"><span class="keyword">Then</span> I have <span class="string">"19"</span> Wiki Links</span><br></pre></td></tr></table></figure></p>
+<h2 id="TDD"><a href="#TDD" class="headerlink" title="TDD"></a>TDD</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> assert = <span class="built_in">require</span>(<span class="string">'assert'</span>);</span><br><span class="line"><span class="keyword">const</span> webdriver = <span class="built_in">require</span>(<span class="string">'selenium-webdriver'</span>);</span><br><span class="line"><span class="keyword">const</span> browser = <span class="keyword">new</span> webdriver.Builder()</span><br><span class="line">  .usingServer()</span><br><span class="line">  .withCapabilities(&#123;<span class="string">'browserName'</span>: <span class="string">'chrome'</span> &#125;)</span><br><span class="line">  .build();</span><br><span class="line"></span><br><span class="line">browser.get(<span class="string">'http://en.wikipedia.org/wiki/Wiki'</span>);</span><br><span class="line">browser.findElements(webdriver.By.css(<span class="string">'[href^="/wiki/"]'</span>))</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params">links</span>)</span>&#123;</span><br><span class="line">  assert.equal(<span class="number">19</span>, links.length); <span class="comment">// Made up number</span></span><br><span class="line">  browser.quit();</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="BDD"><a href="#BDD" class="headerlink" title="BDD"></a>BDD</h2><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Given</span> I have opened a Web Browser</span><br><span class="line"><span class="keyword">When</span> I load the Wikipedia article on <span class="string">"Wiki"</span></span><br><span class="line"><span class="keyword">Then</span> I have <span class="string">"19"</span> Wiki Links</span><br></pre></td></tr></table></figure>
 <p>这两种测试做了同样的事，但是一种是通俗易懂的，另一种只有懂得JavaScript和Selenium的人才能阅读。</p>
 <p>这篇文章将向你展现如何使用Cucumber.js框架，在你的JavaScript项目中实现BDD测试，从而使你的产品从这种级别的测试中受益。</p>
-<p>##什么是Cucumber和Gherkin?</p>
-<p>Cucumber是一个为行为驱动开发设计的测试框架。它允许你以Gherkin的形式定义你的测试，然后将这些可执行的Gherkin脚本与代码绑定。</p>
+<h1 id="什么是Cucumber和Gherkin"><a href="#什么是Cucumber和Gherkin" class="headerlink" title="什么是Cucumber和Gherkin?"></a>什么是Cucumber和Gherkin?</h1><p>Cucumber是一个为行为驱动开发设计的测试框架。它允许你以Gherkin的形式定义你的测试，然后将这些可执行的Gherkin脚本与代码绑定。</p>
 <p>Gherkin是一种用来编写Cucumber测试的特定领域语言。它允许测试脚本以人类可读的格式编写，并在参与产品开发的所有人员之间共享。</p>
 <p>Gherkin文件包含用Gherkin语言编写的测试。这些文件通常具有.feature的文件扩展名。Gherkin文件的内容通常被简称为“gherkins”。</p>
 <p>Gherkins</p>
@@ -328,7 +325,7 @@
 <p>理想情况下，每个场景应该是单个测试用例，因此When步骤的数量应该保持很少。</p>
 <p>步骤都是可选的。例如，如果你完全不需要在测试开始前设置任何内容，你可以不设置Given步骤。</p>
 <p>Gherkin文件是为人类可读设计的，并为参与产品开发的任何人带来益处。由于参与人员包括非技术人员，因此Gherkin文件应始终使用商业语言而不是技术语言编写。这意味着，例如，编写测试时，你不需要去引用某个UI组件，而是要去描述你想要测试的产品的功能。</p>
-<p>##一个简单的Gherkin测试<br>以下是一个使用Google搜索Cucumber.js的简单的Gherkin脚本的示例</p>
+<h2 id="一个简单的Gherkin测试"><a href="#一个简单的Gherkin测试" class="headerlink" title="一个简单的Gherkin测试"></a>一个简单的Gherkin测试</h2><p>以下是一个使用Google搜索Cucumber.js的简单的Gherkin脚本的示例</p>
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Given</span> I have loaded Google</span><br><span class="line"><span class="keyword">When</span> I search for <span class="string">"cucumber.js"</span></span><br><span class="line"><span class="keyword">Then</span> the first result is <span class="string">"GitHub - cucumber/cucumber-js: Cucumber for JavaScript"</span></span><br></pre></td></tr></table></figure>
 <p>我们可以直截了当的看到，这个测试告诉我们该做什么，而不是如何去做。它是用面对所有读者的语言编写的，而且 — 重要的是 — 无论产品最终 如何调整，这些测试很可能依然是正确的。谷歌可能会彻底改变他们的页面UI，但只要功能不变，那么Gherkin脚本依然是正确的。</p>
 <p>你可以在Cucumber wiki上阅读更多关于<a href="https://docs.cucumber.io/gherkin/reference/#steps" target="_blank" rel="noopener">Given When Then</a>的内容。</p>
@@ -339,26 +336,24 @@
 <p>将Cucumber.js添加到你的版本中<br>在版本中加入Cucumber.js，只需要添加cucumber模块，然后配置并运行。第一部分如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save-dev cucumber</span><br></pre></td></tr></table></figure>
 <p>其中的第二个参数取决于你执行构建的方式。</p>
-<p>##手动执行<br>手动执行Cucumber是相对容易的，最好是先确保你能做到这一点，因为以下解决方案都是自动执行相同的方法。</p>
+<h2 id="手动执行"><a href="#手动执行" class="headerlink" title="手动执行"></a>手动执行</h2><p>手动执行Cucumber是相对容易的，最好是先确保你能做到这一点，因为以下解决方案都是自动执行相同的方法。</p>
 <p>安装后，可执行文件将为./node_modules/.bin/cucumber.js。当你运行它时，它需要知道文件系统上的哪个地方可以找到它所需的所有文件。这些文件都是Gherkin文件和要执行的JavaScript代码。</p>
 <p>按照惯例，所有的Gherkin文件都将保存在features目录中，如果不指定，那么Cucumber将在同一个目录中查找要执行的JavaScript代码。指定Cucumber在哪里查找这些文件是一个明智的做法，因为这样可以更好地控制构建过程。</p>
 <p>例如，如果将所有的Gherkin文件保存在myFeatures目录中，并将所有JavaScript代码保存在mySteps中，则可以执行以下操作：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./node_modules/.bin/cucumber.js ./myFeatures -r ./mySteps</span><br></pre></td></tr></table></figure>
 <p>-r标志是一个包含JavaScript文件的目录，以便为自动测试所需。还有其他一些标志可能会引起关注 — 请阅读帮助文本以了解它们的工作原理： $ ./node_modules/.bin/cucumber.js –help。</p>
 <p>这些目录以递归方式进行扫描，因此你可以根据特定情况对文件进行浅层或深层嵌套。</p>
-<p>##npm 脚本</p>
-<p>一旦手动运行Cucumber，将它作为npm脚本添加到构建中是一件小事。你只需要添加下面的命令 — 路径并不是限定的，因为npm会为你处理  — 在你的package.json中，如下所示：</p>
+<h2 id="npm-脚本"><a href="#npm-脚本" class="headerlink" title="npm 脚本"></a>npm 脚本</h2><p>一旦手动运行Cucumber，将它作为npm脚本添加到构建中是一件小事。你只需要添加下面的命令 — 路径并不是限定的，因为npm会为你处理  — 在你的package.json中，如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;cucumber&quot;: &quot;cucumber.js ./myFeatures -r ./mySteps&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这些做完了，你就可以执行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm run cucumber</span><br></pre></td></tr></table></figure>
 <p>它就会像之前一样执行你的Cucumber测试。</p>
-<p>##Grunt<br>的确存在用于执行Cucumber.js测试的Grunt插件。然而不幸的是，它已经过时了，并且不适用于最新版本的Cucumber.js，这意味着如果你使用它，你将错过许多新的改进。</p>
+<h2 id="Grunt"><a href="#Grunt" class="headerlink" title="Grunt"></a>Grunt</h2><p>的确存在用于执行Cucumber.js测试的Grunt插件。然而不幸的是，它已经过时了，并且不适用于最新版本的Cucumber.js，这意味着如果你使用它，你将错过许多新的改进。</p>
 <p>相反，我的首选方法是使用grunt-shell插件以与上述完全相同的方式执行命令。</p>
 <p>安装完成后，配置，这只是将以下插件配置添加到您的Gruntfile.js中的一种情况：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">shell: &#123;</span><br><span class="line">  cucumber: &#123;</span><br><span class="line">    command: &apos;cucumber.js ./myFeatures -r ./mySteps&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>现在，和之前一样，你可以通过运行grunt shell:cucumber来执行你的测试。</p>
-<p>##Gulp</p>
-<p>Gulp与Grunt的情况完全相同，现有的插件已经过时并且会使用旧版本的Cucumber工具。同样的，在Gulp中你可以使用gulp-shell模块来执行Cucumber.js命令，就像其他场景一样。</p>
+<h2 id="Gulp"><a href="#Gulp" class="headerlink" title="Gulp"></a>Gulp</h2><p>Gulp与Grunt的情况完全相同，现有的插件已经过时并且会使用旧版本的Cucumber工具。同样的，在Gulp中你可以使用gulp-shell模块来执行Cucumber.js命令，就像其他场景一样。</p>
 <p>设置一下：</p>
 <p>gulp.task(‘cucumber’, shell.task([<br>  ‘cucumber.js ./myFeatures -r ./mySteps’<br>]));<br>现在，和之前一样，你可以通过运行gulp cucumber来执行你的测试。</p>
 <p>第一个Cucumber测试<br>请注意，本文中的所有代码示例均可在GitHub上获得。</p>
@@ -394,7 +389,7 @@
 <p>就是这样。运行此操作将给出以下结果：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">$ ./node_modules/.bin/cucumber.js features/ -r steps/</span><br><span class="line">Feature: Addition</span><br><span class="line"></span><br><span class="line">  Scenario: 1 + 0</span><br><span class="line">  ✔ Given I start with 1</span><br><span class="line">  ✔ When I add 0</span><br><span class="line">  ✔ Then I end up with 1</span><br><span class="line"></span><br><span class="line">  Scenario: 1 + 1</span><br><span class="line">  ✔ Given I start with 1</span><br><span class="line">  ✔ When I add 1</span><br><span class="line">  ✔ Then I end up with 2</span><br><span class="line"></span><br><span class="line">Feature: Multiplication</span><br><span class="line"></span><br><span class="line">  Scenario: 1 * 0</span><br><span class="line">  ✔ Given I start with 1</span><br><span class="line">  ✔ When I multiply by 0</span><br><span class="line">  ✔ Then I end up with 0</span><br><span class="line"></span><br><span class="line">  Scenario: 1 * 1</span><br><span class="line">  ✔ Given I start with 1</span><br><span class="line">  ✔ When I multiply by 1</span><br><span class="line">  ✔ Then I end up with 1</span><br><span class="line"></span><br><span class="line">  Scenario: 2 + 2</span><br><span class="line">  ✔ Given I start with 2</span><br><span class="line">  ✔ When I multiply by 2</span><br><span class="line">  ✔ Then I end up with 4</span><br><span class="line"></span><br><span class="line">5 scenarios (5 passed)</span><br><span class="line">15 steps (15 passed)</span><br><span class="line">0m00.003s</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
 <p>就这么简单，现在我们有了一个用来证明运算的易于扩展的测试套件。作为练习，请尝试扩展它以支持减法。如果遇到困难，你可以在评论中寻求帮助。</p>
-<p>##Cucumber.js的进阶技巧<br>这些功能都很不错，但是Cucumber的一些进阶功能能让我们的工作更加轻松。</p>
+<h2 id="Cucumber-js的进阶技巧"><a href="#Cucumber-js的进阶技巧" class="headerlink" title="Cucumber.js的进阶技巧"></a>Cucumber.js的进阶技巧</h2><p>这些功能都很不错，但是Cucumber的一些进阶功能能让我们的工作更加轻松。</p>
 <p>【异步步骤的定义】</p>
 <p>到目前为止，我们只写了同步步骤的定义，在JavaScript世界中，这不够！JavaScript中有很多情况下需要是异步的，所以我们需要一些方法来处理它。</p>
 <p>值得庆幸的是，Cucumber.js有一些内置的处理方法，具体选择哪一种取决于你的喜好。</p>
@@ -407,19 +402,18 @@
 <p>其中包括返回undefined或null。这意味着您可以在执行该步骤时选择是否需要返回Promise，框架将根据需要进行调整。</p>
 <p>例如，使用Promise进行HTTP API调用的步骤定义如下所示。这是使用<a href="https://www.npmjs.com/package/node-fetch" target="_blank" rel="noopener">Fetch</a> API编写的，因为它返回Promise响应。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">When(<span class="string">'I make an API call using promises'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> fetch(<span class="string">'http://localhost:3000/api/endpoint'</span>)</span><br><span class="line">    .then(<span class="function"><span class="params">res</span> =&gt;</span> res.json())</span><br><span class="line">    .then(<span class="function"><span class="params">body</span> =&gt;</span> doSomethingWithResponse(body));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>##Feature Background</p>
-<p>一个Feature Background是一个Gherkin片段，它被预先添加到文件中每个Scenario的开头。这使得我们在每个Scenario之间可以共享常用的步骤，而不需要重复实现它们。</p>
+<h2 id="Feature-Background"><a href="#Feature-Background" class="headerlink" title="Feature Background"></a>Feature Background</h2><p>一个Feature Background是一个Gherkin片段，它被预先添加到文件中每个Scenario的开头。这使得我们在每个Scenario之间可以共享常用的步骤，而不需要重复实现它们。</p>
 <p>Background是使用Background关键字而不是Scenario关键字编写的。理想情况下，这其中应该只包含Given步骤，因为包含每个测试之间共享的When步骤或Then步骤是没有意义的。但是框架不会在这上面限制你，所以要悉心构造你的测试结构。</p>
 <p>使用它，我们可以重新编写我们的添加的feature，如下所示：</p>
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Feature</span>: Addition</span><br><span class="line"></span><br><span class="line">  <span class="keyword">Background</span>:</span><br><span class="line">    <span class="keyword">Given</span> I start with 1</span><br><span class="line"></span><br><span class="line">  <span class="keyword">Scenario</span>: 1 + 0</span><br><span class="line">    <span class="keyword">When</span> I add 0</span><br><span class="line">    <span class="keyword">Then</span> I end up with 1</span><br><span class="line"></span><br><span class="line">  <span class="keyword">Scenario</span>: 1 + 1</span><br><span class="line">    <span class="keyword">When</span> I add 1</span><br><span class="line">    <span class="keyword">Then</span> I end up with 2</span><br></pre></td></tr></table></figure>
 <p>这实际上与之前的脚本完全一样，但是由于我们已经将通用的步骤提取出来了，所以简短一些。</p>
-<p>##Scenario Outlines<br>Scenario Outlines是从测试数据表中生成scenario的一种方式。这使得我们能以比以前更高效的方式进行参数化测试，可以使用插入不同值的方式重复同一测试脚本。</p>
+<h2 id="Scenario-Outlines"><a href="#Scenario-Outlines" class="headerlink" title="Scenario Outlines"></a>Scenario Outlines</h2><p>Scenario Outlines是从测试数据表中生成scenario的一种方式。这使得我们能以比以前更高效的方式进行参数化测试，可以使用插入不同值的方式重复同一测试脚本。</p>
 <p>Scenario outlines通过使用Scenario Outline关键字而不是Scenario关键字编写，之后提供一个或多个Examples表。然后将来自Examples表格的参数替换到Scenario Outline中以生成运行的scenarios。</p>
 <p>使用它，我们可以重构我们的乘法feature，如下所示：</p>
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Feature</span>: Multiplication</span><br><span class="line"></span><br><span class="line">  <span class="keyword">Scenario</span> <span class="keyword">Outline</span>: <span class="variable">&lt;a&gt;</span> <span class="symbol">*</span> <span class="variable">&lt;b&gt;</span></span><br><span class="line">    <span class="keyword">Given</span> I start with <span class="variable">&lt;a&gt;</span></span><br><span class="line">    <span class="keyword">When</span> I multiply by <span class="variable">&lt;b&gt;</span></span><br><span class="line">    <span class="keyword">Then</span> I end up with <span class="variable">&lt;answer&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">Examples</span>:</span><br><span class="line">    |<span class="string"> a </span>|<span class="string"> b </span>|<span class="string"> answer </span>|</span><br><span class="line">    |<span class="string"> 1 </span>|<span class="string"> 0 </span>|<span class="string"> 0      </span>|</span><br><span class="line">    |<span class="string"> 1 </span>|<span class="string"> 1 </span>|<span class="string"> 1      </span>|</span><br><span class="line">    |<span class="string"> 2 </span>|<span class="string"> 2 </span>|<span class="string"> 4      </span>|</span><br></pre></td></tr></table></figure>
 <p>再一次，这和以前完全一样，但重复次数要少得多。你会看到你是否运行它，它会在输出中生成与之前完全相同的场景：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Feature: Multiplication</span><br><span class="line"></span><br><span class="line">  Scenario: 1 * 0</span><br><span class="line">  ✔ Given I start with 1</span><br><span class="line">  ✔ When I multiply by 0</span><br><span class="line">  ✔ Then I end up with 0</span><br><span class="line"></span><br><span class="line">  Scenario: 1 * 1</span><br><span class="line">  ✔ Given I start with 1</span><br><span class="line">  ✔ When I multiply by 1</span><br><span class="line">  ✔ Then I end up with 1</span><br><span class="line"></span><br><span class="line">  Scenario: 2 * 2</span><br><span class="line">  ✔ Given I start with 2</span><br><span class="line">  ✔ When I multiply by 2</span><br><span class="line">  ✔ Then I end up with 4</span><br></pre></td></tr></table></figure>
-<p>##数据表<br>我们刚刚在scenario outline中看到了一张表格，用于生成我们可以从中生成scenario的数据。<br>但是，我们也可以在scenario中使用数据表。这些可以用作提供数据表或结构化输入或许多其他事物的方式。</p>
+<h2 id="数据表"><a href="#数据表" class="headerlink" title="数据表"></a>数据表</h2><p>我们刚刚在scenario outline中看到了一张表格，用于生成我们可以从中生成scenario的数据。<br>但是，我们也可以在scenario中使用数据表。这些可以用作提供数据表或结构化输入或许多其他事物的方式。</p>
 <p>例如，可以将添加方案的方式重写为添加任意自变量的值，如下所示：</p>
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Scenario</span>: Add numbers</span><br><span class="line">  <span class="keyword">Given</span> I start with 0</span><br><span class="line">  <span class="keyword">When</span> I add the following numbers:</span><br><span class="line">    |<span class="string"> 1 </span>|</span><br><span class="line">    |<span class="string"> 2 </span>|</span><br><span class="line">    |<span class="string"> 3 </span>|</span><br><span class="line">    |<span class="string"> 4 </span>|</span><br><span class="line">  <span class="keyword">Then</span> I end up with 10</span><br></pre></td></tr></table></figure>
 <p>针对这个简单的例子，步骤将如下：</p>
@@ -433,7 +427,7 @@
 <p>在这种情况下，data对象将从数据表中解析出来，如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;Username&quot;: &quot;graham&quot;,</span><br><span class="line">  &quot;Email&quot;: &quot;my.email@example.com&quot;,</span><br><span class="line">  &quot;Password&quot;: &quot;mySecretPassword&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>通过第一列中的键可以轻松访问这些字段。</p>
-<p>##Hooks 钩子<br>像大多数测试框架一样，Cucumber.js支持在场景运行之前和之后执行hook。</p>
+<h2 id="Hooks-钩子"><a href="#Hooks-钩子" class="headerlink" title="Hooks 钩子"></a>Hooks 钩子</h2><p>像大多数测试框架一样，Cucumber.js支持在场景运行之前和之后执行hook。</p>
 <p>它们的设置方式与步骤定义相同，只需要简单按名字的调用hook - 在场景运行之前或之后，无论运行成功或失败与否。</p>
 <p>一个简单的例子，为了能使我们的feature们更加可靠，编写代码如下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">defineSupportCode(<span class="function"><span class="keyword">function</span>(<span class="params">&#123; Before, Given, Then, When &#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> answer;</span><br><span class="line"></span><br><span class="line">  Before(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    answer = <span class="number">0</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -444,14 +438,13 @@
 <p>使用defineSupportCode方法中的registerHandler方法处理这些hook。代码如下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">defineSupportCode(<span class="function"><span class="keyword">function</span>(<span class="params">&#123; registerHandler &#125;</span>) </span>&#123;</span><br><span class="line">  registerHandler(<span class="string">'BeforeStep'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">step</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'About to execute step:'</span> + util.inspect(step));</span><br><span class="line">  &#125;);</span><br><span class="line">  registerHandler(<span class="string">'ScenarioResult'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">scenario</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Result of Scenario:'</span> + util.inspect(scenario));</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>通过接受回调函数作为第二个参数，或者通过返回一个Promise对象，事件处理程序可以与定义步骤完全相同的方式进行异步处理。</p>
-<p>##World – 共享代码和数据<br>到目前为止，我们都无法在步骤之间共享代码。我们可以很容易地拥有很多包含步骤定义，hook，event等的JavaScript文件，但它们彼此独立。</p>
+<h2 id="World-–-共享代码和数据"><a href="#World-–-共享代码和数据" class="headerlink" title="World – 共享代码和数据"></a>World – 共享代码和数据</h2><p>到目前为止，我们都无法在步骤之间共享代码。我们可以很容易地拥有很多包含步骤定义，hook，event等的JavaScript文件，但它们彼此独立。</p>
 <p>碰巧，事实并非如此。Cucumber.js有一个“World”的概念，它是所有运行场景的域。所有的步骤定义、挂钩和事件处理程序都可以通过访问this参数来访问它，无论定义步骤定义的文件如何。这就是为什么所有示例都是使用传统的function关键字编写的，而不是箭头函数。JavaScript中的箭头函数为您重新绑定此变量，这意味着您将无法访问测试中可能需要的World域。</p>
 <p>这种方式使得你不通过额外的处理，就可以直接使用它。这也意味着我们可以通过在多个文件之间逻辑分割Cucumber代码并使它们按预期工作，同时仍然可以访问共享域，从而使我们的代码更加整洁。</p>
-<p>总结<br>行为驱动开发是确保产品功能运行正确的绝佳方式，而Cucumber正是一个实践这种测试理念的强大工具。使用Cucumber，可以使产品中的每个参与者都可以阅读，理解甚至编写测试。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>行为驱动开发是确保产品功能运行正确的绝佳方式，而Cucumber正是一个实践这种测试理念的强大工具。使用Cucumber，可以使产品中的每个参与者都可以阅读，理解甚至编写测试。</p>
 <p>这篇文章只是抓住了Cucumber功能的表面，所以我建议你自己尝试一下，去体验它的作用。Cucumber也有一个非常活跃的社区，他们的<a href="https://groups.google.com/forum/#!forum/cukes" target="_blank" rel="noopener">Google Group</a>和<a href="https://gitter.im/" target="_blank" rel="noopener">Gitter</a>频道是当你遇到困难时寻求帮助的好去处。</p>
 <p>你已经开始使用Cucumber了吗？这篇文章是否鼓励了你进行尝试？无论如何，我都希望在下面的评论中听到您的意见。</p>
-<p>##推荐几个调试工具</p>
-<p><a href="http://cuketest.com/" target="_blank" rel="noopener">cuketest</a></p>
+<h2 id="推荐几个调试工具"><a href="#推荐几个调试工具" class="headerlink" title="推荐几个调试工具"></a>推荐几个调试工具</h2><p><a href="http://cuketest.com/" target="_blank" rel="noopener">cuketest</a></p>
 <p><a href="http://cucumber.github.io/cucumber-js/" target="_blank" rel="noopener">cucumber</a></p>
 
       
@@ -570,8 +563,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -613,6 +615,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-中的-BDD-Cucumber-和-Gherkin-入门"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 中的 BDD : Cucumber 和 Gherkin 入门</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BDD-vs-TDD-—-有什么不同"><span class="nav-number">2.</span> <span class="nav-text">BDD vs TDD — 有什么不同?</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TDD"><span class="nav-number">2.1.</span> <span class="nav-text">TDD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BDD"><span class="nav-number">2.2.</span> <span class="nav-text">BDD</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是Cucumber和Gherkin"><span class="nav-number">3.</span> <span class="nav-text">什么是Cucumber和Gherkin?</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一个简单的Gherkin测试"><span class="nav-number">3.1.</span> <span class="nav-text">一个简单的Gherkin测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#手动执行"><span class="nav-number">3.2.</span> <span class="nav-text">手动执行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-脚本"><span class="nav-number">3.3.</span> <span class="nav-text">npm 脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Grunt"><span class="nav-number">3.4.</span> <span class="nav-text">Grunt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gulp"><span class="nav-number">3.5.</span> <span class="nav-text">Gulp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cucumber-js的进阶技巧"><span class="nav-number">3.6.</span> <span class="nav-text">Cucumber.js的进阶技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Feature-Background"><span class="nav-number">3.7.</span> <span class="nav-text">Feature Background</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scenario-Outlines"><span class="nav-number">3.8.</span> <span class="nav-text">Scenario Outlines</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据表"><span class="nav-number">3.9.</span> <span class="nav-text">数据表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hooks-钩子"><span class="nav-number">3.10.</span> <span class="nav-text">Hooks 钩子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#World-–-共享代码和数据"><span class="nav-number">3.11.</span> <span class="nav-text">World – 共享代码和数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.12.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐几个调试工具"><span class="nav-number">3.13.</span> <span class="nav-text">推荐几个调试工具</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
