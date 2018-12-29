@@ -731,20 +731,21 @@
 <p>理想情况下，每个场景应该是单个测试用例，因此When步骤的数量应该保持很少。</p>
 <p>步骤都是可选的。例如，如果你完全不需要在测试开始前设置任何内容，你可以不设置Given步骤。</p>
 <p>Gherkin文件是为人类可读设计的，并为参与产品开发的任何人带来益处。由于参与人员包括非技术人员，因此Gherkin文件应始终使用商业语言而不是技术语言编写。这意味着，例如，编写测试时，你不需要去引用某个UI组件，而是要去描述你想要测试的产品的功能。</p>
-<h2 id="一个简单的Gherkin测试"><a href="#一个简单的Gherkin测试" class="headerlink" title="一个简单的Gherkin测试"></a>一个简单的Gherkin测试</h2><p>以下是一个使用Google搜索Cucumber.js的简单的Gherkin脚本的示例</p>
+<h2 id="一个简单的Gherkin测试"><a href="#一个简单的Gherkin测试" class="headerlink" title="一个简单的Gherkin测试"></a>一个简单的Gherkin测试</h2><p>以下是一个使用Google搜索Cucumber.js的简单的Gherkin脚本的示例:</p>
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Given</span> I have loaded Google</span><br><span class="line"><span class="keyword">When</span> I search for <span class="string">"cucumber.js"</span></span><br><span class="line"><span class="keyword">Then</span> the first result is <span class="string">"GitHub - cucumber/cucumber-js: Cucumber for JavaScript"</span></span><br></pre></td></tr></table></figure>
 <p>我们可以直截了当的看到，这个测试告诉我们该做什么，而不是如何去做。它是用面对所有读者的语言编写的，而且 — 重要的是 — 无论产品最终 如何调整，这些测试很可能依然是正确的。谷歌可能会彻底改变他们的页面UI，但只要功能不变，那么Gherkin脚本依然是正确的。</p>
 <p>你可以在Cucumber wiki上阅读更多关于<a href="https://docs.cucumber.io/gherkin/reference/#steps" target="_blank" rel="noopener">Given When Then</a>的内容。</p>
+<p>在上面的示例中，对应将执行js文件中以下步骤：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given(<span class="string">'I have loaded Google'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;);</span><br><span class="line">When(<span class="string">'I search for &#123;stringInDoubleQuotes&#125;'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;);</span><br><span class="line">Then(<span class="string">'the first result is &#123;stringInDoubleQuotes&#125;'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;);</span><br></pre></td></tr></table></figure>
+<p>不用担心这些代码的含义 – 稍后会详细解释。</p>
+<p>本质上，它定义了一些Cucumber.js将代码绑定到Gherkin文件中的步骤的方法。</p>
 <h1 id="Cucumber-js"><a href="#Cucumber-js" class="headerlink" title="Cucumber.js"></a>Cucumber.js</h1><p>当你使用Gherkin来编写测试用例后，你需要一些方法来执行它们。在JavaScript世界中，有一个叫做Cucumber.js的模块，可以让你做到这一点。它的工作原理是允许你定义可关联到你的Gherkin文件中定义的各个步骤的JavaScript代码。然后通过加载Gherkin文件，以正确的顺序执行与每个步骤相关的JavaScript代码来运行测试。</p>
 <h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><p>首先你想要使用cucumber.js模块，就需要安装nodejs并配置相关环境变量（因为这些模块都是基于nodejs<br>                                          进行封装打包的模块。）</p>
 <p><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">nodejs下载</a></p>
 <p><a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">nodejs环境变量配置</a></p>
-<p>例如，在上面的示例中，将执行以下步骤：</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Given</span>('I have loaded Google', function() &#123;&#125;);</span><br><span class="line"><span class="keyword">When</span>('I search for &#123;stringInDoubleQuotes&#125;', function() &#123;&#125;);</span><br><span class="line"><span class="keyword">Then</span>('the first result is &#123;stringInDoubleQuotes&#125;', function() &#123;&#125;);</span><br></pre></td></tr></table></figure>
-<p>不用担心这些代码的含义 – 稍后会详细解释。本质上，它定义了一些Cucumber.js将代码绑定到Gherkin文件中的步骤的方法。</p>
-<p>将Cucumber.js添加到你的版本中<br>在版本中加入Cucumber.js，只需要添加cucumber模块，然后配置并运行。第一部分如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install cucumber 用于项目中的本地安装。</span><br><span class="line"></span><br><span class="line">npm install -g cucumber 用于全局安装（服务器部署强烈建议使用全局安装cucumber模块）。</span><br><span class="line"></span><br><span class="line">npm install --save-dev cucumber安装Cucumber.js作为开发依赖项</span><br></pre></td></tr></table></figure>
-<p>其中的第二个参数取决于你执行构建的方式。</p>
+<p>其次，将Cucumber.js添加到你的版本中，在版本中加入Cucumber.js，只需要添加cucumber模块，然后配置并运行。</p>
+<p>第一部分如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install cucumber //用于项目中的本地安装。</span><br><span class="line"></span><br><span class="line">npm install -g cucumber //用于全局安装（服务器部署强烈建议使用全局安装cucumber模块）。</span><br><span class="line"></span><br><span class="line">npm install --save-dev cucumber 用于//安装Cucumber.js作为开发依赖项</span><br></pre></td></tr></table></figure>
 <h2 id="手动执行"><a href="#手动执行" class="headerlink" title="手动执行"></a>手动执行</h2><p>手动执行Cucumber是相对容易的，最好是先确保你能做到这一点，因为以下解决方案都是自动执行相同的方法。</p>
 <p>安装后，可执行文件将为./node_modules/.bin/cucumber-js。当你运行它时，它需要知道文件系统上的哪个地方可以找到它所需的所有文件。这些文件都是Gherkin文件和要执行的JavaScript代码。</p>
 <p>按照惯例，所有的Gherkin文件都将保存在features目录中，如果不指定，那么Cucumber将在同一个目录中查找要执行的JavaScript代码。指定Cucumber在哪里查找这些文件是一个明智的做法，因为这样可以更好地控制构建过程，比如你指向运行某个文件夹下的测试用例。</p>
