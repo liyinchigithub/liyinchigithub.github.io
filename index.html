@@ -867,7 +867,7 @@
 <h2 id="World-–-共享代码和数据"><a href="#World-–-共享代码和数据" class="headerlink" title="World – 共享代码和数据"></a>World – 共享代码和数据</h2><p>到目前为止，我们都无法在步骤之间共享代码。我们可以很容易地拥有很多包含步骤定义，hook，event等的JavaScript文件，但它们彼此独立。</p>
 <p>碰巧，事实并非如此。Cucumber.js有一个“World”的概念，它是所有运行场景的域。所有的步骤定义、挂钩和事件处理程序都可以通过访问this参数来访问它，无论定义步骤定义的文件如何。这就是为什么所有示例都是使用传统的function关键字编写的，而不是箭头函数。JavaScript中的箭头函数为您重新绑定此变量，这意味着您将无法访问测试中可能需要的World域。</p>
 <p>这种方式使得你不通过额外的处理，就可以直接使用它。这也意味着我们可以通过在多个文件之间逻辑分割Cucumber代码并使它们按预期工作，同时仍然可以访问共享域，从而使我们的代码更加整洁。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>行为驱动开发是确保产品功能运行正确的绝佳方式，而Cucumber正是一个实践这种测试理念的强大工具。使用Cucumber，可以使产品中的每个参与者都可以阅读，理解甚至编写测试。</p>
+<h2 id="cucumber识别中文"><a href="#cucumber识别中文" class="headerlink" title="cucumber识别中文"></a>cucumber识别中文</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>行为驱动开发是确保产品功能运行正确的绝佳方式，而Cucumber正是一个实践这种测试理念的强大工具。使用Cucumber，可以使产品中的每个参与者都可以阅读，理解甚至编写测试。</p>
 <p>这篇文章只是抓住了Cucumber功能的表面，所以我建议你自己尝试一下，去体验它的作用。Cucumber也有一个非常活跃的社区，他们的<a href="https://groups.google.com/forum/#!forum/cukes" target="_blank" rel="noopener">Google Group</a>和<a href="https://gitter.im/" target="_blank" rel="noopener">Gitter</a>频道是当你遇到困难时寻求帮助的好去处。</p>
 <p>你已经开始使用Cucumber了吗？这篇文章是否鼓励了你进行尝试？无论如何，我都希望在下面的评论中听到您的意见。<br>你已经开始使用Cucumber了吗？这篇文章是否鼓励了你进行尝试？无论如何，我都希望在下面的评论中听到您的意见。</p>
 <h2 id="推荐几个调试工具"><a href="#推荐几个调试工具" class="headerlink" title="推荐几个调试工具"></a>推荐几个调试工具</h2><p><a href="http://cuketest.com/" target="_blank" rel="noopener">cuketest</a></p>
