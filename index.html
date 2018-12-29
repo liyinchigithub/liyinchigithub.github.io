@@ -731,6 +731,7 @@
 <p>理想情况下，每个场景应该是单个测试用例，因此When步骤的数量应该保持很少。</p>
 <p>步骤都是可选的。例如，如果你完全不需要在测试开始前设置任何内容，你可以不设置Given步骤。</p>
 <p>Gherkin文件是为人类可读设计的，并为参与产品开发的任何人带来益处。由于参与人员包括非技术人员，因此Gherkin文件应始终使用商业语言而不是技术语言编写。这意味着，例如，编写测试时，你不需要去引用某个UI组件，而是要去描述你想要测试的产品的功能。</p>
+<p><a href="https://github.com/cucumber/cucumber-js/blob/HEAD/docs/support_files/api_reference.md" target="_blank" rel="noopener">更多Gherkin API参考</a></p>
 <h2 id="一个简单的Gherkin测试"><a href="#一个简单的Gherkin测试" class="headerlink" title="一个简单的Gherkin测试"></a>一个简单的Gherkin测试</h2><p>以下是一个使用Google搜索Cucumber.js的简单的Gherkin脚本的示例:</p>
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Given</span> I have loaded Google</span><br><span class="line"><span class="keyword">When</span> I search for <span class="string">"cucumber.js"</span></span><br><span class="line"><span class="keyword">Then</span> the first result is <span class="string">"GitHub - cucumber/cucumber-js: Cucumber for JavaScript"</span></span><br></pre></td></tr></table></figure>
 <p>我们可以直截了当的看到，这个测试告诉我们该做什么，而不是如何去做。它是用面对所有读者的语言编写的，而且 — 重要的是 — 无论产品最终 如何调整，这些测试很可能依然是正确的。谷歌可能会彻底改变他们的页面UI，但只要功能不变，那么Gherkin脚本依然是正确的。</p>
@@ -779,6 +780,7 @@
 <p>gulp.task(‘cucumber’, shell.task([<br>  ‘cucumber-js ./myFeatures -r ./mySteps’<br>]));<br>现在，和之前一样，你可以通过运行gulp cucumber来执行你的测试。</p>
 <h2 id="第一个Cucumber测试"><a href="#第一个Cucumber测试" class="headerlink" title="第一个Cucumber测试"></a>第一个Cucumber测试</h2><p>现在我们知道如何执行Cucumber了，那就让我们编写一个测试。在这个例子中，我们将使用一些精心设计的例子向你展现系统是如何运作的。上，你可以做到更多，比如直接调用你正在测试的代码，对正在运行的服务进行HTTP API调用，或者使用Selenium驱动浏览器来测试你的应用程序。</p>
 <p>我们将用一个简单的例子将证明算法有效。一共有两个功能 — 加法和乘法。</p>
+<p>假设你已安装配置好nodejs.</p>
 <p>首先，先配置好。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm init</span><br><span class="line">$ npm install --save-dev cucumber</span><br><span class="line">$ mkdir features steps</span><br></pre></td></tr></table></figure>
 <p>如何执行测试完全取决于你自己。在这个例子中，我只是为了简单起见而手动完成它。在实际的项目中，你可以使用上述选项之一将其集成到版本中。</p>
@@ -877,6 +879,7 @@
 <p><a href="http://cucumber.github.io/cucumber-js/" target="_blank" rel="noopener">cucumber debug</a></p>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://docs.cucumber.io/guides/overview/" target="_blank" rel="noopener">cucumber 官方教程</a></p>
 <p><a href="https://github.com/cucumber/cucumber-js" target="_blank" rel="noopener">cucumber for JavaScript 官方源码</a></p>
+<p><a href="https://github.com/cucumber/cucumber-js/blob/HEAD/docs/support_files/api_reference.md" target="_blank" rel="noopener">cucumber for JavaScript 官方API</a></p>
 <p><a href="https://github.com/cucumber/cucumber-ruby" target="_blank" rel="noopener">cucumber for ruby 官方源码</a></p>
 <p><a href="https://github.com/cucumber/cucumber-jvm" target="_blank" rel="noopener">cucumber for Java 官方源码</a></p>
 <p><a href="https://www.ibm.com/developerworks/cn/java/j-lo-cucumber01/index.html" target="_blank" rel="noopener">cucumber for Java IMB教程</a></p>
