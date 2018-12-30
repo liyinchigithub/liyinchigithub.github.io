@@ -736,6 +736,11 @@
 <p>步骤都是可选的。例如，如果你完全不需要在测试开始前设置任何内容，你可以不设置Given步骤。</p>
 <p>Gherkin文件是为人类可读设计的，并为参与产品开发的任何人带来益处。由于参与人员包括非技术人员，因此Gherkin文件应始终使用商业语言而不是技术语言编写。这意味着，例如，编写测试时，你不需要去引用某个UI组件，而是要去描述你想要测试的产品的功能。</p>
 <p>行为驱动开发是一个软件工程的系列实践，能够帮助团队快速构建和交付更多价值和质量的软件产品。其和敏捷已经精益的开发实践，特别是测试驱动开发(TDD)和领域驱动开发(DDD)，是一脉相承的。但是最重要的是BDD提供了一种通用的，简单的，结构化的描述语言，这种语言既可以是英语也可以是其他本地的语言，通过他能够很方便让项目成员和业务干系人非常顺畅的沟通需求，即使这些成员不懂的任何编程语言。</p>
+<p>通过对比，可以发现BDD的这种方式，把用户或者客户真正的通过Feature文件联系在一起了，其沟通是顺畅的，各个角色，包括QA，BA，开发，测试，客户，用户可以通过这一媒介，进行高效无障碍的沟通，而不是像传统的方式，通过BA进行二次转达，从而丢失了很多重要的需求。 由此可见，其BDD的好处如下：</p>
+<p>减少浪费</p>
+<p>节省成本</p>
+<p>容易并且安全的适应变化</p>
+<p>因为少了中间的转达环节，从而能够快速交付产品</p>
 <h2 id="一个简单的Gherkin测试"><a href="#一个简单的Gherkin测试" class="headerlink" title="一个简单的Gherkin测试"></a>一个简单的Gherkin测试</h2><p>以下是一个使用Google搜索Cucumber.js的简单的Gherkin脚本的示例:</p>
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Given</span> I have loaded Google</span><br><span class="line"><span class="keyword">When</span> I search for <span class="string">"cucumber.js"</span></span><br><span class="line"><span class="keyword">Then</span> the first result is <span class="string">"GitHub - cucumber/cucumber-js: Cucumber for JavaScript"</span></span><br></pre></td></tr></table></figure>
 <p>我们可以直截了当的看到，这个测试告诉我们该做什么，而不是如何去做。它是用面对所有读者的语言编写的，而且 — 重要的是 — 无论产品最终 如何调整，这些测试很可能依然是正确的。谷歌可能会彻底改变他们的页面UI，但只要功能不变，那么Gherkin脚本依然是正确的。</p>
