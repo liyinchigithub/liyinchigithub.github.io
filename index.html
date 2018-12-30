@@ -728,9 +728,14 @@
 <p>每个Gherkin文件只包含一个功能，每个功能都包含一个或多个场景。</p>
 <p>然后场景由步骤组成，这些步骤以特定的方式排序：</p>
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Given</span> – 这些步骤用于在测试之前设置初始状态</span><br><span class="line"></span><br><span class="line"><span class="keyword">When</span> – 这些步骤是要实际执行的测试</span><br><span class="line"></span><br><span class="line"><span class="keyword">Then</span> –  这些步骤被用来断言测试的结果</span><br></pre></td></tr></table></figure>
-<p>理想情况下，每个场景应该是单个测试用例，因此When步骤的数量应该保持很少。</p>
+<p>上面其实就叫Feature(剧本)文件，其遵循的Gherkin(剧本语法)标准。</p>
+<p>这种剧本文件，客户、项目经理、业务分析师，QA都能看懂，因为其就是一个故事点或者需求点。而且通过特定的工具，比如Cucumber，<br>或CukeTest等工具，能够把其自动转换成为代码。开发人员根据自动生成的代码，断言一些预期的行为，并根据这些行为，完成相应的代码实现。<br>这样的自动化脚本，为一个项目中的各个人员了解项目的需求，实现提供了一个很好的交互桥梁。</p>
+<p>下面是其一个交互的过程：<br><img src="http://thyrsi.com/t6/645/1546154825x2728278644.jpg" alt=""></p>
+<p>如果是传统的方式，其交互方式，应该是：<br><img src="http://thyrsi.com/t6/645/1546154898x2728278644.jpg" alt=""></p>
+<h1 id="为什么要行为驱动开发-BDD"><a href="#为什么要行为驱动开发-BDD" class="headerlink" title="为什么要行为驱动开发(BDD)"></a>为什么要行为驱动开发(BDD)</h1><p>理想情况下，每个场景应该是单个测试用例，因此When步骤的数量应该保持很少。</p>
 <p>步骤都是可选的。例如，如果你完全不需要在测试开始前设置任何内容，你可以不设置Given步骤。</p>
 <p>Gherkin文件是为人类可读设计的，并为参与产品开发的任何人带来益处。由于参与人员包括非技术人员，因此Gherkin文件应始终使用商业语言而不是技术语言编写。这意味着，例如，编写测试时，你不需要去引用某个UI组件，而是要去描述你想要测试的产品的功能。</p>
+<p>行为驱动开发是一个软件工程的系列实践，能够帮助团队快速构建和交付更多价值和质量的软件产品。其和敏捷已经精益的开发实践，特别是测试驱动开发(TDD)和领域驱动开发(DDD)，是一脉相承的。但是最重要的是BDD提供了一种通用的，简单的，结构化的描述语言，这种语言既可以是英语也可以是其他本地的语言，通过他能够很方便让项目成员和业务干系人非常顺畅的沟通需求，即使这些成员不懂的任何编程语言。</p>
 <h2 id="一个简单的Gherkin测试"><a href="#一个简单的Gherkin测试" class="headerlink" title="一个简单的Gherkin测试"></a>一个简单的Gherkin测试</h2><p>以下是一个使用Google搜索Cucumber.js的简单的Gherkin脚本的示例:</p>
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Given</span> I have loaded Google</span><br><span class="line"><span class="keyword">When</span> I search for <span class="string">"cucumber.js"</span></span><br><span class="line"><span class="keyword">Then</span> the first result is <span class="string">"GitHub - cucumber/cucumber-js: Cucumber for JavaScript"</span></span><br></pre></td></tr></table></figure>
 <p>我们可以直截了当的看到，这个测试告诉我们该做什么，而不是如何去做。它是用面对所有读者的语言编写的，而且 — 重要的是 — 无论产品最终 如何调整，这些测试很可能依然是正确的。谷歌可能会彻底改变他们的页面UI，但只要功能不变，那么Gherkin脚本依然是正确的。</p>
