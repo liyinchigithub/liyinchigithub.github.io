@@ -95,7 +95,7 @@
 <meta property="og:image" content="http://thyrsi.com/t6/644/1546049359x2890174076.jpg">
 <meta property="og:image" content="http://thyrsi.com/t6/644/1546068162x2890174094.jpg">
 <meta property="og:image" content="http://thyrsi.com/t6/644/1546068340x2890174094.jpg">
-<meta property="og:updated_time" content="2018-12-30T07:37:07.969Z">
+<meta property="og:updated_time" content="2018-12-30T07:39:23.014Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cucumber.js">
 <meta name="twitter:description" content="JavaScript 中的 BDD : Cucumber 和 Gherkin 入门每个人都听说过测试驱动开发（TDD），以及它将对整个产品和开发周期带来的好处。这些都是显而易见的。每次你为一段代码编写测试，你将知道代码是否正常运行。而且，更重要的是，以后你将第一时间知道代码是否发生中断。 行为驱动开发（BDD）是对此理念的扩展，但不同的是它并不是测试代码，而是测试产品，特别是产品是否按照你的期望行">
@@ -345,7 +345,7 @@
 <p>节省成本！</p>
 <p>容易并且安全的适应变化！</p>
 <p>因为少了中间的转达环节，从而能够快速交付产品！</p>
-<p>我们来看下面简单的例子：</p>
+<p>我们来看下面这个流程：</p>
 <p><img src="http://thyrsi.com/t6/645/1546155203x2728278644.jpg" alt=""><br>从上图可以看出，当一个需求过来的时候，先通过项目干系人都能理解的Feature文件，描述项目的User Story，有的里面还有详细生动的数据示例(example)，从而能够让所有的人更加容易理解其需求，比如：<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Scenario</span> <span class="keyword">Outline</span>: Earning interest</span><br><span class="line">  <span class="keyword">Given</span> I have an account of type <span class="variable">&lt;account-type&gt;</span> with a balance of <span class="variable">&lt;initial-balance&gt;</span></span><br><span class="line">  <span class="keyword">When</span> the monthly interest is calculated</span><br><span class="line">  <span class="keyword">Then</span> I should have earned at an annual interest rate of <span class="variable">&lt;interest-rate&gt;</span></span><br><span class="line">  <span class="keyword">And</span> I should have a new balance of <span class="variable">&lt;new-balance&gt;</span></span><br><span class="line">  Example:</span><br><span class="line">  |<span class="string"> initial-balance </span>|<span class="string"> account-type </span>|<span class="string"> interest-rate </span>|<span class="string"> new-balance </span>|</span><br><span class="line">  |<span class="string"> 10000           </span>|<span class="string"> current      </span>|<span class="string"> 1             </span>|<span class="string"> 10008.33    </span>|</span><br><span class="line">  |<span class="string"> 10000           </span>|<span class="string"> savings      </span>|<span class="string"> 3             </span>|<span class="string"> 10025       </span>|</span><br><span class="line">  |<span class="string"> 10000           </span>|<span class="string"> supersaver   </span>|<span class="string"> 5             </span>|<span class="string"> 10041.67    </span>|</span><br></pre></td></tr></table></figure></p>
 <p>通过上面的示例表(example)的表格可以更加容易的理解当前用例的意图了。<br>当Feature和Example文件都完成后，借助于第三方的开源框架实现，比如Cucumber，CukeTest、jBehave，SpecFlow等把Feature和Example转换成代码，<br>然后通过底层次的单元测试框架，比如JUnit，mocha，NUnit，Spock，RSpec，结合测试驱动开发，从而把业务代码的逻辑实现一举多得。</p>
 <h2 id="一个简单的Gherkin测试"><a href="#一个简单的Gherkin测试" class="headerlink" title="一个简单的Gherkin测试"></a>一个简单的Gherkin测试</h2><p>以下是一个使用Google搜索Cucumber.js的简单的Gherkin脚本的示例:</p>
