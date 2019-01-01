@@ -789,6 +789,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">特别说明：cucumber 5.0.3之后运行方式cucumber.js变成了cucumber-js!</span><br><span class="line">如果你使用的版本比较低，那么你的执行命令应该是&quot;./node_modules/.bin/cucumber.js&quot;</span><br></pre></td></tr></table></figure>
 <h2 id="IDEA插件运行"><a href="#IDEA插件运行" class="headerlink" title="IDEA插件运行"></a>IDEA插件运行</h2><p>在IDEA编辑器中搜索 cucumber.js插件并安装，你也可以从这边下载<a href="http://plugins.jetbrains.com/plugin/7418-cucumber-js" target="_blank" rel="noopener">cucumber.js插件</a></p>
 <p>添加一个cucumber.js运行配置，并设置相关参数，<a href="https://www.jetbrains.com/help/idea/run-debug-configuration-cucumberjs.html" target="_blank" rel="noopener">IDEA官方参数配置介绍</a></p>
+<p><img src="http://thyrsi.com/t6/647/1546353493x2890211744.jpg" alt="插件配置参考"></p>
+<p>你可能会遇到一个版本问题：</p>
+<p>![版本过低，造成执行 ./node_modules/.bin/cucumber.js，实际应该是 ./node_modules/.bin/cucumber-js]（<a href="http://thyrsi.com/t6/647/1546353701x2890211744.jpg）" target="_blank" rel="noopener">http://thyrsi.com/t6/647/1546353701x2890211744.jpg）</a></p>
 <h2 id="Grunt（不推荐）"><a href="#Grunt（不推荐）" class="headerlink" title="Grunt（不推荐）"></a>Grunt（不推荐）</h2><p>的确存在用于执行Cucumber.js测试的Grunt插件。然而不幸的是，【它已经过时了】，并且不适用于最新版本的Cucumber.js，这意味着如果你使用它，你将错过许多新的改进。</p>
 <p>相反，我的首选方法是使用grunt-shell插件以与上述完全相同的方式执行命令。</p>
 <p>安装完成后，配置，这只是将以下插件配置添加到您的Gruntfile.js中的一种情况：</p>
@@ -1690,7 +1693,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
