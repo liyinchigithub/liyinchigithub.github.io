@@ -87,6 +87,7 @@
 <meta property="og:site_name" content="liyinchi">
 <meta property="og:description" content="前言自动化测试框架很多，测试人都知道有JUnit、TestNG、Selenium+WebDriver、Appium等。再具体点，如果说通用的测试框架，您可能会想到STAF+STAX；如果说Android App自动化测试框架，除了Appium，您可能还会想到Robotium、Selendroid、ATAF等；如果说API自动化测试框架，您可能会说Postman没有竞争对手；如果说验收测试框架，您可">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://thyrsi.com/t6/649/1546503931x2890211750.jpg">
 <meta property="og:image" content="http://thyrsi.com/t6/649/1546496379x1822611383.jpg">
 <meta property="og:image" content="http://thyrsi.com/t6/649/1546496979x1822611383.jpg">
 <meta property="og:image" content="http://thyrsi.com/t6/649/1546497047x1822611383.jpg">
@@ -95,11 +96,11 @@
 <meta property="og:image" content="http://thyrsi.com/t6/649/1546496765x1822611383.jpg">
 <meta property="og:image" content="http://thyrsi.com/t6/649/1546496638x1822611383.jpg">
 <meta property="og:image" content="http://thyrsi.com/t6/649/1546496652x1822611383.jpg">
-<meta property="og:updated_time" content="2019-01-03T06:32:06.990Z">
+<meta property="og:updated_time" content="2019-01-03T08:26:12.569Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动化测试框架究竟哪家强？">
 <meta name="twitter:description" content="前言自动化测试框架很多，测试人都知道有JUnit、TestNG、Selenium+WebDriver、Appium等。再具体点，如果说通用的测试框架，您可能会想到STAF+STAX；如果说Android App自动化测试框架，除了Appium，您可能还会想到Robotium、Selendroid、ATAF等；如果说API自动化测试框架，您可能会说Postman没有竞争对手；如果说验收测试框架，您可">
-<meta name="twitter:image" content="http://thyrsi.com/t6/649/1546496379x1822611383.jpg">
+<meta name="twitter:image" content="http://thyrsi.com/t6/649/1546503931x2890211750.jpg">
 
 
 
@@ -312,6 +313,7 @@
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自动化测试框架很多，测试人都知道有JUnit、TestNG、Selenium+WebDriver、Appium等。再具体点，如果说通用的测试框架，您可能会想到STAF+STAX；如果说Android App自动化测试框架，除了Appium，您可能还会想到Robotium、Selendroid、ATAF等；如果说API自动化测试框架，您可能会说Postman没有竞争对手；如果说验收测试框架，您可能会想到Fitnesse；如果要说流行的BDD自动化测试框架，Cucumber、Calabash、Jbehave也鼎鼎有名。究竟哪家自动化测试框架最强呢？</p>
 <p>答案是Node.js你一定很惊讶，这哪是测试工具啊，这不就是一个JavaScript引擎吗。其实这指的是Node.js生态。你可以在Node.js中找到各类强大的自动化框架，开源库，能够满足一个精力充沛的IT男对自动化测试的所有狂野的想象。测试的类型从API、Web、手机移动端和Windows应用。其实我们为什么为一些测试工具争个你高我低呢，博采众长、取万物之精华不是更有利吗？Node.js就是这样一个环境，所有优秀的工具都愿意在Node.js社区贡献自己的力量。</p>
 <p>下面我们来看个究竟。</p>
+<p>cucumber<br><img src="http://thyrsi.com/t6/649/1546503931x2890211750.jpg" alt="cucumber"></p>
 <h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><p>例如，如果你要做RESTful API测试，Node.js提供了很多框架，例如Request、Axios、got等，从功能完备的到轻量级的都有。这些框架都有着非常高的人气，例如有图为证，got库最近7天就有300万的下载量，而Request库只会更高：</p>
 <p><img src="http://thyrsi.com/t6/649/1546496379x1822611383.jpg" alt="下载量"></p>
 <h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><p>如果你要做Web UI测试，那可选的就更多了。经典的selenium-webdriver，最近7天也达到了近100万的下载量。还有很多类似于selenium-webdriver的库，如webdriverio，wd等，提供了不同程度的简化。</p>
@@ -322,6 +324,7 @@
 <p><img src="http://thyrsi.com/t6/649/1546497047x1822611383.jpg" alt="webdriverIO"></p>
 <h1 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h1><p>手机移动端测试，就不能不说应用的最广泛的Appium。Appium很大，包含了iOS、Android等系统的自动化测试库。你只要象其它的库一样，在命令行输入”npm install appium”就有了。</p>
 <p>阿里对Node.js有特别的偏爱，做了很多Node.js的开源库，其中Macaca就是阿里发布的针对移动端测试的工具。它也包括Node.js的客户端。可以测试 Native, Hybrid, H5 等多种应用类型，提供客户端工具和持续集成服务。</p>
+<p>实际上webdriverIO也可以应用到移动端，并且也被Appium纳入了官方demo中。</p>
 <p>对于Windows 应用，微软也来支援，发布了WinAppDriver (<a href="https://github.com/Microsoft/WinAppDriver)它可以在Node.js通过WebDriver端直接调用，测试Windows应用。" target="_blank" rel="noopener">https://github.com/Microsoft/WinAppDriver)它可以在Node.js通过WebDriver端直接调用，测试Windows应用。</a></p>
 <h1 id="其它框架"><a href="#其它框架" class="headerlink" title="其它框架"></a>其它框架</h1><p>除了这些提供自动化技术的库，还有一个很重要的部分就是自动化驱动的框架。Node.js提供了很多框架，包括mocha、jasmine、cucumber.js。其中mocha、jasmine既可以适用于自动化单元测试，也可以驱动TDD（测试驱动）、BDD（行为驱动）的开发。而cucumber.js是专业做行为驱动的自动化测试的工具，最近在开源社区很活跃，已经更新到最新的4.0版本。</p>
 <p>测试完了要显示报表，不要急，也有做的足够专业的开源报表显示工具cucumber-html-reporter，能够针对Cucumber.js生成多种格式的报告。</p>
