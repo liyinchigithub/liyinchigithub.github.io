@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前言自动化测试框架很多，测试人都知道有JUnit、TestNG、Selenium+WebDriver、Appium等。再具体点，如果说通用的测试框架，您可能会想到STAF+STAX；如果说Android App自动化测试框架，除了Appium，您可能还会想到Robotium、Selendroid、ATAF等；如果说API自动化测试框架，您可能会说Postman没有竞争对手；如果说验收测试框架，您可">
+<meta name="keywords" content="test autotest java JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动化测试框架究竟哪家强？">
+<meta property="og:url" content="http://yoursite.com/2019/01/03/自动化测试框架究竟哪家强？/index.html">
+<meta property="og:site_name" content="liyinchi">
+<meta property="og:description" content="前言自动化测试框架很多，测试人都知道有JUnit、TestNG、Selenium+WebDriver、Appium等。再具体点，如果说通用的测试框架，您可能会想到STAF+STAX；如果说Android App自动化测试框架，除了Appium，您可能还会想到Robotium、Selendroid、ATAF等；如果说API自动化测试框架，您可能会说Postman没有竞争对手；如果说验收测试框架，您可">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-03T06:17:30.308Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自动化测试框架究竟哪家强？">
+<meta name="twitter:description" content="前言自动化测试框架很多，测试人都知道有JUnit、TestNG、Selenium+WebDriver、Appium等。再具体点，如果说通用的测试框架，您可能会想到STAF+STAX；如果说Android App自动化测试框架，除了Appium，您可能还会想到Robotium、Selendroid、ATAF等；如果说API自动化测试框架，您可能会说Postman没有竞争对手；如果说验收测试框架，您可">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/01/03/自动化测试框架究竟哪家强？/">
+
+
+
+
+
+  <title>自动化测试框架究竟哪家强？ | liyinchi</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">liyinchi</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/03/自动化测试框架究竟哪家强？/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">自动化测试框架究竟哪家强？</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-03T14:13:33+08:00">
+                2019-01-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自动化测试框架很多，测试人都知道有JUnit、TestNG、Selenium+WebDriver、Appium等。再具体点，如果说通用的测试框架，您可能会想到STAF+STAX；如果说Android App自动化测试框架，除了Appium，您可能还会想到Robotium、Selendroid、ATAF等；如果说API自动化测试框架，您可能会说Postman没有竞争对手；如果说验收测试框架，您可能会想到Fitnesse；如果要说流行的BDD自动化测试框架，Cucumber、Calabash、Jbehave也鼎鼎有名。究竟哪家自动化测试框架最强呢？</p>
+<p>答案是Node.js你一定很惊讶，这哪是测试工具啊，这不就是一个JavaScript引擎吗。其实这指的是Node.js生态。你可以在Node.js中找到各类强大的自动化框架，开源库，能够满足一个精力充沛的IT男对自动化测试的所有狂野的想象。测试的类型从API、Web、手机移动端和Windows应用。其实我们为什么为一些测试工具争个你高我低呢，博采众长、取万物之精华不是更有利吗？Node.js就是这样一个环境，所有优秀的工具都愿意在Node.js社区贡献自己的力量。</p>
+<p>下面我们来看个究竟。</p>
+<h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><p>例如，如果你要做RESTful API测试，Node.js提供了很多框架，例如Request、Axios、got等，从功能完备的到轻量级的都有。这些框架都有着非常高的人气，例如有图为证，got库最近7天就有300万的下载量，而Request库只会更高：</p>
+<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><p>如果你要做Web UI测试，那可选的就更多了。经典的selenium-webdriver，最近7天也达到了近100万的下载量。还有很多类似于selenium-webdriver的库，如webdriverio，wd等，提供了不同程度的简化。</p>
+<p>还有一个最近很火的Puppupteer ，是Google Chrome团队开源的端到端自动化测试框架，可以做UI自动化测试，也可以做为爬虫工具。作为Headless方式运行，Puppupteer更快，更省资源，它主要支持nodejs开发脚本。</p>
+<h1 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h1><p>手机移动端测试，就不能不说应用的最广泛的Appium。Appium很大，包含了iOS、Android等系统的自动化测试库。你只要象其它的库一样，在命令行输入”npm install appium”就有了。</p>
+<p>阿里对Node.js有特别的偏爱，做了很多Node.js的开源库，其中Macaca就是阿里发布的针对移动端测试的工具。它也包括Node.js的客户端。可以测试 Native, Hybrid, H5 等多种应用类型，提供客户端工具和持续集成服务。</p>
+<p>对于Windows 应用，微软也来支援，发布了WinAppDriver (<a href="https://github.com/Microsoft/WinAppDriver)它可以在Node.js通过WebDriver端直接调用，测试Windows应用。" target="_blank" rel="noopener">https://github.com/Microsoft/WinAppDriver)它可以在Node.js通过WebDriver端直接调用，测试Windows应用。</a></p>
+<h1 id="其它框架"><a href="#其它框架" class="headerlink" title="其它框架"></a>其它框架</h1><p>除了这些提供自动化技术的库，还有一个很重要的部分就是自动化驱动的框架。Node.js提供了很多框架，包括mocha、jasmine、cucumber.js。其中mocha、jasmine既可以适用于自动化单元测试，也可以驱动TDD（测试驱动）、BDD（行为驱动）的开发。而cucumber.js是专业做行为驱动的自动化测试的工具，最近在开源社区很活跃，已经更新到最新的4.0版本。</p>
+<p>测试完了要显示报表，不要急，也有做的足够专业的开源报表显示工具cucumber-html-reporter，能够针对Cucumber.js生成多种格式的报告。</p>
+<h1 id="JavaScript生态"><a href="#JavaScript生态" class="headerlink" title="JavaScript生态"></a>JavaScript生态</h1><p>在整个Github项目中，用的编程语言最多的就是JavaScript，下面是Github项目中的语言排名。</p>
+<p>俗话说的好，女怕嫁错郎，男怕入错行，而IT男最怕的就是选错技术，选错了技术不但意味着工作选择、薪资都有可能被限制，而且意味着巨大的学习成本的浪费。</p>
+<p>从学习编程以来，本人学了很多的技术都被淘汰了：大学里学Pascal，现在几乎不用了，后来自学了VB，也很少人用了，毕业的时候感潮流学了COM+，现在连微软自己都不用了。网站开发的时候学了ASP、后来用的Silverlight都逐渐被淘汰。测试开发的时候用VBScript（QTP）、C (LoadRunner)现在都越来越不流行。只能kubi的不断的学习。</p>
+<p>而JavaScript从十几年前开始用到现在仍旧不光流行，而且是越来越火，从网页、后端，到跨Windows、Linux平台应用的开发，到开发原生移动端应用都可以用JavaScript搞定。所以现在它成为了全栈工程师的首选。不管你现在是全栈工程师、还是仅仅在做测试，选择JavaScript都能满足需要。如果你对Node.js还有怀疑可以看看这篇文章，了解一下Node.js的强大：</p>
+<p>不只是Web：十大令人振奋的Node.js项目<br><a href="https://cloud.tencent.com/developer/article/1064884" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1064884</a></p>
+<h1 id="工具整合"><a href="#工具整合" class="headerlink" title="工具整合"></a>工具整合</h1><p>综上看来Node.js完全可以满足各类自动化测试的需求。但是还是有很多同学觉得为难，这么多开源工具要整合起来有点难，而且Node.js作为纯命令行工具，也对初学者也不够友好。这种担心是很合理的，这是很多开源工具的都有的问题。</p>
+<p>现在有了一个将所有这些开源工具在一起使用的机会。一个对个人用户都免费的工具，CukeTest，可以将所有这些框架都整合在一起使用。</p>
+<p>不仅因为它具有易于编写测试用例的可视化界面，根据测试用例一键生成自动化测试代码框架，运行完成后自动生成测试报告、web自动化支持屏幕录制功能，同时也支持使用csv文件导入导出功能支持数据驱动。下面就呈上证据：</p>
+<h2 id="1-可视化界面"><a href="#1-可视化界面" class="headerlink" title="1.可视化界面"></a>1.可视化界面</h2><p>不仅可以很方便的编写用例，同时也可以很方便的管理测试用例集；<br>最重要的是可以直接根据测试用例生成自动化代码样例，<br>并且能在自动化代码与测试用例可以自由的相互跳转：</p>
+<h2 id="2-详细的测试报告"><a href="#2-详细的测试报告" class="headerlink" title="2.详细的测试报告"></a>2.详细的测试报告</h2><p>你几乎可以不用定义任何测试报告，运行完项目自动生成测试报告；<br>同时支持多种测试报告模板供选择；测试报告支持导出PDF，邮件发送常用功能：</p>
+<h2 id="3-屏幕录制功能"><a href="#3-屏幕录制功能" class="headerlink" title="3.屏幕录制功能"></a>3.屏幕录制功能</h2><p>Web自动化过程中，只需要在运行配置中开启屏幕录制功能，项目运行中即可自动录制屏幕：</p>
+<h2 id="4-可以与其它框架优雅的结合起来"><a href="#4-可以与其它框架优雅的结合起来" class="headerlink" title="4.可以与其它框架优雅的结合起来"></a>4.可以与其它框架优雅的结合起来</h2><p>CukeTest可以与selenium，appium这些常用的测试框架结合起来一起使用。也可以使用nodejs流行的第三方HTTP库函数进行API自动化测试。<br>所以CukeTest在web，手机端，API的自动化都可以进行。</p>
+<h2 id="5-可以很方便持续集成"><a href="#5-可以很方便持续集成" class="headerlink" title="5.可以很方便持续集成"></a>5.可以很方便持续集成</h2><p>CukeTest支持命令行方式运行脚本，所以可以与所有CI工具一起使用。</p>
+<h2 id="6-CukeTest可以让团队更加敏捷"><a href="#6-CukeTest可以让团队更加敏捷" class="headerlink" title="6.CukeTest可以让团队更加敏捷"></a>6.CukeTest可以让团队更加敏捷</h2><p>使用行为驱动开发，能够开发出大家都看得懂的测试脚本，不管懂不懂编程。而且。使用自然语言将我们的测试用例与自动化代码结合，可以在团队中以用例设计为测试准则，减少团队直接的沟通成本，同时又可以让团队中更多的成员参与进来。</p>
+<p>几乎不用重新造轮子，测试报告，屏幕录像这些操作都给我们提供了，我们只需要关注我们的业务，实现对应的代码既可。最重要的一点，CukeTest还是对所有开源社区和个人使用者是免费的。是的，免费！</p>
+<p>请记住CukeTest只是一个编辑工具、帮助你提高你在Node.js上的开发效率。你开发的自动化脚本仍旧是基于开源框架的，这意味着你仍旧可以不用这个编辑工具，也能运行你的脚本，保持了脚本的独立性。CukeTest可以在cuketest.com网站免费下载，或是在Windows10应用商店免费安装。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Jack Li WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Jack Li Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/01/mockjs/" rel="next" title="mockjs">
+                <i class="fa fa-chevron-left"></i> mockjs
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jack Li</p>
+              <p class="site-description motion-element" itemprop="description">liyinchi personal blog site</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#API"><span class="nav-number">2.</span> <span class="nav-text">API</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web"><span class="nav-number">3.</span> <span class="nav-text">Web</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#移动端"><span class="nav-number">4.</span> <span class="nav-text">移动端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其它框架"><span class="nav-number">5.</span> <span class="nav-text">其它框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript生态"><span class="nav-number">6.</span> <span class="nav-text">JavaScript生态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工具整合"><span class="nav-number">7.</span> <span class="nav-text">工具整合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-可视化界面"><span class="nav-number">7.1.</span> <span class="nav-text">1.可视化界面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-详细的测试报告"><span class="nav-number">7.2.</span> <span class="nav-text">2.详细的测试报告</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-屏幕录制功能"><span class="nav-number">7.3.</span> <span class="nav-text">3.屏幕录制功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-可以与其它框架优雅的结合起来"><span class="nav-number">7.4.</span> <span class="nav-text">4.可以与其它框架优雅的结合起来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-可以很方便持续集成"><span class="nav-number">7.5.</span> <span class="nav-text">5.可以很方便持续集成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-CukeTest可以让团队更加敏捷"><span class="nav-number">7.6.</span> <span class="nav-text">6.CukeTest可以让团队更加敏捷</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jack Li</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
