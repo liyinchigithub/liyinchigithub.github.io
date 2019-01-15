@@ -448,7 +448,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run.bat test\test.1.js</span><br></pre></td></tr></table></figure>
 <p>运行单个脚本</p>
 <p>此处说明下：第二种方式windows平台使用run.bat 而linux平台使用 run.sh 此方法与第一种方式其实一样，只是把命令行封装到bat或sh文件中。</p>
-<h2 id="mobile"><a href="#mobile" class="headerlink" title="mobile"></a>mobile</h2><p>1.环境准备<br>（1）Android平台</p>
+<h2 id="mobile"><a href="#mobile" class="headerlink" title="mobile"></a>mobile</h2><p>1.环境准备</p>
+<p>（1）Android平台</p>
 <p>①JDK（前面步骤我们已配置好）</p>
 <p>②安装macaca<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g macaca-cli</span><br></pre></td></tr></table></figure></p>
 <p>安装成功会显示：</p>
@@ -460,6 +461,7 @@
 <p>下载地址：<a href="https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量" target="_blank" rel="noopener">https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量</a></p>
 <p>【A】PATH中加入%GRADLE_HOME%\bin<br>【B】新增GRADLE_HOME变量，变量值为Gradle存放位置</p>
 <p>（mac直接安装即可）</p>
+<p>（2）iOS平台</p>
 <p>2.录制</p>
 <p>（1）新建一个文件夹，比如命名为Mobile</p>
 <p>（2）终端cd 进入Mobile文件夹内</p>
@@ -492,8 +494,14 @@
 <p>修改后</p>
 <p><img src="http://thyrsi.com/t6/657/1547538393x2728278638.jpg" alt="录制提示"></p>
 <p>3.回放</p>
+<p>（1）使用mocha命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha ./mobile/test/4S金融下单.js --reporter mochawesome</span><br></pre></td></tr></table></figure>
+<p>（2）使用批处理命令</p>
 <p>全部脚本:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">run.sh ( Linux|Mac )</span><br><span class="line">run.bat ( Windows )</span><br></pre></td></tr></table></figure>
+<p>run.sh ( Linux|Mac )</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh run.sh ./mobile/test/4S金融下单.js</span><br></pre></td></tr></table></figure>
+<p>run.bat ( Windows )</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run.bat ./mobile/test/4S金融下单.js</span><br></pre></td></tr></table></figure>
 <p>指定脚本: </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">run.sh sample/test.spec.js ( Linux|Mac ) </span><br><span class="line">run.bat sample/test.spec.js ( Windows )</span><br></pre></td></tr></table></figure>
 <h1 id="高级使用（工具面板）"><a href="#高级使用（工具面板）" class="headerlink" title="高级使用（工具面板）"></a>高级使用（工具面板）</h1><h2 id="属性开关"><a href="#属性开关" class="headerlink" title="属性开关"></a>属性开关</h2><p>进入录制页面后，属性开关全部为默认开启状态，因此在你点击任意DOM时，DomPath会自动选择属性并展示。<br>如下图所示：</p>
