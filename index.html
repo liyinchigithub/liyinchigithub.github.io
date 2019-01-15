@@ -527,6 +527,8 @@
 <p>#比较方式，支持7种类型：equal、notEqual、contain、notContain、above、below、match、notMatch，，根据自己的需要选择。</p>
 <p>#断言结果，填写期望结果</p>
 <p><img src="http://thyrsi.com/t6/657/1547539373x2890211845.jpg" alt="添加断言"></p>
+<p>脚本中设置断言的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//断言是否登录成功</span><br><span class="line">it(&apos;expect: text, //*[@text=&quot;工作台&quot;], equal, 工作台&apos;, async function()&#123;</span><br><span class="line">await driver.sleep(300).wait(&apos;//*[@text=&quot;工作台&quot;]&apos;, 30000)</span><br><span class="line">.text()</span><br><span class="line">.should.not.be.a(&apos;error&apos;)</span><br><span class="line">.should.equal(_(`工作台`));</span><br><span class="line">&#125;);</span><br><span class="line">//等待</span><br></pre></td></tr></table></figure>
 <h2 id="使用变量"><a href="#使用变量" class="headerlink" title="使用变量"></a>使用变量</h2><p>（1）添加变量有2种方式，一种方式是在config.json文件中直接编辑添加，另一种方式是在录制页面，点击使用变量，选择创建变量。</p>
 <p>提示: 所有变量字符串均支持JS语法的模板字符串，例如：, ${new Date().getTime()}</p>
 <p>1）编辑config.json，设置变量。</p>
@@ -549,8 +551,10 @@
 <p><img src="http://thyrsi.com/t6/657/1547540157x2890211845.jpg" alt="执行JS代码"></p>
 <h2 id="添加延迟"><a href="#添加延迟" class="headerlink" title="添加延迟"></a>添加延迟</h2><p>在录制页面，点击添加延迟按钮，可在录制过程中添加延迟时间，在添加延迟弹框中，输入延迟时间，并执行，默认为1000ms。</p>
 <p><img src="http://thyrsi.com/t6/657/1547540212x2890211845.jpg" alt="添加延迟"></p>
+<p>在脚本中设置延迟<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//等待</span><br><span class="line">  it(&apos;sleep: 3000&apos;, async function()&#123;</span><br><span class="line">   await driver.sleep(3000);</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure></p>
 <h2 id="脚本跳转"><a href="#脚本跳转" class="headerlink" title="脚本跳转"></a>脚本跳转</h2><p>录制过程中，可录制一些公用脚本，例如登录脚本、固定流程脚本等等。<br>调用公共脚本方法：在开始页面的时候输入sample/test.login.js，或者在录制中间页面时点击脚本跳转，脚本跳转弹框中输入sample/test.login.js<br>当sample/test.login.js加载完成后，继续别的步骤的录制。</p>
 <p>脚本中设置跳转的方法<br><img src="http://thyrsi.com/t6/657/1547543228x2890149799.jpg" alt="callSpec"></p>
+<p>控制台显示<br><img src="http://thyrsi.com/t6/657/1547545886x2728279033.png" alt="控制台显示"></p>
 <h2 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h2><p>UI Recorder仅支持Native文件上传, 不支持FLASH上传<br>直接点击“选择文件”按钮或点击“Upload file”, 占位按钮必需要用role或data-role标注为upload</p>
 <p><img src="http://thyrsi.com/t6/657/1547540730x2890211845.jpg" alt="上传文件"></p>
 <p>上传的文件必需保存在/uploadfiles/文件夹中。</p>
