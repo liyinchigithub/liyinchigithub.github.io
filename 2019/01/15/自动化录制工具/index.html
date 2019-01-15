@@ -99,8 +99,9 @@
 <meta property="og:image" content="http://thyrsi.com/t6/657/1547521065x2918527038.jpg">
 <meta property="og:image" content="http://thyrsi.com/t6/657/1547520611x2918527038.jpg">
 <meta property="og:image" content="http://thyrsi.com/t6/657/1547521933x2890191853.jpg">
+<meta property="og:image" content="http://thyrsi.com/t6/657/1547522554x2918527038.jpg">
 <meta property="og:image" content="http://thyrsi.com/t6/657/1547522283x2918527038.jpg">
-<meta property="og:updated_time" content="2019-01-15T03:18:27.886Z">
+<meta property="og:updated_time" content="2019-01-15T03:23:18.258Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动化录制工具">
 <meta name="twitter:description" content="简介你想象过可以让任何一个完全没有自动化经验的人，可以1分钟录制出可读性高，且强大的自动化脚本工具吗？ 还真存在这么一款UI自动化录制工具,它就是由alibaba Macaca团队开源的UiRecorder。 这是一款基于WebDriver、Chrome浏览器、NodeJs等方案共同打造的零成本自动化解决方案。 基于几乎零成本的【录制方案】，让所有开发和测试能够最低成本的获得自动化测试的能力，把重">
@@ -457,7 +458,19 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run.bat test\test.1.js</span><br></pre></td></tr></table></figure>
 <p>运行单个脚本</p>
 <p>此处说明下：第二种方式windows平台使用run.bat 而linux平台使用 run.sh 此方法与第一种方式其实一样，只是把命令行封装到bat或sh文件中。</p>
-<h2 id="mobile"><a href="#mobile" class="headerlink" title="mobile"></a>mobile</h2><h1 id="报告"><a href="#报告" class="headerlink" title="报告"></a>报告</h1><p>在目录A下会自动生成一个mochawesome-report文件夹，报告格式有两种,一种html另一种json格式</p>
+<h2 id="mobile"><a href="#mobile" class="headerlink" title="mobile"></a>mobile</h2><p>1.环境准备<br>（1）Android平台</p>
+<p>①JDK（前面步骤我们已配置好）</p>
+<p>②安装macaca<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g macaca-cli</span><br></pre></td></tr></table></figure></p>
+<p>安装成功会显示：</p>
+<p><img src="http://thyrsi.com/t6/657/1547522554x2918527038.jpg" alt=""></p>
+<p><a href="https://macacajs.github.io/zh/guide/recorder.html#%E7%A7%BB%E5%8A%A8%E7%AB%AF" target="_blank" rel="noopener">macaca参考</a></p>
+<p>③Android sdk 环境变量配置</p>
+<p>参考：<a href="https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html</a></p>
+<p>④安装Gradle</p>
+<p>下载地址：<a href="https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量" target="_blank" rel="noopener">https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量</a></p>
+<p>【A】PATH中加入%GRADLE_HOME%\bin<br>【B】新增GRADLE_HOME变量，变量值为Gradle存放位置</p>
+<p>（mac直接安装即可）</p>
+<h1 id="报告"><a href="#报告" class="headerlink" title="报告"></a>报告</h1><p>在目录A下会自动生成一个mochawesome-report文件夹，报告格式有两种,一种html另一种json格式</p>
 <p><img src="http://thyrsi.com/t6/657/1547522283x2918527038.jpg" alt="测试报告"></p>
 
       
