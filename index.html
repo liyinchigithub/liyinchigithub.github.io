@@ -400,6 +400,31 @@
 <p>点击【结束录制】按钮，即可结束录制，自动关闭浏览器</p>
 <p>同时在test目录下生成一个脚本文件，文件名称便是在启用录制时，咱们命名的脚本名称</p>
 <p>终端窗口也会同步显示录制记录结果</p>
+<p><img src="http://thyrsi.com/t6/657/1547520176x2890149799.jpg" alt="终端窗口"></p>
+<p>2.回放脚本</p>
+<p>【第一种回放脚本方式】</p>
+<p>此处说明下：回放脚本借助mocha框架回放js脚本，并生成mochawesome结果报告，所以需要你在之前环境准备过程中安装mochawesome node模块</p>
+<p>①安装mochawesome</p>
+<p>开始-运行-cmd，以管理员身份运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mochawesome -g</span><br></pre></td></tr></table></figure></p>
+<p>②安装selenium-standalone与浏览器驱动</p>
+<p>此处说明下：回放脚本需要启动selenium-standalone服务（实际上我们刚才在uirecorder init 初始化时，已下载安装了selenium-standalone和相关浏览器驱动），启动selenium-standalone服务有两种方式：一种是独立包方式、另一种是全局node模块模式，建议使用全局node模块模式。</p>
+<p>【第一种方式】独立包方式 </p>
+<p>（如果你的浏览器是非安装版，双击即可直接打开，并且浏览器版本和浏览器驱动版本想要固定不变，可以采用这种方式）</p>
+<p>【A】下载selenium-standalone到本地，<a href="https://npm.taobao.org/mirrors/selenium/3.9/" target="_blank" rel="noopener">下载地址</a>(建议放置放录制脚本目录下)</p>
+<p> <img src="http://thyrsi.com/t6/657/1547520979x2918527038.jpg" alt="下载配置"></p>
+<p>【B】启动selenium-server-standalone</p>
+<p> 打开终端窗口：开始-运行-cmd 右击以管理员身份运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd 存放selenium-server-standalone.jar包路径下</span><br></pre></td></tr></table></figure></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar selenium-server-standalone-3.9.1.jar</span><br></pre></td></tr></table></figure>
+<p> <img src="http://thyrsi.com/t6/657/1547521065x2918527038.jpg" alt="启动jar包"></p>
+<p> 【C】下载chromedriver到本地，<a href="https://npm.taobao.org/mirrors/chromedriver" target="_blank" rel="noopener">下载地址</a></p>
+<p> 此处说明下：chromedriver版本与你本地电脑安装的chrome版本需要对应，谷歌官方对应版本查看地址<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads</a></p>
+<p> 不能翻墙可以看<a href="https://blog.csdn.net/yoyocat915/article/details/80580066" target="_blank" rel="noopener">这里</a><br> （我本地chrome浏览器版本是68, 因此下载chromedriver版本应该是2.40）</p>
+<p> 【D】下载后双击打开服务</p>
+<p> <img src="http://thyrsi.com/t6/657/1547520611x2918527038.jpg" alt=""></p>
+<p> 第二种方式：（需要翻墙，翻墙还不一定能成功，访问谷歌官网地址下载超时）</p>
+<p> 全局安装node selenium-standalone模块</p>
+<p> 输入selenium-standalone install &amp;&amp; selenium-standalone start</p>
+<p> 启用服务<br> 输入selenium-standalone start</p>
 <h2 id="mobile"><a href="#mobile" class="headerlink" title="mobile"></a>mobile</h2><p>appium之webdriverIO</p>
 <p>###或者你也可以使用webdriverIO官方推荐运行容器wdio</p>
 <h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><h3 id="restful-api-测试"><a href="#restful-api-测试" class="headerlink" title="restful api 测试"></a>restful api 测试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
