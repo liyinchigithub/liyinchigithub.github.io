@@ -459,6 +459,13 @@
 <p>下载地址：<a href="https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量" target="_blank" rel="noopener">https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量</a></p>
 <p>【A】PATH中加入%GRADLE_HOME%\bin<br>【B】新增GRADLE_HOME变量，变量值为Gradle存放位置</p>
 <p>（mac直接安装即可）</p>
+<p>2.录制</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">uirecorder init --mobile</span><br><span class="line">uirecorder --mobile sample/test.spec.js</span><br></pre></td></tr></table></figure>
+<p>3.回放</p>
+<p>全部脚本:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">run.sh ( Linux|Mac )</span><br><span class="line">run.bat ( Windows )</span><br></pre></td></tr></table></figure>
+<p>指定脚本: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">run.sh sample/test.spec.js ( Linux|Mac ) </span><br><span class="line">run.bat sample/test.spec.js ( Windows )</span><br></pre></td></tr></table></figure>
 <h1 id="高级使用（工具面板）"><a href="#高级使用（工具面板）" class="headerlink" title="高级使用（工具面板）"></a>高级使用（工具面板）</h1><h2 id="属性开关"><a href="#属性开关" class="headerlink" title="属性开关"></a>属性开关</h2><p>进入录制页面后，属性开关全部为默认开启状态，因此在你点击任意DOM时，DomPath会自动选择属性并展示。<br>如下图所示：</p>
 <p>鼠标点击页面DOM“Email:”，DomPath展示为：//td[text()=”Email:”]</p>
 <p>若将属性开关text关闭后，DomPath会自动选择其他属性并展示。(点击属性开关text，text置灰并关闭，再次点击点亮并开启)</p>
@@ -475,7 +482,8 @@
 <p>#断言DOM，显示鼠标定位的元素</p>
 <p>#比较方式，支持7种类型：equal、notEqual、contain、notContain、above、below、match、notMatch，，根据自己的需要选择。</p>
 <p>#断言结果，填写期望结果</p>
-<h2 id="使用变量"><a href="#使用变量" class="headerlink" title="使用变量"></a>使用变量</h2><p>（1）添加变量有2种方式，一种方式是在config.json文件中直接编辑添加，另一种方式是在录制页面，点击使用变量，选择创建变量。<br>提示: 所有变量字符串均支持JS语法的模板字符串，例如：, ${new Date().getTime()}</p>
+<h2 id="使用变量"><a href="#使用变量" class="headerlink" title="使用变量"></a>使用变量</h2><p>（1）添加变量有2种方式，一种方式是在config.json文件中直接编辑添加，另一种方式是在录制页面，点击使用变量，选择创建变量。</p>
+<p>提示: 所有变量字符串均支持JS语法的模板字符串，例如：, ${new Date().getTime()}</p>
 <p>1）编辑config.json，设置变量。<br>如下图：此处设置了4个变量，分别为：username、password、test、dev</p>
 <p>2）在录制页面，创建变量。<br>如下图所示，在录制页面，点击使用变量，弹出使用变量弹窗，使用方式选择为插入变量，变量名，点击添加变量，即可设置变量。</p>
 <p>（2）更新变量，在录制页面，点击使用变量，弹出使用变量弹窗，使用方式选择为更新变量。<br>选择想要更新的变量名username，选择取值方式（与断言方式一致，为12种类型），取值正则，即可更新已有变量。</p>
@@ -495,6 +503,7 @@
 <p>（3）浏览器驱动版本需要与浏览器版本不一致。</p>
 <h1 id="报告"><a href="#报告" class="headerlink" title="报告"></a>报告</h1><p>在目录A下会自动生成一个mochawesome-report文件夹，报告格式有两种,一种html另一种json格式</p>
 <p><img src="http://thyrsi.com/t6/657/1547522283x2918527038.jpg" alt="测试报告"></p>
+<h1 id="中文手册"><a href="#中文手册" class="headerlink" title="中文手册"></a>中文手册</h1><p><a href="https://github.com/alibaba/uirecorder/blob/master/doc/zh-cn/readme.md" target="_blank" rel="noopener">中文手册</a></p>
 
           
         
