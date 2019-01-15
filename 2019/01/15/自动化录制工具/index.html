@@ -102,8 +102,12 @@
 <meta property="og:image" content="http://thyrsi.com/t6/657/1547522554x2918527038.jpg">
 <meta property="og:image" content="http://thyrsi.com/t6/657/1547533368x2728278638.jpg">
 <meta property="og:image" content="http://thyrsi.com/t6/657/1547537859x2728278638.jpg">
+<meta property="og:image" content="http://thyrsi.com/t6/657/1547538081x2728278638.jpg">
+<meta property="og:image" content="http://thyrsi.com/t6/657/1547538185x2728278638.jpg">
+<meta property="og:image" content="http://thyrsi.com/t6/657/1547538379x2728278638.jpg">
+<meta property="og:image" content="http://thyrsi.com/t6/657/1547538393x2728278638.jpg">
 <meta property="og:image" content="http://thyrsi.com/t6/657/1547522283x2918527038.jpg">
-<meta property="og:updated_time" content="2019-01-15T07:38:13.400Z">
+<meta property="og:updated_time" content="2019-01-15T07:46:40.023Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动化录制工具">
 <meta name="twitter:description" content="简介你想象过可以让任何一个完全没有自动化经验的人，可以1分钟录制出可读性高，且强大的自动化脚本工具吗？ 还真存在这么一款UI自动化录制工具,它就是由alibaba Macaca团队开源的UiRecorder。 这是一款基于WebDriver、Chrome浏览器、NodeJs等方案共同打造的零成本自动化解决方案。 基于几乎零成本的【录制方案】，让所有开发和测试能够最低成本的获得自动化测试的能力，把重">
@@ -489,6 +493,21 @@
 <p>【A】输入要进行录制测试包包名</p>
 <p>【B】弹出浏览器，同时手机端弹出app安装（有些手机系统需要输入安装密码执行安装）</p>
 <p><img src="http://thyrsi.com/t6/657/1547537859x2728278638.jpg" alt="输入安装包名称并附带包后缀"></p>
+<p>【C】操作浏览器即可进行录制，录制工具使用方法和web端一样（详见第六部分介绍）</p>
+<p>【D】每录制成功一步，屏幕右上角会有相应提示</p>
+<p><img src="http://thyrsi.com/t6/657/1547538081x2728278638.jpg" alt="录制提示"></p>
+<p>【E】你还可以通过工具面板输入文字、后退、弹窗命令处理、断言、延迟等待、跳转到另一个之前录制的脚本、结束录制</p>
+<p>【F】录制完毕，我们还可以通过编辑器打开Mobile文件夹，修改脚本内容，删除某些录制步骤</p>
+<p><img src="http://thyrsi.com/t6/657/1547538185x2728278638.jpg" alt="录制提示"></p>
+<p>（7）注意事项：某些控件无法录制</p>
+<p>有时候由于控件排版问题，或其他原因导致无法识别到元素，既是uirecorder识别到了，但点击也没反应。</p>
+<p>解决办法：<br>修改脚本，直接在脚本内手动输入该元素（元素定位可以是用appium或者macaca inspect）</p>
+<p>例如：录制某个按钮点击无效</p>
+<p>通过编辑器打开并找到这个脚本位置，修改其元素选择器内容，如：xpath等，并直接执行mocha命令，通过浏览器进行调试。<br>如下图所示：</p>
+<p>修改前</p>
+<p><img src="http://thyrsi.com/t6/657/1547538379x2728278638.jpg" alt="录制提示"></p>
+<p>修改后</p>
+<p><img src="http://thyrsi.com/t6/657/1547538393x2728278638.jpg" alt="录制提示"></p>
 <p>3.回放</p>
 <p>全部脚本:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">run.sh ( Linux|Mac )</span><br><span class="line">run.bat ( Windows )</span><br></pre></td></tr></table></figure>
