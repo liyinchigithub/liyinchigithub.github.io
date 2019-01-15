@@ -459,6 +459,40 @@
 <p>下载地址：<a href="https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量" target="_blank" rel="noopener">https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量</a></p>
 <p>【A】PATH中加入%GRADLE_HOME%\bin<br>【B】新增GRADLE_HOME变量，变量值为Gradle存放位置</p>
 <p>（mac直接安装即可）</p>
+<h1 id="高级使用（工具面板）"><a href="#高级使用（工具面板）" class="headerlink" title="高级使用（工具面板）"></a>高级使用（工具面板）</h1><h2 id="属性开关"><a href="#属性开关" class="headerlink" title="属性开关"></a>属性开关</h2><p>进入录制页面后，属性开关全部为默认开启状态，因此在你点击任意DOM时，DomPath会自动选择属性并展示。<br>如下图所示：</p>
+<p>鼠标点击页面DOM“Email:”，DomPath展示为：//td[text()=”Email:”]</p>
+<p>若将属性开关text关闭后，DomPath会自动选择其他属性并展示。(点击属性开关text，text置灰并关闭，再次点击点亮并开启)</p>
+<p>此处说明下：建议都开启属性开关，避免元素无法定位。</p>
+<h2 id="属性黑名单"><a href="#属性黑名单" class="headerlink" title="属性黑名单"></a>属性黑名单</h2><p>因为某些属性值是随机或不稳定，我们无法录制出稳定的CSS选择器路径，因此我们可以使用黑名单过滤这些属性值。</p>
+<p>提示: 属性黑名单是一个正则表达式, 可以类似这样使用:/attr_\d+/</p>
+<p>a)可以在UI Recorder初始化时，属性值黑名单正则设置时，输入黑名单正则表达式，如：/attr_\d+/</p>
+<p>b)也可以在录制页面，属性黑名单处，输入黑名单正则表达式，如：/attr_\d+/</p>
+<h2 id="添加悬停"><a href="#添加悬停" class="headerlink" title="添加悬停"></a>添加悬停</h2><p>当页面中存在二级目录等类似情况时，需要鼠标悬停操作，UI Recorder就提供了添加悬停操作，可单次悬停或者多次添加悬停。依据需求可自行选择实现方式。<br>a)单次悬停，点击“添加悬停”按钮，鼠标变为绿色锁定元素，单击后结束悬停。</p>
+<p>b)多次添加悬停，按下Ctrl键，点击添加悬停按钮，进入悬停模式，可释放Ctrl键；点击需要悬停的DOM控件(可多次添加悬停)。<br>按下Esc键 或 点击结束悬停按钮, 退出悬停模式。<br>悬停模式下，可对元素进行断言操作，点击添加断言按钮，点击需要断言的DOM控件。</p>
+<h2 id="添加断言"><a href="#添加断言" class="headerlink" title="添加断言"></a>添加断言</h2><p>UI Recorder支持丰富的断言类型: val、text、displayed、enabled、selected、attr、css、url、title、cookie、localStorage、sessionStorage<br>步骤：点击添加断言按钮，点击需要断言的DOM控件。弹出添加断言的窗口，在窗口中填入相关信息。点击确认，添加断言成功。</p>
+<p>#延迟时间，默认为300ms</p>
+<p>#断言类型，支持以上列出的12种类型，根据自己的需要选择。</p>
+<p>#断言DOM，显示鼠标定位的元素</p>
+<p>#比较方式，支持7种类型：equal、notEqual、contain、notContain、above、below、match、notMatch，，根据自己的需要选择。</p>
+<p>#断言结果，填写期望结果</p>
+<h2 id="使用变量"><a href="#使用变量" class="headerlink" title="使用变量"></a>使用变量</h2><p>（1）添加变量有2种方式，一种方式是在config.json文件中直接编辑添加，另一种方式是在录制页面，点击使用变量，选择创建变量。<br>提示: 所有变量字符串均支持JS语法的模板字符串，例如：, ${new Date().getTime()}</p>
+<p>1）编辑config.json，设置变量。<br>如下图：此处设置了4个变量，分别为：username、password、test、dev</p>
+<p>2）在录制页面，创建变量。<br>如下图所示，在录制页面，点击使用变量，弹出使用变量弹窗，使用方式选择为插入变量，变量名，点击添加变量，即可设置变量。</p>
+<p>（2）更新变量，在录制页面，点击使用变量，弹出使用变量弹窗，使用方式选择为更新变量。<br>选择想要更新的变量名username，选择取值方式（与断言方式一致，为12种类型），取值正则，即可更新已有变量。</p>
+<p>（3）使用变量，在录制页面，点击使用变量，鼠标定位需要插入变量的DOM，弹出使用变量弹窗，使用方式选择为插入变量<br>选择想要插入的已有变量名username，页面自动展示username相关信息。</p>
+<p>鼠标定位需要插入变量的DOM为Email的输入框，点击使用变量框的确认按钮，变量添加成功。在输入框中插入该变量username</p>
+<p>插入变量的DOM，若要添加断言，可使用变量字符串:</p>
+<h2 id="执行JS"><a href="#执行JS" class="headerlink" title="执行JS"></a>执行JS</h2><p>在录制页面，点击执行JS按钮，可输入一段js代码，并执行，例：document.title=”test”</p>
+<p>输入js代码后，点击确认，浏览器会立即执行该js代码，如下图，title更改为test。</p>
+<h2 id="添加延迟"><a href="#添加延迟" class="headerlink" title="添加延迟"></a>添加延迟</h2><p>在录制页面，点击添加延迟按钮，可在录制过程中添加延迟时间，在添加延迟弹框中，输入延迟时间，并执行，默认为1000ms。</p>
+<h2 id="脚本跳转"><a href="#脚本跳转" class="headerlink" title="脚本跳转"></a>脚本跳转</h2><p>录制过程中，可录制一些公用脚本，例如登录脚本、固定流程脚本等等。<br>调用公共脚本方法：在开始页面的时候输入sample/test.login.js，或者在录制中间页面时点击脚本跳转，脚本跳转弹框中输入sample/test.login.js<br>当sample/test.login.js加载完成后，继续别的步骤的录制。</p>
+<h2 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h2><p>UI Recorder仅支持Native文件上传, 不支持FLASH上传<br>直接点击“选择文件”按钮或点击“Upload file”, 占位按钮必需要用role或data-role标注为upload</p>
+<p>上传的文件必需保存在/uploadfiles/文件夹中。</p>
+<p>录制中需要注意的事项：</p>
+<h2 id="注意事项与常见问题"><a href="#注意事项与常见问题" class="headerlink" title="注意事项与常见问题"></a>注意事项与常见问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">注意事项：</span><br><span class="line">（1）禁止直接手动修改地址栏中的URL</span><br><span class="line">（2）禁止使用TAB切换焦点</span><br><span class="line">（3）不要使用双击, WebDriver兼容性不好</span><br><span class="line">（4）不要使用鼠标选择部分文本, WebDriver兼容性不好</span><br><span class="line">（5）不要手动切换至背景窗口。（目前最新版貌似没有影响）</span><br><span class="line">（6）不要点击非关键区域, 仅录制关键步骤，不然增加脚本长度</span><br></pre></td></tr></table></figure>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>（1）浏览器驱动chromedriver.exe没有启动</p>
+<p>（2）selenium-server-standalone没有启动</p>
+<p>（3）浏览器驱动版本需要与浏览器版本不一致。</p>
 <h1 id="报告"><a href="#报告" class="headerlink" title="报告"></a>报告</h1><p>在目录A下会自动生成一个mochawesome-report文件夹，报告格式有两种,一种html另一种json格式</p>
 <p><img src="http://thyrsi.com/t6/657/1547522283x2918527038.jpg" alt="测试报告"></p>
 
