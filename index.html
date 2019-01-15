@@ -321,19 +321,26 @@
         
           
             <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>你想象过可以让任何一个完全没有自动化经验的人，可以1分钟录制出可读性高，且强大的自动化脚本工具吗？</p>
-<p>还真存在这么一款UI自动化录制工具====》UiRecorder由alibaba开源出品。</p>
+<p>还真存在这么一款UI自动化录制工具,它就是由alibaba Macaca团队开源的UiRecorder。</p>
 <p>这是一款基于WebDriver、Chrome浏览器、NodeJs等方案共同打造的零成本自动化解决方案。</p>
 <p>基于几乎零成本的【录制方案】，让所有开发和测试能够最低成本的获得自动化测试的能力，把重复又枯燥的测试工作全部交给计算机，彻底的提高测试效率，解放我们的生产力。</p>
 <p>跨平台：适用于Windows、linux、mac</p>
 <p>三端录制：PC、移动端（android、iOS）</p>
-<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p><a href="https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html" target="_blank" rel="noopener">JDK 8.0</a></p>
+<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>安装配置JDK环境变量</p>
+<p><a href="https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html" target="_blank" rel="noopener">JDK 8.0</a></p>
+<p>安装配置Node环境变量</p>
 <p><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">Node.js 10</a></p>
 <p>More info: <a href="https://github.com/alibaba/uirecorder" target="_blank" rel="noopener">uirecorder官网</a></p>
-<h1 id="安装配置"><a href="#安装配置" class="headerlink" title="安装配置"></a>安装配置</h1><h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><p>实际上UiRecorder录制生成的脚本，是一个基于nodejs+mocha+jwebdriver框架的自动化工程，回放脚本是通过执行mocha命令并附带mochawesome报告参数来生成测试报告</p>
-<h2 id="api"><a href="#api" class="headerlink" title="api"></a>api</h2><p>http、request、</p>
+<h1 id="安装UiRecorder"><a href="#安装UiRecorder" class="headerlink" title="安装UiRecorder"></a>安装UiRecorder</h1><h2 id="mocha安装"><a href="#mocha安装" class="headerlink" title="mocha安装"></a>mocha安装</h2><p>（此处说明下：录制的脚本运行环境基于mocha框架，因此需要安装mocha）</p>
+<p>1.全局安装mocha</p>
+<h4 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h4><p>（1）打开终端窗口：开始-运行-cmd 右击以管理员身份运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mocha -g</span><br></pre></td></tr></table></figure>
+<p>（2）安装完成后，配置到系统变量</p>
+<p>打开系统变量path 末尾加入C:\Program Files\nodejs\node_global 确定保存</p>
+<p><img src="http://thyrsi.com/t6/657/1547516883x1822611209.jpg" alt="查看"></p>
+<h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><p>实际上UiRecorder录制生成的脚本，是一个基于nodejs+mocha+jwebdriver框架的自动化工程，回放脚本是通过执行mocha命令并附带mochawesome报告参数来生成测试报告</p>
 <h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><p>webdriverIO、selenium</p>
 <h2 id="mobile"><a href="#mobile" class="headerlink" title="mobile"></a>mobile</h2><p>appium之webdriverIO</p>
-<h2 id="unit-test"><a href="#unit-test" class="headerlink" title="unit test"></a>unit test</h2><p>mocha</p>
 <p>###或者你也可以使用webdriverIO官方推荐运行容器wdio</p>
 <h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><h3 id="restful-api-测试"><a href="#restful-api-测试" class="headerlink" title="restful api 测试"></a>restful api 测试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
 <h3 id="浏览器UI自动化测试"><a href="#浏览器UI自动化测试" class="headerlink" title="浏览器UI自动化测试"></a>浏览器UI自动化测试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">启动selenium-standalone-server</span><br><span class="line"></span><br><span class="line">$ selenium-standalone start</span><br><span class="line"></span><br><span class="line">启动测试脚本</span><br><span class="line"></span><br><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
