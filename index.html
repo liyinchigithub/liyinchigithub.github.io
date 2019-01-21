@@ -1863,9 +1863,10 @@
             <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>android monkey界面工具，快速为测试机界面压力测试。</p>
 <p>你可以从这里下载使用</p>
 <p><a href="https://github.com/liyinchigithub/monkeyGUI" target="_blank" rel="noopener">monkeyGUI</a></p>
-<p><a href="https://pan.baidu.com/s/14KdCklJ3Vybi79FDzCwHYQ" target="_blank" rel="noopener">安装包</a></p>
+<p><a href="https://github.com/liyinchigithub/monkeyGUI/releases" target="_blank" rel="noopener">下载安装包</a></p>
+<p><img src="http://thyrsi.com/t6/660/1548085896x2890211845.jpg" alt="img"></p>
 <p>说明：windows需要使用右击以管理员身份运行</p>
-<h1 id="Version-版本"><a href="#Version-版本" class="headerlink" title="Version 版本"></a>Version 版本</h1><p>V1.0.0（后续会在V2.0.0整合adb常用命令）</p>
+<h1 id="Version-版本"><a href="#Version-版本" class="headerlink" title="Version 版本"></a>Version 版本</h1><p>V2.0.0</p>
 <h1 id="Run-Environment-运行环境依赖"><a href="#Run-Environment-运行环境依赖" class="headerlink" title="Run Environment 运行环境依赖"></a>Run Environment 运行环境依赖</h1><p>本地电脑已配置android SDK及其环境</p>
 <p>参考：</p>
 <p><a href="https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html</a></p>
@@ -1874,14 +1875,22 @@
 <p><strong>运行程序</strong></p>
 <p>npm start 或npm run start</p>
 <p><strong>打包</strong></p>
-<p>npm run pack</p>
-<p><strong>package.json设置</strong></p>
-<p>scripts==》pack</p>
-<p>electron-packager . monkeyGUI –all –out ./打包monkeyGUI –app-version=1.0.0 –electron-version=3.0.7</p>
+<p>#electron-packager<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run pack</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;pack&quot;: &quot;electron-packager . monkeyGUI --all --out ./打包monkeyGUI --app-version=2.0.0 --electron-version=3.0.10 --overwrite --icon=./other/image/logo.ico&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>package.json设置==》scripts==》pack<br>electron-packager . monkeyGUI –all –out ./打包monkeyGUI –app-version=2.0.0 –electron-version=3.0.10</p>
+<p>参数说明：</p>
 <p>–all表示打包所有平台的包（含linux、windows、mac）</p>
-<p><img src="http://thyrsi.com/t6/659/1547805886x2728278638.jpg" alt=""></p>
-<p><img src="http://thyrsi.com/t6/659/1547805937x2728278638.jpg" alt=""></p>
-<p><img src="http://thyrsi.com/t6/659/1547805973x2728278638.jpg" alt=""></p>
+<p>–out打包后输出路径</p>
+<p>–app-version当前应用的版本号</p>
+<p>–electron-version打包环境的electron版本号</p>
+<p>#electron-builder</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dist:mac</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dist:win</span><br></pre></td></tr></table></figure>
+<p>package.json设置==》scripts==》dist:mac、dist:win</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;start&quot;: &quot;electron .&quot;,</span><br><span class="line">  &quot;dist:mac&quot;: &quot;electron-builder --mac&quot;,</span><br><span class="line">  &quot;dist:win&quot;: &quot;electron-builder --win --x64&quot;,</span><br><span class="line">  &quot;dist:linux&quot;:&quot;electron-builder --linux&quot;,</span><br><span class="line">   &quot;pack&quot;: &quot;electron-packager . monkeyGUI --all --out ./打包monkeyGUI --app-version=2.0.0 --electron-version=3.0.10 --overwrite --icon=./other/image/logo.ico&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://thyrsi.com/t6/660/1548049748x2728278638.jpg" alt="img"></p>
+<p><img src="http://thyrsi.com/t6/660/1548049777x2728278638.jpg" alt="img"></p>
+<p><img src="http://thyrsi.com/t6/660/1548049804x2728278638.jpg" alt="img"></p>
 <h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/" target="_blank" rel="noopener">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
 
           
