@@ -822,19 +822,35 @@
 <p><img src="../../images/Uirecorder_images/macaca-logo.jpg" alt="macacalogo"></p>
 <p><a href="https://macacajs.github.io/zh/guide/recorder.html#%E7%A7%BB%E5%8A%A8%E7%AB%AF" target="_blank" rel="noopener">macaca参考</a></p>
 <p>③安装macaca-android</p>
-<p>【A】设置淘宝镜像<br>npm config set registry <a href="http://registry.npm.taobao.org/" target="_blank" rel="noopener">http://registry.npm.taobao.org/</a><br>此处说明：不设置淘宝镜像，node将会从谷歌上面下载相关内容，在没有翻墙前提下，执行下一步【B】将会报超时下载失败。</p>
-<p>【B】执行安装<br>npm i macaca-android -g</p>
-<p>③Android sdk 环境变量配置</p>
+<p>【A】设置淘宝镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry http://registry.npm.taobao.org/</span><br></pre></td></tr></table></figure>
+<p>此处说明：不设置淘宝镜像，node将会从谷歌上面下载相关内容，在没有翻墙前提下，执行下一步【B】将会报超时下载失败。</p>
+<p>【B】执行安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i macaca-android -g</span><br></pre></td></tr></table></figure>
+<p>检查环境</p>
+<p>macaca doctor</p>
+<p> <img src="../../images/Uirecorder_images/35.jpg" alt="img"></p>
+<p>④启动macaca服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">macaca server --port 4444 --verbose</span><br></pre></td></tr></table></figure>
+<p> <img src="../../images/Uirecorder_images/24.jpg" alt="img"></p>
+<p>⑤Android sdk 环境变量配置</p>
 <p>参考：<a href="https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html</a></p>
-<p>④安装Gradle</p>
+<p>⑥安装Gradle</p>
 <p>下载地址：<a href="https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量" target="_blank" rel="noopener">https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量</a></p>
 <p>【A】PATH中加入%GRADLE_HOME%\bin</p>
-<p><img src="../../images/25.jpg" alt="img"></p>
+<p> <img src="../../images/Uirecorder_images/25.jpg" alt="img"></p>
 <p>【B】新增GRADLE_HOME变量，变量值为Gradle存放位置</p>
-<p>【C】检查是否配置成功<br><img src="../../images/26.jpg" alt="img"></p>
+<p>【C】检查是否配置成功<br> <img src="../../images/Uirecorder_images/26.jpg" alt="img"></p>
 <p>（mac直接安装即可）</p>
 <p>（2）iOS平台（需要使用Mac系统）<br>安装配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Xcode</span><br><span class="line">Xcode Command Line Tool</span><br></pre></td></tr></table></figure></p>
-<p>此处说明：<br>①iOS安装包使用格式为.app（不能用.ipa）<br>②iOS需要在mac系统上配置，配置请参考：<br><a href="https://testerhome.com/topics/13273" target="_blank" rel="noopener">https://testerhome.com/topics/13273</a></p>
+<p>此处说明：<br>①iOS安装包使用格式为.app（不能用.ipa）</p>
+<p>②iOS需要在mac系统上配置，配置请参考：<a href="https://testerhome.com/topics/13273" target="_blank" rel="noopener">https://testerhome.com/topics/13273</a></p>
+<p>③安装包使用格式为.apk或.zip(如果是.zip会提示你选择是android还是ios平台的安装包）</p>
+<p>此处说明：如果你是从零开始，环境配置可以参考：</p>
+<p>JDK <a href="https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html</a></p>
+<p>Android SDK <a href="https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html</a></p>
+<p>Android ADB <a href="https://jingyan.baidu.com/article/17bd8e52f514d985ab2bb800.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/17bd8e52f514d985ab2bb800.html</a></p>
+<p>Gradle <a href="https://jingyan.baidu.com/article/73c3ce2816eae9e50343d9fe.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/73c3ce2816eae9e50343d9fe.html</a></p>
 <p>2.录制</p>
 <p>（1）新建一个文件夹，比如命名为Mobile</p>
 <p>（2）终端cd 进入Mobile文件夹内</p>
@@ -844,7 +860,8 @@
 <p> <img src="../../images/Uirecorder_images/27.jpg" alt="img"></p>
 <p> <img src="../../images/Uirecorder_images/31.jpg" alt="img"></p>
 <p>（6）开始录制</p>
-<p>①新建一个文件夹命名为test，用于存放录制的脚本<br>‘<br>②把测试包放入mobile文件夹下</p>
+<p>①新建一个文件夹命名为test，用于存放录制的脚本</p>
+<p>②把测试包放入mobile文件夹下</p>
 <p>此处说明下：<br>【A】android使用.apk格式安装包<br>【B】iOS使用.app格式的安装包（并不能用.ipa格式）</p>
 <p>③uirecorder –mobile test/test.spec.js</p>
 <p>【A】输入要进行录制测试包包名</p>
