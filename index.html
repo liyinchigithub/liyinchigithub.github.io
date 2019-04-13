@@ -154,7 +154,7 @@
     
       <div class="site-meta-headline">
         <a>
-          <img class="custom-logo-image" src="../../images/logo/liyinchi.jpg" alt="liyinchi">
+          <img class="custom-logo-image" src="../../images/Logo/liyinchi.jpg" alt="liyinchi">
         </a>
       </div>
     
@@ -768,19 +768,18 @@
 <p>②安装selenium-standalone与浏览器驱动</p>
 <p>此处说明下：回放脚本需要启动selenium-standalone服务，实际上我们刚才在uirecorder init 初始化时，已下载安装了selenium-standalone和相关浏览器驱动）。</p>
 <p>（启动selenium-standalone服务有两种方式：一种是独立包方式、另一种是全局node模块模式，建议使用全局node模块模式）</p>
-<p>【第一种方式】独立包方式 </p>
+<p>【第一种方式】独立包方式 (优势：可以手动更换浏览器driver)</p>
 <p>（如果你的浏览器是非安装版，双击即可直接打开，并且浏览器版本和浏览器驱动版本想要固定不变，可以采用这种方式）</p>
 <p>【A】下载selenium-standalone到本地，<a href="https://npm.taobao.org/mirrors/selenium/3.9/" target="_blank" rel="noopener">下载地址</a>(建议放置放录制脚本目录下)</p>
-<p> ![selenium-standalone下载]!(<a href="http://i2.bvimg.com/675556/c6239e5265176478.jpg" target="_blank" rel="noopener">http://i2.bvimg.com/675556/c6239e5265176478.jpg</a>)</p>
 <p>【B】启动selenium-server-standalone</p>
 <p> 打开终端窗口：开始-运行-cmd 右击以管理员身份运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd 存放selenium-server-standalone.jar包路径下</span><br></pre></td></tr></table></figure></p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar selenium-server-standalone-3.9.1.jar</span><br></pre></td></tr></table></figure>
-<p><img src="" alt="启动jar包"></p>
+<p> <img src="../../images/25.jpg" alt="img"></p>
 <p> 【C】下载chromedriver到本地，<a href="https://npm.taobao.org/mirrors/chromedriver" target="_blank" rel="noopener">下载地址</a></p>
 <p> 此处说明下：chromedriver版本与你本地电脑安装的chrome版本需要对应，谷歌官方对应版本查看地址<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads</a></p>
 <p> 不能翻墙可以看<a href="https://blog.csdn.net/yoyocat915/article/details/80580066" target="_blank" rel="noopener">这里</a><br> （我本地chrome浏览器版本是68, 因此下载chromedriver版本应该是2.40）</p>
-<p> 【D】下载后双击打开服务</p>
-<p><img src="" alt="启动chromedriver"></p>
+<p> 【D】下载后双击chromedriver打开服务</p>
+<p> <img src="../../images/25.jpg" alt="img"></p>
 <p> 第二种方式：全局安装</p>
 <p> 此处说明：安装前需要设置淘宝镜像，因为chromedriver默认是从谷歌官网下载下来，未设置淘宝镜像会报超时。（如果你有翻墙那是最好，但建议你关闭翻墙代理，使用淘宝镜像地址进行下载）</p>
 <p> 【A】全局安装node selenium-standalone模块</p>
@@ -794,7 +793,6 @@
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha 脚本路径名称 --reporter mochawesome</span><br></pre></td></tr></table></figure>
 <p> 例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha C:\Users\lyc\Desktop\A\test\test.1.js --reporter mochawesome</span><br></pre></td></tr></table></figure>
-<p><img src="../../images/" alt="mocha命令执行回放脚本"></p>
 <p> 此处说明下：回放脚本前，如果你使用独立方式安装selenium-standalone，那么需要开启selenium-server-standalone服务、开启chromedriver服务，且不能关闭。</p>
 <p>【B】运行所有脚本</p>
 <p>开始-运行-cmd，以管理员身份运行</p>
@@ -818,29 +816,29 @@
 <p>参考：<a href="https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html</a></p>
 <p>④安装Gradle</p>
 <p>下载地址：<a href="https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量" target="_blank" rel="noopener">https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量</a></p>
-<p>【A】PATH中加入%GRADLE_HOME%\bin<br>【B】新增GRADLE_HOME变量，变量值为Gradle存放位置</p>
-<p>（mac直接安装即可）</p>
-<p>（2）iOS平台</p>
+<p>【A】PATH中加入%GRADLE_HOME%\bin<br><img src="../../images/25.jpg" alt="img"><br>【B】新增GRADLE_HOME变量，变量值为Gradle存放位置<br><img src="../../images/26.jpg" alt="img"><br>（mac直接安装即可）</p>
+<p>（2）iOS平台（需要使用Mac系统）<br>安装配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Xcode</span><br><span class="line">Xcode Command Line Tool</span><br></pre></td></tr></table></figure></p>
+<p>此处说明：<br>①iOS安装包使用格式为.app（不能用.ipa）<br>②iOS需要在mac系统上配置，配置请参考：<br><a href="https://testerhome.com/topics/13273" target="_blank" rel="noopener">https://testerhome.com/topics/13273</a></p>
 <p>2.录制</p>
 <p>（1）新建一个文件夹，比如命名为Mobile</p>
 <p>（2）终端cd 进入Mobile文件夹内</p>
 <p>（3）uirecorder 初始化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uirecorder init --mobile</span><br></pre></td></tr></table></figure></p>
 <p>（4）提示输入app安装包名（带格式后缀）</p>
 <p>（5）输入安装包回车后，弹出浏览器，开始录制<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uirecorder --mobile sample/test.spec.js</span><br></pre></td></tr></table></figure></p>
-<p>![录制界面]（../../images/）</p>
+<p><img src="../../images/31.jpg" alt="录制界面"></p>
 <p>（6）开始录制</p>
-<p>①新建一个文件夹命名为test，用于存放录制的脚本</p>
-<p>②把测试包放入mobile文件夹下</p>
+<p>①新建一个文件夹命名为test，用于存放录制的脚本<br>‘<br>②把测试包放入mobile文件夹下</p>
+<p>此处说明下：<br>【A】android使用.apk格式安装包<br>【B】iOS使用.app格式的安装包（并不能用.ipa格式）</p>
 <p>③uirecorder –mobile test/test.spec.js</p>
 <p>【A】输入要进行录制测试包包名</p>
 <p>【B】弹出浏览器，同时手机端弹出app安装（有些手机系统需要输入安装密码执行安装）</p>
 <p><img src="../../images/" alt="输入安装包名称并附带包后缀"></p>
 <p>【C】操作浏览器即可进行录制，录制工具使用方法和web端一样（详见第六部分介绍）</p>
 <p>【D】每录制成功一步，屏幕右上角会有相应提示</p>
-<p><img src="../../images/" alt="录制提示"></p>
+<p><img src="../../images/32.jpg" alt="录制提示"></p>
 <p>【E】你还可以通过工具面板输入文字、后退、弹窗命令处理、断言、延迟等待、跳转到另一个之前录制的脚本、结束录制</p>
 <p>【F】录制完毕，我们还可以通过编辑器打开Mobile文件夹，修改脚本内容，删除某些录制步骤</p>
-<p><img src="../../images/" alt="录制提示"></p>
+<p><img src="../../images/33.jpg" alt="录制提示"></p>
 <p>（7）注意事项：某些控件无法录制</p>
 <p>有时候由于控件排版问题，或其他原因导致无法识别到元素，既是uirecorder识别到了，但点击也没反应。</p>
 <p>解决办法：<br>修改脚本，直接在脚本内手动输入该元素（元素定位可以是用appium或者macaca inspect）</p>
