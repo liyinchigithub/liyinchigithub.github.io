@@ -249,6 +249,126 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/" itemprop="url">解决postman无法下载xls并解析下载内容是否正确方案</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-13T14:16:12+08:00">
+                2019-04-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>使用postman做restful api自动化测试，遇到下载excel报表，并需要解析报表内容是否正确？</p>
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//引入接口实现模块</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line"><span class="comment">//引入sheetJS xlsx模块</span></span><br><span class="line"><span class="keyword">var</span> xl = <span class="built_in">require</span>(<span class="string">'xlsx'</span>);</span><br><span class="line"><span class="comment">//引入文件、路径、http请求模块</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>);</span><br><span class="line"><span class="keyword">var</span> request = <span class="built_in">require</span>(<span class="string">'request'</span>);</span><br><span class="line"><span class="comment">// 实例化一个express的对象app</span></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"><span class="comment">// 创建 application/x-www-form-urlencoded 编码解析</span></span><br><span class="line"><span class="keyword">var</span> urlencodedParser = bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">true</span> &#125;)</span><br><span class="line"><span class="comment">// 告诉应用程序中间件，使用外部引入的模块中间件（内置中间件、第三方中间件、自己封装js）</span></span><br><span class="line"><span class="comment">// 开放客户端请求访问public目录下的资源  express.statics()是内置中间件函数，与express.json、express.urlencoder一样都是内置中间件</span></span><br><span class="line">app.use(express.static(__dirname + <span class="string">"/public"</span>), <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"请求地址："</span> + __dirname + <span class="string">"/public"</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'请求时间:'</span>, <span class="keyword">new</span> <span class="built_in">Date</span>());</span><br><span class="line">  <span class="comment">//释放控制权</span></span><br><span class="line">  next();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 为了解析 application/json</span></span><br><span class="line">app.use(bodyParser.json());</span><br><span class="line"><span class="comment">// 跨域设置，对所有http请求均有效</span></span><br><span class="line"><span class="comment">// 自定义跨域中间件</span></span><br><span class="line">app.all(<span class="string">"*"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//响应头</span></span><br><span class="line">  <span class="comment">// res.header("Access-Control-Allow-Credentials", 'true');</span></span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Origin'</span>, <span class="string">'*'</span>);</span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Headers'</span>, <span class="string">'Content-Type,Content-Length,Authorization,Accept,X-Requested-With'</span>);</span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Methods'</span>, <span class="string">'PUT,POST,GET,DELETE,OPTIONS'</span>);</span><br><span class="line">  res.header(<span class="string">"Content-Length"</span>, <span class="string">"2000"</span>);</span><br><span class="line">  res.header(<span class="string">"X-Powered-By"</span>, <span class="string">' 3.2.1'</span>);</span><br><span class="line">  <span class="comment">//  res.header("Content-Type", "application/x-www-form-urlencoded");</span></span><br><span class="line">  res.header(<span class="string">"Content-Type"</span>, <span class="string">"application/json;charset=utf-8"</span>);</span><br><span class="line">  <span class="comment">//控制权交给下一个处理程序</span></span><br><span class="line">  <span class="keyword">if</span> (req.method == <span class="string">'OPTIONS'</span>) &#123;</span><br><span class="line">    <span class="comment">//让options请求快速返回</span></span><br><span class="line">    res.sendStatus(<span class="number">200</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    next();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @description 下载文件</span></span><br><span class="line"><span class="comment"> * @params ''</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">app.post(<span class="string">'/check'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//创建文件夹目录，用于保存下载文件</span></span><br><span class="line">  <span class="keyword">let</span> dirPath = path.join(__dirname, <span class="string">"download_path"</span>);</span><br><span class="line">  <span class="comment">//判断文件夹是否已存在</span></span><br><span class="line">  <span class="keyword">if</span> (!fs.existsSync(dirPath)) &#123;</span><br><span class="line">    fs.mkdirSync(dirPath);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件夹创建成功"</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件夹已存在"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//创建写入流</span></span><br><span class="line">  <span class="keyword">let</span> stream = fs.createWriteStream(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>));</span><br><span class="line">  <span class="comment">//请求参数</span></span><br><span class="line">  <span class="keyword">let</span> options = &#123;</span><br><span class="line">    url: <span class="string">"http://img01"</span> + req.body.testEnvironment + <span class="string">".maimaiche.com/upload/ucvrms/export/16684/"</span> + req.body.fileName + <span class="string">".xls"</span>,</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">//通过request模块，pipe方法将响应结果写入文件流stream中</span></span><br><span class="line">  request(options).pipe(stream).on(<span class="string">"close"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件["</span> + req.body.fileName + <span class="string">".xls]下载完毕"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//获取表内内容</span></span><br><span class="line">  res.send(&#123; <span class="attr">result</span>: <span class="literal">true</span> &#125;)</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//监听端口</span></span><br><span class="line"><span class="keyword">var</span> server = app.listen(<span class="number">8004</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> host = server.address().address</span><br><span class="line">  <span class="keyword">var</span> port = server.address().port</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"应用实例，访问地址为 http://%s:%s"</span>, host, port)</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/02/element-ui/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2239,203 +2359,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/27/express-mysql-restfulAPI/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liyinchi">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/27/express-mysql-restfulAPI/" itemprop="url">express-mysql-restfulAPI</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-27T21:29:39+08:00">
-                2018-12-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>【服务诞生原因】测试人员、开发人员常使用postman进行接口测试，但postman自身无法对mysql数据库进行操作，为了方便测试人员日常使用postman进行接口功能测试、接口自动回归测试，可以通过postman调用操作数据库清除测试数据。其次行业中借助postman调用数据库，使用比较多的是xmysql，但xmysql有个缺点，启用xmysql服务需要写死数据库账号密码，一旦接口地址外泄，对测试结果又一定影响。由此诞生express-mysql-restfulAPI，我为其命名为omysql</p>
-<p>你可以从这里下载使用<a href="https://github.com/liyinchigithub/express-mysql-restfulAPI" target="_blank" rel="noopener">express-mysql-restfulAPI</a></p>
-<h1 id="Version-版本"><a href="#Version-版本" class="headerlink" title="Version 版本"></a>Version 版本</h1><p>V1.0.0</p>
-<h1 id="Run-Environment-运行环境依赖"><a href="#Run-Environment-运行环境依赖" class="headerlink" title="Run Environment 运行环境依赖"></a>Run Environment 运行环境依赖</h1><p>1.安装配置node环境</p>
-<p>node 10及以上</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>windows<br><a href="https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html</a></p>
-<p>mac<br><a href="https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html</a></p>
-<p>2.所运用到的依赖包及版本</p>
-<p>“body-parser”: “^1.18.3”</p>
-<p>“express”: “^4.16.4”</p>
-<p>“mysql”: “^2.16.0”</p>
-<p>“multer”: “^1.4.1”</p>
-<h1 id="Deployment-steps-部署步骤"><a href="#Deployment-steps-部署步骤" class="headerlink" title="Deployment steps 部署步骤"></a>Deployment steps 部署步骤</h1><ol>
-<li><p>npm install  //Installation node operation environment 安装node运行环境</p>
-</li>
-<li><p>npm server.js   //Start 启动，windows写个bat批处理开机启动，linux写个shell脚本开机启动</p>
-</li>
-</ol>
-<p>#目录结构描述</p>
-<p>├── README.md                   // help</p>
-<p>├── server.js                   // server</p>
-<p>├── mysql_demo.js             // mongdb</p>
-<h1 id="V1-0-0-版本内容更新"><a href="#V1-0-0-版本内容更新" class="headerlink" title="V1.0.0 版本内容更新"></a>V1.0.0 版本内容更新</h1><ol>
-<li>功能   创建数据库</li>
-</ol>
-<p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/CreateDB/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/CreateDB/</a></p>
-<p>请求body：{<br>    “host”:”127.0.0.1”,<br>    “user”:”root”,<br>    “password”:”12345678”,<br>    “port”:”3306”,<br>    “query”:”CREATE DATABASE Express_API_DB;”<br>}</p>
-<ol start="2">
-<li>功能   创建表</li>
-</ol>
-<p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/CreateTable/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/CreateTable/</a></p>
-<p>请求body：{<br>    “host”:”127.0.0.1”,<br>    “user”:”root”,<br>    “password”:”12345678”,<br>    “port”:”3306”,<br>    “database”:”Express_API_DB”,<br>    “query”:”CREATE TABLE table4(name VARCHAR(100),id VARCHAR(100),age INT,address VARCHAR(100),tel INT,PRIMARY KEY ( id ))ENGINE=InnoDB DEFAULT CHARSET=utf8;”<br>}</p>
-<ol start="3">
-<li>功能   插入数据</li>
-</ol>
-<p>请求方法：PUT</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/insert_data/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/insert_data/</a></p>
-<p>请求body：{<br>    “host”:”127.0.0.1”,<br>    “user”:”root”,<br>    “password”:”12345678”,<br>    “port”:”3306”,<br>    “database”:”Express_API_DB”,<br>    “addSql”:”INSERT INTO table4(address,age,id,name,tel) VALUES(‘福建省泉州市丰泽区’,19,225,’刘丽丽’,’159115’);”<br>}</p>
-<ol start="4">
-<li>功能   更新数据</li>
-</ol>
-<p>请求方法：PUT</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/update/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/update/</a></p>
-<p>请求body：{<br>    “host”:”127.0.0.1”,<br>    “user”:”root”,<br>    “password”:”12345678”,<br>    “port”:”3306”,<br>    “database”:”Express_API_DB”,<br>    “UpdateSql”:”UPDATE table4 SET address=’福建省厦门市’,age=’17’,id=’123’,name=’赵柳’,tel=’123123’ WHERE name=’刘丽丽’;”<br>}</p>
-<ol start="5">
-<li>功能   删除表数据</li>
-</ol>
-<p>请求方法：DELETE</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/delete/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/delete/</a></p>
-<p>请求body：{<br>    “host”:”127.0.0.1”,<br>    “user”:”root”,<br>    “password”:”12345678”,<br>    “port”:”3306”,<br>    “database”:”Express_API_DB”,<br>    “delSql”:”DELETE FROM table4 where name=’王老五’;”<br>}</p>
-<p>6.功能   删除表</p>
-<p>请求方法：DELETE</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/drop" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/drop</a></p>
-<p>请求body：{<br>    “host”:”127.0.0.1”,<br>    “user”:”root”,<br>    “password”:”12345678”,<br>    “port”:”3306”,<br>    “database”:”Express_API_DB”,<br>    “DropSql”:”DROP TABLE table4;”<br>}</p>
-<p>7.功能   删除数据库</p>
-<p>请求方法：DELETE</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/drop" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/drop</a></p>
-<p>请求body：{<br>    “host”:”127.0.0.1”,<br>    “user”:”root”,<br>    “password”:”12345678”,<br>    “port”:”3306”,<br>    “database”:”Express_API_DB”,<br>    “DropSql”:”DROP DATABASE Express_API_DB;”<br>}</p>
-<p>8.功能   查询条件</p>
-<p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/find" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/find</a></p>
-<p>请求body：{<br>    “host”:”127.0.0.1”,<br>    “user”:”root”,<br>    “password”:”12345678”,<br>    “port”:”3306”,<br>    “database”:”Express_API_DB”,<br>    “findSql”:”SELECT * FROM table4 WHERE name=’赵柳’;”<br>}</p>
-<p>9.功能   查询表内所有数据</p>
-<p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/find" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/find</a></p>
-<p>请求body：{<br>    “host”:”127.0.0.1”,<br>    “user”:”root”,<br>    “password”:”12345678”,<br>    “port”:”3306”,<br>    “database”:”Express_API_DB”,<br>    “findSql”:”SELECT * FROM table4;”<br>}</p>
-<p>10.功能   查询所有数据库</p>
-<p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/show_databases" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/show_databases</a></p>
-<p>请求body：{<br>    “host”:”127.0.0.1”,<br>    “port”:”3306”,<br>    “user”:”root”,<br>    “password”:”12345678”,<br>    “findSql”:”show databases”</p>
-<p>}</p>
-<p>11.功能   查询数据库所有表</p>
-<p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/show_databases" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/show_databases</a></p>
-<p>请求body：{<br>    “host”:”127.0.0.1”,<br>    “port”:”3306”,<br>    “user”:”root”,<br>    “password”:”12345678”,<br>    “database”:”Express_API_DB”,<br>    “findSql”:”show tables”<br>}</p>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/" target="_blank" rel="noopener">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2486,7 +2409,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
