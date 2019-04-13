@@ -592,7 +592,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install uirecorder -g</span><br></pre></td></tr></table></figure>
 <p>（2）检查uirecorder是否安装成功</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uirecorder --version</span><br></pre></td></tr></table></figure>
-<p><img src="../../images/Uirecorder_images/uirecorder--version.png" alt="Markdown"></p>
+<p><img src="../../images/Uirecorder_images/uirecorder--version.jpg" alt="Markdown"></p>
 <h4 id="mac-1"><a href="#mac-1" class="headerlink" title="mac"></a>mac</h4><p>（1）打开终端窗口</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install uirecorder -g</span><br></pre></td></tr></table></figure>
 <p>（2）检查uirecorder是否安装成功</p>
@@ -604,7 +604,7 @@
 <p><a href="https://pc.qq.com/detail/1/detail_2661.html" target="_blank" rel="noopener">下载地址</a></p>
 <p>5.移动端录制需要安装配置环境android SDK 、ios开发工具</p>
 <p>可以参照appium-doctor</p>
-<p><img src="../../images/Uirecorder_images/appium-doctor.png" alt="appium-doctor"></p>
+<p><img src="../../images/Uirecorder_images/appium-doctor.jpg" alt="appium-doctor"></p>
 <h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><p>实际上UiRecorder录制生成的脚本，是一个基于nodejs+mocha+jwebdriver框架的自动化工程，回放脚本是通过执行mocha命令并附带mochawesome报告参数来生成测试报告</p>
 <h1 id="基础操作（录制与回放）"><a href="#基础操作（录制与回放）" class="headerlink" title="基础操作（录制与回放）"></a>基础操作（录制与回放）</h1><h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><p>1.录制</p>
 <p>（1）以文件夹来划分录制项目模块</p>
@@ -616,8 +616,8 @@
 <p>打开终端窗口：开始-运行-cmd 右击以管理员身份运行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd test  </span><br><span class="line">uirecorder init</span><br></pre></td></tr></table></figure>
 <p>此处说明下：uirecorder初始化会自动生成配置文件，建议使用默认配置，一路回车即可。<br>初始化完成后会自动安装相关依赖</p>
-<p><img src="../../images/Uirecorder_images/uirecorder-init.png" alt="初始化"></p>
-<p><img src="../../images/Uirecorder_images/uirecorder-init2.png" alt="自动安装浏览器驱动"></p>
+<p><img src="../../images/Uirecorder_images/uirecorder-init.jpg" alt="初始化"></p>
+<p><img src="../../images/Uirecorder_images/uirecorder-init2.jpg" alt="自动安装浏览器驱动"></p>
 <p>初始化完后当前目录下生成以下文件<br>如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">uirecorder初始化文件夹说明</span><br><span class="line">Commons:公共脚本文件夹</span><br><span class="line">Diffbase:图片对比文件夹</span><br><span class="line">node_modules:node核心文件库</span><br><span class="line">reports:测试报告文件夹</span><br><span class="line">sample:示例脚本目录</span><br><span class="line">screenshots:测试执行截图保存目录</span><br><span class="line">uploadfiles：附件保存文件夹，比如写信页上传附件，要求把附件先放入该目录；</span><br><span class="line">config.Json：运行配置文件，比如IP，浏览器</span><br><span class="line">run.bat：运行测试，执行该命令会运行所有的测试脚本</span><br></pre></td></tr></table></figure>
 <p>（3）录制脚本<br>打开终端窗口：开始-运行-cmd 右击以管理员身份运行</p>
@@ -673,7 +673,7 @@
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha 脚本路径名称 --reporter mochawesome</span><br></pre></td></tr></table></figure>
 <p> 例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha C:\Users\lyc\Desktop\A\test\test.1.js --reporter mochawesome</span><br></pre></td></tr></table></figure>
-<p><img src="http://i2.bvimg.com/675556/fe95fbf6fbc020c7.png" alt="mocha命令执行回放脚本"></p>
+<p><img src="http://i2.bvimg.com/675556/fe95fbf6fbc020c7.jpg" alt="mocha命令执行回放脚本"></p>
 <p> 此处说明下：回放脚本前，如果你使用独立方式安装selenium-standalone，那么需要开启selenium-server-standalone服务、开启chromedriver服务，且不能关闭。</p>
 <p>【B】运行所有脚本</p>
 <p>开始-运行-cmd，以管理员身份运行</p>
@@ -691,7 +691,7 @@
 <p>①JDK（前面步骤我们已配置好）</p>
 <p>②安装macaca<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g macaca-cli</span><br></pre></td></tr></table></figure></p>
 <p>安装成功会显示：</p>
-<p><img src="../../images/Uirecorder_images/macaca-logo.png" alt="macacalogo"></p>
+<p><img src="../../images/Uirecorder_images/macaca-logo.jpg" alt="macacalogo"></p>
 <p><a href="https://macacajs.github.io/zh/guide/recorder.html#%E7%A7%BB%E5%8A%A8%E7%AB%AF" target="_blank" rel="noopener">macaca参考</a></p>
 <p>③Android sdk 环境变量配置</p>
 <p>参考：<a href="https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html</a></p>
