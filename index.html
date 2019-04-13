@@ -862,15 +862,24 @@
 <p>（6）开始录制</p>
 <p>①新建一个文件夹命名为test，用于存放录制的脚本</p>
 <p>②把测试包放入mobile文件夹下</p>
-<p>此处说明下：<br>【A】android使用.apk格式安装包<br>【B】iOS使用.app格式的安装包（并不能用.ipa格式）</p>
+<p>此处说明下：<br>【A】android使用.apk格式安装包</p>
+<p>【B】iOS使用.app格式的安装包（并不能用.ipa格式）</p>
+<p> <img src="../../images/Uirecorder_images/28.jpg" alt="img"></p>
 <p>③uirecorder –mobile test/test.spec.js</p>
+<p>参数说明：<br>–mobile 表示录制移动端</p>
+<p>test表示脚本位于test文件夹</p>
+<p>test.spec 表示用例脚本名称</p>
 <p>【A】输入要进行录制测试包包名</p>
-<p>【B】弹出浏览器，同时手机端弹出app安装（有些手机系统需要输入安装密码执行安装）</p>
-<p><img src="../../images/" alt="输入安装包名称并附带包后缀"></p>
+<p>【B】弹出浏览器，同时手机端弹出app安装（有些手机系统安全机制需要先输入安装密码执行安装，比如vivoX21）</p>
+<p> <img src="../../images/Uirecorder_images/29.jpg" alt="img"></p>
+<p> 如果你使用的是zip压缩包，会提示你选择android还是ios平台</p>
+<p>  <img src="../../images/Uirecorder_images/36.jpg" alt="img"></p>
 <p>【C】操作浏览器即可进行录制，录制工具使用方法和web端一样（详见第六部分介绍）</p>
+<p> <img src="../../images/Uirecorder_images/31.jpg" alt="img"></p>
 <p>【D】每录制成功一步，屏幕右上角会有相应提示</p>
 <p> <img src="../../images/Uirecorder_images/32.jpg" alt="img"></p>
 <p>【E】你还可以通过工具面板输入文字、后退、弹窗命令处理、断言、延迟等待、跳转到另一个之前录制的脚本、结束录制</p>
+<p> <img src="../../images/Uirecorder_images/33.jpg" alt="img"></p>
 <p>【F】录制完毕，我们还可以通过编辑器打开Mobile文件夹，修改脚本内容，删除某些录制步骤</p>
 <p> <img src="../../images/Uirecorder_images/34.jpg" alt="img"></p>
 <p>（7）注意事项：某些控件无法录制</p>
@@ -879,12 +888,15 @@
 <p>例如：录制某个按钮点击无效</p>
 <p>通过编辑器打开并找到这个脚本位置，修改其元素选择器内容，如：xpath等，并直接执行mocha命令，通过浏览器进行调试。<br>如下图所示：</p>
 <p>修改前</p>
-<p> <img src="../../images/Uirecorder_images/.jpg" alt="img"></p>
+<p> <img src="../../images/Uirecorder_images/37.jpg" alt="img"></p>
 <p>修改后</p>
-<p> <img src="../../images/Uirecorder_images/.jpg" alt="img"></p>
+<p> <img src="../../images/Uirecorder_images/38.jpg" alt="img"></p>
 <p>3.回放</p>
-<p>（1）使用mocha命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha ./mobile/test/4S金融下单.js --reporter mochawesome</span><br></pre></td></tr></table></figure>
+<p>（1）使用mocha命令<br>①全部脚本:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha --reporter mochawesome</span><br></pre></td></tr></table></figure>
+<p>②指定脚本:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha ./mobile/test/4S金融下单.js --reporter mochawesome</span><br></pre></td></tr></table></figure></p>
+<p>参数说明：–reporter mochawesome为生成报告参数，执行命令后会在根目录下生成mochawesome报告文件。<br>如下图所示：</p>
+<p> <img src="../../images/Uirecorder_images/39.jpg" alt="img"></p>
 <p>（2）使用批处理命令</p>
 <p>全部脚本:</p>
 <p>run.sh ( Linux|Mac )</p>
