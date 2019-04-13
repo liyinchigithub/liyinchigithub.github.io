@@ -937,53 +937,105 @@
 <p> <img src="../../images/Uirecorder_images/48.jpg" alt="img"></p>
 <p>2）在录制页面，创建变量。</p>
 <p>如下图所示，在录制页面，点击使用变量，弹出使用变量弹窗，使用方式选择为插入变量，变量名，点击添加变量，即可设置变量。</p>
-<p><img src="../../images/" alt="使用变量"></p>
+<p> <img src="../../images/Uirecorder_images/50.jpg" alt="img"></p>
+<p> <img src="../../images/Uirecorder_images/51.jpg" alt="img"></p>
 <p>（2）更新变量，在录制页面，点击使用变量，弹出使用变量弹窗，使用方式选择为更新变量。<br>选择想要更新的变量名username，选择取值方式（与断言方式一致，为12种类型），取值正则，即可更新已有变量。</p>
-<p><img src="../../images/" alt="更新变量"></p>
+<p> <img src="../../images/Uirecorder_images/52.jpg" alt="img"></p>
 <p>（3）使用变量，在录制页面，点击使用变量，鼠标定位需要插入变量的DOM，弹出使用变量弹窗，使用方式选择为插入变量<br>选择想要插入的已有变量名username，页面自动展示username相关信息。</p>
-<p><img src="../../images/" alt="使用变量"></p>
+<p> <img src="../../images/Uirecorder_images/53.jpg" alt="img"></p>
 <p>鼠标定位需要插入变量的DOM为Email的输入框，点击使用变量框的确认按钮，变量添加成功。在输入框中插入该变量username</p>
-<p><img src="../../images/" alt="使用变量"></p>
+<p> <img src="../../images/Uirecorder_images/54.jpg" alt="img"></p>
 <p>插入变量的DOM，若要添加断言，可使用变量字符串:</p>
-<p><img src="../../images/" alt="插入变量的DOM"></p>
+<p> <img src="../../images/Uirecorder_images/55.jpg" alt="img"></p>
 <h2 id="执行JS"><a href="#执行JS" class="headerlink" title="执行JS"></a>执行JS</h2><p>在录制页面，点击执行JS按钮，可输入一段js代码，并执行，例：document.title=”test”</p>
-<p><img src="../../images/" alt="执行JS代码"></p>
+<p> <img src="../../images/Uirecorder_images/56.jpg" alt="img"></p>
 <p>输入js代码后，点击确认，浏览器会立即执行该js代码，如下图，title更改为test。</p>
-<p><img src="../../images/" alt="执行JS代码"></p>
+<p> <img src="../../images/Uirecorder_images/57.jpg" alt="img"></p>
 <h2 id="添加延迟"><a href="#添加延迟" class="headerlink" title="添加延迟"></a>添加延迟</h2><p>在录制页面，点击添加延迟按钮，可在录制过程中添加延迟时间，在添加延迟弹框中，输入延迟时间，并执行，默认为1000ms。</p>
-<p><img src="../../images/" alt="添加延迟"></p>
+<p> <img src="../../images/Uirecorder_images/58.jpg" alt="img"></p>
 <p>在脚本中设置延迟<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//等待</span><br><span class="line">  it(&apos;sleep: 3000&apos;, async function()&#123;</span><br><span class="line">   await driver.sleep(3000);</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure></p>
 <h2 id="脚本跳转"><a href="#脚本跳转" class="headerlink" title="脚本跳转"></a>脚本跳转</h2><p>录制过程中，可录制一些公用脚本，例如登录脚本、固定流程脚本等等。<br>调用公共脚本方法：在开始页面的时候输入sample/test.login.js，或者在录制中间页面时点击脚本跳转，脚本跳转弹框中输入sample/test.login.js<br>当sample/test.login.js加载完成后，继续别的步骤的录制。</p>
+<p> <img src="../../images/Uirecorder_images/59.jpg" alt="img"></p>
 <p>脚本中设置跳转的方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">callSpec(<span class="string">'test/脚本名称.js'</span>)</span><br></pre></td></tr></table></figure></p>
-<p><img src="../../images/" alt="callSpec"></p>
-<p>控制台显示<br><img src="../../images/" alt="控制台显示"></p>
+<p> <img src="../../images/Uirecorder_images/60.jpg" alt="img"></p>
+<p>控制台显示<br> <img src="../../images/Uirecorder_images/61.jpg" alt="img"></p>
 <h2 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h2><p>UI Recorder仅支持Native文件上传, 不支持FLASH上传<br>直接点击“选择文件”按钮或点击“Upload file”, 占位按钮必需要用role或data-role标注为upload</p>
-<p><img src="../../images/" alt="上传文件"></p>
+<p> <img src="../../images/Uirecorder_images/62.jpg" alt="img"></p>
 <p>上传的文件必需保存在/uploadfiles/文件夹中。</p>
-<p><img src="../../images/" alt="上传文件"></p>
-<p>录制中需要注意的事项：</p>
+<p> <img src="../../images/Uirecorder_images/63.jpg" alt="img"></p>
+<h2 id="测试数据和脚本分离"><a href="#测试数据和脚本分离" class="headerlink" title="测试数据和脚本分离"></a>测试数据和脚本分离</h2><p> demo中以json来管理测试数据</p>
+<p>  <img src="../../images/Uirecorder_images/64.jpg" alt="img"></p>
+<p>  <img src="../../images/Uirecorder_images/65.jpg" alt="img"></p>
 <h2 id="脚本修改"><a href="#脚本修改" class="headerlink" title="脚本修改"></a>脚本修改</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//（一）Web</span></span><br><span class="line"><span class="comment">//打开页面</span></span><br><span class="line">it(<span class="string">'url: http://adminpre.alspark.cn/#/login'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.url(_(<span class="string">'xxxxxxx'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//'xxxxxxx' 是一个网页地址,例如http:”www.baidu.com”</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//向下滚动屏幕</span></span><br><span class="line">it(<span class="string">'scrollElementTo: #app div.app-iframe-container, 0, 539'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">300</span>).wait(<span class="string">'#app div.app-iframe-container'</span>, <span class="number">30000</span>)</span><br><span class="line">.sleep(<span class="number">300</span>).scrollElementTo(<span class="number">0</span>, <span class="number">539</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//(0, 539)是滚动的幅度坐标</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//置顶滚动屏幕</span></span><br><span class="line">it(<span class="string">'scrollElementTo: #app div.app-iframe-container, 0, 0'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">300</span>).wait(<span class="string">'#app div.app-iframe-container'</span>, <span class="number">30000</span>)</span><br><span class="line">.sleep(<span class="number">300</span>).scrollElementTo(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//假设从主窗口0点击某个按钮，弹出了一个子窗口1，当前同时存在主窗口0和子窗口1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//切换至子窗口1</span></span><br><span class="line">it(<span class="string">'switchWindow: 1'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">500</span>).switchWindow(<span class="number">1</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//关闭窗口</span></span><br><span class="line">it(<span class="string">'closeWindow: '</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.closeWindow();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//切换到主窗口</span></span><br><span class="line">it(<span class="string">'switchWindow: 0'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">500</span>).switchWindow(<span class="number">0</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//0是主窗口、1是子窗口、之后打开的子窗口以此类推。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//切换到页面iframe</span></span><br><span class="line">it(<span class="string">'switchFrame: #iframe0201000000'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.switchFrame(<span class="literal">null</span>)</span><br><span class="line">.wait(<span class="string">'#iframe0201000000'</span>, <span class="number">30000</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">element</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">this</span>.switchFrame(element).wait(<span class="string">'body'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//切换出iframe 切到null即是且至主页面</span></span><br><span class="line">it(<span class="string">'switchFrame: null'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.switchFrame(<span class="literal">null</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//（二）Mobile</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//点击</span></span><br><span class="line">it(<span class="string">'tap: //*[@resource-id="com.maimaiche.dms:id/start_button"]'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.wait(<span class="string">'//*[@resource-id="com.maimaiche.dms:id/start_button"]'</span>, <span class="number">30000</span>).sendElementActions(<span class="string">'tap'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//输入账号</span></span><br><span class="line">it(<span class="string">'sendKeys: 15022676605'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sendKeys(_(<span class="string">`15022676605`</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//滑动</span></span><br><span class="line">it(<span class="string">'drag: 滑动欢迎页'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sendActions(<span class="string">'drag'</span>, &#123;<span class="attr">fromX</span>: <span class="number">1016</span>, <span class="attr">fromY</span>:<span class="number">1157</span>, <span class="attr">toX</span>:<span class="number">245</span>, <span class="attr">toY</span>:<span class="number">1134</span>, <span class="attr">duration</span>: <span class="number">0.73</span>&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//三）通用</span></span><br><span class="line"><span class="comment">//等待</span></span><br><span class="line">it(<span class="string">'sleep: 3000'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">3000</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//等待页面加载，断言是否出现页面加载错误或者超时等其他情况</span></span><br><span class="line">it(<span class="string">'waitBody: '</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">500</span>).wait(<span class="string">'body'</span>, <span class="number">30000</span>).html().then(<span class="function"><span class="keyword">function</span>(<span class="params">code</span>)</span>&#123;</span><br><span class="line">isPageError(code).should.be.false;</span><br><span class="line">&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//断言是否登录成功</span></span><br><span class="line">it(<span class="string">'expect: text, //*[@text="工作台"], equal, 工作台'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">300</span>).wait(<span class="string">'//*[@text="工作台"]'</span>, <span class="number">30000</span>)</span><br><span class="line">.text()</span><br><span class="line">.should.not.be.a(<span class="string">'error'</span>)</span><br><span class="line">.should.equal(<span class="string">`工作台`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="注意事项与常见问题"><a href="#注意事项与常见问题" class="headerlink" title="注意事项与常见问题"></a>注意事项与常见问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">注意事项：</span><br><span class="line">（1）禁止直接手动修改地址栏中的URL</span><br><span class="line">（2）禁止使用TAB切换焦点</span><br><span class="line">（3）不要使用双击, WebDriver兼容性不好</span><br><span class="line">（4）不要使用鼠标选择部分文本, WebDriver兼容性不好</span><br><span class="line">（5）不要手动切换至背景窗口。（目前最新版貌似没有影响）</span><br><span class="line">（6）不要点击非关键区域, 仅录制关键步骤，不然增加脚本长度</span><br></pre></td></tr></table></figure>
 <h1 id="报告"><a href="#报告" class="headerlink" title="报告"></a>报告</h1><p>在目录A下会自动生成一个mochawesome-report文件夹，报告格式有两种,一种html另一种json格式</p>
 <p> <img src="../../images/Uirecorder_images/22.jpg" alt="img"></p>
 <p> <img src="../../images/Uirecorder_images/23.jpg" alt="img"></p>
-<h2 id="故障排除"><a href="#故障排除" class="headerlink" title="故障排除"></a>故障排除</h2><p>（1）【web端】【已解决】浏览器驱动chromedriver.exe本版本与本地<br>浏览器版本未对应一致</p>
-<p><img src="../../images/" alt="Markdown"></p>
-<p>（2）【移动端】【已解决】macaca server没有启动起来或者启动端口非4444</p>
-<p> <img src="../../images/Uirecorder_images/24.jpg" alt="img"></p>
-<p>（3）【web端】【已解决】selenium-standalone 服务未启动便开始录制。</p>
-<p><img src="../../images/" alt="Markdown"></p>
-<p>（4）【移动端】【已解决】macaca server没有启动，录制、回放都要开启macaca server 端口指向4444</p>
+<h2 id="故障排除"><a href="#故障排除" class="headerlink" title="故障排除"></a>故障排除</h2><p>（1）【环境与安装】【待解决】Node 版本10.13、15 uirecorder 初始化安装依赖会报错<br>解决方案：请使用低与10.13、15版本的node，比如:10.8 版本支持uirecorder<br><a href="https://nodejs.org/zh-cn/download/releases/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/download/releases/</a></p>
+<p>（2）【环境与安装】【已解决】报错SyntaxError: missing ) after argument list<br>解决方案：升级到NodeJs v7.10以上版本</p>
+<p>（3）【环境与安装】【已解决】报错session not created exception from disconnected: unable to connect to renderer<br>解决方案：系统hosts文件中添加127.0.0.1 localhost</p>
+<p>（4）【环境与安装】【已解决】已经存在旧版本部分文件，执行安装报错后，查看版本提示失败。<br>解决方法：<br>node删除文件，重新安装，重新配置node环境。</p>
+<p>（5）权限不够报错</p>
+<p>windows系统特性，需要手动授权C盘的ProgramFiles文件<br>如下图所示：勾掉只读，确定保存</p>
+<p>（6）【环境与安装】【已解决】安装中提示编译失败 缺少websocket</p>
+<p>解决方法：npm i websocket -g </p>
+<p>（7）【环境与安装】【已解决】初始化页面卡住</p>
+<p>解决方法：把node 卸载重装（v.10.8.0）</p>
+<p>目前最新版node（v10.13）和最新版uirecorder（2.5.46）不兼容，需要安装node版本低于10.12版本。</p>
+<p>（8）【环境与安装】【已解决】安装npm i selenium-sandalone -g  超时报错</p>
+<p>解决方案：</p>
+<p>①设置淘宝镜像<br>npm config set registry <a href="http://registry.npm.taobao.org/" target="_blank" rel="noopener">http://registry.npm.taobao.org/</a></p>
+<p>②执行</p>
+<p>【A】卸载之前安装 npm uninstall selenium-sandalone -g</p>
+<p>【B】清缓存 npm cache verify</p>
+<p>【C】重新执行安装 npm install selenium-standalone -g</p>
+<p>（9）Selenium-standalone install 过一会报错</p>
+<p>执行安装命令后</p>
+<p>原因：设置淘宝镜像没有生效，从第一图看出还是在谷歌上面下载驱动，所以超时报错。</p>
+<p>解决方案：</p>
+<p>①将下载链接设置为淘宝镜像，执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set CHROMEDRIVER_CDNURL=http://npm.taobao.org/mirrors/chromedriver</span><br></pre></td></tr></table></figure>
+<p>②管理员账号权限下，执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm info underscore  //生效设置</span><br></pre></td></tr></table></figure></p>
+<p>执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selenium-standalone install --drivers.chrome.version=2.46 --drivers.chrome.baseURL=http://npm.taobao.org/mirrors/chromedriver</span><br></pre></td></tr></table></figure>
+<p>注意chromedriver版本号2.46要和你本地谷歌浏览器对应。<br>（chromedriver版本与chrome浏览器版本对应，参考：<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads</a><br>）</p>
+<p>③执行</p>
+<p>【A】卸载之前安装 npm uninstall selenium-sandalone -g</p>
+<p>【B】清缓存 npm cache verify</p>
+<p>【C】安装 npm install selenium-standalone -g</p>
+<p>【D】安装 selenium-standalone install</p>
+<p>【E】安装 selenium-standalone start</p>
+<p>（10）npm i 或npm install 提示不是内部命令</p>
+<p>解决方案：</p>
+<p>①系统环境变量NODE_PATH路径设置不正确</p>
+<p>②系统环境变量PATH中 nodejs的路径设置不正确</p>
+<p>（11）npm install uirecorder -g安装成功，但是执行uirecorder –version后提示不是内部命令或外部命令<br>解决方案：</p>
+<p>①检查C:/ProgramFiles/nodejs/下是否有uirecorder.cmd文件</p>
+<p>②检查系统环境变量NODE_PATH的路径，并通过文件夹打开进入到该路径下查看是否有uirecorder文件夹。</p>
+<p>以上均没有的话，可能是你node安装位置和环境变量不一致。</p>
+<p>（12）【web端】【已解决】报错ChromeDriverServices\nBuild<br>解决方案：</p>
+<p>①浏览器驱动chromedriver.exe本版本与本地浏览器版本对应一致。</p>
+<p>【A】chromedriver下载地址:<br><a href="https://npm.taobao.org/mirrors/chromedriver/" target="_blank" rel="noopener">https://npm.taobao.org/mirrors/chromedriver/</a></p>
+<p>【B】chromedriver与chrome版本对应地址:<br><a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads</a></p>
+<p>②下载一个独立的chromedriver并设置为本地系统全局变量。</p>
+<p>（13）【web端】【已解决】selenium-standalone 服务未启动便开始录制。</p>
+<p>（14）【web端】【已解决】web录制遇到切换至iframe如果手动更改，需要执行iframe切出，await driver.switchFrame(null);</p>
+<p>（15）【web端】【已解决】web录制弹出子窗口，关闭子窗口会退出录制状态。因此子窗口在录制过程中不要关闭（一旦关闭，之前录的都不会保存）</p>
+<p>（16）【web端】【已解决】web上传文件的附件需要放置在目录uploadfiles下。录制后的脚本会通过这个文件夹去查找是否有这个待上传的文件</p>
+<p>脚本中读取的路径也是从uploadfiles目录中查找</p>
+<p>（17）【web端】【已解决】web上传文件的附件需要放置在目录uploadfiles下。录制后的脚本会通过这个文件夹去查找是否有这个待上传的文件</p>
+<p>（18）【web端】【已解决】web下载文件，浏览器使用chrome不会弹出保存文件弹窗，使用firefox会弹出保存文件弹窗，可以通过firefox设置页修改下载文件保存位置来解决。</p>
+<p>（参考：<a href="https://jingyan.baidu.com/article/9f63fb9171e81bc8400f0e07.html）" target="_blank" rel="noopener">https://jingyan.baidu.com/article/9f63fb9171e81bc8400f0e07.html）</a></p>
+<p>（19）【web端】【已解决】默认录制等待时间最长30秒，有时下载步骤可能会超过30秒，可以修改脚本这边的等待时长，如下图所示：</p>
+<p>（20）【移动端】【已解决】macaca server没有启动起来或者启动端口非4444</p>
+<p>（21）【移动端】【已解决】macaca server没有启动，录制、回放都要开启macaca server 端口指向4444</p>
 <p>macaca server –port 4444 –verbose</p>
-<p><img src="" alt="Markdown"></p>
-<p>（5）【移动端】【待解决】无法输入中文（车码头APP 4S金融下单输入客户名称）</p>
-<p>（6）【移动端】【待解决】移动端无法输入特殊符号。（车码头APP登录账号使用邮箱 ）</p>
-<p>（7）【移动端】【已解决】安装iOS .app测试包报错提示手动安装。（使用.app格式包）</p>
+<p>（22）【移动端】【待解决】无法输入中文（车码头APP 4S金融下单输入客户名称）</p>
+<p>（23）【移动端】【待解决】移动端无法输入特殊符号。（车码头APP登录账号使用邮箱 ）</p>
+<p>（24）【移动端】【已解决】安装iOS .app测试包报错提示手动安装。（使用.app格式包）</p>
 <p>iOS测试包必须是.app格式，如果使用.ipa会报这个错</p>
-<p><img src="../../images/" alt="Markdown"></p>
-<p>（8）【web端】【已解决】web录制遇到切换至iframe如果手动更改，需要执行iframe切出，await driver.switchFrame(null);</p>
-<p>（9）【已解决】报错SyntaxError: missing ) after argument list升级到NodeJs v7.10以上版本；</p>
-<p>（10）【已解决】报错session not created exception from disconnected: unable to connect to renderer，解决方案：系统hosts文件中添加127.0.0.1 localhost</p>
+<p>解决办法：将.ipa改成.app格式。</p>
+<p>①将.ipa格式后缀改成.rar或.zip<br>②解压<br>③进入文件夹，应该是一个.app格式的文件<br>④将这个.app格式的文件压缩成.zip<br>⑤重命名testapp.app.zip</p>
 <h1 id="中文手册"><a href="#中文手册" class="headerlink" title="中文手册"></a>中文手册</h1><p><a href="https://github.com/alibaba/uirecorder/blob/master/doc/zh-cn/readme.md" target="_blank" rel="noopener">中文手册</a></p>
 <h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/" target="_blank" rel="noopener">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
 
