@@ -1,679 +1,1435 @@
 <!DOCTYPE html>
-<!--[if lte IE 8 ]>
-<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--
-***************  *      *     *
-      8          *    *       *
-      8          *  *         *
-      8          **           *
-      8          *  *         *
-      8          *    *       *
-      8          *      *     *
-      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
--->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
-<!--<![endif]-->
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
 
-<head>
+  
   <title>liyinchi</title>
-  <!-- Meta data -->
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="liyinchi">
-    <meta name="author" content="Jack Li  QQ:233227763@qq.com">
-    <meta name="description" content="" />
-    <meta name="keywords" content="test autotest java JavaScript" />
-
-    <!-- Favicon, (keep icon in root folder) -->
-    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="liyinchi personal blog site">
+<meta name="keywords" content="test autotest java JavaScript">
+<meta property="og:type" content="website">
+<meta property="og:title" content="liyinchi">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="liyinchi">
+<meta property="og:description" content="liyinchi personal blog site">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="liyinchi">
+<meta name="twitter:description" content="liyinchi personal blog site">
+  
     <link rel="alternate" href="/atom.xml" title="liyinchi" type="application/atom+xml">
-    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
-    
-    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
-    
-
-    <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
-    <![endif]-->
-
-    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
-    <script src="/js/jquery-1.11.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
-
-    <!-- Load these in the <head> for quicker IE8+ load times -->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <script src="/js/respond.min.js"></script>
-    <![endif]-->
-
   
   
+    <link rel="icon" href="/favicon.png">
   
-
-  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
 </head>
-
-<!--
-<body class="home-template">
--->
-<body id="index" class="lightnav animsition">
-
-      <!-- ============================ Off-canvas navigation =========================== -->
-
-    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
-        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
-            <img src="/img/close.png" alt="Close"/>
-        </div>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu">
-            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
-            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
-            <!-- Dropdown Menu -->
-			 
-            <li>
-                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
-                    
-                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
-                    
-                </ul>
-            </li>
-            
-            
-            
-            <li>
-                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
-                    
-                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
-                    
-                </ul>
-            </li>
-            
-        </ul>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu secondary">
-            
-            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
-            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
-        </ul>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">liyinchi</a>
+      </h1>
+      
     </div>
-    
-    <!-- ============================ END Off-canvas navigation =========================== -->
-
-    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
-
-    <div id="sb-site">
-        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
-
-        <!-- ============================ Header & Logo bar =========================== -->
-
-        <div id="navigation" class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <!-- Nav logo -->
-                    <div class="logo">
-                        <a href="/" title="Logo" class="animsition-link">
-                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
-                        </a>
-                    </div>
-                    <!-- // Nav logo -->
-                    <!-- Info-bar -->
-                    <nav>
-                        <ul class="nav">
-                            <li><a href="/" class="animsition-link">liyinchi</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
-                            
-                            <li><a href="https://github.com/liyinchigithub" title="Github" target="_blank"><i class="icon-github"></i></a></li>
-                            
-                            
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
-                            
-                            
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
-                            
-                            
-                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
-                            
-                            
-                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
-                            
-                            <li class="nolink"><span>Welcome!</span></li>
-                        </ul>
-                    </nav>
-                    <!--// Info-bar -->
-                </div>
-                <!-- // .container -->
-                <div class="learnmore sb-toggle-right">More</div>
-                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar before"></span>
-                <span class="icon-bar main"></span>
-                <span class="icon-bar after"></span>
-                </button>
-            </div>
-            <!-- // .navbar-inner -->
-        </div>
-
-        <!-- ============================ Header & Logo bar =========================== -->
-
-
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
     </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-<!-- ============================ Content =========================== -->
-
-<section id="intro">
-    <div class="container">
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/06/14/Nodemailer/">Nodemailer</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-06-14T09:11:49.000Z" itemprop="datePublished">
-          2019-06-14
-      </time>
-    
-    
-    | 
-    <a href='/tags/Development/'>Development</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        领导让我做一个解析测试报告的程序，将最终结果发邮件给所有相关同事，前期自动化测试都是基于jenkins+gitlab+newman，发送邮件使用的是jenkins配置邮件插件。这次需要借助非jenkins发送邮件，找了很久Nodemailer比较适合。
-1npm i nodemailer
-123456789101112131415161718192021222324252627282930313233343536373839404142
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/06/14/Nodemailer/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/06/14/测试工作管理平台/">测试工作管理平台</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-06-14T07:50:46.000Z" itemprop="datePublished">
-          2019-06-14
-      </time>
-    
-    
-    | 
-    <a href='/tags/Development/'>Development</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        为了更好的管理团队测试工作，项目测试环节风险把控、测试工作饱和度以及测试数据资料维护，自己做了一个这样的工作平台，前端基于vue、后端基于nodejs
-功能介绍一、测试数据统计
- 
-上线而未上线占比、测试人员本月总任务、进行中、已完成、未完成数量、测试人员每人本周目前工时（7.5*5天）
-二、上线记录管理
- 
- 
- 
-统计当前测试部，已上线、进行中、未开始的需求等信息
-三、测试用例管理
- 
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
   
-日常测试用例编写、执行
-四、接口文档管理
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/06/14/测试工作管理平台/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
+    <article id="post-Nodemailer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/14/Nodemailer/" class="article-date">
+  <time datetime="2019-06-14T09:11:49.000Z" itemprop="datePublished">2019-06-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/04/19/场景法设计测试用例/">场景法设计测试用例</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-04-19T03:17:08.000Z" itemprop="datePublished">
-          2019-04-19
-      </time>
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/14/Nodemailer/">Nodemailer</a>
+    </h1>
+  
+
+      </header>
     
-    
-    | 
-    <a href='/tags/AutoTest/'>AutoTest</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        场景法设计测试用例定义1、分析软件应用的场景（使用场景）：
-从用户的角度出发，从场景的角度来设计测试用例，是一种面向用户的测试用例设计方法。
-2、关心用户做什么，而不是关心产品做什么。（功能测试用例相反，更关注产品功能）
-优点实用性强，贴近用户的操作。（功能测试用例相反）
-缺点可能使用的场景不一定能对事件系列进行全面的分析，设计出来的用例不完整。（功能测试用例相反，对每个页面表单控件进行全面分析）
-实例登录
-(1)场景用例：
-合法账号密
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/04/19/场景法设计测试用例/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/">解决postman无法下载xls并解析下载内容是否正确方案</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-04-13T06:16:12.000Z" itemprop="datePublished">
-          2019-04-13
-      </time>
-    
-    
-    | 
-    <a href='/tags/Development/'>Development</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        问题使用postman做restful api自动化测试，遇到下载excel报表，并需要解析报表内容是否正确？
-解决办法借助nodejs后端框架express写一个解析程序：postman客户端请求服务端接口，带上相关参数；服务端下载指定文档，解析文档内容，断言是否和客户端参数一致！
-12345678910111213141516171819202122232425262728293031323334353637383940414243
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/02/02/element-ui/">element-ui</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-02-02T08:43:00.000Z" itemprop="datePublished">
-          2019-02-02
-      </time>
-    
-    
-    | 
-    <a href='/tags/Development/'>Development</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        简介Element UI 是一套采用 Vue 2.0 作为基础框架实现的组件库，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的组件库，提供了配套设计资源，帮助网站快速成型
-组件分页12
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/02/02/element-ui/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/01/25/持续集成之jenkins的Job配置/">持续集成之jenkins的Job配置</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-01-25T10:46:04.000Z" itemprop="datePublished">
-          2019-01-25
-      </time>
-    
-    
-    | 
-    <a href='/tags/AutoTest/'>AutoTest</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        常用配置邮件正文配置1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253 &lt;!DOCTYPE html&gt;    &lt;html&gt;    &lt;head&gt;    &lt;meta charset="UTF-8"&gt;    &lt;title&gt;$&#123;ENV
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/01/25/持续集成之jenkins的Job配置/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/01/15/自动化录制工具/">自动化录制工具</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-01-15T01:30:41.000Z" itemprop="datePublished">
-          2019-01-15
-      </time>
-    
-    
-    | 
-    <a href='/tags/AutoTest/'>AutoTest</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        简介你想象过可以让任何一个完全没有自动化经验的人，可以1分钟录制出可读性高，且强大的自动化脚本工具吗？
-还真存在这么一款UI自动化录制工具,它就是由alibaba Macaca团队开源的UiRecorder。
-这是一款基于WebDriver、Chrome浏览器、NodeJs等方案共同打造的零成本自动化解决方案。
-基于几乎零成本的【录制方案】，让所有开发和测试能够最低成本的获得自动化测试的能力，把重复又枯燥的测试工作全部交给计算机，彻底的
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/01/15/自动化录制工具/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/01/03/自动化测试框架究竟哪家强？/">自动化测试框架究竟哪家强？</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-01-03T06:13:33.000Z" itemprop="datePublished">
-          2019-01-03
-      </time>
-    
-    
-    | 
-    <a href='/tags/AutoTest/'>AutoTest</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        前言自动化测试框架很多，测试人都知道有JUnit、TestNG、Selenium+WebDriver、Appium等。再具体点，如果说通用的测试框架，您可能会想到STAF+STAX；如果说Android App自动化测试框架，除了Appium，您可能还会想到Robotium、Selendroid、ATAF等；如果说API自动化测试框架，您可能会说Postman没有竞争对手；如果说验收测试框架，您可能会想到Fitnesse；如果要说流行的
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/01/03/自动化测试框架究竟哪家强？/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/01/01/mock.js/">mockjs</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-01-01T14:55:06.000Z" itemprop="datePublished">
-          2019-01-01
-      </time>
-    
-    
-    | 
-    <a href='/tags/AutoTest/'>AutoTest</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        开始 &amp; 安装Node (CommonJS) 安装
-npm install mockjs1234567891011// 使用 Mockvar Mock = require('mockjs')var data = Mock.mock(&#123;    // 属性 list 的值是一个数组，其中含有 1 到 10 个元素    'list|1-10': [&#123;        // 属性 id 是一个自增数，起始值为 1，每
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/01/01/mock.js/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/12/28/如何编写README-md？/">如何编写README.md？</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-12-28T03:12:50.000Z" itemprop="datePublished">
-          2018-12-28
-      </time>
-    
-    
-    | 
-    <a href='/tags/Development/'>Development</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        最近对它的README.md文件颇为感兴趣。
-帮助更多的还不会编写README文件的同学们。
-README文件后缀名为md
-md是markdown的缩写，markdown是一种编辑博客的语言。用惯了可视化的博客编辑器（比如CSDN博客，囧），这种编程式的博客编辑方案着实让人眼前一亮。不过GitHub支持的语法在标准markdown语法的基础上做了修改，称为Github Flavored Markdown，简称GFM。可不是GFW呀偷笑。
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/12/28/如何编写README-md？/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <nav class="pagination" role="pagination">
-          
-          <a class="pull-right" href="/page/2/">Older Posts →</a>
-        </nav>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>领导让我做一个解析测试报告的程序，将最终结果发邮件给所有相关同事，前期自动化测试都是基于jenkins+gitlab+newman，发送邮件使用的是jenkins配置邮件插件。<br>这次需要借助非jenkins发送邮件，找了很久Nodemailer比较适合。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i nodemailer</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nodemailer = <span class="built_in">require</span>(<span class="string">"nodemailer"</span>);</span><br><span class="line"><span class="comment">// var smtpTransport = require('nodemailer-smtp-transport');</span></span><br><span class="line"></span><br><span class="line">describe(<span class="string">''</span>, () =&gt; &#123;</span><br><span class="line">    it.skip(<span class="string">'发送邮件'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> transport = nodemailer.createTransport(&#123;</span><br><span class="line">            host: <span class="string">"smtp.qq.com"</span>,<span class="comment">// SMTP 端口</span></span><br><span class="line">            secureConnection: <span class="literal">true</span>,<span class="comment">// 使用 SSL</span></span><br><span class="line">            port: <span class="number">465</span>,</span><br><span class="line">            auth: &#123;</span><br><span class="line">                user: <span class="string">"liyinchi@qq.com"</span>,<span class="comment">//邮箱账号</span></span><br><span class="line">                <span class="comment">//这里密码不是qq密码，是你设置的smtp密码</span></span><br><span class="line">                pass: <span class="string">""</span><span class="comment">//授权码 </span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> mailOptions = &#123;</span><br><span class="line">            <span class="keyword">from</span>: <span class="string">"liyinchi@qq.com"</span>,<span class="comment">// 发件地址</span></span><br><span class="line">            to: <span class="string">"yinchi.li@xxxx.com"</span>,<span class="comment">// 收件列表</span></span><br><span class="line">            <span class="comment">// Subject of the message 邮件主题</span></span><br><span class="line">            subject: <span class="string">'Nodemailer is unicode friendly ✔'</span> + <span class="built_in">Date</span>.now(),<span class="comment">// 标题</span></span><br><span class="line">            <span class="comment">//text和html两者只支持一种</span></span><br><span class="line">            <span class="comment">// 标题 </span></span><br><span class="line">            text: <span class="string">'Hello to myself!'</span>,</span><br><span class="line">            <span class="comment">// html 内容</span></span><br><span class="line">            html: <span class="string">`&lt;p&gt;&lt;b&gt;Hello&lt;/b&gt; to myself &lt;img src="cid:note@example.com"/&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p&gt;Here's a nyan cat for you as an embedded attachment:&lt;br/&gt;&lt;img src="https://www.baidu.com/s?rsv_idx=1&amp;wd=foreach&amp;ie=utf-8&amp;rsv_cq=js+%E6%88%AA%E5%8F%96%E6%95%B0%E7%BB%84&amp;rsv_dl=0_right_recommends_merge_28335&amp;euri=262673"/&gt;&lt;/p&gt;`</span>,</span><br><span class="line">            <span class="comment">// An array of attachments</span></span><br><span class="line">            attachments: [</span><br><span class="line">                <span class="comment">// String attachment 文本附件</span></span><br><span class="line">                &#123;</span><br><span class="line">                    filename: <span class="string">'notes.txt'</span>, <span class="comment">//附件名称，文本格式</span></span><br><span class="line">                    content: <span class="string">'这是在notes.txt的内容'</span>, <span class="comment">//文本中的内容</span></span><br><span class="line">                    contentType: <span class="string">'text/plain'</span> <span class="comment">// 可选，将从文件名中检测到</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="comment">// File Stream attachment</span></span><br><span class="line">                &#123;</span><br><span class="line">                    filename: <span class="string">'cat.jpg'</span>,</span><br><span class="line">                    path: <span class="string">'/Users/liyinchi/workspace/前端/vue/test-file-management-platform/back-end/assets/nyan.jpg'</span>,</span><br><span class="line">                &#125;</span><br><span class="line">            ],</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        transport.sendMail(mailOptions, <span class="function"><span class="keyword">function</span> (<span class="params">err, info,response</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (err) &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(err);</span><br><span class="line">                <span class="built_in">console</span>.log(info.accepted);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(response);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+      
     </div>
-</section>
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
-        </div>
-    </div>
-</section>
-<!-- ============================ END Content =========================== -->
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/06/14/Nodemailer/" data-id="cjymci29d0000px38zbqr8ful" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Development/">Development</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-测试工作管理平台" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/14/测试工作管理平台/" class="article-date">
+  <time datetime="2019-06-14T07:50:46.000Z" itemprop="datePublished">2019-06-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/14/测试工作管理平台/">测试工作管理平台</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>为了更好的管理团队测试工作，项目测试环节风险把控、测试工作饱和度以及测试数据资料维护，自己做了一个这样的工作平台，前端基于vue、后端基于nodejs</p>
+<h1 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h1><p>一、测试数据统计</p>
+<p> <img src="../../images/test-file-manage/1.jpg" alt="img"></p>
+<p>上线而未上线占比、测试人员本月总任务、进行中、已完成、未完成数量、测试人员每人本周目前工时（7.5*5天）</p>
+<p>二、上线记录管理</p>
+<p> <img src="../../images/test-file-manage/2-1.jpg" alt="img"></p>
+<p> <img src="../../images/test-file-manage/2-2.jpg" alt="img"></p>
+<p> <img src="../../images/test-file-manage/2-3.jpg" alt="img"></p>
+<p>统计当前测试部，已上线、进行中、未开始的需求等信息</p>
+<p>三、测试用例管理</p>
+<p> <img src="../../images/test-file-manage/3.jpg" alt="img"></p>
+<p>  <img src="../../images/test-file-manage/3-1.jpg" alt="img"></p>
+<p>日常测试用例编写、执行</p>
+<p>四、接口文档管理</p>
+<p> <img src="../../images/test-file-manage/4-1.jpg" alt="img"></p>
+<p> <img src="../../images/test-file-manage/4-2.jpg" alt="img"></p>
+<p>接口测试文档</p>
+<p>五、测试数据构造</p>
+<p> <img src="../../images/test-file-manage/5.jpg" alt="img"></p>
+<p>日常测试数据构建，便于功能测试，核心封装了几个常用构造测试数据的客户端请求。</p>
+<p>六、测试报告管理</p>
+<p> <img src="../../images/test-file-manage/6.jpg" alt="img"></p>
+<p>同步CI jenkins服务器报告数据，newman接口测试报告、mochawesome UI自动化测试报告</p>
+<p> <img src="../../images/test-file-manage/6-1.jpg" alt="img"></p>
+<p>七、测试文档管理</p>
+<p> <img src="../../images/test-file-manage/7-1.jpg" alt="img"></p>
+<p> <img src="../../images/test-file-manage/7-2.jpg" alt="img"></p>
+<p>保存相关测试文档，目前主要是以测试工具、框架技术资料文档为主</p>
+<p>八、数据库管理</p>
+<p>（一）表结构查看</p>
+<p>通过网页配置好数据库访问参数，快速查看数据表结构（无需安装破解任何数据库客户端软件）</p>
+<p> <img src="../../images/test-file-manage/8-6.jpg" alt="img"></p>
+<p> <img src="../../images/test-file-manage/8-7.jpg" alt="img"></p>
+<p> <img src="../../images/test-file-manage/8-8.jpg" alt="img"></p>
+<p>  <img src="../../images/test-file-manage/8-9.jpg" alt="img"></p>
+<p>（二）命令执行</p>
+<p> <img src="../../images/test-file-manage/8-1.jpg" alt="img"></p>
+<p> <img src="../../images/test-file-manage/8-2.jpg" alt="img"></p>
+<p>日常测试经常使用的数据库命令脚本，可以放在这边管理，用于测试人员学习、使用</p>
+<p> <img src="../../images/test-file-manage/8-3.jpg" alt="img"></p>
+<p>支持页面执行数据库命令脚本</p>
+<p> <img src="../../images/test-file-manage/8-4.jpg" alt="img"></p>
+<p> <img src="../../images/test-file-manage/8-5.jpg" alt="img"></p>
+<p>支持保存执行配置信息</p>
+<p>九、脚本代码管理</p>
+<p> <img src="../../images/test-file-manage/9-1.jpg" alt="img"></p>
+<p> <img src="../../images/test-file-manage/9-2.jpg" alt="img"></p>
+<p>十、产品原型管理</p>
+<p>公司产品经理，可以将原型文档压缩包，通过这个入口上传到服务器，测试、开发人员直接通过点击列表上面相应原型链接访问原型文档，无需再本地化管理原型文档</p>
+<p> <img src="../../images/test-file-manage/10-1.jpg" alt="img"></p>
+<p> <img src="../../images/test-file-manage/10-5.jpg" alt="img"></p>
+<p> 支持上传历史记录，新旧版本都可以快速查看到</p>
+<p> <img src="../../images/test-file-manage/10-2.jpg" alt="img"></p>
+<p> <img src="../../images/test-file-manage/10-3.jpg" alt="img"></p>
+<p> 打开后的原型文档地址，就是平台服务器后台地址</p>
+<p> <img src="../../images/test-file-manage/10-4.jpg" alt="img"></p>
+<p>十一、系统基础数据管理</p>
+<p> <img src="../../images/test-file-manage/10.jpg" alt="img"></p>
+<p>比如：测试人员基础数据，用于其他功能进行选择分配</p>
 
       
-<!-- ============================ Footer =========================== -->
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/06/14/测试工作管理平台/" data-id="cjymci29w000npx38cg9klt20" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Development/">Development</a></li></ul>
 
-<footer>
-    <div class="container">
-            <div class="copy">
-                <p>
-                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Jack Li  QQ:233227763@qq.com. All Rights Reserved.
-                </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
-            </div>
-            <div class="social">
-                <ul>
-                    
-                    <li><a href="https://github.com/liyinchigithub" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
-                    
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-场景法设计测试用例" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/19/场景法设计测试用例/" class="article-date">
+  <time datetime="2019-04-19T03:17:08.000Z" itemprop="datePublished">2019-04-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/19/场景法设计测试用例/">场景法设计测试用例</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="场景法设计测试用例"><a href="#场景法设计测试用例" class="headerlink" title="场景法设计测试用例"></a>场景法设计测试用例</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>1、分析软件应用的场景（使用场景）：</p>
+<p>从用户的角度出发，从场景的角度来设计测试用例，是一种面向用户的测试用例设计方法。</p>
+<p>2、关心用户做什么，而不是关心产品做什么。（功能测试用例相反，更关注产品功能）</p>
+<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><p>实用性强，贴近用户的操作。（功能测试用例相反）</p>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>可能使用的场景不一定能对事件系列进行全面的分析，设计出来的用例不完整。（功能测试用例相反，对每个页面表单控件进行全面分析）</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>登录</p>
+<p>(1)场景用例：</p>
+<p>合法账号密码，能够登录成功。</p>
+<p>合法账号密码，被禁用后再次启用，能够登录成功。</p>
+<p>合法账号密码，重复登录，能够登录成功。</p>
+<p>非法账号密码，无法登录，切换为合法账号密码，能够登录成功。</p>
+<p>（你会发现：从用户层面设计用例）</p>
+<p>(2)功能用例：</p>
+<p>账号输入框支持格式，是否符合需求文档要求</p>
+<p>密码输入框支持格式，是否符合需求文档要求</p>
+<p>登录成功，是否符合需求文档要求</p>
+<p>登录失败，是否符合需求文档要求</p>
+<p>错误信息提示，是否符合需求文档要求。</p>
+<p>（你会发现：从产品层面设计用例，少部分会涉及用户场景）</p>
+<p>我的理解（总结）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">场景分析是通过【描述流经用例路径】来确定的过程。</span><br><span class="line"></span><br><span class="line">这个流经过程要从【用例开始到结束遍历其中所有基本流】 。</span><br><span class="line"></span><br><span class="line">直黑线表示基本流，是最基本、最简单的路径（软件功能按照正确的事件流实现的一条正确流程无任何错，程序从开始直到结束）。</span><br></pre></td></tr></table></figure>
+<p> <img src="../../images/ScenarioCase/1.jpg" alt="img"></p>
+<p>遵循上图中每个经过用例的可能路径，可以确定不同的用例场景。</p>
+<p>从基本流开始，再将基本流和备选流结合起来，可以确定以下用例场景：</p>
+<p>场景1    基本流<br>场景2    基本流    备选流1<br>场景3    基本流    备选流1    备选流2<br>场景4    基本流    备选流3<br>场景5    基本流    备选流3    备选流1<br>场景6    基本流    备选流3    备选流1    备选流2<br>场景7    基本流    备选流4<br>场景8    基本流    备选流3    备选流4     </p>
+<h2 id="用场景分析法设计测试用例的步骤"><a href="#用场景分析法设计测试用例的步骤" class="headerlink" title="用场景分析法设计测试用例的步骤"></a>用场景分析法设计测试用例的步骤</h2><p>1.根据说明，画出流程图（确定基本流和备选流）；</p>
+<p>2.根据基本流和各项备选流确定场景；</p>
+<p>3.对每一个场景生成测试用例；</p>
+<p>4.对生成的所有测试用例重新复审，去掉多余的测试用例，测试用例确定后，对每一个测试用例确定测试数据值。</p>
+<h2 id="用例场景例子"><a href="#用例场景例子" class="headerlink" title="用例场景例子"></a>用例场景例子</h2><p>购书：用户登录到网站后，进行书籍的选择，当选好自己心仪的书籍后进行订购，这时把所需图书放进购物车，等进行结帐的时候，用户需要登录自己注册的帐号，登录成功后，进行付款交易，交易成功后，生成订购单，整个购物过程结束。</p>
+<p>第一步：画出流程图，确定基本流和备选流；</p>
+<p> <img src="../../images/ScenarioCase/2.jpg" alt="img"></p>
+<p>基本流：登录在线网站→选择书籍→放入购物车→登录账号→付款→生成订单</p>
+<p>备选流１：用户不存在→注册用户</p>
+<p>备选流２：密码不正确</p>
+<p>备选流３：账户余额不足→充值</p>
+<p>第二步：根据基本流、备选流确定场景；</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>流</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>场景１（成功购物）</td>
+<td>基本流；</td>
+<td></td>
+</tr>
+<tr>
+<td>场景２（账户不存在）</td>
+<td>基本流、备选流１</td>
+<td></td>
+</tr>
+<tr>
+<td>场景３（账户密码错误）</td>
+<td>基本流、备选流２</td>
+<td></td>
+</tr>
+<tr>
+<td>场景４（账户余额不足）</td>
+<td>基本流、备选流3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>第三步：对每一个场景生成测试用例；</p>
+<p> <img src="../../images/ScenarioCase/3.jpg" alt="img"></p>
+<p>第四步：对生成的所有测试用例重新复审，补充测试数据值；</p>
+<p> <img src="../../images/ScenarioCase/4.jpg" alt="img"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/19/场景法设计测试用例/" data-id="cjymci29r000epx381d99ldew" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AutoTest/">AutoTest</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-解决postman无法下载xls并解析下载内容是否正确方案" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/" class="article-date">
+  <time datetime="2019-04-13T06:16:12.000Z" itemprop="datePublished">2019-04-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/">解决postman无法下载xls并解析下载内容是否正确方案</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>使用postman做restful api自动化测试，遇到下载excel报表，并需要解析报表内容是否正确？</p>
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>借助nodejs后端框架express写一个解析程序：<br>postman客户端请求服务端接口，带上相关参数；<br>服务端下载指定文档，解析文档内容，断言是否和客户端参数一致！</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入接口实现模块</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line"><span class="comment">//引入sheetJS xlsx模块</span></span><br><span class="line"><span class="keyword">var</span> xl = <span class="built_in">require</span>(<span class="string">'xlsx'</span>);</span><br><span class="line"><span class="comment">//引入node-xlsx模块</span></span><br><span class="line"><span class="keyword">var</span> xlsx = <span class="built_in">require</span>(<span class="string">'node-xlsx'</span>);</span><br><span class="line"><span class="comment">//引入文件、路径、http请求模块</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>);</span><br><span class="line"><span class="keyword">var</span> request = <span class="built_in">require</span>(<span class="string">'request'</span>);</span><br><span class="line"><span class="comment">// 实例化一个express的对象app</span></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"><span class="comment">// 创建 application/x-www-form-urlencoded 编码解析</span></span><br><span class="line"><span class="keyword">var</span> urlencodedParser = bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">true</span> &#125;)</span><br><span class="line"><span class="comment">// 告诉应用程序中间件，使用外部引入的模块中间件（内置中间件、第三方中间件、自己封装js）</span></span><br><span class="line"><span class="comment">// 开放客户端请求访问public目录下的资源  express.statics()是内置中间件函数，与express.json、express.urlencoder一样都是内置中间件</span></span><br><span class="line">app.use(express.static(__dirname + <span class="string">"/public"</span>), <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"请求地址："</span> + __dirname + <span class="string">"/public"</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'请求时间:'</span>, <span class="keyword">new</span> <span class="built_in">Date</span>());</span><br><span class="line">  <span class="comment">//释放控制权</span></span><br><span class="line">  next();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 为了解析 application/json</span></span><br><span class="line">app.use(bodyParser.json());</span><br><span class="line"><span class="comment">// 跨域设置，对所有http请求均有效</span></span><br><span class="line"><span class="comment">// 自定义跨域中间件</span></span><br><span class="line">app.all(<span class="string">"*"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//响应头</span></span><br><span class="line">  <span class="comment">// res.header("Access-Control-Allow-Credentials", 'true');</span></span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Origin'</span>, <span class="string">'*'</span>);</span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Headers'</span>, <span class="string">'Content-Type,Content-Length,Authorization,Accept,X-Requested-With'</span>);</span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Methods'</span>, <span class="string">'PUT,POST,GET,DELETE,OPTIONS'</span>);</span><br><span class="line">  res.header(<span class="string">"Content-Length"</span>, <span class="string">"2000"</span>);</span><br><span class="line">  res.header(<span class="string">"X-Powered-By"</span>, <span class="string">' 3.2.1'</span>);</span><br><span class="line">  <span class="comment">//  res.header("Content-Type", "application/x-www-form-urlencoded");</span></span><br><span class="line">  res.header(<span class="string">"Content-Type"</span>, <span class="string">"application/json;charset=utf-8"</span>);</span><br><span class="line">  <span class="comment">//控制权交给下一个处理程序</span></span><br><span class="line">  <span class="keyword">if</span> (req.method == <span class="string">'OPTIONS'</span>) &#123;</span><br><span class="line">    <span class="comment">//让options请求快速返回</span></span><br><span class="line">    res.sendStatus(<span class="number">200</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    next();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @description 下载文件</span></span><br><span class="line"><span class="comment"> * @params ''</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">app.post(<span class="string">'/ExportTheDetailsAndCheckTheContent'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 第一部分：根据请求内容下载指定报表</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="comment">//创建文件夹目录，用于保存下载文件</span></span><br><span class="line">  <span class="keyword">let</span> dirPath = path.join(__dirname, <span class="string">"download_path"</span>);</span><br><span class="line">  <span class="comment">//判断文件夹是否已存在</span></span><br><span class="line">  <span class="keyword">if</span> (!fs.existsSync(dirPath)) &#123;</span><br><span class="line">    fs.mkdirSync(dirPath);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件夹创建成功"</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件夹已存在"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//创建写入流</span></span><br><span class="line">  <span class="keyword">let</span> stream = fs.createWriteStream(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>));</span><br><span class="line">  <span class="comment">//请求参数</span></span><br><span class="line">  <span class="keyword">let</span> options = &#123;</span><br><span class="line">    url: req.body.down_url + req.body.fileName + <span class="string">".xls"</span>,</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">//通过request模块，pipe方法将响应结果写入文件流stream中</span></span><br><span class="line">  request(options).pipe(stream).on(<span class="string">"close"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件["</span> + req.body.fileName + <span class="string">".xls]下载完毕"</span>);</span><br><span class="line">    <span class="comment">//此处特别说明：因为是异步，所以要放在请求下载生成文档之后，再进行解析excel报表</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 第二部分：解析下载报表方法</span></span><br><span class="line"><span class="comment">     * 使用sheetJS xlsx读取工作簿指定工作表的数据</span></span><br><span class="line"><span class="comment">     * @description 获取指定单元格数据</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//workbook 对象，指的是整份 Excel 文档。我们在使用 js-xlsx 读取 Excel 文档之后就会获得 workbook 对象。</span></span><br><span class="line">    <span class="keyword">var</span> workbook = xl.readFile(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>))</span><br><span class="line">    <span class="built_in">console</span>.log(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取 Excel 中所有表名</span></span><br><span class="line">    <span class="keyword">const</span> sheetNames = workbook.SheetNames; <span class="comment">// 返回 ['sheet1', 'sheet2']</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"sheetNames:"</span> + sheetNames);</span><br><span class="line">    <span class="comment">//获取指定工作表数据，返回json数据</span></span><br><span class="line">    <span class="keyword">var</span> first_sheet_name = workbook.SheetNames[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_A2 = <span class="string">'A2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_B2 = <span class="string">'B2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_C2 = <span class="string">'C2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_D2 = <span class="string">'D2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_E2 = <span class="string">'E2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_F2 = <span class="string">'F2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_G2 = <span class="string">'G2'</span>;</span><br><span class="line">    <span class="comment">//获取工作表</span></span><br><span class="line">    <span class="keyword">var</span> worksheet = workbook.Sheets[first_sheet_name];</span><br><span class="line">    <span class="comment">//找到所需的单元格</span></span><br><span class="line">    <span class="keyword">var</span> desired_cell_A2 = worksheet[address_of_cell_A2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_B2 = worksheet[address_of_cell_B2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_C2 = worksheet[address_of_cell_C2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_D2 = worksheet[address_of_cell_D2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_E2 = worksheet[address_of_cell_E2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_F2 = worksheet[address_of_cell_F2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_G2 = worksheet[address_of_cell_G2];</span><br><span class="line">    <span class="comment">//获取值</span></span><br><span class="line">    <span class="keyword">var</span> desired_value_A2 = (desired_cell_A2 ? desired_cell_A2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_B2 = (desired_cell_B2 ? desired_cell_B2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_C2 = (desired_cell_C2 ? desired_cell_C2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_D2 = (desired_cell_D2 ? desired_cell_D2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_E2 = (desired_cell_E2 ? desired_cell_E2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_F2 = (desired_cell_F2 ? desired_cell_F2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_G2 = (desired_cell_G2 ? desired_cell_G2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_A2);<span class="comment">//输出excel单元格A2的数据</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_B2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_C2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_D2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_E2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_F2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_G2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 第二部分：解析下载报表方法</span></span><br><span class="line"><span class="comment">     * 使用node-xlsx</span></span><br><span class="line"><span class="comment">     * @description 获取整个工作簿的数据</span></span><br><span class="line"><span class="comment">     * 格式：[&#123;"name":"表名","data":数据数据</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">var</span> list = xlsx.parse(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>));</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(list[<span class="number">0</span>].data[<span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//将读取的数据返回给客户端</span></span><br><span class="line">    <span class="keyword">if</span> (!err === <span class="literal">null</span>) &#123;</span><br><span class="line">      res.status(<span class="number">500</span>).send(&#123; <span class="attr">data</span>: list &#125;)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      res.status(<span class="number">200</span>).send(&#123; <span class="attr">data</span>: list &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//监听端口</span></span><br><span class="line"><span class="keyword">var</span> server = app.listen(<span class="number">8004</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> host = server.address().address</span><br><span class="line">  <span class="keyword">var</span> port = server.address().port</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"应用实例，访问地址为 http://%s:%s"</span>, host, port)</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>参考链接：<a href="https://blog.csdn.net/q3585914/article/details/70157938" target="_blank" rel="noopener">https://blog.csdn.net/q3585914/article/details/70157938</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/" data-id="cjymci29y000upx38lff8wqca" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Development/">Development</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-element-ui" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/02/element-ui/" class="article-date">
+  <time datetime="2019-02-02T08:43:00.000Z" itemprop="datePublished">2019-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/02/element-ui/">element-ui</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Element UI 是一套采用 Vue 2.0 作为基础框架实现的组件库，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的组件库，提供了配套设计资源，帮助网站快速成型</p>
+<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><h2 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/02/element-ui/" data-id="cjymci29g0002px38o88fsbhe" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Development/">Development</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-持续集成之jenkins的Job配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/25/持续集成之jenkins的Job配置/" class="article-date">
+  <time datetime="2019-01-25T10:46:04.000Z" itemprop="datePublished">2019-01-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/25/持续集成之jenkins的Job配置/">持续集成之jenkins的Job配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="常用配置"><a href="#常用配置" class="headerlink" title="常用配置"></a>常用配置</h1><h2 id="邮件正文配置"><a href="#邮件正文配置" class="headerlink" title="邮件正文配置"></a>邮件正文配置</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">&lt;!DOCTYPE html&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>$&#123;ENV, var="JOB_NAME"&#125;-第$&#123;BUILD_NUMBER&#125;次构建日志<span class="tag">&lt;/<span class="name">title</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>    </span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">leftmargin</span>=<span class="string">"8"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">topmargin</span>=<span class="string">"8"</span> <span class="attr">marginheight</span>=<span class="string">"4"</span>    </span></span><br><span class="line"><span class="tag">    <span class="attr">offset</span>=<span class="string">"0"</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">width</span>=<span class="string">"95%"</span> <span class="attr">cellpadding</span>=<span class="string">"0"</span> <span class="attr">cellspacing</span>=<span class="string">"0"</span>  <span class="attr">style</span>=<span class="string">"font-size: 11pt; font-family: Tahoma, Arial, Helvetica, sans-serif"</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span>    </span><br><span class="line">            本邮件由系统自动发出，无需回复！<span class="tag">&lt;<span class="name">br</span>/&gt;</span>            </span><br><span class="line">            各位同事，大家好，以下为$&#123;PROJECT_NAME &#125;项目构建信息<span class="tag">&lt;/<span class="name">br</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"#000000"</span>&gt;</span>构建结果 - $&#123;BUILD_STATUS&#125;<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span>   </span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span>    </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span>    </span><br><span class="line">            <span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"#0B610B"</span>&gt;</span>构建信息<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span>    </span><br><span class="line">            <span class="tag">&lt;<span class="name">hr</span> <span class="attr">size</span>=<span class="string">"2"</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">align</span>=<span class="string">"center"</span> /&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span>    </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>    </span><br><span class="line">                <span class="tag">&lt;<span class="name">ul</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>项目名称 ： $&#123;PROJECT_NAME&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>构建编号 ： 第$&#123;BUILD_NUMBER&#125;次构建<span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>触发原因： $&#123;CAUSE&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>构建状态： $&#123;BUILD_STATUS&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>构建日志： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/$&#123;BUILD_ID&#125;/console"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/$&#123;BUILD_ID&#125;/console<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>构建  Url ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>工作目录 ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;、ws"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/ws<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>项目  Url ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;"</span>&gt;</span>$&#123;JENKINS_URL&#125;jenkins/job/$&#123;JOB_NAME&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>本次构建脚本：$&#123;script&#125; <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>本次构建环境：$&#123;env&#125; <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>具体报告内容  Url ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/HTML_20Report/$&#123;JOB_NAME&#125;-$&#123;env&#125;-$&#123;BUILD_ID&#125;-index.htm"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/HTML_20Report/$&#123;JOB_NAME&#125;-$&#123;env&#125;-$&#123;BUILD_ID&#125;-index.htm<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </span><br><span class="line">               <span class="tag">&lt;<span class="name">li</span>&gt;</span>聚合报告  Url ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://10.104.113.228:8080/system/#/"</span>&gt;</span>http://10.104.113.228:8080/system/#/<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </span><br><span class="line">                <span class="tag">&lt;/<span class="name">ul</span>&gt;</span>    </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"#0B610B"</span>&gt;</span>失败用例<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> <span class="attr">size</span>=<span class="string">"2"</span> <span class="attr">width</span>=<span class="string">"100%"</span> /&gt;</span></span><br><span class="line">详见附件build.log<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"#0B610B"</span>&gt;</span>最近提交(#GITLAB_REVISION)<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> <span class="attr">size</span>=<span class="string">"2"</span> <span class="attr">width</span>=<span class="string">"100%"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">$&#123;CHANGES_SINCE_LAST_SUCCESS, reverse=true, format="%c", changesFormat="<span class="tag">&lt;<span class="name">li</span>&gt;</span>%d [%a] %m<span class="tag">&lt;/<span class="name">li</span>&gt;</span>"&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">详细提交: <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;changes"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/changes<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>参数化构建使用扩展参数插件（Extended choice parameter)</p>
+<p>Choose Source for Value </p>
+<p>Groovy script</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//读取目录结构</span></span><br><span class="line"><span class="keyword">def</span> locat = <span class="string">"/data/jenkins/workspace/资产售后-流程脚本/脚本"</span></span><br><span class="line"><span class="keyword">def</span> dir = <span class="keyword">new</span> File(locat)</span><br><span class="line">Set&lt;String&gt; artifacts = <span class="keyword">new</span> TreeSet&lt;String&gt;()</span><br><span class="line">dir.eachDir &#123; directory -&gt;</span><br><span class="line">    <span class="keyword">if</span> (directory.absolutePath.contains(<span class="string">"postman"</span>) || directory.absolutePath.contains(<span class="string">"jmeter"</span>)) &#123;</span><br><span class="line">        <span class="keyword">for</span> (File <span class="string">f :</span> directory.listFiles()) &#123;</span><br><span class="line">            String script = f.getAbsolutePath()</span><br><span class="line">            artifacts.add(script)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">List&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;String&gt;()</span><br><span class="line">result.addAll(artifacts)</span><br><span class="line"><span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
+<p>可以获取以文件夹命名存放的脚本名称，作为jenkins参数来选择，用于构建jenkins job</p>
+<p> <img src="../../images/jenkins/1.jpg" alt="img"></p>
+<h2 id="shell脚本获取文件件目录"><a href="#shell脚本获取文件件目录" class="headerlink" title=" shell脚本获取文件件目录"></a> shell脚本获取文件件目录</h2><p>获取postman或jmeter下的脚本内容</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/usr/bin/env bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash">获取执行脚本集合</span></span><br><span class="line">arr=($&#123;script//,/ &#125;)</span><br><span class="line"><span class="meta">#</span><span class="bash">调试输出每个集合元素</span></span><br><span class="line">echo -----$&#123;arr[@]&#125;</span><br><span class="line"><span class="meta">#</span><span class="bash">获取集合元素个数</span></span><br><span class="line">length=$&#123;#arr[@]&#125;</span><br><span class="line"><span class="meta">#</span><span class="bash">判断个数是否大于0，相当于判断jenkins界面脚本文件夹参数<span class="variable">$script</span>是否勾选了</span></span><br><span class="line">if [ $length &gt; 0 ]</span><br><span class="line">then</span><br><span class="line"><span class="meta">  #</span><span class="bash">循环调用执行postman/jmeter脚本</span></span><br><span class="line">  for i in $&#123;arr[@]&#125;; do</span><br><span class="line">      # =~代表正则匹配</span><br><span class="line">      if [[ $i =~ postman ]]</span><br><span class="line">      then</span><br><span class="line">        # ls 返回目录下的所有文件</span><br><span class="line">        files=$(ls $i)</span><br><span class="line">        #遍历所有的文件夹</span><br><span class="line">        for j in $files</span><br><span class="line">        do</span><br><span class="line">          # if [ -z $String ] 代表如果字符串为空  这边只运行$testFilesIncluded所包含的文件（有配置的情况）和只获取后缀为postman_collection.json的文件</span><br><span class="line">          if ( [ -z "$testFilesIncluded"] || [[ $testFilesIncluded == *$j* ]] ) &amp;&amp; [[ $j == *.postman_collection.json ]]</span><br><span class="line">          then</span><br><span class="line">            # % 去除最短的向后匹配 %%去除最长的向后匹配 #去除最短的向前匹配 ##去除最长的向前匹配 eg:http://landoflinux.com/linux_bash_scripting_substring_tests.html</span><br><span class="line">            envPrefix=$&#123;j%.postman_collection.json&#125;</span><br><span class="line">            reportPrefix=$&#123;envPrefix&#125;</span><br><span class="line">            # newman 运行脚本文件 输出cli和html的测试报告</span><br><span class="line">             #切换当前目录到$WORKSPACE</span><br><span class="line">             cd $&#123;WORKSPACE&#125;</span><br><span class="line">             #执行newman命令，其中报告输出位置文件名使用到变量。当前shell脚本定义的变量：$&#123;reportPrefix&#125;；jenkins用户自定义变量：$&#123;env&#125;；jenkins系统变量：$&#123;JOB_NAME&#125;、$&#123;BUILD_ID&#125;；</span><br><span class="line">            newman run $i/$j -e $i/$&#123;env&#125;.postman_environment.json --delay-request 1000 --reporters cli,html,json,junit --reporter-json-export $&#123;BUILD_ID&#125;"-"jsonOut.json --reporter-junit-export $&#123;BUILD_ID&#125;"-"xmlOut.xml --reporter-html-export $&#123;JOB_NAME&#125;"-"$&#123;env&#125;"-"$&#123;BUILD_ID&#125;"-"index.htm</span><br><span class="line">          fi</span><br><span class="line">        done</span><br><span class="line"></span><br><span class="line">      fi</span><br><span class="line">  done</span><br><span class="line"></span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/25/持续集成之jenkins的Job配置/" data-id="cjymci29v000kpx38hdsxrv0c" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AutoTest/">AutoTest</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-自动化录制工具" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/15/自动化录制工具/" class="article-date">
+  <time datetime="2019-01-15T01:30:41.000Z" itemprop="datePublished">2019-01-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/15/自动化录制工具/">自动化录制工具</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>你想象过可以让任何一个完全没有自动化经验的人，可以1分钟录制出可读性高，且强大的自动化脚本工具吗？</p>
+<p>还真存在这么一款UI自动化录制工具,它就是由alibaba Macaca团队开源的UiRecorder。</p>
+<p>这是一款基于WebDriver、Chrome浏览器、NodeJs等方案共同打造的零成本自动化解决方案。</p>
+<p>基于几乎零成本的【录制方案】，让所有开发和测试能够最低成本的获得自动化测试的能力，把重复又枯燥的测试工作全部交给计算机，彻底的提高测试效率，解放我们的生产力。</p>
+<p>跨平台：适用于Windows、linux、mac</p>
+<p>三端录制：PC、移动端（android、iOS）</p>
+<p>（也许你看到标题第一反应是Selenium IDE，但实际上Selenium IDE已停止维护好多年了，UI Recorder 要比Selenium IDE更加强大，支持多端录制）</p>
+<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>安装配置JDK环境变量</p>
+<p><a href="https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html" target="_blank" rel="noopener">JDK 8.0</a></p>
+<p>安装配置Node环境变量</p>
+<p><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">Node.js 10</a></p>
+<p>More info: <a href="https://github.com/alibaba/uirecorder" target="_blank" rel="noopener">uirecorder官网</a></p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="mocha安装"><a href="#mocha安装" class="headerlink" title="mocha安装"></a>mocha安装</h2><p>（此处说明下：录制的脚本运行环境基于mocha框架，因此需要安装mocha）</p>
+<p>1.全局安装mocha</p>
+<h4 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h4><p>（1）打开终端窗口：开始-运行-cmd 右击以管理员身份运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mocha -g</span><br></pre></td></tr></table></figure>
+<p>（2）安装完成后，配置到系统变量<br>打开系统变量path 末尾加入C:\Program Files\nodejs\node_global 确定保存</p>
+<p>（3）检查mocha是否安装成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha -V</span><br></pre></td></tr></table></figure></p>
+<h4 id="mac"><a href="#mac" class="headerlink" title="mac"></a>mac</h4><p>（1）打开终端窗口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mocha -g</span><br></pre></td></tr></table></figure>
+<p>（2）检查mocha是否安装成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha -V</span><br></pre></td></tr></table></figure></p>
+<p>2.全局安装uirecorder</p>
+<p>此处说明下：安装uirecorder时，需要下载chrome浏览器驱动会超时报错，因为这边下载默认从谷歌官方。</p>
+<p>解决办法：设置淘宝镜像下载路径 </p>
+<p>windows执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set CHROMEDRIVER_CDNURL=http://npm.taobao.org/mirrors/chromedriver</span><br></pre></td></tr></table></figure>
+<p>mac执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export CHROMEDRIVER_CDNURL=http://npm.taobao.org/mirrors/chromedriver</span><br></pre></td></tr></table></figure>
+<h4 id="windows-1"><a href="#windows-1" class="headerlink" title="windows"></a>windows</h4><p>（1）打开终端窗口：开始-运行-cmd 右击以管理员身份运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install uirecorder -g</span><br></pre></td></tr></table></figure>
+<p>（2）检查uirecorder是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uirecorder --version</span><br></pre></td></tr></table></figure>
+<p><img src="../../images/Uirecorder_images/uirecorder--version.jpg" alt="img"></p>
+<h4 id="mac-1"><a href="#mac-1" class="headerlink" title="mac"></a>mac</h4><p>（1）打开终端窗口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install uirecorder -g</span><br></pre></td></tr></table></figure>
+<p>（2）检查uirecorder是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uirecorder --version</span><br></pre></td></tr></table></figure>
+<p>3.全局安装mochawesome</p>
+<p>Uirecorder报告是借助mochawesome来展示脚本执行结果，再回放录制脚本的时候使用只要带入参数mochawesome</p>
+<p>（1）打开终端窗口：开始-运行-cmd 右击以管理员身份运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mochawesome -g</span><br></pre></td></tr></table></figure></p>
+<p>4.chrome浏览器安装（如果已安装要升级到最新版）</p>
+<p><a href="https://pc.qq.com/detail/1/detail_2661.html" target="_blank" rel="noopener">下载地址</a></p>
+<p>5.移动端录制需要安装配置环境android SDK 、ios开发工具</p>
+<p>可以参照appium-doctor</p>
+<p><img src="../../images/Uirecorder_images/appium-doctor.jpg" alt="appium-doctor"></p>
+<h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><p>实际上UiRecorder录制生成的脚本，是一个基于nodejs+mocha+jwebdriver框架的自动化工程，回放脚本是通过执行mocha命令并附带mochawesome报告参数来生成测试报告</p>
+<h1 id="基础操作（录制与回放）"><a href="#基础操作（录制与回放）" class="headerlink" title="基础操作（录制与回放）"></a>基础操作（录制与回放）</h1><h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><p>1.录制</p>
+<p>（1）以文件夹来划分录制项目模块</p>
+<p>①新建一个文件夹A，用来放录制脚本存放位置</p>
+<p>②打开终端窗口：开始-运行-cmd 右击以管理员身份运行，进入到新建文件夹A目录下</p>
+<p>（2）Uirecorder初始化</p>
+<p>①在新建的文件夹A下，新建一个文件夹test，用于存放录制的脚本</p>
+<p>②执行初始化</p>
+<p>打开终端窗口：开始-运行-cmd 右击以管理员身份运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd test  </span><br><span class="line">uirecorder init</span><br></pre></td></tr></table></figure>
+<p>此处说明下：uirecorder初始化会自动生成配置文件，建议使用默认配置，一路回车即可。<br>初始化完成后会自动安装相关依赖</p>
+<p><img src="../../images/Uirecorder_images/uirecorder-init.jpg" alt="初始化"></p>
+<p><img src="../../images/Uirecorder_images/uirecorder-init2.jpg" alt="自动安装浏览器驱动"></p>
+<p>初始化完后当前目录下生成以下文件<br>如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">uirecorder初始化文件夹说明</span><br><span class="line">Commons:公共脚本文件夹</span><br><span class="line">Diffbase:图片对比文件夹</span><br><span class="line">node_modules:node核心文件库</span><br><span class="line">reports:测试报告文件夹</span><br><span class="line">sample:示例脚本目录</span><br><span class="line">screenshots:测试执行截图保存目录</span><br><span class="line">uploadfiles：附件保存文件夹，比如写信页上传附件，要求把附件先放入该目录；</span><br><span class="line">config.Json：运行配置文件，比如IP，浏览器</span><br><span class="line">run.bat：运行测试，执行该命令会运行所有的测试脚本</span><br></pre></td></tr></table></figure>
+<p>（3）录制脚本<br>打开终端窗口：开始-运行-cmd 右击以管理员身份运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uirecorder start</span><br></pre></td></tr></table></figure>
+<p>①Uirecorder配置向导会提示输入要使用的测试脚本名称：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例如：输入test/test.1.js</span><br><span class="line">表示录制的脚本要存放在test文件夹下的test.1.js</span><br></pre></td></tr></table></figure>
+<p>②配置向导提示你输入是否同步校验浏览器：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例如：输入Y</span><br><span class="line">表示启用同步校验浏览器</span><br></pre></td></tr></table></figure></p>
+<p>③配置向导提示你输入浏览器大小：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例如：输入maximize</span><br><span class="line">表示窗口最大化</span><br></pre></td></tr></table></figure></p>
+<p>（配置向导完成之后会自动打开chrome页面（同时打开校验页面,校验页面没有内容）</p>
+<p>④输入打算录制的页面地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例如：输入百度地址https://www.baidu.com</span><br></pre></td></tr></table></figure>
+<p>⑤点击【开始录制】按钮，进入录制模式</p>
+<p> <img src="../../images/Uirecorder_images/2.jpg" alt="工具面板"></p>
+<p>录制页面会显示一个uirecorder工具面板，此时你的所有操作均会被录制下来。<br>例如：鼠标（点击事件）、键盘（按键事件）等操作</p>
+<p>⑥期间，可以使用工具面板上面的功能：</p>
+<p> 属性开关、属性黑名单、添加悬停、添加断言、执行JS、添加延迟、脚本跳转、结束录制</p>
+<p> <img src="../../images/Uirecorder_images/4.jpg" alt="工具面板"></p>
+<p> <img src="../../images/Uirecorder_images/5.jpg" alt="工具面板"><br>⑦每录制成功，屏幕右下角会弹出执行成功的提示</p>
+<p>⑧录制结束</p>
+<p>点击【结束录制】按钮，即可结束录制，自动关闭浏览器</p>
+<p>同时在test目录下生成一个脚本文件，文件名称便是在启用录制时，咱们命名的脚本名称</p>
+<p>终端窗口也会同步显示录制记录结果</p>
+<p><img src="../../images/Uirecorder_images/8.jpg" alt="终端窗口"></p>
+<p>2.回放脚本</p>
+<p>此处说明下：回放脚本借助mocha框架回放js脚本，并生成mochawesome结果报告，所以需要你在之前环境准备过程中安装mochawesome node模块</p>
+<p>①安装mochawesome</p>
+<p>开始-运行-cmd，以管理员身份运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mochawesome -g</span><br></pre></td></tr></table></figure></p>
+<p>②安装selenium-standalone与浏览器驱动</p>
+<p>此处说明下：回放脚本需要启动selenium-standalone服务，实际上我们刚才在uirecorder init 初始化时，已下载安装了selenium-standalone和相关浏览器驱动）。</p>
+<p>（启动selenium-standalone服务有两种方式：一种是独立包方式、另一种是全局node模块模式，建议使用全局node模块模式）</p>
+<p>【第一种方式】独立包方式 (优势：可以手动更换浏览器driver)</p>
+<p>（如果你的浏览器是非安装版，双击即可直接打开，并且浏览器版本和浏览器驱动版本想要固定不变，可以采用这种方式）</p>
+<p>【A】下载selenium-standalone到本地，<a href="https://npm.taobao.org/mirrors/selenium/3.9/" target="_blank" rel="noopener">下载地址</a>(建议放置放录制脚本目录下)</p>
+<p> <img src="../../images/Uirecorder_images/10.jpg" alt="img"></p>
+<p>【B】启动selenium-server-standalone</p>
+<p> 打开终端窗口：开始-运行-cmd 右击以管理员身份运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd 存放selenium-server-standalone.jar包路径下</span><br></pre></td></tr></table></figure></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar selenium-server-standalone-3.9.1.jar</span><br></pre></td></tr></table></figure>
+<p><img src="../../images/Uirecorder_images/11.jpg" alt="img"></p>
+<p> 【C】下载chromedriver到本地，<a href="https://npm.taobao.org/mirrors/chromedriver" target="_blank" rel="noopener">下载地址</a></p>
+<p> <img src="../../images/Uirecorder_images/12.jpg" alt="img"></p>
+<p> 此处说明下：chromedriver版本与你本地电脑安装的chrome版本需要对应，谷歌官方对应版本查看地址<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads</a></p>
+<p> 不能翻墙可以看<a href="https://blog.csdn.net/yoyocat915/article/details/80580066" target="_blank" rel="noopener">这里</a><br> （我本地chrome浏览器版本是68, 因此下载chromedriver版本应该是2.40）</p>
+<p> 【D】下载后双击chromedriver打开服务</p>
+<p><img src="../../images/Uirecorder_images/13.jpg" alt="img"></p>
+<p><img src="../../images/Uirecorder_images/14.jpg" alt="img"></p>
+<p> 第二种方式：全局安装</p>
+<p> 此处说明：安装前需要设置淘宝镜像，因为chromedriver默认是从谷歌官网下载下来，未设置淘宝镜像会报超时。（如果你有翻墙那是最好，但建议你关闭翻墙代理，使用淘宝镜像地址进行下载）</p>
+<p> 【A】全局安装node selenium-standalone模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install selenium-standalone -g</span><br></pre></td></tr></table></figure>
+<p>  <img src="../../images/Uirecorder_images/15.jpg" alt="img"></p>
+<p> 【C】 安装selenium驱动、浏览器驱动</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selenium-standalone install</span><br></pre></td></tr></table></figure>
+<p> 【B】 启用服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selenium-standalone start</span><br></pre></td></tr></table></figure>
+<p> <img src="../../images/Uirecorder_images/3.jpg" alt="img"></p>
+<p> ③执行回放脚本</p>
+<p> 此处说明下：回放脚本方式有两种第一种借助mocha框架执行指定位置脚本，第二种使用bat文件</p>
+<p> 【第一种方式】推荐使用</p>
+<p> 【A】运行单个脚本<br> 开始-运行-cmd，以管理员身份运行</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha 脚本路径名称 --reporter mochawesome</span><br></pre></td></tr></table></figure>
+<p> 例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha C:\Users\lyc\Desktop\A\test\test.1.js --reporter mochawesome</span><br></pre></td></tr></table></figure>
+<p> <img src="../../images/Uirecorder_images/16.jpg" alt="img"></p>
+<p> 此处说明下：回放脚本前，如果你使用独立方式安装selenium-standalone，那么需要开启selenium-server-standalone服务、开启chromedriver服务，且不能关闭。</p>
+<p>【B】运行所有脚本</p>
+<p>开始-运行-cmd，以管理员身份运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Users\lyc\Desktop\A   //目录切换至新建文件夹A</span><br><span class="line"></span><br><span class="line">mocha --reporter mochawesome</span><br></pre></td></tr></table></figure>
+<p> <img src="../../images/Uirecorder_images/20.jpg" alt="img"></p>
+<p>此处说明下：mocha框架自身默认会执行以test命名的文件夹下所有脚本。</p>
+<p>【第二种回放方式】</p>
+<p>run运行测试用例<br>开始-运行-cmd，终端进入存放脚本的文件夹A，终端输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run.bat</span><br></pre></td></tr></table></figure>
+<p>运行所有脚本<br>此处说明下，运行所有脚本需要配置/*<em>/</em>.spec.js，否则会报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run.bat test\test.1.js</span><br></pre></td></tr></table></figure>
+<p>运行单个脚本</p>
+<p>此处说明下：第二种方式windows平台使用run.bat 而linux平台使用 run.sh 此方法与第一种方式其实一样，只是把命令行封装到bat或sh文件中。</p>
+<h2 id="mobile"><a href="#mobile" class="headerlink" title="mobile"></a>mobile</h2><p>1.环境准备</p>
+<p>（1）Android平台</p>
+<p>①JDK（前面步骤我们已配置好）</p>
+<p>②安装macaca<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g macaca-cli</span><br></pre></td></tr></table></figure></p>
+<p>安装成功会显示：</p>
+<p><img src="../../images/Uirecorder_images/macaca-logo.jpg" alt="macacalogo"></p>
+<p><a href="https://macacajs.github.io/zh/guide/recorder.html#%E7%A7%BB%E5%8A%A8%E7%AB%AF" target="_blank" rel="noopener">macaca参考</a></p>
+<p>③安装macaca-android</p>
+<p>【A】设置淘宝镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry http://registry.npm.taobao.org/</span><br></pre></td></tr></table></figure>
+<p>此处说明：不设置淘宝镜像，node将会从谷歌上面下载相关内容，在没有翻墙前提下，执行下一步【B】将会报超时下载失败。</p>
+<p>【B】执行安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i macaca-android -g</span><br></pre></td></tr></table></figure>
+<p>检查环境</p>
+<p>macaca doctor</p>
+<p> <img src="../../images/Uirecorder_images/35.jpg" alt="img"></p>
+<p>④启动macaca服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">macaca server --port 4444 --verbose</span><br></pre></td></tr></table></figure>
+<p> <img src="../../images/Uirecorder_images/24.jpg" alt="img"></p>
+<p>⑤Android sdk 环境变量配置</p>
+<p>参考：<a href="https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html</a></p>
+<p>⑥安装Gradle</p>
+<p>下载地址：<a href="https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量" target="_blank" rel="noopener">https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量</a></p>
+<p>【A】PATH中加入%GRADLE_HOME%\bin</p>
+<p> <img src="../../images/Uirecorder_images/25.jpg" alt="img"></p>
+<p>【B】新增GRADLE_HOME变量，变量值为Gradle存放位置</p>
+<p>【C】检查是否配置成功<br> <img src="../../images/Uirecorder_images/26.jpg" alt="img"></p>
+<p>（mac直接安装即可）</p>
+<p>（2）iOS平台（需要使用Mac系统）<br>安装配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Xcode</span><br><span class="line">Xcode Command Line Tool</span><br></pre></td></tr></table></figure></p>
+<p>此处说明：<br>①iOS安装包使用格式为.app（不能用.ipa）</p>
+<p>②iOS需要在mac系统上配置，配置请参考：<a href="https://testerhome.com/topics/13273" target="_blank" rel="noopener">https://testerhome.com/topics/13273</a></p>
+<p>③安装包使用格式为.apk或.zip(如果是.zip会提示你选择是android还是ios平台的安装包）</p>
+<p>此处说明：如果你是从零开始，环境配置可以参考：</p>
+<p>JDK <a href="https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html</a></p>
+<p>Android SDK <a href="https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html</a></p>
+<p>Android ADB <a href="https://jingyan.baidu.com/article/17bd8e52f514d985ab2bb800.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/17bd8e52f514d985ab2bb800.html</a></p>
+<p>Gradle <a href="https://jingyan.baidu.com/article/73c3ce2816eae9e50343d9fe.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/73c3ce2816eae9e50343d9fe.html</a></p>
+<p>2.录制</p>
+<p>（1）新建一个文件夹，比如命名为Mobile</p>
+<p>（2）终端cd 进入Mobile文件夹内</p>
+<p>（3）uirecorder 初始化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uirecorder init --mobile</span><br></pre></td></tr></table></figure></p>
+<p>（4）提示输入app安装包名（带格式后缀）</p>
+<p>（5）输入安装包回车后，弹出浏览器，开始录制<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uirecorder --mobile sample/test.spec.js</span><br></pre></td></tr></table></figure></p>
+<p> <img src="../../images/Uirecorder_images/27.jpg" alt="img"></p>
+<p> <img src="../../images/Uirecorder_images/31.jpg" alt="img"></p>
+<p>（6）开始录制</p>
+<p>①新建一个文件夹命名为test，用于存放录制的脚本</p>
+<p>②把测试包放入mobile文件夹下</p>
+<p>此处说明下：<br>【A】android使用.apk格式安装包</p>
+<p>【B】iOS使用.app格式的安装包（并不能用.ipa格式）</p>
+<p> <img src="../../images/Uirecorder_images/28.jpg" alt="img"></p>
+<p>③uirecorder –mobile test/test.spec.js</p>
+<p>参数说明：<br>–mobile 表示录制移动端</p>
+<p>test表示脚本位于test文件夹</p>
+<p>test.spec 表示用例脚本名称</p>
+<p>【A】输入要进行录制测试包包名</p>
+<p>【B】弹出浏览器，同时手机端弹出app安装（有些手机系统安全机制需要先输入安装密码执行安装，比如vivoX21）</p>
+<p> <img src="../../images/Uirecorder_images/29.jpg" alt="img"></p>
+<p> 如果你使用的是zip压缩包，会提示你选择android还是ios平台</p>
+<p>  <img src="../../images/Uirecorder_images/36.jpg" alt="img"></p>
+<p>【C】操作浏览器即可进行录制，录制工具使用方法和web端一样（详见第六部分介绍）</p>
+<p> <img src="../../images/Uirecorder_images/31.jpg" alt="img"></p>
+<p>【D】每录制成功一步，屏幕右上角会有相应提示</p>
+<p> <img src="../../images/Uirecorder_images/32.jpg" alt="img"></p>
+<p>【E】你还可以通过工具面板输入文字、后退、弹窗命令处理、断言、延迟等待、跳转到另一个之前录制的脚本、结束录制</p>
+<p> <img src="../../images/Uirecorder_images/33.jpg" alt="img"></p>
+<p>【F】录制完毕，我们还可以通过编辑器打开Mobile文件夹，修改脚本内容，删除某些录制步骤</p>
+<p> <img src="../../images/Uirecorder_images/34.jpg" alt="img"></p>
+<p>（7）注意事项：某些控件无法录制</p>
+<p>有时候由于控件排版问题，或其他原因导致无法识别到元素，既是uirecorder识别到了，但点击也没反应。</p>
+<p>解决办法：<br>修改脚本，直接在脚本内手动输入该元素（元素定位可以是用appium或者macaca inspect）</p>
+<p>例如：录制某个按钮点击无效</p>
+<p>通过编辑器打开并找到这个脚本位置，修改其元素选择器内容，如：xpath等，并直接执行mocha命令，通过浏览器进行调试。<br>如下图所示：</p>
+<p>修改前</p>
+<p> <img src="../../images/Uirecorder_images/37.jpg" alt="img"></p>
+<p>修改后</p>
+<p> <img src="../../images/Uirecorder_images/38.jpg" alt="img"></p>
+<p>3.回放</p>
+<p>（1）使用mocha命令<br>①全部脚本:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha --reporter mochawesome</span><br></pre></td></tr></table></figure>
+<p>②指定脚本:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha ./mobile/test/4S金融下单.js --reporter mochawesome</span><br></pre></td></tr></table></figure></p>
+<p>参数说明：–reporter mochawesome为生成报告参数，执行命令后会在根目录下生成mochawesome报告文件。<br>如下图所示：</p>
+<p> <img src="../../images/Uirecorder_images/39.jpg" alt="img"></p>
+<p>（2）使用批处理命令</p>
+<p>全部脚本:</p>
+<p>run.sh ( Linux|Mac )</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh run.sh ./mobile/test/4S金融下单.js</span><br></pre></td></tr></table></figure>
+<p>run.bat ( Windows )</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run.bat ./mobile/test/4S金融下单.js</span><br></pre></td></tr></table></figure>
+<p>指定脚本: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">run.sh sample/test.spec.js ( Linux|Mac ) </span><br><span class="line">run.bat sample/test.spec.js ( Windows )</span><br></pre></td></tr></table></figure>
+<h1 id="高级使用（工具面板）"><a href="#高级使用（工具面板）" class="headerlink" title="高级使用（工具面板）"></a>高级使用（工具面板）</h1><h2 id="属性开关"><a href="#属性开关" class="headerlink" title="属性开关"></a>属性开关</h2><p>进入录制页面后，属性开关全部为默认开启状态，因此在你点击任意DOM时，DomPath会自动选择属性并展示。<br>如下图所示：</p>
+<p>鼠标点击页面DOM“Email:”，DomPath展示为：//td[text()=”Email:”]</p>
+<p> <img src="../../images/Uirecorder_images/40.jpg" alt="img"></p>
+<p>若将属性开关text关闭后，DomPath会自动选择其他属性并展示。(点击属性开关text，text置灰并关闭，再次点击点亮并开启)</p>
+<p> <img src="../../images/Uirecorder_images/41.jpg" alt="img"></p>
+<p>此处说明下：建议都开启属性开关，避免元素无法定位。</p>
+<h2 id="属性黑名单"><a href="#属性黑名单" class="headerlink" title="属性黑名单"></a>属性黑名单</h2><p>因为某些属性值是随机或不稳定，我们无法录制出稳定的CSS选择器路径，因此我们可以使用黑名单过滤这些属性值。</p>
+<p>提示: 属性黑名单是一个正则表达式, 可以类似这样使用:/attr_\d+/</p>
+<p>a)可以在UI Recorder初始化时，属性值黑名单正则设置时，输入黑名单正则表达式，如：/attr_\d+/</p>
+<p> <img src="../../images/Uirecorder_images/43.jpg" alt="img"></p>
+<p>b)也可以在录制页面，属性黑名单处，输入黑名单正则表达式，如：/attr_\d+/</p>
+<p> <img src="../../images/Uirecorder_images/44.jpg" alt="img"></p>
+<h2 id="添加悬停"><a href="#添加悬停" class="headerlink" title="添加悬停"></a>添加悬停</h2><p>当页面中存在二级目录等类似情况时，需要鼠标悬停操作，UI Recorder就提供了添加悬停操作，可单次悬停或者多次添加悬停。依据需求可自行选择实现方式。<br>a)单次悬停，点击“添加悬停”按钮，鼠标变为绿色锁定元素，单击后结束悬停。</p>
+<p> <img src="../../images/Uirecorder_images/45.jpg" alt="img"></p>
+<p>b)多次添加悬停，按下Ctrl键，点击添加悬停按钮，进入悬停模式，可释放Ctrl键；点击需要悬停的DOM控件(可多次添加悬停)。<br>按下Esc键 或 点击结束悬停按钮, 退出悬停模式。<br>悬停模式下，可对元素进行断言操作，点击添加断言按钮，点击需要断言的DOM控件。</p>
+<p> <img src="../../images/Uirecorder_images/46.jpg" alt="img"></p>
+<h2 id="添加断言"><a href="#添加断言" class="headerlink" title="添加断言"></a>添加断言</h2><p>UI Recorder支持丰富的断言类型: val、text、displayed、enabled、selected、attr、css、url、title、cookie、localStorage、sessionStorage<br>步骤：点击添加断言按钮，点击需要断言的DOM控件。弹出添加断言的窗口，在窗口中填入相关信息。点击确认，添加断言成功。</p>
+<p>#延迟时间，默认为300ms</p>
+<p>#断言类型，支持以上列出的12种类型，根据自己的需要选择。</p>
+<p>#断言DOM，显示鼠标定位的元素</p>
+<p>#比较方式，支持7种类型：equal、notEqual、contain、notContain、above、below、match、notMatch，，根据自己的需要选择。</p>
+<p>#断言结果，填写期望结果</p>
+<p> <img src="../../images/Uirecorder_images/47.jpg" alt="img"></p>
+<p>脚本中设置断言的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//断言是否登录成功</span><br><span class="line">it(&apos;expect: text, //*[@text=&quot;工作台&quot;], equal, 工作台&apos;, async function()&#123;</span><br><span class="line">await driver.sleep(300).wait(&apos;//*[@text=&quot;工作台&quot;]&apos;, 30000)</span><br><span class="line">.text()</span><br><span class="line">.should.not.be.a(&apos;error&apos;)</span><br><span class="line">.should.equal(_(`工作台`));</span><br><span class="line">&#125;);</span><br><span class="line">//等待</span><br></pre></td></tr></table></figure>
+<h2 id="使用变量"><a href="#使用变量" class="headerlink" title="使用变量"></a>使用变量</h2><p>（1）添加变量有2种方式，一种方式是在config.json文件中直接编辑添加，另一种方式是在录制页面，点击使用变量，选择创建变量。</p>
+<p>提示: 所有变量字符串均支持JS语法的模板字符串，例如：, ${new Date().getTime()}</p>
+<p>1）编辑config.json，设置变量。</p>
+<p>如下图：此处设置了4个变量，分别为：username、password、test、dev</p>
+<p> <img src="../../images/Uirecorder_images/48.jpg" alt="img"></p>
+<p>2）在录制页面，创建变量。</p>
+<p>如下图所示，在录制页面，点击使用变量，弹出使用变量弹窗，使用方式选择为插入变量，变量名，点击添加变量，即可设置变量。</p>
+<p> <img src="../../images/Uirecorder_images/50.jpg" alt="img"></p>
+<p> <img src="../../images/Uirecorder_images/51.jpg" alt="img"></p>
+<p>（2）更新变量，在录制页面，点击使用变量，弹出使用变量弹窗，使用方式选择为更新变量。<br>选择想要更新的变量名username，选择取值方式（与断言方式一致，为12种类型），取值正则，即可更新已有变量。</p>
+<p> <img src="../../images/Uirecorder_images/52.jpg" alt="img"></p>
+<p>（3）使用变量，在录制页面，点击使用变量，鼠标定位需要插入变量的DOM，弹出使用变量弹窗，使用方式选择为插入变量<br>选择想要插入的已有变量名username，页面自动展示username相关信息。</p>
+<p> <img src="../../images/Uirecorder_images/53.jpg" alt="img"></p>
+<p>鼠标定位需要插入变量的DOM为Email的输入框，点击使用变量框的确认按钮，变量添加成功。在输入框中插入该变量username</p>
+<p> <img src="../../images/Uirecorder_images/54.jpg" alt="img"></p>
+<p>插入变量的DOM，若要添加断言，可使用变量字符串:</p>
+<p> <img src="../../images/Uirecorder_images/55.jpg" alt="img"></p>
+<h2 id="执行JS"><a href="#执行JS" class="headerlink" title="执行JS"></a>执行JS</h2><p>在录制页面，点击执行JS按钮，可输入一段js代码，并执行，例：document.title=”test”</p>
+<p> <img src="../../images/Uirecorder_images/56.jpg" alt="img"></p>
+<p>输入js代码后，点击确认，浏览器会立即执行该js代码，如下图，title更改为test。</p>
+<p> <img src="../../images/Uirecorder_images/57.jpg" alt="img"></p>
+<h2 id="添加延迟"><a href="#添加延迟" class="headerlink" title="添加延迟"></a>添加延迟</h2><p>在录制页面，点击添加延迟按钮，可在录制过程中添加延迟时间，在添加延迟弹框中，输入延迟时间，并执行，默认为1000ms。</p>
+<p> <img src="../../images/Uirecorder_images/58.jpg" alt="img"></p>
+<p>在脚本中设置延迟<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//等待</span><br><span class="line">  it(&apos;sleep: 3000&apos;, async function()&#123;</span><br><span class="line">   await driver.sleep(3000);</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure></p>
+<h2 id="脚本跳转"><a href="#脚本跳转" class="headerlink" title="脚本跳转"></a>脚本跳转</h2><p>录制过程中，可录制一些公用脚本，例如登录脚本、固定流程脚本等等。<br>调用公共脚本方法：在开始页面的时候输入sample/test.login.js，或者在录制中间页面时点击脚本跳转，脚本跳转弹框中输入sample/test.login.js<br>当sample/test.login.js加载完成后，继续别的步骤的录制。</p>
+<p> <img src="../../images/Uirecorder_images/59.jpg" alt="img"></p>
+<p>脚本中设置跳转的方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">callSpec(<span class="string">'test/脚本名称.js'</span>)</span><br></pre></td></tr></table></figure></p>
+<p> <img src="../../images/Uirecorder_images/60.jpg" alt="img"></p>
+<p>控制台显示<br> <img src="../../images/Uirecorder_images/61.jpg" alt="img"></p>
+<h2 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h2><p>UI Recorder仅支持Native文件上传, 不支持FLASH上传<br>直接点击“选择文件”按钮或点击“Upload file”, 占位按钮必需要用role或data-role标注为upload</p>
+<p> <img src="../../images/Uirecorder_images/62.jpg" alt="img"></p>
+<p>上传的文件必需保存在/uploadfiles/文件夹中。</p>
+<p> <img src="../../images/Uirecorder_images/63.jpg" alt="img"></p>
+<h2 id="测试数据和脚本分离"><a href="#测试数据和脚本分离" class="headerlink" title="测试数据和脚本分离"></a>测试数据和脚本分离</h2><p> demo中以json来管理测试数据</p>
+<p>  <img src="../../images/Uirecorder_images/64.jpg" alt="img"></p>
+<p>  <img src="../../images/Uirecorder_images/65.jpg" alt="img"></p>
+<h2 id="脚本修改"><a href="#脚本修改" class="headerlink" title="脚本修改"></a>脚本修改</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//（一）Web</span></span><br><span class="line"><span class="comment">//打开页面</span></span><br><span class="line">it(<span class="string">'url: http://adminpre.alspark.cn/#/login'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.url(_(<span class="string">'xxxxxxx'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//'xxxxxxx' 是一个网页地址,例如http:”www.baidu.com”</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//向下滚动屏幕</span></span><br><span class="line">it(<span class="string">'scrollElementTo: #app div.app-iframe-container, 0, 539'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">300</span>).wait(<span class="string">'#app div.app-iframe-container'</span>, <span class="number">30000</span>)</span><br><span class="line">.sleep(<span class="number">300</span>).scrollElementTo(<span class="number">0</span>, <span class="number">539</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//(0, 539)是滚动的幅度坐标</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//置顶滚动屏幕</span></span><br><span class="line">it(<span class="string">'scrollElementTo: #app div.app-iframe-container, 0, 0'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">300</span>).wait(<span class="string">'#app div.app-iframe-container'</span>, <span class="number">30000</span>)</span><br><span class="line">.sleep(<span class="number">300</span>).scrollElementTo(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//假设从主窗口0点击某个按钮，弹出了一个子窗口1，当前同时存在主窗口0和子窗口1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//切换至子窗口1</span></span><br><span class="line">it(<span class="string">'switchWindow: 1'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">500</span>).switchWindow(<span class="number">1</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//关闭窗口</span></span><br><span class="line">it(<span class="string">'closeWindow: '</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.closeWindow();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//切换到主窗口</span></span><br><span class="line">it(<span class="string">'switchWindow: 0'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">500</span>).switchWindow(<span class="number">0</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//0是主窗口、1是子窗口、之后打开的子窗口以此类推。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//切换到页面iframe</span></span><br><span class="line">it(<span class="string">'switchFrame: #iframe0201000000'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.switchFrame(<span class="literal">null</span>)</span><br><span class="line">.wait(<span class="string">'#iframe0201000000'</span>, <span class="number">30000</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">element</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">this</span>.switchFrame(element).wait(<span class="string">'body'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//切换出iframe 切到null即是且至主页面</span></span><br><span class="line">it(<span class="string">'switchFrame: null'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.switchFrame(<span class="literal">null</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//（二）Mobile</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//点击</span></span><br><span class="line">it(<span class="string">'tap: //*[@resource-id="com.maimaiche.dms:id/start_button"]'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.wait(<span class="string">'//*[@resource-id="com.maimaiche.dms:id/start_button"]'</span>, <span class="number">30000</span>).sendElementActions(<span class="string">'tap'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//输入账号</span></span><br><span class="line">it(<span class="string">'sendKeys: 15022676605'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sendKeys(_(<span class="string">`15022676605`</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//滑动</span></span><br><span class="line">it(<span class="string">'drag: 滑动欢迎页'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sendActions(<span class="string">'drag'</span>, &#123;<span class="attr">fromX</span>: <span class="number">1016</span>, <span class="attr">fromY</span>:<span class="number">1157</span>, <span class="attr">toX</span>:<span class="number">245</span>, <span class="attr">toY</span>:<span class="number">1134</span>, <span class="attr">duration</span>: <span class="number">0.73</span>&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//三）通用</span></span><br><span class="line"><span class="comment">//等待</span></span><br><span class="line">it(<span class="string">'sleep: 3000'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">3000</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//等待页面加载，断言是否出现页面加载错误或者超时等其他情况</span></span><br><span class="line">it(<span class="string">'waitBody: '</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">500</span>).wait(<span class="string">'body'</span>, <span class="number">30000</span>).html().then(<span class="function"><span class="keyword">function</span>(<span class="params">code</span>)</span>&#123;</span><br><span class="line">isPageError(code).should.be.false;</span><br><span class="line">&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//断言是否登录成功</span></span><br><span class="line">it(<span class="string">'expect: text, //*[@text="工作台"], equal, 工作台'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">300</span>).wait(<span class="string">'//*[@text="工作台"]'</span>, <span class="number">30000</span>)</span><br><span class="line">.text()</span><br><span class="line">.should.not.be.a(<span class="string">'error'</span>)</span><br><span class="line">.should.equal(<span class="string">`工作台`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="注意事项与常见问题"><a href="#注意事项与常见问题" class="headerlink" title="注意事项与常见问题"></a>注意事项与常见问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">注意事项：</span><br><span class="line">（1）禁止直接手动修改地址栏中的URL</span><br><span class="line">（2）禁止使用TAB切换焦点</span><br><span class="line">（3）不要使用双击, WebDriver兼容性不好</span><br><span class="line">（4）不要使用鼠标选择部分文本, WebDriver兼容性不好</span><br><span class="line">（5）不要手动切换至背景窗口。（目前最新版貌似没有影响）</span><br><span class="line">（6）不要点击非关键区域, 仅录制关键步骤，不然增加脚本长度</span><br></pre></td></tr></table></figure>
+<h1 id="报告"><a href="#报告" class="headerlink" title="报告"></a>报告</h1><p>在目录A下会自动生成一个mochawesome-report文件夹，报告格式有两种,一种html另一种json格式</p>
+<p> <img src="../../images/Uirecorder_images/22.jpg" alt="img"></p>
+<p> <img src="../../images/Uirecorder_images/23.jpg" alt="img"></p>
+<h2 id="故障排除"><a href="#故障排除" class="headerlink" title="故障排除"></a>故障排除</h2><p>（1）【环境与安装】【待解决】Node 版本10.13、15 uirecorder 初始化安装依赖会报错<br>解决方案：请使用低与10.13、15版本的node，比如:10.8 版本支持uirecorder<br><a href="https://nodejs.org/zh-cn/download/releases/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/download/releases/</a></p>
+<p>（2）【环境与安装】【已解决】报错SyntaxError: missing ) after argument list<br>解决方案：升级到NodeJs v7.10以上版本</p>
+<p>（3）【环境与安装】【已解决】报错session not created exception from disconnected: unable to connect to renderer<br>解决方案：系统hosts文件中添加127.0.0.1 localhost</p>
+<p>（4）【环境与安装】【已解决】已经存在旧版本部分文件，执行安装报错后，查看版本提示失败。<br>解决方法：<br>node删除文件，重新安装，重新配置node环境。</p>
+<p> <img src="../../images/Uirecorder_images/66.jpg" alt="img"></p>
+<p>（5）权限不够报错</p>
+<p> <img src="../../images/Uirecorder_images/67.jpg" alt="img"></p>
+<p>windows系统特性，需要手动授权C盘的ProgramFiles文件<br>如下图所示：勾掉只读，确定保存</p>
+<p> <img src="../../images/Uirecorder_images/68.jpg" alt="img"></p>
+<p>（6）【环境与安装】【已解决】安装中提示编译失败 缺少websocket</p>
+<p>解决方法：npm i websocket -g </p>
+<p> <img src="../../images/Uirecorder_images/69.jpg" alt="img"></p>
+<p>（7）【环境与安装】【已解决】初始化页面卡住</p>
+<p> <img src="../../images/Uirecorder_images/70.jpg" alt="img"></p>
+<p>解决方法：把node 卸载重装（v.10.8.0）</p>
+<p> <img src="../../images/Uirecorder_images/71.jpg" alt="img"></p>
+<p>目前最新版node（v10.13）和最新版uirecorder（2.5.46）不兼容，需要安装node版本低于10.12版本。</p>
+<p>（8）【环境与安装】【已解决】安装npm i selenium-sandalone -g  超时报错</p>
+<p>解决方案：</p>
+<p>①设置淘宝镜像<br>npm config set registry <a href="http://registry.npm.taobao.org/" target="_blank" rel="noopener">http://registry.npm.taobao.org/</a></p>
+<p>②执行</p>
+<p>【A】卸载之前安装 npm uninstall selenium-sandalone -g</p>
+<p>【B】清缓存 npm cache verify</p>
+<p>【C】重新执行安装 npm install selenium-standalone -g</p>
+<p> <img src="../../images/Uirecorder_images/72.jpg" alt="img"></p>
+<p>（9）Selenium-standalone install 过一会报错</p>
+<p>执行安装命令后</p>
+<p> <img src="../../images/Uirecorder_images/73.jpg" alt="img"></p>
+<p> <img src="../../images/Uirecorder_images/74.jpg" alt="img"></p>
+<p>原因：设置淘宝镜像没有生效，从第一图看出还是在谷歌上面下载驱动，所以超时报错。</p>
+<p>解决方案：</p>
+<p>①将下载链接设置为淘宝镜像，执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set CHROMEDRIVER_CDNURL=http://npm.taobao.org/mirrors/chromedriver</span><br></pre></td></tr></table></figure>
+<p>②管理员账号权限下，执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm info underscore  //生效设置</span><br></pre></td></tr></table></figure></p>
+<p>执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selenium-standalone install --drivers.chrome.version=2.46 --drivers.chrome.baseURL=http://npm.taobao.org/mirrors/chromedriver</span><br></pre></td></tr></table></figure>
+<p>注意chromedriver版本号2.46要和你本地谷歌浏览器对应。<br>（chromedriver版本与chrome浏览器版本对应，参考：<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads</a><br>）</p>
+<p> <img src="../../images/Uirecorder_images/75.jpg" alt="img"></p>
+<p>③执行</p>
+<p>【A】卸载之前安装 npm uninstall selenium-sandalone -g</p>
+<p>【B】清缓存 npm cache verify</p>
+<p>【C】安装 npm install selenium-standalone -g</p>
+<p>【D】安装 selenium-standalone install</p>
+<p>【E】安装 selenium-standalone start</p>
+<p>（10）npm i 或npm install 提示不是内部命令</p>
+<p>解决方案：</p>
+<p>①系统环境变量NODE_PATH路径设置不正确</p>
+<p>②系统环境变量PATH中 nodejs的路径设置不正确</p>
+<p>（11）npm install uirecorder -g安装成功，但是执行uirecorder –version后提示不是内部命令或外部命令<br>解决方案：</p>
+<p>①检查C:/ProgramFiles/nodejs/下是否有uirecorder.cmd文件</p>
+<p>②检查系统环境变量NODE_PATH的路径，并通过文件夹打开进入到该路径下查看是否有uirecorder文件夹。</p>
+<p>以上均没有的话，可能是你node安装位置和环境变量不一致。</p>
+<p>（12）【web端】【已解决】报错ChromeDriverServices\nBuild<br>解决方案：</p>
+<p>①浏览器驱动chromedriver.exe本版本与本地浏览器版本对应一致。</p>
+<p>【A】chromedriver下载地址:<br><a href="https://npm.taobao.org/mirrors/chromedriver/" target="_blank" rel="noopener">https://npm.taobao.org/mirrors/chromedriver/</a></p>
+<p>【B】chromedriver与chrome版本对应地址:<br><a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads</a></p>
+<p>②下载一个独立的chromedriver并设置为本地系统全局变量。</p>
+<p> <img src="../../images/Uirecorder_images/76.jpg" alt="img"></p>
+<p>（13）【web端】【已解决】selenium-standalone 服务未启动便开始录制。</p>
+<p> <img src="../../images/Uirecorder_images/77.jpg" alt="img"></p>
+<p>（14）【web端】【已解决】web录制遇到切换至iframe如果手动更改，需要执行iframe切出，await driver.switchFrame(null);</p>
+<p>（15）【web端】【已解决】web录制弹出子窗口，关闭子窗口会退出录制状态。因此子窗口在录制过程中不要关闭（一旦关闭，之前录的都不会保存）</p>
+<p> <img src="../../images/Uirecorder_images/78.jpg" alt="img"></p>
+<p>（16）【web端】【已解决】web上传文件的附件需要放置在目录uploadfiles下。录制后的脚本会通过这个文件夹去查找是否有这个待上传的文件</p>
+<p> <img src="../../images/Uirecorder_images/79.jpg" alt="img"></p>
+<p>脚本中读取的路径也是从uploadfiles目录中查找</p>
+<p> <img src="../../images/Uirecorder_images/80.jpg" alt="img"></p>
+<p>（17）【web端】【已解决】web上传文件的附件需要放置在目录uploadfiles下。录制后的脚本会通过这个文件夹去查找是否有这个待上传的文件</p>
+<p>（18）【web端】【已解决】web下载文件，浏览器使用chrome不会弹出保存文件弹窗，使用firefox会弹出保存文件弹窗，可以通过firefox设置页修改下载文件保存位置来解决。</p>
+<p>（参考：<a href="https://jingyan.baidu.com/article/9f63fb9171e81bc8400f0e07.html）" target="_blank" rel="noopener">https://jingyan.baidu.com/article/9f63fb9171e81bc8400f0e07.html）</a></p>
+<p>（19）【web端】【已解决】默认录制等待时间最长30秒，有时下载步骤可能会超过30秒，可以修改脚本这边的等待时长，如下图所示：</p>
+<p> <img src="../../images/Uirecorder_images/81.jpg" alt="img"></p>
+<p>（20）【移动端】【已解决】macaca server没有启动起来或者启动端口非4444</p>
+<p> <img src="../../images/Uirecorder_images/82.jpg" alt="img"></p>
+<p>（21）【移动端】【已解决】macaca server没有启动，录制、回放都要开启macaca server 端口指向4444</p>
+<p>macaca server –port 4444 –verbose</p>
+<p> <img src="../../images/Uirecorder_images/83.jpg" alt="img"></p>
+<p>（22）【移动端】【待解决】无法输入中文（车码头APP 4S金融下单输入客户名称）</p>
+<p>（23）【移动端】【待解决】移动端无法输入特殊符号。（车码头APP登录账号使用邮箱 ）</p>
+<p>（24）【移动端】【已解决】安装iOS .app测试包报错提示手动安装。（使用.app格式包）</p>
+<p> <img src="../../images/Uirecorder_images/84.jpg" alt="img"></p>
+<p>iOS测试包必须是.app格式，如果使用.ipa会报这个错</p>
+<p>解决办法：将.ipa改成.app格式。</p>
+<p>①将.ipa格式后缀改成.rar或.zip</p>
+<p>②解压</p>
+<p>③进入文件夹，应该是一个.app格式的文件</p>
+<p>④将这个.app格式的文件压缩成.zip </p>
+<p>⑤重命名testapp.app.zip</p>
+<p> <img src="../../images/Uirecorder_images/85.jpg" alt="img"></p>
+<h1 id="中文手册"><a href="#中文手册" class="headerlink" title="中文手册"></a>中文手册</h1><p><a href="https://github.com/alibaba/uirecorder/blob/master/doc/zh-cn/readme.md" target="_blank" rel="noopener">中文手册</a></p>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/" target="_blank" rel="noopener">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/15/自动化录制工具/" data-id="cjymci29x000ppx38d25pkb26" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AutoTest/">AutoTest</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-自动化测试框架究竟哪家强？" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/03/自动化测试框架究竟哪家强？/" class="article-date">
+  <time datetime="2019-01-03T06:13:33.000Z" itemprop="datePublished">2019-01-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/03/自动化测试框架究竟哪家强？/">自动化测试框架究竟哪家强？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自动化测试框架很多，测试人都知道有<a href="https://junit.org/" target="_blank" rel="noopener">JUnit</a>、<a href="https://testng.org/" target="_blank" rel="noopener">TestNG</a>、<a href="https://www.seleniumhq.org/" target="_blank" rel="noopener">Selenium+WebDriver</a>、<a href="http://appium.io/" target="_blank" rel="noopener">Appium等</a>。再具体点，如果说通用的测试框架，您可能会想到STAF+STAX；如果说Android App自动化测试框架，除了Appium，您可能还会想到Robotium、Selendroid、ATAF等；如果说API自动化测试框架，您可能会说Postman没有竞争对手；如果说验收测试框架，您可能会想到Fitnesse；如果要说流行的BDD自动化测试框架，<a href="https://cucumber.io/" target="_blank" rel="noopener">Cucumber</a>、<a href="http://calaba.sh/" target="_blank" rel="noopener">Calabash</a>、<a href="https://jbehave.org/" target="_blank" rel="noopener">Jbehave</a>也鼎鼎有名。究竟哪家自动化测试框架最强呢？</p>
+<p>答案是Node.js你一定很惊讶，这哪是测试工具啊，这不就是一个JavaScript引擎吗。其实这指的是Node.js生态（未来趋势）。你可以在Node.js中找到各类强大的自动化框架，开源库，能够满足一个精力充沛的IT男对自动化测试的所有狂野的想象。测试的类型从API、Web、手机移动端和Windows应用。其实我们为什么为一些测试工具争个你高我低呢，博采众长、取万物之精华不是更有利吗？Node.js就是这样一个环境，所有优秀的工具都愿意在Node.js社区贡献自己的力量。</p>
+<p>cucumber<br><img src="http://thyrsi.com/t6/649/1546503931x2890211750.jpg" alt="cucumber"></p>
+<p>下面我们来看个究竟。</p>
+<h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><p>例如，如果你要做RESTful API测试，Node.js提供了很多框架，例如Request、Axios、got等，从功能完备的到轻量级的都有。这些框架都有着非常高的人气，例如有图为证，got库最近7天就有300万的下载量，而Request库只会更高：</p>
+<p><img src="http://thyrsi.com/t6/649/1546496379x1822611383.jpg" alt="npm下载量"></p>
+<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><p>如果你要做Web UI测试，那可选的就更多了。经典的<a href="https://github.com/SeleniumHQ/selenium" target="_blank" rel="noopener">selenium-webdriver</a>，最近7天也达到了近100万的下载量。还有很多类似于selenium-webdriver的库，如<a href="https://webdriver.io/" target="_blank" rel="noopener">webdriverio</a>，<a href="https://github.com/admc/wd" target="_blank" rel="noopener">wd</a>等，提供了不同程度的简化。</p>
+<p>还有一个最近很火的<a href="https://github.com/GoogleChrome/puppeteer" target="_blank" rel="noopener">Puppupteer</a> ，是Google Chrome团队开源的端到端自动化测试框架，可以做UI自动化测试，也可以做为爬虫工具。作为Headless方式运行，Puppupteer更快，更省资源，它主要支持nodejs开发脚本。</p>
+<p>（你可能会好奇爬虫不是用python吗？其实Java、JavaScript也都可以实现爬虫，爬虫爬的是前端页面的元素内容，而前端页面是由JavaScript构成，当然谁更适合爬虫一目了然，nodejs生态的领域会超出你们的想象，关于node爬虫你可以参照<a href="http://csbun.github.io/blog/2017/09/puppeteer/" target="_blank" rel="noopener">这里</a>玩下）</p>
+<p>selenium-webdriver</p>
+<p><img src="http://thyrsi.com/t6/649/1546496979x1822611383.jpg" alt="selenium-webdriver"></p>
+<p>webdriverIO</p>
+<p><img src="http://thyrsi.com/t6/649/1546497047x1822611383.jpg" alt="webdriverIO"></p>
+<h1 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h1><p>手机移动端测试，就不能不说应用的最广泛的Appium。Appium很大，包含了iOS、Android等系统的自动化测试库。你只要象其它的库一样，在命令行输入”npm install appium”就有了。</p>
+<p>阿里对Node.js有特别的偏爱，做了很多Node.js的开源库，其中Macaca就是阿里发布的针对移动端测试的工具。它也包括Node.js的客户端。可以测试 Native, Hybrid, H5 等多种应用类型，提供客户端工具和持续集成服务。</p>
+<p>实际上webdriverIO也可以应用到移动端，并且也被Appium纳入了官方demo中。</p>
+<p>对于Windows 应用，微软也来支援，发布了<a href="https://github.com/Microsoft/WinAppDriver" target="_blank" rel="noopener">WinAppDriver</a>它可以在Node.js通过WebDriver端直接调用，测试Windows应用。</p>
+<h1 id="其它框架"><a href="#其它框架" class="headerlink" title="其它框架"></a>其它框架</h1><p>除了这些提供自动化技术的库，还有一个很重要的部分就是自动化驱动的框架。Node.js提供了很多框架，包括mocha、jasmine、cucumber.js。其中mocha、jasmine既可以适用于自动化单元测试，也可以驱动TDD（测试驱动）、BDD（行为驱动）的开发。而cucumber.js是专业做行为驱动的自动化测试的工具，最近在开源社区很活跃，已经更新到最新的4.0版本。</p>
+<p>测试完了要显示报表，不要急，也有做的足够专业的开源报表显示工具<a href="https://www.npmjs.com/package/cucumber-html-reporter" target="_blank" rel="noopener">cucumber-html-reporter</a>，能够针对Cucumber.js生成多种格式的报告。</p>
+<h1 id="JavaScript生态"><a href="#JavaScript生态" class="headerlink" title="JavaScript生态"></a>JavaScript生态</h1><p>在整个Github项目中，用的编程语言最多的就是JavaScript，下面是Github项目中的语言排名。</p>
+<p><img src="http://thyrsi.com/t6/649/1546496483x1822611383.jpg" alt="生态圈"></p>
+<p>俗话说的好，女怕嫁错郎，男怕入错行，而IT男最怕的就是选错技术，选错了技术不但意味着工作选择、薪资都有可能被限制，而且意味着巨大的学习成本的浪费。</p>
+<p>从学习编程以来，本人学了很多的技术都被淘汰了：大学里学asp.net，现在几乎不用了，后来自学了C，也很少人用了，毕业的时候感潮流学了VB，现在连微软自己都不用了。网站开发的时候学了ASP、后来用的Silverlight都逐渐被淘汰。测试开发的时候用VBScript（QTP）、C (LoadRunner)现在都越来越不流行。只能苦逼的不断的学习。</p>
+<p>而JavaScript从十几年前开始用到现在仍旧不光流行，而且是越来越火，从网页、后端，到跨Windows、Linux平台应用的开发，到开发原生移动端应用都可以用JavaScript搞定。所以现在它成为了全栈工程师的首选。不管你现在是全栈工程师、还是仅仅在做测试，选择JavaScript都能满足需要。如果你对Node.js还有怀疑可以看看这篇文章，了解一下Node.js的强大：</p>
+<p>不只是Web：十大令人振奋的Node.js项目<br><a href="https://cloud.tencent.com/developer/article/1064884" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1064884</a></p>
+<h1 id="工具整合"><a href="#工具整合" class="headerlink" title="工具整合"></a>工具整合</h1><p>PC客户端开发可以使用<a href="https://electronjs.org/" target="_blank" rel="noopener">electron</a></p>
+<p>移动端开发可以使用<a href="http://weex.apache.org/cn/guide/" target="_blank" rel="noopener">weex</a></p>
+<p>前端web、H5可以使用<a href="https://cn.vuejs.org/" target="_blank" rel="noopener">Vue</a>和<a href="http://element.eleme.io/" target="_blank" rel="noopener">Element-ui</a></p>
+<p>自动化测试框架那就更多了。。。</p>
+<p>综上看来Node.js完全可以满足各类自动化测试的需求。但是还是有很多同学觉得为难，这么多开源工具要整合起来有点难，而且Node.js作为纯命令行工具，也对初学者也不够友好。这种担心是很合理的，这是很多开源工具的都有的问题。</p>
+<h2 id="CukeTest"><a href="#CukeTest" class="headerlink" title="CukeTest"></a>CukeTest</h2><p>现在有了一个将所有这些开源工具在一起使用的机会。一个对个人用户都免费的工具，CukeTest，可以将所有这些框架都整合在一起使用。</p>
+<p>不仅因为它具有易于编写测试用例的可视化界面，根据测试用例一键生成自动化测试代码框架，运行完成后自动生成测试报告、web自动化支持屏幕录制功能，同时也支持使用csv文件导入导出功能支持数据驱动。下面就呈上证据：</p>
+<p>1.可视化界面</p>
+<p>不仅可以很方便的编写用例，同时也可以很方便的管理测试用例集；<br>最重要的是可以直接根据测试用例生成自动化代码样例，<br>并且能在自动化代码与测试用例可以自由的相互跳转：</p>
+<p><img src="http://thyrsi.com/t6/649/1546496623x1822611383.jpg" alt="可视化界面"></p>
+<p>2.详细的测试报告</p>
+<p>你几乎可以不用定义任何测试报告，运行完项目自动生成测试报告；<br>同时支持多种测试报告模板供选择；测试报告支持导出PDF，邮件发送常用功能：</p>
+<p><img src="http://thyrsi.com/t6/649/1546496765x1822611383.jpg" alt="测试报告"></p>
+<p><img src="http://thyrsi.com/t6/649/1546496638x1822611383.jpg" alt="测试报告"></p>
+<p>3.屏幕录制功能</p>
+<p>Web自动化过程中，只需要在运行配置中开启屏幕录制功能，项目运行中即可自动录制屏幕：</p>
+<p><img src="http://thyrsi.com/t6/649/1546496652x1822611383.jpg" alt="屏幕录制功能"></p>
+<p>4.可以与其它框架优雅的结合起来</p>
+<p>CukeTest可以与selenium，appium这些常用的测试框架结合起来一起使用。也可以使用nodejs流行的第三方HTTP库函数进行API自动化测试。<br>所以CukeTest在web，手机端，API的自动化都可以进行。</p>
+<p>5.可以很方便持续集成</p>
+<p>CukeTest支持命令行方式运行脚本，所以可以与所有CI工具一起使用。</p>
+<p>6.CukeTest可以让团队更加敏捷</p>
+<p>使用行为驱动开发，能够开发出大家都看得懂的测试脚本，不管懂不懂编程。而且。使用自然语言将我们的测试用例与自动化代码结合，可以在团队中以用例设计为测试准则，减少团队直接的沟通成本，同时又可以让团队中更多的成员参与进来。</p>
+<p>几乎不用重新造轮子，测试报告，屏幕录像这些操作都给我们提供了，我们只需要关注我们的业务，实现对应的代码既可。最重要的一点，CukeTest还是对所有开源社区和个人使用者是免费的。是的，免费！</p>
+<p>请记住CukeTest只是一个编辑工具、帮助你提高你在Node.js上的开发效率。你开发的自动化脚本仍旧是基于开源框架的，这意味着你仍旧可以不用这个编辑工具，也能运行你的脚本，保持了脚本的独立性。CukeTest可以在cuketest.com网站免费下载，或是在Windows10应用商店免费安装。</p>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/" target="_blank" rel="noopener">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/03/自动化测试框架究竟哪家强？/" data-id="cjymci29y000spx38fegcyt5z" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AutoTest/">AutoTest</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mock.js" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/01/mock.js/" class="article-date">
+  <time datetime="2019-01-01T14:55:06.000Z" itemprop="datePublished">2019-01-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/01/mock.js/">mockjs</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="开始-amp-安装"><a href="#开始-amp-安装" class="headerlink" title="开始 &amp; 安装"></a>开始 &amp; 安装</h1><h2 id="Node-CommonJS"><a href="#Node-CommonJS" class="headerlink" title="Node (CommonJS)"></a>Node (CommonJS)</h2><p> 安装</p>
+<p><code>npm install mockjs</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 Mock</span></span><br><span class="line"><span class="keyword">var</span> Mock = <span class="built_in">require</span>(<span class="string">'mockjs'</span>)</span><br><span class="line"><span class="keyword">var</span> data = Mock.mock(&#123;</span><br><span class="line">    <span class="comment">// 属性 list 的值是一个数组，其中含有 1 到 10 个元素</span></span><br><span class="line">    <span class="string">'list|1-10'</span>: [&#123;</span><br><span class="line">        <span class="comment">// 属性 id 是一个自增数，起始值为 1，每次增 1</span></span><br><span class="line">        <span class="string">'id|+1'</span>: <span class="number">1</span></span><br><span class="line">    &#125;]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 输出结果</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(data, <span class="literal">null</span>, <span class="number">4</span>))</span><br></pre></td></tr></table></figure></p>
+<h2 id="Bower"><a href="#Bower" class="headerlink" title="Bower"></a>Bower</h2><p> 安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g bower</span><br><span class="line">bower install --save mockjs</span><br></pre></td></tr></table></figure>
+<p><code>&lt;script type=&quot;text/javascript&quot; src=&quot;./bower_components/mockjs/dist/mock.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>RequireJS (AMD)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 配置 Mock 路径</span><br><span class="line">require.config(&#123;</span><br><span class="line">    paths: &#123;</span><br><span class="line">        mock: &apos;http://mockjs.com/dist/mock&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">// 加载 Mock</span><br><span class="line">require([&apos;mock&apos;], function(Mock)&#123;</span><br><span class="line">    // 使用 Mock</span><br><span class="line">    var data = Mock.mock(&#123;</span><br><span class="line">        &apos;list|1-10&apos;: [&#123;</span><br><span class="line">            &apos;id|+1&apos;: 1</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;)</span><br><span class="line">    // 输出结果</span><br><span class="line">    document.body.innerHTML +=</span><br><span class="line">        &apos;&lt;pre&gt;&apos; +</span><br><span class="line">        JSON.stringify(data, null, 4) +</span><br><span class="line">        &apos;&lt;/pre&gt;&apos;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>// ==&gt;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"list"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">"id"</span>: <span class="number">1</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">"id"</span>: <span class="number">2</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">"id"</span>: <span class="number">3</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="JSFiddle"><a href="#JSFiddle" class="headerlink" title="JSFiddle"></a>JSFiddle</h2><p>Sea.js (CMD)</p>
+<p>因为 Sea.js 社区尚未提供 webpack 插件，所以 Mock.js 暂不完整支持通过 Sea.js 加载。</p>
+<p>一种变通的方式是，依然通过 Sea.js 配置和加载 Mock.js，然后访问全局变量 Mock。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 配置 Mock 路径</span></span><br><span class="line">seajs.config(&#123;</span><br><span class="line">    alias: &#123;</span><br><span class="line">        mock: <span class="string">'http://mockjs.com/dist/mock.js'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 加载 Mock</span></span><br><span class="line">seajs.use(<span class="string">'mock'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">__PLACEHOLDER</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 使用 Mock（全局变量）</span></span><br><span class="line">    <span class="keyword">var</span> data = Mock.mock(&#123;</span><br><span class="line">        <span class="string">'list|1-10'</span>: [&#123;</span><br><span class="line">            <span class="string">'id|+1'</span>: <span class="number">1</span></span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="built_in">document</span>.body.innerHTML +=</span><br><span class="line">        <span class="string">'&lt;pre&gt;'</span> +</span><br><span class="line">        <span class="built_in">JSON</span>.stringify(data, <span class="literal">null</span>, <span class="number">4</span>) +</span><br><span class="line">        <span class="string">'&lt;/pre&gt;'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>JSFiddle</p>
+<h2 id="Random-CLI"><a href="#Random-CLI" class="headerlink" title="Random CLI"></a>Random CLI</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 全局安装</span><br><span class="line">$ npm install mockjs -g</span><br><span class="line"></span><br><span class="line"># 执行</span><br><span class="line">$ random url</span><br><span class="line"># =&gt; http://rmcpx.org/funzwc</span><br><span class="line"></span><br><span class="line"># 帮助</span><br><span class="line">random -h</span><br></pre></td></tr></table></figure>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/" target="_blank" rel="noopener">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/01/mock.js/" data-id="cjymci29o0009px38tt4u53fb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AutoTest/">AutoTest</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-如何编写README-md？" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/28/如何编写README-md？/" class="article-date">
+  <time datetime="2018-12-28T03:12:50.000Z" itemprop="datePublished">2018-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/28/如何编写README-md？/">如何编写README.md？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近对它的README.md文件颇为感兴趣。</p>
+<p>帮助更多的还不会编写README文件的同学们。</p>
+<p>README文件后缀名为md</p>
+<p>md是markdown的缩写，markdown是一种编辑博客的语言。用惯了可视化的博客编辑器（比如CSDN博客，囧），这种编程式的博客编辑方案着实让人眼前一亮。不过GitHub支持的语法在标准markdown语法的基础上做了修改，称为Github Flavored Markdown，简称GFM。可不是GFW呀偷笑。</p>
+<p>开始编辑README<br>打开你的GitHub的某个项目，我们可以直接在线编辑你的README文件，如果你已经有了这个文件，则在文件目录中直接点击它，如果你还没有这个文件那么点击项目名称右边的一个按钮，来添加新文件：</p>
+<p>然后你就打开了编辑页面，编辑区的左上角有填写文件名的区域，注意加上后缀.md</p>
+<p>如果你本来就有这个文件要重新编辑它的话，那么在点击了文件目录中的该文件后，在上方有工具栏，选择Edit</p>
+<p>然后滚动屏幕到下面，如果是新文件会有一个Commit new file的按钮，若没有内容是不能点击的。如果是旧文件重修编辑，那么这个按钮显示的是 Commit changes</p>
+<p>//顺便吐槽一句如果是360或搜狗浏览器的话，这个按钮是永远都无法点击的，囧。。</p>
+<p>先随便写的东西把这个新文件提交，然后再点击 Edit 重新打开它。你会发现编辑区左上角有了变化。</p>
+<p>默认选中Code，即我们的编辑模式。若点击 Preview（预览）就能实时显示当前的显示效果了。</p>
+<p>好了，下面正式开始编辑这个文件</p>
+<h1 id="大标题"><a href="#大标题" class="headerlink" title="大标题  "></a>大标题  </h1><p>规范的README文件开头都写上一个标题，这被称为大标题。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<h1 id="大标题-1"><a href="#大标题-1" class="headerlink" title="大标题  "></a>大标题  </h1><p>在文本下面加上 等于号 = ，那么上方的文本就变成了大标题。等于号的个数无限制，但一定要大于0个哦。。<br>比大标题低一级的是中标题，也就是显示出来比大标题小点。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<h1 id="中标题"><a href="#中标题" class="headerlink" title="中标题  "></a>中标题  </h1><p>在文本下面加上 下划线 - ，那么上方的文本就变成了中标题，同样的 下划线个数无限制。</p>
+<p>除此之外，你也会发现大，中标题下面都有一条横线，没错这就是 = 和 - 的显示结果。</p>
+<p>如果你只输入了等于号=，但其上方无文字，那么就只会显示一条直线。如果上方有了文字，但你又只想显示一条横线，而不想把上方的文字转义成大标题的话，那么你就要在等于号=和文字直接补一个空行。</p>
+<p>补空行：是很常用的用法，当你不想上下两个不同的布局方式交错到一起的时候，就要在两种布局之间补一个空行。</p>
+<p>如果你只输入了短横线（减号）-，其上方无文字，那么要显示直线，必须要写三个减号以上。不过与等于号的显示效果不同，它显示出来时虚线而不是实线。同减号作用相同的还有星号*和下划线_，同样的这两者符号也要写三个以上才能显示一条虚横线。</p>
+<p>除此以外，关于标题还有等级表示法，分为六个等级，显示的文本大小依次减小。不同等级之间是以井号  #  的个数来标识的。一级标题有一个 #，二级标题有两个# ，以此类推。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p>#一级标题  </p>
+<p>##二级标题  </p>
+<p>###三级标题  </p>
+<p>####四级标题  </p>
+<p>#####五级标题  </p>
+<p>######六级标题<br>注意井号#和标题名称要并排写作一行，显示效果如图：</p>
+<p>实际上，前文所述的大标题和中标题是分别和一级标题和二级标题对应的。即大标题大小和一级标题相同，中标题大小和二级标题相同。</p>
+<h1 id="显示文本"><a href="#显示文本" class="headerlink" title="显示文本  "></a>显示文本  </h1><p>普通文本<br>直接输入的文字就是普通文本。需要注意的是要换行的时候不能直接通过回车来换行，需要使用<br>(或者<br>)。也就是html里面的标签。事实上，markdown支持一些html标签，你可以试试。当然如果你完全使用html来写的话，就丧失意义了，毕竟markdown并非专门做前端的，然而仅实现一般效果的话，它会比html写起来要简洁得多得多啦。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p>这是一段普通的文本，<br>直接回车不能换行，<br><br>要使用\<br><br>注意第三行的<br>前加了反斜杠 \ 。目的就是像其他语言那样实现转义，也就是 &lt;  的转义。<br>效果如图：</p>
+<p>此外，要显示一个超链接的话，就直接输入这个链接的URL就好了。显示出来会自动变成可链接的形式的。</p>
+<p>显示空格的小Tip<br>默认的文本行首空格都会被忽略的，但是如果你想用空格来排一下版的话怎么办呢，有个小技巧，那就是把你的输入法由半角改成全角就OK啦。<br>单行文本<br>使用两个Tab符实现单行文本。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p>Hello,大家好，我是方块银。<br>注意前面有两个Tab。在GitHub上单行文本显示效果如图：</p>
+<p>多行文本<br>多行文本和单行文本异曲同工，只要在每行行首加两个Tab</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p>欢迎到访<br>很高兴见到您<br>祝您，早上好，中午好，下午好，晚安  </p>
+<p>部分文字的高亮<br>如果你想使一段话中部分文字高亮显示，来起到突出强调的作用，那么可以把它用 <code></code> 包围起来。注意这不是单引号，而是Tab上方，数字1左边的按键（注意使用英文输入法）。</p>
+<p>Thank <code>You</code> . Please <code>Call</code> Me <code>Coder</code></p>
+<h1 id="文字超链接"><a href="#文字超链接" class="headerlink" title="文字超链接"></a>文字超链接</h1><p>给一段文字加入超链接的格式是这样的 <a href="链接的地址"> 要显示的文字 </a>。比如：</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p><a href="https://liyinchigithub.github.io" target="_blank" rel="noopener">我的博客</a><br>显示效果：</p>
+<p>你还可以给他加上一个鼠标悬停显示的文本。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p><a href="https://liyinchigithub.github.io" title="悬停显示" target="_blank" rel="noopener">我的博客</a><br>即在URL之后 用双引号括起来一个字符串。同样要注意这里是英文双引号。</p>
+<p>插入符号<br>圆点符<br>这是一个圆点符<br>这也是一个圆点符<br>上面这段的圆点是CSDN博客编辑器里面的符号列表。写文章在列出条目时经常用到。在GitHub的markdown语法里也支持使用圆点符。编辑的时候使用的是星号 *</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<ul>
+<li>昵称：liyinchi </li>
+<li>别名：方块银</li>
+<li>英文名：Jack li<br>要注意的是星号* 后面要有一个空格。否则显示为普通星号。上文的显示效果如图：</li>
+</ul>
+<p>此外还有二级圆点和三级圆点。就是多加一个Tab。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<ul>
+<li>编程语言  <ul>
+<li>脚本语言  <ul>
+<li>Python<br>第二行一个Tab，第三行两个Tab。这样用来表示层级结构就更清晰了吧，看效果：</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>如果你觉得三级的结构还不够表达清楚的话，我们可以试着换一种形式，请看字符包围</p>
+<p>缩进<br>缩进的含义是很容易理解的。。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<blockquote>
+<p>数据结构  </p>
+<blockquote>
+<p>树  </p>
+<blockquote>
+<p>二叉树  </p>
+<blockquote>
+<p>平衡二叉树  </p>
+<blockquote>
+<p>满二叉树<br>显示效果：</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>当然比这个更一般的用法是这样。常常能在书籍里面看到的效果，比如引用别人的文章。直接看效果。</p>
+<p>具体这个“缩进”的用法。大家自己摸索吧。</p>
+<p>插入图片</p>
+<p>来源于网络的图片</p>
+<p>网上有很多README插入图片的教程了，经我自己多次测试呢，发现可以使用的最简单，最基本的语法是：</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p><img src="http://www.baidu.com/img/bdlogo.gif" alt><br>即 叹号! + 方括号[ ] + 括号( ) 其中叹号里是图片的URL。</p>
+<p>如果不加叹号! ,就会变成普通文本baidu了。</p>
+<p>在方括号里可以加入一些 标识性的信息，比如</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p><img src="http://www.baidu.com/img/bdlogo.gif" alt="baidu"><br>这个方括号里的baidu并不会对图像显示造成任何改动，如果你想达到鼠标悬停显示提示信息，那么可以仿照前面介绍的文本中的方法，就是这样：</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p><img src="http://www.baidu.com/img/bdlogo.gif" alt="baidu" title="百度logo"><br>在URL后面，加一个双引号包围的字符串，显示效果如图：</p>
+<p>GitHub仓库里的图片<br>有时候我们想显示一个GitHub仓库(或者说项目)里的图片而不是一张其他来源网络图片，因为其他来源的URL很可能会失效。那么如何显示一个GitHub项目里的图片呢？</p>
+<p>其实与上面的格式基本一致的，所不同的就是括号里的URL该怎么写。</p>
+<pre><code>https://github.com/ 你的用户名 / 你的项目名 / raw / 分支名 / 存放图片的文件夹 / 该文件夹下的图片
+</code></pre><p>这样一目了然了吧。比如：</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p><img src alt>  </p>
+<p>给图片加上超链接<br>如果你想使图片带有超链接的功能，即点击一个图片进入一个指定的网页。那么可以这样写：</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p><a href="http://baidu.com" target="_blank" rel="noopener">![baidu]</a><br>[baidu]:<a href="http://www.baidu.com/img/bdlogo.gif" target="_blank" rel="noopener">http://www.baidu.com/img/bdlogo.gif</a> “百度Logo”<br>这两句和前面的写法差异较大，但是也极易模仿着写出，就不过多介绍了。只需注意上下文中的 baidu 是你自己起的标识的名称，可以随意，但是一定要保证上下两行的 标识 是一致的。<br>这样就能实现 点击图片进入网页的功能了。</p>
+<p>插入代码片段<br>我们需要在代码的上一行和下一行用<code>`</code> 标记。<figure class="highlight plain"><figcaption><span>``` 之后加上你的编程语言即可（忽略大小写）。c++语言可以写成c++也可以是cpp。看代码：</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">实际显示效果</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[题外话]在GitHub上用Gist写日记吧</span><br><span class="line">看了这么多markdown的语法，你一定不满足于仅仅写一个README文件了，开始跃跃欲试想实际用markdown语法来编写博客或文章了吧。的确，网上也有依托或者支持markdown语法的博客。但是呢，更方便的是，你可以借助GitHub本身就有的一个功能——Gist。</span><br><span class="line"></span><br><span class="line">Gist是以文件为单位的，不是以项目为单位的。而且与普通的GitHub上建的仓库不同，Gist是private的哦。普通的项目默认都是public的，要想弄成private貌似还要交钱的样子。既然是private那么用来写写日记，是极好的。</span><br><span class="line"></span><br><span class="line">GitHub网页的顶部有：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">点进去:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">这就是你可以编辑的私有文件，它不仅支持Text文本，还支持各种编程语言呢！当然也包括markdown。输入文件名：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">最后保存，选中 Create Secret Gist 就是私有的喽。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-----------下面是一个README.md例子</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">README</span><br><span class="line">====</span><br><span class="line">该文件用来测试和展示书写README的各种markdown语法。GitHub的markdown语法在标准的markdown语法基础上做了扩充，称之为`GitHub Flavored Markdown`。简称`GFM`，GFM在GitHub上有广泛应用，除了README文件外，issues和wiki均支持markdown语法。</span><br><span class="line"></span><br><span class="line">****</span><br><span class="line">	</span><br><span class="line">|Author|JackLi|</span><br><span class="line">|---|---</span><br><span class="line">|E-mail|liyinchi@qq.com</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">****</span><br><span class="line">## 目录</span><br><span class="line">* [横线](#横线)</span><br><span class="line">* [标题](#标题)</span><br><span class="line">* [文本](#文本)</span><br><span class="line">    * 普通文本</span><br><span class="line">    * 单行文本</span><br><span class="line">    * 多行文本</span><br><span class="line">    * 文字高亮</span><br><span class="line">    * 换行</span><br><span class="line">    * 斜体</span><br><span class="line">    * 粗体</span><br><span class="line">    * 删除线</span><br><span class="line">* [图片](#图片)</span><br><span class="line">    * 来源于网络的图片</span><br><span class="line">    * GitHub仓库中的图片</span><br><span class="line">* [链接](#链接) </span><br><span class="line">    * 文字超链接</span><br><span class="line">        *  链接外部URL</span><br><span class="line">        *  链接本仓库里的URL</span><br><span class="line">    *  锚点</span><br><span class="line">    * [图片链接](#图片链接)</span><br><span class="line">* [列表](#列表)</span><br><span class="line">    * 无序列表</span><br><span class="line">    * 有序列表</span><br><span class="line">    * 复选框列表</span><br><span class="line">* [块引用](#块引用)</span><br><span class="line">* [代码高亮](#代码高亮)</span><br><span class="line">* [表格](#表格) </span><br><span class="line">* [表情](#表情)</span><br><span class="line">* [diff语法](#diff语法)</span><br><span class="line"></span><br><span class="line">### 横线</span><br><span class="line">-----------</span><br><span class="line">***、---、___可以显示横线效果</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line">---</span><br><span class="line">___</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">标题</span><br><span class="line">====</span><br><span class="line"></span><br><span class="line"># 一级标题  </span><br><span class="line">## 二级标题  </span><br><span class="line">### 三级标题  </span><br><span class="line">#### 四级标题  </span><br><span class="line">##### 五级标题  </span><br><span class="line">###### 六级标题  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">文本</span><br><span class="line">====</span><br><span class="line">### 普通文本</span><br><span class="line">这是一段普通的文本</span><br><span class="line">### 单行文本</span><br><span class="line">    Hello,大家好，我是Jack li。</span><br><span class="line">在一行开头加入1个Tab或者4个空格。</span><br><span class="line">### 文本块</span><br><span class="line">#### 语法1</span><br><span class="line">在连续几行的文本开头加入1个Tab或者4个空格。</span><br><span class="line"></span><br><span class="line">    欢迎到访</span><br><span class="line">    很高兴见到您</span><br><span class="line">    祝您，早上好，中午好，下午好，晚安</span><br><span class="line"></span><br><span class="line">#### 语法2</span><br><span class="line">使用一对各三个的反引号：</span><br></pre></td></tr></table></figure></p>
+<p>欢迎到访<br>我是JavaScript、Java码农<br>你可以在github搜索【liyinchi】找到我<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">该语法也可以实现代码高亮，见[代码高亮](#代码高亮)</span><br><span class="line">### 文字高亮</span><br><span class="line">文字高亮功能能使行内部分文字高亮，使用一对反引号。</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure></p>
+<p><code>linux</code> <code>网络编程</code> <code>socket</code> <code>epoll</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">效果：`linux` `网络编程` `socket` `epoll`</span><br><span class="line"></span><br><span class="line">也适合做一篇文章的tag</span><br><span class="line">#### 换行</span><br><span class="line">直接回车不能换行，  </span><br><span class="line">可以在上一行文本后面补两个空格，  </span><br><span class="line">这样下一行的文本就换行了。</span><br><span class="line"></span><br><span class="line">或者就是在两行文本直接加一个空行。</span><br><span class="line"></span><br><span class="line">也能实现换行效果，不过这个行间距有点大。</span><br><span class="line">#### 斜体、粗体、删除线</span><br><span class="line"></span><br><span class="line">|语法|效果|</span><br><span class="line">|----|-----|</span><br><span class="line">|`*斜体1*`|*斜体1*|</span><br><span class="line">|`_斜体2_`| _斜体2_|</span><br><span class="line">|`**粗体1**`|**粗体1**|</span><br><span class="line">|`__粗体2__`|__粗体2__|</span><br><span class="line">|`这是一个 ~~删除线~~`|这是一个 ~~删除线~~|</span><br><span class="line">|`***斜粗体1***`|***斜粗体1***|</span><br><span class="line">|`___斜粗体2___`|___斜粗体2___|</span><br><span class="line">|`***~~斜粗体删除线1~~***`|***~~斜粗体删除线1~~***|</span><br><span class="line">|`~~***斜粗体删除线2***~~`|~~***斜粗体删除线2***~~|</span><br><span class="line"></span><br><span class="line">    斜体、粗体、删除线可混合使用</span><br><span class="line"></span><br><span class="line">图片</span><br><span class="line">====</span><br><span class="line">基本格式：</span><br></pre></td></tr></table></figure></p>
+<p><img src="URL title" alt="alt"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">alt和title即对应HTML中的alt和title属性（都可省略）：</span><br><span class="line">- alt表示图片显示失败时的替换文本</span><br><span class="line">- title表示鼠标悬停在图片时的显示文本（注意这里要加引号）</span><br><span class="line"></span><br><span class="line">URL即图片的url地址，如果引用本仓库中的图片，直接使用**相对路径**就可了，如果引用其他github仓库中的图片要注意格式，即：`仓库地址/raw/分支名/图片路径`，如：</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/xxx/ImageCache/raw/master/Logo/foryou.gif" target="_blank" rel="noopener">https://github.com/xxx/ImageCache/raw/master/Logo/foryou.gif</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">|#|语法|效果|</span><br><span class="line">|---|---|----</span><br><span class="line">|1|`![baidu](http://www.baidu.com/img/bdlogo.gif &quot;百度logo&quot;)`|![baidu](http://www.baidu.com/img/bdlogo.gif &quot;百度logo&quot;)</span><br><span class="line">|2|`![][foryou]`|![][foryou]</span><br><span class="line"></span><br><span class="line">注意例2的写法使用了**URL标识符**的形式，在[链接](#链接)一节有介绍。</span><br><span class="line">&gt;在文末有foryou的定义：</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">链接</span><br><span class="line">====</span><br><span class="line">### 链接外部URL</span><br><span class="line"></span><br><span class="line">|#|语法|效果|</span><br><span class="line">|---|----|-----|</span><br><span class="line">|1|`[我的博客](https://liyinchigithub.github.io/ &quot;悬停显示&quot;)`|[我的博客](https://liyinchigithub.github.io/ &quot;悬停显示&quot;)|</span><br><span class="line"></span><br><span class="line">语法2由两部分组成：</span><br><span class="line">- 第一部分使用两个中括号，[ ]里的标识符（本例中zhihu），可以是数字，字母等的组合，标识符上下对应就行了（**姑且称之为URL标识符**）</span><br><span class="line">- 第二部分标记实际URL。</span><br><span class="line"></span><br><span class="line">&gt;使用URL标识符能达到复用的目的，一般把全文所有的URL标识符统一放在文章末尾，这样看起来比较干净。</span><br><span class="line">&gt;&gt;URL标识符是我起的名字，不知道是否准确。囧。。</span><br><span class="line"></span><br><span class="line">### 链接本仓库里的URL</span><br><span class="line"></span><br><span class="line">|语法|效果|</span><br><span class="line">|----|-----|</span><br><span class="line">|`[我的简介](/example/profile.md)`|[我的简介](/example/profile.md)|</span><br><span class="line">|`[example](./example)`|[example](./example)|</span><br><span class="line"></span><br><span class="line">### 图片链接</span><br><span class="line">给图片加链接的本质是混合图片显示语法和普通的链接语法。普通的链接中[ ]内部是链接要显示的文本，而图片链接[ ]里面则是要显示的图片。  </span><br><span class="line">直接混合两种语法当然可以，但是十分啰嗦，为此我们可以使用URL标识符的形式。</span><br><span class="line"></span><br><span class="line">|#|语法|效果|</span><br><span class="line">|---|----|:---:|</span><br><span class="line">|1|`[![weibo-logo]](http://weibo.com)`|[![weibo-logo]](http://weibo.com/)|</span><br><span class="line">|2|`[![](/img/zhihu.png &quot;我的知乎，欢迎关注&quot;)][zhihu]`|[![](/img/zhihu.png &quot;我的知乎，欢迎关注&quot;)][zhihu]|</span><br><span class="line">|3|`[![csdn-logo]][csdn]`|[![csdn-logo]][csdn]|</span><br><span class="line"></span><br><span class="line">因为图片本身和链接本身都支持URL标识符的形式，所以图片链接也可以很简洁（见例3）。  </span><br><span class="line">注意，此时鼠标悬停时显示的文字是图片的title，而非链接本身的title了。</span><br><span class="line">&gt; 本文URL标识符都放置于文末</span><br><span class="line"></span><br><span class="line">### 锚点</span><br><span class="line">其实呢，每一个标题都是一个锚点，和HTML的锚点（`#`）类似，比如我们 </span><br><span class="line"></span><br><span class="line">|语法|效果|</span><br><span class="line">|---|---|</span><br><span class="line">|`[回到顶部](#readme)`|[回到顶部](#readme)|</span><br><span class="line"></span><br><span class="line">不过要注意，标题中的英文字母都被转化为**小写字母**了。</span><br><span class="line">&gt; 以前GitHub对中文支持的不好，所以中文标题不能正确识别为锚点，但是现在已经没问题啦！</span><br><span class="line"></span><br><span class="line">## 列表</span><br><span class="line">### 无序列表</span><br><span class="line">#### 语法</span><br></pre></td></tr></table></figure>
+<ul>
+<li>昵称：liyinchi</li>
+</ul>
+<ul>
+<li>别名：方块银</li>
+</ul>
+<ul>
+<li><p>英文名：Jack Li</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#### 效果</span><br><span class="line">* 昵称：liyinchi</span><br><span class="line">- 别名：方块银</span><br><span class="line">* 英文名：Jack Li</span><br><span class="line"></span><br><span class="line">### 多级无序列表</span><br><span class="line">#### 语法</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编程语言</p>
+<ul>
+<li>脚本语言<ul>
+<li>JAVA<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#### 效果</span><br><span class="line">* 编程语言</span><br><span class="line">    * 脚本语言</span><br><span class="line">        * JAVA</span><br><span class="line"></span><br><span class="line">### 一级有序列表</span><br><span class="line">#### 语法</span><br><span class="line">就是在数字后面加一个点，再加一个空格。不过看起来起来可能不够明显。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>面向对象的三个基本特征：</p>
+<ol>
+<li>封装</li>
+<li>继承</li>
+<li><p>多态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 效果</span><br><span class="line">面向对象的三个基本特征：</span><br><span class="line"></span><br><span class="line">1. 封装</span><br><span class="line">2. 继承</span><br><span class="line">3. 多态</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 多级有序列表</span><br><span class="line">和无序列表一样，有序列表也有多级结构。</span><br><span class="line">#### 语法</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这是一级的有序列表，数字1还是1</p>
+<ol>
+<li>这是二级的有序列表，阿拉伯数字在显示的时候变成了罗马数字<ol>
+<li>这是三级的有序列表，数字在显示的时候变成了英文字母<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 效果</span><br><span class="line"></span><br><span class="line">1. 这是一级的有序列表，数字1还是1</span><br><span class="line">   1. 这是二级的有序列表，阿拉伯数字在显示的时候变成了罗马数字</span><br><span class="line">      1. 这是三级的有序列表，数字在显示的时候变成了英文字母</span><br><span class="line">	 </span><br><span class="line"></span><br><span class="line">### 复选框列表</span><br><span class="line">#### 语法</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> 需求分析</li>
+<li style="list-style: none"><input type="checkbox" checked> 系统设计</li>
+<li style="list-style: none"><input type="checkbox" checked> 详细设计</li>
+<li style="list-style: none"><input type="checkbox"> 编码</li>
+<li style="list-style: none"><input type="checkbox"> 测试</li>
+<li style="list-style: none"><input type="checkbox"> 交付<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#### 效果</span><br><span class="line"></span><br><span class="line">- [x] 需求分析</span><br><span class="line">- [x] 系统设计</span><br><span class="line">- [x] 详细设计</span><br><span class="line">- [ ] 编码</span><br><span class="line">- [ ] 测试</span><br><span class="line">- [ ] 交付</span><br><span class="line"></span><br><span class="line">您可以使用这个功能来标注某个项目各项任务的完成情况。</span><br><span class="line">&gt; Tip:</span><br><span class="line">&gt;&gt; 在GitHub的**issue**中使用该语法是可以实时点击复选框来勾选或解除勾选的，而无需修改issue原文。</span><br><span class="line"></span><br><span class="line">## 块引用</span><br><span class="line"></span><br><span class="line">### 常用于引用文本</span><br><span class="line">#### 文本摘自《深入理解计算机系统》P27</span><br><span class="line">　令人吃惊的是，在哪种字节顺序是合适的这个问题上，人们表现得非常情绪化。实际上术语“little endian”（小端）和“big endian”（大端）出自Jonathan Swift的《格利佛游记》一书，其中交战的两个派别无法就应该从哪一端打开一个半熟的鸡蛋达成一致。因此，争论沦为关于社会政治的争论。只要选择了一种规则并且始终如一的坚持，其实对于哪种字节排序的选择都是任意的。</span><br><span class="line">&gt; **“端”（endian）的起源**  </span><br><span class="line">以下是Jonathan Swift在1726年关于大小端之争历史的描述：  </span><br><span class="line">“……下面我要告诉你的是，Lilliput和Blefuscu这两大强国在过去36个月里一直在苦战。战争开始是由于以下的原因：我们大家都认为，吃鸡蛋前，原始的方法是打破鸡蛋较大的一端，可是当今的皇帝的祖父小时候吃鸡蛋，一次按古法打鸡蛋时碰巧将一个手指弄破了，因此他的父亲，当时的皇帝，就下了一道敕令，命令全体臣民吃鸡蛋时打破较小的一端，违令者重罚。”</span><br><span class="line"></span><br><span class="line">### 块引用有多级结构</span><br><span class="line">#### 语法</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>数据结构</p>
+<blockquote>
+<p>树</p>
+<blockquote>
+<p>二叉树</p>
+<blockquote>
+<p>平衡二叉树</p>
+<blockquote>
+<p>满二叉树<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#### 效果</span><br><span class="line">&gt; 数据结构</span><br><span class="line">&gt;&gt; 树</span><br><span class="line">&gt;&gt;&gt; 二叉树</span><br><span class="line">&gt;&gt;&gt;&gt; 平衡二叉树</span><br><span class="line">&gt;&gt;&gt;&gt;&gt; 满二叉树</span><br><span class="line"></span><br><span class="line">代码高亮</span><br><span class="line">====</span><br><span class="line"></span><br><span class="line">### 语法</span><br><span class="line">在三个反引号后面加上编程语言的名字，另起一行开始写代码，最后一行再加上三个反引号。</span><br><span class="line"></span><br><span class="line">### 效果</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>public static void main(String[]args){} //Java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```c</span><br><span class="line">int main(int argc, char *argv[]) //C</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"hello GitHub"</span> <span class="comment">#Bash</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myH1"</span>).innerHTML=<span class="string">"Welcome to my Homepage"</span>; <span class="comment">//javascipt</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> &amp;<span class="keyword">operator</span>+(<span class="keyword">const</span> <span class="built_in">string</span>&amp; A,<span class="keyword">const</span> <span class="built_in">string</span>&amp; B) <span class="comment">//cpp</span></span><br></pre></td></tr></table></figure>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表格单元</td>
+<td>表格单元</td>
+<td></td>
+</tr>
+<tr>
+<td>表格单元</td>
+<td>表格单元</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表格单元</td>
+<td>表格单元</td>
+</tr>
+<tr>
+<td>表格单元</td>
+<td>表格单元</td>
+</tr>
+</tbody>
+</table>
+<h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><p>表格可以指定对齐方式</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:center">居中</th>
+<th style="text-align:right">右对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">col 3 is</td>
+<td style="text-align:center">some wordy text</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td style="text-align:left">col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td style="text-align:left">zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="混合其他语法"><a href="#混合其他语法" class="headerlink" title="混合其他语法"></a>混合其他语法</h3><p>表格单元中的内容可以和其他大多数GFM语法配合使用，如：  </p>
+<h4 id="使用普通文本的删除线，斜体等效果"><a href="#使用普通文本的删除线，斜体等效果" class="headerlink" title="使用普通文本的删除线，斜体等效果"></a>使用普通文本的删除线，斜体等效果</h4><table>
+<thead>
+<tr>
+<th>名字</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Help</td>
+<td><del>Display the</del> help window.</td>
+</tr>
+<tr>
+<td>Close</td>
+<td><em>Closes</em> a window</td>
+</tr>
+</tbody>
+</table>
+<h4 id="表格中嵌入图片（链接）"><a href="#表格中嵌入图片（链接）" class="headerlink" title="表格中嵌入图片（链接）"></a>表格中嵌入图片（链接）</h4><p>其实前面介绍图片显示、图片链接的时候为了清晰就是放在在表格中显示的。</p>
+<table>
+<thead>
+<tr>
+<th>图片</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>![baidu][baidu-logo]</td>
+<td>百度</td>
+</tr>
+</tbody>
+</table>
+<h2 id="表情"><a href="#表情" class="headerlink" title="表情"></a>表情</h2><p>Github的Markdown语法支持添加emoji表情，输入不同的符号码（两个冒号包围的字符）可以显示出不同的表情。</p>
+<p>比如<code>:blush:</code>，可以显示:blush:。</p>
+<p>具体每一个表情的符号码，可以查询GitHub的官方网页<a href="http://www.emoji-cheat-sheet.com" target="_blank" rel="noopener">http://www.emoji-cheat-sheet.com</a>。</p>
+<p>但是这个网页每次都打开<strong>奇慢</strong>。。所以我整理到了本repo中，大家可以直接在此查看<a href="./emoji.md">emoji</a>。</p>
+<h2 id="diff语法"><a href="#diff语法" class="headerlink" title="diff语法"></a>diff语法</h2><p>版本控制的系统中都少不了diff的功能，即展示一个文件内容的增加与删除。<br>GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示删除。</p>
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>其语法与代码高亮类似，只是在三个反引号后面写diff，<br>并且其内容中，以 <code>+</code>开头表示新增，<code>-</code>开头表示删除。</p>
+<h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="addition">+ 鸟宿池边树，僧敲月下门</span></span><br><span class="line"><span class="deletion">- 鸟宿池边树，僧推月下门</span></span><br></pre></td></tr></table></figure>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/" target="_blank" rel="noopener">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/12/28/如何编写README-md？/" data-id="cjymci29u000jpx383npsa6zv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Development/">Development</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AutoTest/">AutoTest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Development/">Development</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AutoTest/" style="font-size: 10px;">AutoTest</a> <a href="/tags/Development/" style="font-size: 20px;">Development</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/06/14/Nodemailer/">Nodemailer</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/14/测试工作管理平台/">测试工作管理平台</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/19/场景法设计测试用例/">场景法设计测试用例</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/">解决postman无法下载xls并解析下载内容是否正确方案</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/02/element-ui/">element-ui</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Jack Li  QQ:233227763@qq.com<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
 </footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
 
-<!-- ============================ END Footer =========================== -->
-      <!-- Load our scripts -->
-<!-- Resizable 'on-demand' full-height hero -->
-<script type="text/javascript">
-    var resizeHero = function () {
-        var hero = $(".cover,.heightblock"),
-            window1 = $(window);
-        hero.css({
-            "height": window1.height()
-        });
-    };
-
-    resizeHero();
-
-    $(window).resize(function () {
-        resizeHero();
-    });
-</script>
-<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
-<script src="/js/scripts.js"></script><!-- Theme scripts -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$('#intro').find('img').each(function(){
-  var alt = this.alt;
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-  if (alt){
-    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
-  }
 
-  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
-});
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
+<script src="/js/script.js"></script>
 
 
 
-      
+  </div>
 </body>
 </html>
