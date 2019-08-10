@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Development,">
+  <meta name="keywords" content="AutoTest,">
 
 
 
@@ -79,18 +79,21 @@
 
 
 
-<meta name="description" content="简介【服务诞生原因】测试人员、开发人员常使用postman进行接口测试，但postman自身无法对mysql数据库进行操作，为了方便测试人员日常使用postman进行接口功能测试、接口自动回归测试，可以通过postman调用操作数据库清除测试数据。其次市面上目前没有针对postman调用mongoDB数据库的工具。由此诞生express-mongodb-restfulAPI，我为其命名为omong">
-<meta name="keywords" content="Development">
+<meta name="description" content="前言有很多商业化、开源化测试框架及工具，但实际运用需很大维护成本，产生价值低。如何真正”高效快速”、”低成本维护”？经过调研落地、使用对比，最终确认这个方案（Postman+Newman+Jenkins+Git+Nodejs）基于restful Api、RPC等等，都可以变相解决。 如何借助这些工具实现接口测试自动化和持续集成？1、Postman 基于http/https协议接口，一款可视化构造客">
+<meta name="keywords" content="AutoTest">
 <meta property="og:type" content="article">
-<meta property="og:title" content="express-mongodb-restfulAPI">
-<meta property="og:url" content="http://yoursite.com/2018/12/27/express-mongodb-restfulAPI/index.html">
+<meta property="og:title" content="接口自动化测试持续集成解决方案（Postman+Newman+Jenkins+Git+Nodejs）">
+<meta property="og:url" content="http://yoursite.com/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/index.html">
 <meta property="og:site_name" content="liyinchi">
-<meta property="og:description" content="简介【服务诞生原因】测试人员、开发人员常使用postman进行接口测试，但postman自身无法对mysql数据库进行操作，为了方便测试人员日常使用postman进行接口功能测试、接口自动回归测试，可以通过postman调用操作数据库清除测试数据。其次市面上目前没有针对postman调用mongoDB数据库的工具。由此诞生express-mongodb-restfulAPI，我为其命名为omong">
+<meta property="og:description" content="前言有很多商业化、开源化测试框架及工具，但实际运用需很大维护成本，产生价值低。如何真正”高效快速”、”低成本维护”？经过调研落地、使用对比，最终确认这个方案（Postman+Newman+Jenkins+Git+Nodejs）基于restful Api、RPC等等，都可以变相解决。 如何借助这些工具实现接口测试自动化和持续集成？1、Postman 基于http/https协议接口，一款可视化构造客">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-15T09:59:10.634Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/images/test-file-manage/12-1.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/08/images/test-file-manage/12-2.jpg">
+<meta property="og:updated_time" content="2019-08-10T02:38:03.407Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="express-mongodb-restfulAPI">
-<meta name="twitter:description" content="简介【服务诞生原因】测试人员、开发人员常使用postman进行接口测试，但postman自身无法对mysql数据库进行操作，为了方便测试人员日常使用postman进行接口功能测试、接口自动回归测试，可以通过postman调用操作数据库清除测试数据。其次市面上目前没有针对postman调用mongoDB数据库的工具。由此诞生express-mongodb-restfulAPI，我为其命名为omong">
+<meta name="twitter:title" content="接口自动化测试持续集成解决方案（Postman+Newman+Jenkins+Git+Nodejs）">
+<meta name="twitter:description" content="前言有很多商业化、开源化测试框架及工具，但实际运用需很大维护成本，产生价值低。如何真正”高效快速”、”低成本维护”？经过调研落地、使用对比，最终确认这个方案（Postman+Newman+Jenkins+Git+Nodejs）基于restful Api、RPC等等，都可以变相解决。 如何借助这些工具实现接口测试自动化和持续集成？1、Postman 基于http/https协议接口，一款可视化构造客">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/images/test-file-manage/12-1.jpg">
 
 
 
@@ -120,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/27/express-mongodb-restfulAPI/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/">
 
 
 
 
 
-  <title>express-mongodb-restfulAPI | liyinchi</title>
+  <title>接口自动化测试持续集成解决方案（Postman+Newman+Jenkins+Git+Nodejs） | liyinchi</title>
   
 
 
@@ -249,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/27/express-mongodb-restfulAPI/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
@@ -266,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">express-mongodb-restfulAPI</h1>
+          <h1 class="post-title" itemprop="name headline">接口自动化测试持续集成解决方案（Postman+Newman+Jenkins+Git+Nodejs）</h1>
         
 
         <div class="post-meta">
@@ -278,8 +281,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-27T21:43:20+08:00">
-                2018-12-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-10T10:01:08+08:00">
+                2019-08-10
               </time>
             
 
@@ -316,65 +319,16 @@
       
 
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>【服务诞生原因】测试人员、开发人员常使用postman进行接口测试，但postman自身无法对mysql数据库进行操作，为了方便测试人员日常使用postman进行接口功能测试、接口自动回归测试，可以通过postman调用操作数据库清除测试数据。其次市面上目前没有针对postman调用mongoDB数据库的工具。由此诞生express-mongodb-restfulAPI，我为其命名为omongoDB</p>
-<p>你可以从这里下载使用<a href="https://github.com/liyinchigithub/express-mongodb-restfulAPI" target="_blank" rel="noopener">express-mongodb-restfulAPI</a></p>
-<h1 id="Version-版本"><a href="#Version-版本" class="headerlink" title="Version 版本"></a>Version 版本</h1><p>V1.0.0</p>
-<h1 id="Run-Environment-运行环境依赖"><a href="#Run-Environment-运行环境依赖" class="headerlink" title="Run Environment 运行环境依赖"></a>Run Environment 运行环境依赖</h1><h2 id="1-安装配置node环境"><a href="#1-安装配置node环境" class="headerlink" title="1.安装配置node环境"></a>1.安装配置node环境</h2><p>node 10及以上</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>windows<br><a href="https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html</a></p>
-<p>mac<br><a href="https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html</a></p>
-<h2 id="2-所运用到的依赖包及版本"><a href="#2-所运用到的依赖包及版本" class="headerlink" title="2.所运用到的依赖包及版本"></a>2.所运用到的依赖包及版本</h2><p>“body-parser”: “^1.18.3”</p>
-<p>“express”: “^4.16.4”</p>
-<p>“mongodb”: “^3.1.10”</p>
-<p>“multer”: “^1.4.1”</p>
-<h1 id="Deployment-steps-部署步骤"><a href="#Deployment-steps-部署步骤" class="headerlink" title="Deployment steps 部署步骤"></a>Deployment steps 部署步骤</h1><ol>
-<li><p>npm install  //Installation node operation environment 安装node运行环境</p>
-</li>
-<li><p>npm server.js   //Start 启动</p>
-</li>
-</ol>
-<p>#目录结构描述</p>
-<p>├── README.md                   // help</p>
-<p>├── server.js                   // server</p>
-<p>├── mongoDB_demo.js             // mongdb</p>
-<h1 id="V1-0-0-版本内容更新"><a href="#V1-0-0-版本内容更新" class="headerlink" title="V1.0.0 版本内容更新"></a>V1.0.0 版本内容更新</h1><ol>
-<li>功能   创建集合</li>
-</ol>
-<p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/CreateCollection/" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/CreateCollection/</a></p>
-<p>请求body：{<br>    “db_url”:”mongodb://localhost:27017/“,<br>    “db_name”:”Express_API_DB”,<br>    “collection_name”:”Express_API_Collection1”<br>}</p>
-<ol start="2">
-<li>功能   删除数据库集合中的数据</li>
-</ol>
-<p>请求方法：DELETE</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/delete" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/delete</a></p>
-<p>请求body：{<br>    “db_url”:”mongodb://localhost:27017/“,<br>    “db_name”:”Express_API_DB”,<br>    “collection_name”:”Express_API_Collection1”,<br>    “whereStr”:<br>        {<br>            “name”:”网易”<br>        }<br>}</p>
-<ol start="3">
-<li>功能   删除集合</li>
-</ol>
-<p>请求方法：DELETE</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/drop" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/drop</a></p>
-<p>请求body：{<br>    “db_url”:”mongodb://localhost:27017/“,<br>    “db_name”:”Express_API_DB”,<br>    “collection_name”:”Express_API_Collection5”<br>}</p>
-<ol start="4">
-<li>功能   插入数据到数据库集合中</li>
-</ol>
-<p>请求方法：PUT</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/insert_data/" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/insert_data/</a></p>
-<p>请求body：{<br>    “db_url”:”mongodb://localhost:27017/“,<br>    “db_name”:”Express_API_DB”,<br>    “collection_name”:”Express_API_Collection1”,<br>    “obj”:{<br>        “name”: “网易”,<br>        “url”: “<a href="http://www.162.com&quot;" target="_blank" rel="noopener">www.162.com&quot;</a><br>        }<br>}</p>
-<ol start="5">
-<li>功能   查询数据库集合中的数据</li>
-</ol>
-<p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/find" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/find</a></p>
-<p>请求body：{<br>        “db_url”:”mongodb://localhost:27017/“,<br>        “db_name”:”Express_API_DB”,<br>        “collection_name”:”Express_API_Collection1”<br>}</p>
-<p>6 功能   查询数据库集合中的数据</p>
-<p>请求方法：GET</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/find" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/find</a></p>
-<p>请求参数：</p>
-<p>db_name数据库名称</p>
-<p>collection_name集合名称</p>
-<p>7.备注<br>如果你的mongoDB设置了账号密码，url参数可以使用此格式：</p>
-<p>mongoose.connect(‘mongodb://账号:密码@localhost:27017/‘);</p>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/" target="_blank" rel="noopener">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>有很多商业化、开源化测试框架及工具，但实际运用需很大维护成本，产生价值低。<br>如何真正”高效快速”、”低成本维护”？经过调研落地、使用对比，最终确认这个方案（Postman+Newman+Jenkins+Git+Nodejs）<br>基于restful Api、RPC等等，都可以变相解决。</p>
+<h1 id="如何借助这些工具实现接口测试自动化和持续集成？"><a href="#如何借助这些工具实现接口测试自动化和持续集成？" class="headerlink" title="如何借助这些工具实现接口测试自动化和持续集成？"></a>如何借助这些工具实现接口测试自动化和持续集成？</h1><p>1、Postman</p>
+<p>基于http/https协议接口，一款可视化构造客户端请求工具，虽然是商业化工具，但免费版提供的功能基本满足目前测试人员需求，能快速构建接口自动化测试脚本，用于场景流程回归、批量构造测试数据。</p>
+<p> <img src="../../images/test-file-manage/12-1.jpg" alt="img"></p>
+<p>官方文档：<a href="https://learning.getpostman.com/" target="_blank" rel="noopener">https://learning.getpostman.com/</a></p>
+<p>下载地址：<a href="https://www.getpostman.com/downloads/" target="_blank" rel="noopener">https://www.getpostman.com/downloads/</a></p>
+<p>2、Newman</p>
+<p>Postman的脚本运行器，能够不在使用postman工具情况下，非界面化运行脚本！</p>
+<p> <img src="../../images/test-file-manage/12-2.jpg" alt="img"></p>
+<p> 可以生成html、json、xml格式的测试报告</p>
 
       
     </div>
@@ -421,7 +375,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Development/" rel="tag"># Development</a>
+            <a href="/tags/AutoTest/" rel="tag"># AutoTest</a>
           
         </div>
       
@@ -434,8 +388,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/27/express-mysql-restfulAPI/" rel="next" title="express-mysql-restfulAPI">
-                <i class="fa fa-chevron-left"></i> express-mysql-restfulAPI
+              <a href="/2019/06/14/Nodemailer/" rel="next" title="Nodemailer">
+                <i class="fa fa-chevron-left"></i> Nodemailer
               </a>
             
           </div>
@@ -443,10 +397,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/27/monkeyGUI/" rel="prev" title="monkeyGUI">
-                monkeyGUI <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -569,7 +519,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Version-版本"><span class="nav-number">2.</span> <span class="nav-text">Version 版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Run-Environment-运行环境依赖"><span class="nav-number">3.</span> <span class="nav-text">Run Environment 运行环境依赖</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装配置node环境"><span class="nav-number">3.1.</span> <span class="nav-text">1.安装配置node环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">3.2.</span> <span class="nav-text">参考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-所运用到的依赖包及版本"><span class="nav-number">3.3.</span> <span class="nav-text">2.所运用到的依赖包及版本</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Deployment-steps-部署步骤"><span class="nav-number">4.</span> <span class="nav-text">Deployment steps 部署步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#V1-0-0-版本内容更新"><span class="nav-number">5.</span> <span class="nav-text">V1.0.0 版本内容更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#声明"><span class="nav-number">6.</span> <span class="nav-text">声明</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何借助这些工具实现接口测试自动化和持续集成？"><span class="nav-number">2.</span> <span class="nav-text">如何借助这些工具实现接口测试自动化和持续集成？</span></a></li></ol></div>
             
 
           </div>
