@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Development,">
+  <meta name="keywords" content="AutoTest,">
 
 
 
@@ -79,18 +79,25 @@
 
 
 
-<meta name="description" content="领导让我做一个解析测试报告的程序，将最终结果发邮件给所有相关同事，前期自动化测试都是基于jenkins+gitlab+newman，发送邮件使用的是jenkins配置邮件插件。这次需要借助非jenkins发送邮件，找了很久Nodemailer比较适合。 1npm i nodemailer 1234567891011121314151617181920212223242526272829303132">
-<meta name="keywords" content="Development">
+<meta name="description" content="前言（啰嗦几句） 软件测试过程中，最核心重要在用例设计，以往都是用excel维护测试用例，但缺点是在太多！ 缺点： 1、评审不够直观，开发产品对着报表评审用例打瞌睡。 2、编写效率不够，思维不能发散，迭代用例版本维护很麻烦。 3、excel转成xml再导入testlink。 解决办法： 1、使用思维导图工具（xmind）设计测试用例。 2、遵循xmind用例模板。 3、将xmind用例转成xml再">
+<meta name="keywords" content="AutoTest">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nodemailer">
-<meta property="og:url" content="http://yoursite.com/2019/06/14/Nodemailer/index.html">
+<meta property="og:title" content="Xmind2TestLink">
+<meta property="og:url" content="http://yoursite.com/2019/10/10/Xmind2TestLink/index.html">
 <meta property="og:site_name" content="liyinchi">
-<meta property="og:description" content="领导让我做一个解析测试报告的程序，将最终结果发邮件给所有相关同事，前期自动化测试都是基于jenkins+gitlab+newman，发送邮件使用的是jenkins配置邮件插件。这次需要借助非jenkins发送邮件，找了很久Nodemailer比较适合。 1npm i nodemailer 1234567891011121314151617181920212223242526272829303132">
+<meta property="og:description" content="前言（啰嗦几句） 软件测试过程中，最核心重要在用例设计，以往都是用excel维护测试用例，但缺点是在太多！ 缺点： 1、评审不够直观，开发产品对着报表评审用例打瞌睡。 2、编写效率不够，思维不能发散，迭代用例版本维护很麻烦。 3、excel转成xml再导入testlink。 解决办法： 1、使用思维导图工具（xmind）设计测试用例。 2、遵循xmind用例模板。 3、将xmind用例转成xml再">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-14T09:22:45.725Z">
+<meta property="og:image" content="http://yoursite.com/2019/10/images/xmind2testlink/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/images/xmind2testlink/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/images/xmind2testlink/3.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/images/xmind2testlink/4.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/images/xmind2testlink/5.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/images/xmind2testlink/6.jpg">
+<meta property="og:updated_time" content="2019-10-10T14:39:11.355Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nodemailer">
-<meta name="twitter:description" content="领导让我做一个解析测试报告的程序，将最终结果发邮件给所有相关同事，前期自动化测试都是基于jenkins+gitlab+newman，发送邮件使用的是jenkins配置邮件插件。这次需要借助非jenkins发送邮件，找了很久Nodemailer比较适合。 1npm i nodemailer 1234567891011121314151617181920212223242526272829303132">
+<meta name="twitter:title" content="Xmind2TestLink">
+<meta name="twitter:description" content="前言（啰嗦几句） 软件测试过程中，最核心重要在用例设计，以往都是用excel维护测试用例，但缺点是在太多！ 缺点： 1、评审不够直观，开发产品对着报表评审用例打瞌睡。 2、编写效率不够，思维不能发散，迭代用例版本维护很麻烦。 3、excel转成xml再导入testlink。 解决办法： 1、使用思维导图工具（xmind）设计测试用例。 2、遵循xmind用例模板。 3、将xmind用例转成xml再">
+<meta name="twitter:image" content="http://yoursite.com/2019/10/images/xmind2testlink/1.jpg">
 
 
 
@@ -120,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/06/14/Nodemailer/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/10/Xmind2TestLink/">
 
 
 
 
 
-  <title>Nodemailer | liyinchi</title>
+  <title>Xmind2TestLink | liyinchi</title>
   
 
 
@@ -249,7 +256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/14/Nodemailer/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/10/Xmind2TestLink/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
@@ -266,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Nodemailer</h1>
+          <h1 class="post-title" itemprop="name headline">Xmind2TestLink</h1>
         
 
         <div class="post-meta">
@@ -278,8 +285,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-14T17:11:49+08:00">
-                2019-06-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-10T22:17:26+08:00">
+                2019-10-10
               </time>
             
 
@@ -316,9 +323,24 @@
       
 
       
-        <p>领导让我做一个解析测试报告的程序，将最终结果发邮件给所有相关同事，前期自动化测试都是基于jenkins+gitlab+newman，发送邮件使用的是jenkins配置邮件插件。<br>这次需要借助非jenkins发送邮件，找了很久Nodemailer比较适合。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i nodemailer</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nodemailer = <span class="built_in">require</span>(<span class="string">"nodemailer"</span>);</span><br><span class="line"><span class="comment">// var smtpTransport = require('nodemailer-smtp-transport');</span></span><br><span class="line"></span><br><span class="line">describe(<span class="string">''</span>, () =&gt; &#123;</span><br><span class="line">    it.skip(<span class="string">'发送邮件'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> transport = nodemailer.createTransport(&#123;</span><br><span class="line">            host: <span class="string">"smtp.qq.com"</span>,<span class="comment">// SMTP 端口</span></span><br><span class="line">            secureConnection: <span class="literal">true</span>,<span class="comment">// 使用 SSL</span></span><br><span class="line">            port: <span class="number">465</span>,</span><br><span class="line">            auth: &#123;</span><br><span class="line">                user: <span class="string">"liyinchi@qq.com"</span>,<span class="comment">//邮箱账号</span></span><br><span class="line">                <span class="comment">//这里密码不是qq密码，是你设置的smtp密码</span></span><br><span class="line">                pass: <span class="string">""</span><span class="comment">//授权码 </span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> mailOptions = &#123;</span><br><span class="line">            <span class="keyword">from</span>: <span class="string">"liyinchi@qq.com"</span>,<span class="comment">// 发件地址</span></span><br><span class="line">            to: <span class="string">"yinchi.li@xxxx.com"</span>,<span class="comment">// 收件列表</span></span><br><span class="line">            <span class="comment">// Subject of the message 邮件主题</span></span><br><span class="line">            subject: <span class="string">'Nodemailer is unicode friendly ✔'</span> + <span class="built_in">Date</span>.now(),<span class="comment">// 标题</span></span><br><span class="line">            <span class="comment">//text和html两者只支持一种</span></span><br><span class="line">            <span class="comment">// 标题 </span></span><br><span class="line">            text: <span class="string">'Hello to myself!'</span>,</span><br><span class="line">            <span class="comment">// html 内容</span></span><br><span class="line">            html: <span class="string">`&lt;p&gt;&lt;b&gt;Hello&lt;/b&gt; to myself &lt;img src="cid:note@example.com"/&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p&gt;Here's a nyan cat for you as an embedded attachment:&lt;br/&gt;&lt;img src="https://www.baidu.com/s?rsv_idx=1&amp;wd=foreach&amp;ie=utf-8&amp;rsv_cq=js+%E6%88%AA%E5%8F%96%E6%95%B0%E7%BB%84&amp;rsv_dl=0_right_recommends_merge_28335&amp;euri=262673"/&gt;&lt;/p&gt;`</span>,</span><br><span class="line">            <span class="comment">// An array of attachments</span></span><br><span class="line">            attachments: [</span><br><span class="line">                <span class="comment">// String attachment 文本附件</span></span><br><span class="line">                &#123;</span><br><span class="line">                    filename: <span class="string">'notes.txt'</span>, <span class="comment">//附件名称，文本格式</span></span><br><span class="line">                    content: <span class="string">'这是在notes.txt的内容'</span>, <span class="comment">//文本中的内容</span></span><br><span class="line">                    contentType: <span class="string">'text/plain'</span> <span class="comment">// 可选，将从文件名中检测到</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="comment">// File Stream attachment</span></span><br><span class="line">                &#123;</span><br><span class="line">                    filename: <span class="string">'cat.jpg'</span>,</span><br><span class="line">                    path: <span class="string">'/Users/liyinchi/workspace/前端/vue/test-file-management-platform/back-end/assets/nyan.jpg'</span>,</span><br><span class="line">                &#125;</span><br><span class="line">            ],</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        transport.sendMail(mailOptions, <span class="function"><span class="keyword">function</span> (<span class="params">err, info,response</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (err) &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(err);</span><br><span class="line">                <span class="built_in">console</span>.log(info.accepted);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(response);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>（啰嗦几句）</p>
+<p>软件测试过程中，最核心重要在用例设计，以往都是用excel维护测试用例，但缺点是在太多！</p>
+<p>缺点：</p>
+<p>1、评审不够直观，开发产品对着报表评审用例打瞌睡。</p>
+<p>2、编写效率不够，思维不能发散，迭代用例版本维护很麻烦。</p>
+<p>3、excel转成xml再导入testlink。</p>
+<p>解决办法：</p>
+<p>1、使用思维导图工具（xmind）设计测试用例。</p>
+<p>2、遵循xmind用例模板。</p>
+<p>3、将xmind用例转成xml再导入testlink。</p>
+<h1 id="如何快速设计测试用例、高效管理测试用例？？"><a href="#如何快速设计测试用例、高效管理测试用例？？" class="headerlink" title="如何快速设计测试用例、高效管理测试用例？？"></a>如何快速设计测试用例、高效管理测试用例？？</h1><p>1、Xmind2Testlink</p>
+<p> <img src="../../images/xmind2testlink/1.jpg" alt="img"></p>
+<p> <img src="../../images/xmind2testlink/2.jpg" alt="img"></p>
+<p> <img src="../../images/xmind2testlink/3.jpg" alt="img"></p>
+<p> <img src="../../images/xmind2testlink/4.jpg" alt="img"></p>
+<p> <img src="../../images/xmind2testlink/5.jpg" alt="img"></p>
+<p> <img src="../../images/xmind2testlink/6.jpg" alt="img"></p>
+
       
     </div>
     
@@ -364,7 +386,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Development/" rel="tag"># Development</a>
+            <a href="/tags/AutoTest/" rel="tag"># AutoTest</a>
           
         </div>
       
@@ -377,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/14/测试工作管理平台/" rel="next" title="测试工作管理平台">
-                <i class="fa fa-chevron-left"></i> 测试工作管理平台
+              <a href="/2019/08/12/Nginx到底能做什么？/" rel="next" title="Nginx到底能做什么？">
+                <i class="fa fa-chevron-left"></i> Nginx到底能做什么？
               </a>
             
           </div>
@@ -386,10 +408,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/" rel="prev" title="接口自动化测试持续集成解决方案（Postman+Newman+Jenkins+Git）">
-                接口自动化测试持续集成解决方案（Postman+Newman+Jenkins+Git） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -441,8 +459,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -493,6 +520,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何快速设计测试用例、高效管理测试用例？？"><span class="nav-number">2.</span> <span class="nav-text">如何快速设计测试用例、高效管理测试用例？？</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
