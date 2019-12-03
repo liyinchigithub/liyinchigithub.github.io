@@ -249,6 +249,224 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/03/Android测试工具DDMS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/03/Android测试工具DDMS/" itemprop="url">Android测试工具DDMS</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-03T23:15:31+08:00">
+                2019-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>对于每个开发或测试Android设备的人来说，各种调试、测试工具极多，如颇有名气的ADB、DDMS、APT等等。</p>
+<h1 id="DDMS是什么？"><a href="#DDMS是什么？" class="headerlink" title="DDMS是什么？"></a>DDMS是什么？</h1><p>DDMS 的全称是Dalvik Debug Monitor Service，是 Android 开发环境中的Dalvik虚拟机调试监控服务。</p>
+<h1 id="DDMS功能"><a href="#DDMS功能" class="headerlink" title="DDMS功能"></a>DDMS功能</h1><p>（1）测试设备截屏；</p>
+<p>（2）查看特定进程正在运行的线程以及堆信息；</p>
+<p>（3）Logcat（日志查看）；</p>
+<p>（4）广播状态信息；</p>
+<p>（5）模拟电话呼叫；</p>
+<p>（6）模拟接收及发送SMS；</p>
+<p>（7）虚拟地理坐标；</p>
+<p>（8）端口重定向；</p>
+<h1 id="DDMS工作原理"><a href="#DDMS工作原理" class="headerlink" title="DDMS工作原理"></a>DDMS工作原理</h1><p>DDMS扮演了一个IDE与移动设备上的应用程序之间的”中间人”角色，在Android上，每一个应用程序都有一个自己的VM并运行在自己的进程中。因此，每个进程都有一个不同的端口用来监听debugger。</p>
+<p>1、DDMS启动时，会连接到ADB，并开启一个device监视服务，当有设备连接到ADB或与ADB断开时，DDMS都会得到通知；</p>
+<p>2、一旦一个设备连接到ADB，DDMS就会为其创建一个VM监视服务，当移动设备上有VM的启动或终止时，DDMS就会得到通知；</p>
+<p>3、一旦一个VM开始运行，DDMS就会通过ADB获取VM的PID，然后，为这个VM打开一个端口，监听来自这个VM的Debugger。为第一个VM打开的监听端口是8600，第二个是8601，依次往后排；</p>
+<p>5、DDMS还会打开一个默认为8700的本地端口，并通过这个端口监听来自IDE的Debugger。当有IDE Debugger连接上来时，DDMS查找当前选中的VM，再通过ADB转接上去。流程为：</p>
+<p>IDE Debugger–&gt;DDMS8700端口–&gt;ADB–&gt;ADBD–&gt;VM</p>
+<p>这样，Debugger就可以向VM发送信息了；</p>
+<p>而VM的Debugger抓取到的堆栈、线程等VM的运行时信息通过连接到DDMS为这个VM打开的监听端口上，就可以发送到DDMS上了。</p>
+<h1 id="DDMS如何获得版本安装"><a href="#DDMS如何获得版本安装" class="headerlink" title="DDMS如何获得版本安装"></a>DDMS如何获得版本安装</h1><p>下载官网：</p>
+<p>Android-ADT：<a href="https://dl.google.com/android/ADT-23.0.6.zip" target="_blank" rel="noopener">https://dl.google.com/android/ADT-23.0.6.zip</a></p>
+<p>Android-SDK: <a href="http://developer.android.com/sdk/index.html(可以不安装)" target="_blank" rel="noopener">http://developer.android.com/sdk/index.html(可以不安装)</a></p>
+<h1 id="DDMS如何使用"><a href="#DDMS如何使用" class="headerlink" title="DDMS如何使用"></a>DDMS如何使用</h1><p>DDMS启动</p>
+<p><img src="../../images/ddms/0.jpg" alt="img"></p>
+<p>配置android sdk环境变量，dos执行ddms或Android sdk 目录下tools文件夹内ddms.bat、ddms.sh</p>
+<p>（1）正常启动后，界面如下：</p>
+<p><img src="../../images/ddms/12.jpg" alt="img"></p>
+<p>左侧的面板上提供了相应功能的按钮，从左往右依次是：Debug the selected process、Update Heap、Dump HPROF File、Cause GC（Garbage Collection）、Update Threads、Start Method Profiling、Stop Process和Screen Capture，如下图：</p>
+<p>右侧显示相应的监测信息并进行文件管理，如下图：</p>
+<p><img src="../../images/ddms/18.jpg" alt="img"></p>
+<p>DDMS测试APP</p>
+<h1 id="DDMS使用"><a href="#DDMS使用" class="headerlink" title="DDMS使用"></a>DDMS使用</h1><p>注：以下所有操作必须手机连接PC，连接时确认手机处于”USB调试”模式；</p>
+<h1 id="线程监测"><a href="#线程监测" class="headerlink" title="线程监测"></a>线程监测</h1><p>DDMS中的线程监控和评测浏览对于管理大量线程的应用很有用。</p>
+<p>要启用，点击 Update Threads（更新线程）图标即可开始，如下图：</p>
+<p><img src="../../images/ddms/13.jpg" alt="img"></p>
+<p>右侧对应的Threads窗口会显示面向选中VM进程的所有线程的名称和其他细节，如下图：</p>
+<p>utime 和stime代表了线程在瞬间运行用户代码（utime）和系统代码（STIME）所花的总时间。一瞬间的时间是由系统定义的，但通常为10毫秒。星号表示守护线程；native状态表示线程正执行原生代码。查看上述样本数据时，除了查看应用主线程花费时间，也要关注GC花费时间，便于测试中发现GC问题或观察处理对象创建，提出有助于优化性能建议。</p>
+<h1 id="内存检测"><a href="#内存检测" class="headerlink" title="内存检测"></a>内存检测</h1><p>可以使用DDMS中的Heap和Allocation tracker一起定位内存问题，如下：</p>
+<p>点击Update Heap（更新堆）按钮，获得有关选定虚拟机中堆分配的信息，如下图：</p>
+<p><img src="../../images/ddms/14.jpg" alt="img"></p>
+<p><img src="../../images/ddms/15.jpg" alt="img"></p>
+<p>右侧对应的Heap，点击”Cause GC”，Heap视图中便会显示当前应用的内存使用量的详细情况；</p>
+<p>测试中如何判断程序是否有内存泄漏的可能性呢？需要关注一个值：Heap视图中部有一个Type叫做data object，即数据对象，也就是我们的程序中大量存在的类型的对象。在data object一行中有一列是”Total Size”，其值就是当前进程中所有Java数据对象的内存总量，一般情况下，这个值的大小决定了是否会有内存泄漏，可以这样判断：</p>
+<p>（1）不断的操作当前应用，同时注意观察data object的Total Size值；</p>
+<p>（2）正常情况下Total Size值都会稳定在一个有限的范围内，虽然不断的操作会不断的生成较多对象，但是虚拟机在不断的进行GC的过程中，对象都被回收了，内存占用量会会落到一个稳定的水平，也就是说程序代码良好，无内存泄露情况出现；</p>
+<p>（3）反之如果代码中存在没有释放对象引用的情况，则data object的Total Size值在每次GC后不会有明显的回落，随着操作次数的增多Total Size的值会不断增大，累加到一个极限后导致进程被kill掉。</p>
+<p>所以我们测试中可以预判下那些场景容易出现内存泄露，可以重复这个场景的操作，观察heap size值和data object”Total Size” 的变化，若发现内存泄露情况，可使用DMS另一个自带的内存分配跟踪工具Allocation tracker进行跟踪。</p>
+<p>操作步骤：</p>
+<p>（1）点击 “Start Tracking”；</p>
+<p>（2）点击”Get allocations”，更新内存分配显示；</p>
+<p>（3）filter输入应用名称进行筛选;</p>
+<p>（4）继续不断重复场景操作，再点击”Get allocations”；</p>
+<p>（5）若发现某个类占用的内存最大，且有上升的趋势，可点击该类，下方展示该类中运行的各方法，可定位到该类中的具体方法，双击method名，定位到对应的代码；</p>
+<h1 id="响应时间检测"><a href="#响应时间检测" class="headerlink" title="响应时间检测"></a>响应时间检测</h1><p>Method Profiling（方法分析）对于快速概览应用中时间的消耗分布非常有用，也可用于时间关键型函数的详细查看。</p>
+<p>响应时间测试的场景主要是在：遍历查询、递归查询等（循环判断）。</p>
+<p>点击Start Method Profiling 图标开始方法分析，操作场景测试，点击Stop Method Profiling 停止分析如下图：</p>
+<p>分析结果如下图：</p>
+<p>incl cpu time%，将各方法时间消耗进行排序；</p>
+<p>Incl cpu time%: inclusive时间占总时间的百分比</p>
+<p>Excl cpu time%: 执行占总时间的白分比</p>
+<p>Calls+Recur Calls/Total: 调用和重复调用的次数</p>
+<p>Time/Call: 总的时间(ms)排序</p>
+<p>单击底部窗格中的方法调用可创建一个层级结构，显示该方法–先是调用该方法的母方法，然后是从选定方法中调用的子方法，若发现某个方法占用CPU时间过长，可定位到对应代码,查看代码逻辑，针对性发现问题。</p>
+<h1 id="UI检查"><a href="#UI检查" class="headerlink" title="UI检查"></a>UI检查</h1><p>DDMS下Dump view UI hierarchy for Automator针对程序开发中UI调试好处多多，对于测试而言该工具在UI视觉测试时也是一个利器，该工具能够定位到每个View在屏幕中的绝对位置（精确到具体的PX（像素）级别），在视觉检查测试时可以帮我们很轻松的发现UI视觉问题。</p>
+<p>启动时，点击Dump view UI hierarchy for Automator图标，如下图：</p>
+<p> <img src="../../images/ddms/9.jpg" alt="img"></p>
+<p>启动后进入正式界面，可以逐个元素的进行UI视觉稿检测，有问题立即便可知晓，如下图：</p>
+<p> <img src="../../images/ddms/10.jpg" alt="img"></p>
+<h1 id="流量统计"><a href="#流量统计" class="headerlink" title="流量统计"></a>流量统计</h1><p>测试中流量大小是1个重要测试点，而DDMS提供了流量统计工具network statistics，该工具可以实时统计查看程序使用网络的情况，也可以通过设置不同的Tag(标签)来区分不同类型的流量使用情况，数据在DDMS中通过图表显示，点击右侧视图中的network statistic，并Start即开始统计，如下图：</p>
+<p> <img src="../../images/ddms/11.jpg" alt="img"></p>
+<h1 id="CPU-Memory-FPS抓取"><a href="#CPU-Memory-FPS抓取" class="headerlink" title="CPU/Memory/FPS抓取"></a>CPU/Memory/FPS抓取</h1><p>测试中CPU、内存、帧率测试必不可少，同样DDMS针对此提供了System Information工具，可以用来对CPU、内存和帧进行抓取，可以抓取到整个系统的某个瞬间信息。使用时点击右侧视图中的System Information即可，具体使用方法比较简单，不再赘述。</p>
+<h1 id="log抓取"><a href="#log抓取" class="headerlink" title="log抓取"></a>log抓取</h1><p>日志一般用于记录程序运行信息，从而使开发者方便开发调试，便于发现问题。我们先看看android.util.Log常用的方法，共有以下六种：Log.v() 、Log.d() 、Log.i() 、Log.w()、 Log.e()以及Log.a() (android 4.0新增加的)。根据首字母对应VERBOSE、DEBUG、INFO、WARN、ERROR、Assert，重要程度排序Assert &gt; Error &gt; Warn &gt; Info &gt; Verbose。</p>
+<p>(1)Log.v 的调试颜色为黑色的，任何消息都会输出，平时使用就是Log.v(“”,””);</p>
+<p>(2)Log.d的输出颜色是蓝色的，仅输出debug调试的意思，但他会输出上层的信息，过滤起来可以通过DDMS的Logcat标签来选择.</p>
+<p>(3)Log.i的输出为绿色，一般提示性的消息information，它不会输出Log.v和Log.d的信息，但会显示i、w和e的信息</p>
+<p>(4)Log.w的意思为橙色，可以看作为warning警告，一般需要我们注意优化Android代码，同时选择它后还会输出Log.e的信息。</p>
+<p>(5)Log.e为红色，可以想到error错误，这里仅显示红色的错误信息，这些错误就需要我们认真的分析，查看栈的信息了;</p>
+<p>(6)Log.a为4.0新增加的，Assert表示断言失败后的错误消息，这类错误原本是不可能出现的错误，现在却出现了，是极其严重的错误类型;</p>
+<p>而我们平时测试Android App过程中会经常通过log定位问题，而DDMS中LogCat则是一个抓取APP运行log的利器，具体操作如下：</p>
+<p>打开LogCat窗口，Window -&gt; Show View -&gt; LogCat.</p>
+<p>手机连上本地PC，并打开usb调试模式，即可收集到app运行log了。</p>
+<p>收集中可以增加log规律规则，点击窗口右上的加号，在Filter Name中输入需要过滤的的字符串。点击OK就行了。</p>
+<h1 id="多个设备的Log查看"><a href="#多个设备的Log查看" class="headerlink" title="多个设备的Log查看"></a>多个设备的Log查看</h1><p>在模拟器、真机数量多于两个的时候，DDMS仍然适用，DDMS试图，在左上角Devices中双击想要看log的设备即可，具体适用与单设备完全一致。</p>
+<h1 id="虚拟地理坐标"><a href="#虚拟地理坐标" class="headerlink" title="虚拟地理坐标"></a>虚拟地理坐标</h1><p>如果您的应用程序依赖于位置的手机，你可以有的DDMS送您的设备或AVD一个模拟的位置。这是非常有用的，如果你想测试你的应用程序的特定位置的功能，而不必实际移动的不同方面。<br>您可以使用下面的地理位置数据类型：<br>手动设置（Manual）位置 - 通过手动指定十进制或六十进制的经度和纬度值。<br>GPX - GPS交换文件<br>KML -Keyhole标记语言文件</p>
+<p> <img src="../../images/ddms/8.jpg" alt="img"></p>
+<h1 id="进程信息"><a href="#进程信息" class="headerlink" title="进程信息"></a>进程信息</h1><p>获取进程信息需要点击左侧Update Threads按钮，然后在左侧显示相应的进程信息，包括进程的名称、ID、状态等重要信息<br>内存信息<br>需要点击Update Heap，在Heap界面下，上部显示堆的详细信息，点击Cause GC进行垃圾回收，当完成后，可以看到一组对象类型和为每种类型已分配的内存，点击列表中的一个对象类型，为该种特定内存大小的对象分配的数量。</p>
+<p> <img src="../../images/ddms/6.jpg" alt="img"></p>
+<p> <img src="../../images/ddms/7.jpg" alt="img"></p>
+<h1 id="模拟拨入电话，模拟接收短信"><a href="#模拟拨入电话，模拟接收短信" class="headerlink" title="模拟拨入电话，模拟接收短信"></a>模拟拨入电话，模拟接收短信</h1><p><img src="../../images/ddms/16.jpg" alt="img"></p>
+<p>模拟器接收模拟发送短信的效果，中文乱码</p>
+<p><img src="../../images/ddms/17.jpg" alt="img"></p>
+<h1 id="网络状态获取"><a href="#网络状态获取" class="headerlink" title="网络状态获取"></a>网络状态获取</h1><p>在Android 4.0， DDMS 具备监控详细的网络使用情况的功能，使得它可以跟踪您的应用程序的网络请求。使用这个工具，你可以监视应用程序的数据传输，并适当优化的底层代码。</p>
+<h1 id="系统信息获取"><a href="#系统信息获取" class="headerlink" title="系统信息获取"></a>系统信息获取</h1><p>包括三部分CPU相关信息（CPU load）、内存使用信息（MemoryUsage）、框架渲染时间信息（Frame Render Time）</p>
+<p> <img src="../../images/ddms/1.jpg" alt="img"></p>
+<p>CPU load</p>
+<p> <img src="../../images/ddms/2.jpg" alt="img"></p>
+<p>Memory Usage<br> <img src="../../images/ddms/3.jpg" alt="img"></p>
+<p>Frame Render Time<br>测试使用模拟器<br> <img src="../../images/ddms/4.jpg" alt="img"></p>
+<h1 id="网速设置"><a href="#网速设置" class="headerlink" title="网速设置"></a>网速设置</h1><h1 id="手机文件管理"><a href="#手机文件管理" class="headerlink" title="手机文件管理"></a>手机文件管理</h1><p>手机文件管理，如果虚拟机分配了SD卡空间或真机挂载了SD卡可以管理SD中的文件。从设备复制文件，在文件浏览器中找到该文件，然后单击“Pull file”按钮。要复制一个文件到设备上的文件资源管理器“Push file<br>”按钮。</p>
+<p> <img src="../../images/ddms/5.jpg" alt="img"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/27/Yapi可视化接口管理平台/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1736,133 +1954,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/25/持续集成之jenkins的Job配置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liyinchi">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/25/持续集成之jenkins的Job配置/" itemprop="url">持续集成之jenkins的Job配置</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-25T18:46:04+08:00">
-                2019-01-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="常用配置"><a href="#常用配置" class="headerlink" title="常用配置"></a>常用配置</h1><h2 id="邮件正文配置"><a href="#邮件正文配置" class="headerlink" title="邮件正文配置"></a>邮件正文配置</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">&lt;!DOCTYPE html&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>$&#123;ENV, var="JOB_NAME"&#125;-第$&#123;BUILD_NUMBER&#125;次构建日志<span class="tag">&lt;/<span class="name">title</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>    </span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">leftmargin</span>=<span class="string">"8"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">topmargin</span>=<span class="string">"8"</span> <span class="attr">marginheight</span>=<span class="string">"4"</span>    </span></span><br><span class="line"><span class="tag">    <span class="attr">offset</span>=<span class="string">"0"</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">width</span>=<span class="string">"95%"</span> <span class="attr">cellpadding</span>=<span class="string">"0"</span> <span class="attr">cellspacing</span>=<span class="string">"0"</span>  <span class="attr">style</span>=<span class="string">"font-size: 11pt; font-family: Tahoma, Arial, Helvetica, sans-serif"</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span>    </span><br><span class="line">            本邮件由系统自动发出，无需回复！<span class="tag">&lt;<span class="name">br</span>/&gt;</span>            </span><br><span class="line">            各位同事，大家好，以下为$&#123;PROJECT_NAME &#125;项目构建信息<span class="tag">&lt;/<span class="name">br</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"#000000"</span>&gt;</span>构建结果 - $&#123;BUILD_STATUS&#125;<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span>   </span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span>    </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span>    </span><br><span class="line">            <span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"#0B610B"</span>&gt;</span>构建信息<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span>    </span><br><span class="line">            <span class="tag">&lt;<span class="name">hr</span> <span class="attr">size</span>=<span class="string">"2"</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">align</span>=<span class="string">"center"</span> /&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span>    </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>    </span><br><span class="line">                <span class="tag">&lt;<span class="name">ul</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>项目名称 ： $&#123;PROJECT_NAME&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>构建编号 ： 第$&#123;BUILD_NUMBER&#125;次构建<span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>触发原因： $&#123;CAUSE&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>构建状态： $&#123;BUILD_STATUS&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>构建日志： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/$&#123;BUILD_ID&#125;/console"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/$&#123;BUILD_ID&#125;/console<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>构建  Url ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>工作目录 ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;、ws"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/ws<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>项目  Url ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;"</span>&gt;</span>$&#123;JENKINS_URL&#125;jenkins/job/$&#123;JOB_NAME&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>本次构建脚本：$&#123;script&#125; <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>本次构建环境：$&#123;env&#125; <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>具体报告内容  Url ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/HTML_20Report/$&#123;JOB_NAME&#125;-$&#123;env&#125;-$&#123;BUILD_ID&#125;-index.htm"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/HTML_20Report/$&#123;JOB_NAME&#125;-$&#123;env&#125;-$&#123;BUILD_ID&#125;-index.htm<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </span><br><span class="line">               <span class="tag">&lt;<span class="name">li</span>&gt;</span>聚合报告  Url ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://10.104.113.228:8080/system/#/"</span>&gt;</span>http://10.104.113.228:8080/system/#/<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </span><br><span class="line">                <span class="tag">&lt;/<span class="name">ul</span>&gt;</span>    </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"#0B610B"</span>&gt;</span>失败用例<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> <span class="attr">size</span>=<span class="string">"2"</span> <span class="attr">width</span>=<span class="string">"100%"</span> /&gt;</span></span><br><span class="line">详见附件build.log<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"#0B610B"</span>&gt;</span>最近提交(#GITLAB_REVISION)<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> <span class="attr">size</span>=<span class="string">"2"</span> <span class="attr">width</span>=<span class="string">"100%"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">$&#123;CHANGES_SINCE_LAST_SUCCESS, reverse=true, format="%c", changesFormat="<span class="tag">&lt;<span class="name">li</span>&gt;</span>%d [%a] %m<span class="tag">&lt;/<span class="name">li</span>&gt;</span>"&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">详细提交: <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;changes"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/changes<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>参数化构建使用扩展参数插件（Extended choice parameter)</p>
-<p>Choose Source for Value </p>
-<p>Groovy script</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//读取目录结构</span></span><br><span class="line"><span class="keyword">def</span> locat = <span class="string">"/data/jenkins/workspace/资产售后-流程脚本/脚本"</span></span><br><span class="line"><span class="keyword">def</span> dir = <span class="keyword">new</span> File(locat)</span><br><span class="line">Set&lt;String&gt; artifacts = <span class="keyword">new</span> TreeSet&lt;String&gt;()</span><br><span class="line">dir.eachDir &#123; directory -&gt;</span><br><span class="line">    <span class="keyword">if</span> (directory.absolutePath.contains(<span class="string">"postman"</span>) || directory.absolutePath.contains(<span class="string">"jmeter"</span>)) &#123;</span><br><span class="line">        <span class="keyword">for</span> (File <span class="string">f :</span> directory.listFiles()) &#123;</span><br><span class="line">            String script = f.getAbsolutePath()</span><br><span class="line">            artifacts.add(script)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">List&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;String&gt;()</span><br><span class="line">result.addAll(artifacts)</span><br><span class="line"><span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
-<p>可以获取以文件夹命名存放的脚本名称，作为jenkins参数来选择，用于构建jenkins job</p>
-<p> <img src="../../images/jenkins/1.jpg" alt="img"></p>
-<h2 id="shell脚本获取文件件目录"><a href="#shell脚本获取文件件目录" class="headerlink" title=" shell脚本获取文件件目录"></a> shell脚本获取文件件目录</h2><p>获取postman或jmeter下的脚本内容</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/usr/bin/env bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash">获取执行脚本集合</span></span><br><span class="line">arr=($&#123;script//,/ &#125;)</span><br><span class="line"><span class="meta">#</span><span class="bash">调试输出每个集合元素</span></span><br><span class="line">echo -----$&#123;arr[@]&#125;</span><br><span class="line"><span class="meta">#</span><span class="bash">获取集合元素个数</span></span><br><span class="line">length=$&#123;#arr[@]&#125;</span><br><span class="line"><span class="meta">#</span><span class="bash">判断个数是否大于0，相当于判断jenkins界面脚本文件夹参数<span class="variable">$script</span>是否勾选了</span></span><br><span class="line">if [ $length &gt; 0 ]</span><br><span class="line">then</span><br><span class="line"><span class="meta">  #</span><span class="bash">循环调用执行postman/jmeter脚本</span></span><br><span class="line">  for i in $&#123;arr[@]&#125;; do</span><br><span class="line">      # =~代表正则匹配</span><br><span class="line">      if [[ $i =~ postman ]]</span><br><span class="line">      then</span><br><span class="line">        # ls 返回目录下的所有文件</span><br><span class="line">        files=$(ls $i)</span><br><span class="line">        #遍历所有的文件夹</span><br><span class="line">        for j in $files</span><br><span class="line">        do</span><br><span class="line">          # if [ -z $String ] 代表如果字符串为空  这边只运行$testFilesIncluded所包含的文件（有配置的情况）和只获取后缀为postman_collection.json的文件</span><br><span class="line">          if ( [ -z "$testFilesIncluded"] || [[ $testFilesIncluded == *$j* ]] ) &amp;&amp; [[ $j == *.postman_collection.json ]]</span><br><span class="line">          then</span><br><span class="line">            # % 去除最短的向后匹配 %%去除最长的向后匹配 #去除最短的向前匹配 ##去除最长的向前匹配 eg:http://landoflinux.com/linux_bash_scripting_substring_tests.html</span><br><span class="line">            envPrefix=$&#123;j%.postman_collection.json&#125;</span><br><span class="line">            reportPrefix=$&#123;envPrefix&#125;</span><br><span class="line">            # newman 运行脚本文件 输出cli和html的测试报告</span><br><span class="line">             #切换当前目录到$WORKSPACE</span><br><span class="line">             cd $&#123;WORKSPACE&#125;</span><br><span class="line">             #执行newman命令，其中报告输出位置文件名使用到变量。当前shell脚本定义的变量：$&#123;reportPrefix&#125;；jenkins用户自定义变量：$&#123;env&#125;；jenkins系统变量：$&#123;JOB_NAME&#125;、$&#123;BUILD_ID&#125;；</span><br><span class="line">            newman run $i/$j -e $i/$&#123;env&#125;.postman_environment.json --delay-request 1000 --reporters cli,html,json,junit --reporter-json-export $&#123;BUILD_ID&#125;"-"jsonOut.json --reporter-junit-export $&#123;BUILD_ID&#125;"-"xmlOut.xml --reporter-html-export $&#123;JOB_NAME&#125;"-"$&#123;env&#125;"-"$&#123;BUILD_ID&#125;"-"index.htm</span><br><span class="line">          fi</span><br><span class="line">        done</span><br><span class="line"></span><br><span class="line">      fi</span><br><span class="line">  done</span><br><span class="line"></span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1913,7 +2004,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
