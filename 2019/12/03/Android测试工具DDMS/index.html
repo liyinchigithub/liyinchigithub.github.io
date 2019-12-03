@@ -93,6 +93,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/12/images/ddms/13.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/12/images/ddms/14.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/12/images/ddms/15.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/12/images/ddms/19.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/12/images/ddms/9.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/12/images/ddms/10.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/12/images/ddms/11.jpg">
@@ -106,7 +107,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/12/images/ddms/3.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/12/images/ddms/4.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/12/images/ddms/5.jpg">
-<meta property="og:updated_time" content="2019-12-03T16:01:46.314Z">
+<meta property="og:updated_time" content="2019-12-03T16:04:21.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android测试工具DDMS">
 <meta name="twitter:description" content="对于每个开发或测试Android设备的人来说，各种调试、测试工具极多，如颇有名气的ADB、DDMS、APT等等。 DDMS是什么？DDMS 的全称是Dalvik Debug Monitor Service，是 Android 开发环境中的Dalvik虚拟机调试监控服务。 DDMS功能（1）测试设备截屏； （2）查看特定进程正在运行的线程以及堆信息； （3）Logcat（日志查看）； （4）广播状态">
@@ -370,7 +371,7 @@
 <h1 id="线程监测"><a href="#线程监测" class="headerlink" title="线程监测"></a>线程监测</h1><p>DDMS中的线程监控和评测浏览对于管理大量线程的应用很有用。</p>
 <p>要启用，点击 Update Threads（更新线程）图标即可开始，如下图：</p>
 <p><img src="../../images/ddms/13.jpg" alt="img"></p>
-<p>右侧对应的Threads窗口会显示面向选中VM进程的所有线程的名称和其他细节，如下图：</p>
+<p>右侧对应的Threads窗口会显示面向选中VM进程的所有线程的名称和其他细节</p>
 <p>utime 和stime代表了线程在瞬间运行用户代码（utime）和系统代码（STIME）所花的总时间。一瞬间的时间是由系统定义的，但通常为10毫秒。星号表示守护线程；native状态表示线程正执行原生代码。查看上述样本数据时，除了查看应用主线程花费时间，也要关注GC花费时间，便于测试中发现GC问题或观察处理对象创建，提出有助于优化性能建议。</p>
 <h1 id="内存检测"><a href="#内存检测" class="headerlink" title="内存检测"></a>内存检测</h1><p>可以使用DDMS中的Heap和Allocation tracker一起定位内存问题，如下：</p>
 <p>点击Update Heap（更新堆）按钮，获得有关选定虚拟机中堆分配的信息，如下图：</p>
@@ -392,6 +393,7 @@
 <p>响应时间测试的场景主要是在：遍历查询、递归查询等（循环判断）。</p>
 <p>点击Start Method Profiling 图标开始方法分析，操作场景测试，点击Stop Method Profiling 停止分析如下图：</p>
 <p>分析结果如下图：</p>
+<p><img src="../../images/ddms/19.jpg" alt="img"></p>
 <p>incl cpu time%，将各方法时间消耗进行排序；</p>
 <p>Incl cpu time%: inclusive时间占总时间的百分比</p>
 <p>Excl cpu time%: 执行占总时间的白分比</p>
