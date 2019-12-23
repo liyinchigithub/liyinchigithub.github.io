@@ -200,53 +200,53 @@
 <p>ps：来神州之前敏捷团队一直使用xmind作为脑图使用，应对短期、长期项目非常好用。</p>
 <h1 id="如何快速设计测试用例、高效管理测试用例？？"><a href="#如何快速设计测试用例、高效管理测试用例？？" class="headerlink" title="如何快速设计测试用例、高效管理测试用例？？"></a>如何快速设计测试用例、高效管理测试用例？？</h1><h2 id="Xmind2Testlink"><a href="#Xmind2Testlink" class="headerlink" title="Xmind2Testlink"></a>Xmind2Testlink</h2><p>Xmind2TestLink 是一款开源xmind文件转xml格式工具！</p>
 <p> 1、页面（界面）</p>
-<p> <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/1.jpg" alt="img"></p>
 <p> 2、简单模板</p>
 <p> (1)模板示例 version 1<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">①默认的中心主题不会被转换，默认从第一层子主题开始转换。</span><br><span class="line">②第一层子主题会被识别为 TestSuite 测试集。</span><br><span class="line">③TestSuite 的子主题 会被识别为 TestCase 测试用例。</span><br><span class="line">④TestCase 的下级分支为 TestStep 测试步骤 和 Expected Result 期望结果。</span><br><span class="line">⑤你可以给 TestSuite，TestCase加上 Note，这会被识别为Summary 总结/概要 字段。</span><br><span class="line">⑥你可以给TestCase 加上 Comment 解释，这会被识别为 Preconception 预想 字段。</span><br><span class="line">⑦你可以使用数字Marker来为TestCase定义优先级。</span><br><span class="line">⑧你可以使用感叹号!来注释掉不想导入的任意分支。</span><br></pre></td></tr></table></figure></p>
-<p> <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/2.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/2.jpg" alt="img"></p>
 <p>（2）模板示例 version 2</p>
-<p> <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/2-1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/2-1.jpg" alt="img"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">①根主题必须加上一个小星星，这是用来区分V1和V2的标识。</span><br><span class="line">②第一层子主题还是会被识别为 TestSuite。</span><br><span class="line">③之后的主题可以自由扩展，如果一个主题被标记了priority 优先级 那么意味着case到此结束。</span><br><span class="line">④如果没有主题被标记priority 优先级，默认case取到最后一个主题。</span><br><span class="line">⑤默认使用空格连接case子主题，你可以指定其他连接符（根主题的最后一个字符）。</span><br><span class="line">⑥TestCase 的下级分支为 TestStep 和 Expected Result。</span><br><span class="line">⑦所有case子主题的Summary 概要和Preconception 预想会被连接起来。</span><br><span class="line">⑧你可以给 TestSuite，TestCase加上 Note，这会被识别为Summary 字段。</span><br><span class="line">⑨!开头的所有主题都会被自动忽略，可以用来隐藏或者注释某些不想导入的内容。</span><br></pre></td></tr></table></figure>
 <p> 3、简单模板示例解析结果</p>
-<p> <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/3.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/3.jpg" alt="img"></p>
 <p> 4、在TestLink上创建对应测试项目，然后导入转换后的文件</p>
 <p>  （1）登录testlink</p>
-<p>   <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-3.jpg" alt="img"></p>
+<p>   <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-3.jpg" alt="img"></p>
 <p>  （2）点击文本【编辑测试用例】，跳转到新页面</p>
 <p>  导入包含符合TestLink系统的测试用例的xml文件</p>
-<p>   <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-1.jpg" alt="img"></p>
+<p>   <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-1.jpg" alt="img"></p>
 <p>  （3）点击图标【导入测试用例集】，跳转到新页面</p>
-<p> <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-2.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-2.jpg" alt="img"></p>
 <p>   （4）点击图标【导入测试用例集】，跳转到新页面</p>
-<p>  <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-4.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-4.jpg" alt="img"></p>
 <p>   （5）查看整体的上传结果</p>
 <p>   在页面左边树状图最下方有生成正确的8条用例：目录层级展示正确，用例名展示正确</p>
-<p>  <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-5.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-5.jpg" alt="img"></p>
 <p> 5、TestLink导入状态示例</p>
-<p> <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/5.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/5.jpg" alt="img"></p>
 <p> 6、TestLink导入结果示例</p>
-<p> <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/6.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/6.jpg" alt="img"></p>
 <p> 7、xmind常用小图标基本使用操作</p>
-<p>  <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7.jpg" alt="img"></p>
 <p>(1)xmind图标 对应 testlink位置</p>
 <p>①xmind “备注” 对应 testlink “详细、摘要”</p>
-<p> <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-1.jpg" alt="img"></p>
 <p>②xmind “批注” 对应 testlink “前提”</p>
-<p> <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-2.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-2.jpg" alt="img"></p>
 <p>另，xmind添加批注方式</p>
-<p><img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-3.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-3.jpg" alt="img"></p>
 <p>③xmind “批注” 对应 testlink “前提”</p>
-<p>  <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-4.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-4.jpg" alt="img"></p>
 <p>④在TestCase所属子主题前面的子主题，如果前一个子主题是以”+”标识符开头，就是最里层的一个目录文件名</p>
-<p>  <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-5.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-5.jpg" alt="img"></p>
 <p>⑤编写的xmind文件基本都要新建两个画布</p>
 <p>默认画布名为：画布1，画布2，保持默认画布名即可。</p>
 <p>画布2允许不用创建，表示不填测试用例相关的关键字。</p>
 <p>画布2的关键字编写规则。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">【A】根主题名称可任意取值，默认填写为【用例相关说明】</span><br><span class="line">【B】第二层主题写6个，6个名称固定为【Jira需求】【用例编写者】【手机兼容性(型号、系统版本)】【对应开发】【浏览器兼容性】【关键字】</span><br><span class="line">【C】第三层主题，填的值分别是第二层主题对应的值</span><br><span class="line">【D】特别注意：第二层主题名为【关键字】所对应第三层主题的值，如果值为多个，要以分割符&quot;|&quot;分开来写。</span><br></pre></td></tr></table></figure>
-<p> <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-6.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-6.jpg" alt="img"></p>
 <p> xmind”画布2” 对应TestLink用例详情页”相关字段”</p>
-<p> <img src="//yoursite.com/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-7.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-7.jpg" alt="img"></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">

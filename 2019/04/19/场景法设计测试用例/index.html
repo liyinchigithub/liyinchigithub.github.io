@@ -208,7 +208,7 @@
 <p>（你会发现：从产品层面设计用例，少部分会涉及用户场景）</p>
 <p>我的理解（总结）：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">场景分析是通过【描述流经用例路径】来确定的过程。</span><br><span class="line"></span><br><span class="line">这个流经过程要从【用例开始到结束遍历其中所有基本流】 。</span><br><span class="line"></span><br><span class="line">直黑线表示基本流，是最基本、最简单的路径（软件功能按照正确的事件流实现的一条正确流程无任何错，程序从开始直到结束）。</span><br></pre></td></tr></table></figure>
-<p> <img src="//yoursite.com/2019/04/19/场景法设计测试用例/../images/ScenarioCase/1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/../images/ScenarioCase/1.jpg" alt="img"></p>
 <p>遵循上图中每个经过用例的可能路径，可以确定不同的用例场景。</p>
 <p>从基本流开始，再将基本流和备选流结合起来，可以确定以下用例场景：</p>
 <p>场景1    基本流<br>场景2    基本流    备选流1<br>场景3    基本流    备选流1    备选流2<br>场景4    基本流    备选流3<br>场景5    基本流    备选流3    备选流1<br>场景6    基本流    备选流3    备选流1    备选流2<br>场景7    基本流    备选流4<br>场景8    基本流    备选流3    备选流4     </p>
@@ -218,7 +218,7 @@
 <p>4.对生成的所有测试用例重新复审，去掉多余的测试用例，测试用例确定后，对每一个测试用例确定测试数据值。</p>
 <h2 id="用例场景例子"><a href="#用例场景例子" class="headerlink" title="用例场景例子"></a>用例场景例子</h2><p>购书：用户登录到网站后，进行书籍的选择，当选好自己心仪的书籍后进行订购，这时把所需图书放进购物车，等进行结帐的时候，用户需要登录自己注册的帐号，登录成功后，进行付款交易，交易成功后，生成订购单，整个购物过程结束。</p>
 <p>第一步：画出流程图，确定基本流和备选流；</p>
-<p> <img src="//yoursite.com/2019/04/19/场景法设计测试用例/../images/ScenarioCase/2.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/../images/ScenarioCase/2.jpg" alt="img"></p>
 <p>基本流：登录在线网站→选择书籍→放入购物车→登录账号→付款→生成订单</p>
 <p>备选流１：用户不存在→注册用户</p>
 <p>备选流２：密码不正确</p>
@@ -255,9 +255,9 @@
 </tbody>
 </table>
 <p>第三步：对每一个场景生成测试用例；</p>
-<p> <img src="//yoursite.com/2019/04/19/场景法设计测试用例/../images/ScenarioCase/3.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/../images/ScenarioCase/3.jpg" alt="img"></p>
 <p>第四步：对生成的所有测试用例重新复审，补充测试数据值；</p>
-<p> <img src="//yoursite.com/2019/04/19/场景法设计测试用例/../images/ScenarioCase/4.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/../images/ScenarioCase/4.jpg" alt="img"></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
