@@ -1,694 +1,2241 @@
 <!DOCTYPE html>
-<!--[if lte IE 8 ]>
-<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--
-***************  *      *     *
-      8          *    *       *
-      8          *  *         *
-      8          **           *
-      8          *  *         *
-      8          *    *       *
-      8          *      *     *
-      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
--->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
-<!--<![endif]-->
 
-<head>
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="liyinchi personal blog site">
+<meta name="keywords" content="test autotest java JavaScript">
+<meta property="og:type" content="website">
+<meta property="og:title" content="liyinchi">
+<meta property="og:url" content="http://liyinchigithub.github.io/index.html">
+<meta property="og:site_name" content="liyinchi">
+<meta property="og:description" content="liyinchi personal blog site">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="liyinchi">
+<meta name="twitter:description" content="liyinchi personal blog site">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://liyinchigithub.github.io/">
+
+
+
+
+
   <title>liyinchi</title>
-  <!-- Meta data -->
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="liyinchi">
-    <meta name="author" content="Jack Li  QQ:233227763@qq.com">
-    <meta name="description" content="" />
-    <meta name="keywords" content="test autotest java JavaScript" />
-
-    <!-- Favicon, (keep icon in root folder) -->
-    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
-
-    <link rel="alternate" href="/atom.xml" title="liyinchi" type="application/atom+xml">
-    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
-    
-    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
-    
-
-    <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
-    <![endif]-->
-
-    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
-    <script src="/js/jquery-1.11.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
-
-    <!-- Load these in the <head> for quicker IE8+ load times -->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <script src="/js/respond.min.js"></script>
-    <![endif]-->
-
-  
-  
   
 
-  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+
+
+
+
+
+
+
 </head>
 
-<!--
-<body class="home-template">
--->
-<body id="index" class="lightnav animsition">
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
-      <!-- ============================ Off-canvas navigation =========================== -->
-
-    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
-        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
-            <img src="/img/close.png" alt="Close"/>
-        </div>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu">
-            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
-            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
-            <!-- Dropdown Menu -->
-			 
-            <li>
-                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
-                    
-                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
-                    
-                </ul>
-            </li>
-            
-            
-            
-            <li>
-                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
-                    
-                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
-                    
-                </ul>
-            </li>
-            
-        </ul>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu secondary">
-            
-            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
-            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
-        </ul>
-    </div>
-    
-    <!-- ============================ END Off-canvas navigation =========================== -->
-
-    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
-
-    <div id="sb-site">
-        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
-
-        <!-- ============================ Header & Logo bar =========================== -->
-
-        <div id="navigation" class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <!-- Nav logo -->
-                    <div class="logo">
-                        <a href="/" title="Logo" class="animsition-link">
-                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
-                        </a>
-                    </div>
-                    <!-- // Nav logo -->
-                    <!-- Info-bar -->
-                    <nav>
-                        <ul class="nav">
-                            <li><a href="/" class="animsition-link">liyinchi</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
-                            
-                            <li><a href="https://github.com/liyinchigithub" title="Github" target="_blank"><i class="icon-github"></i></a></li>
-                            
-                            
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
-                            
-                            
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
-                            
-                            
-                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
-                            
-                            
-                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
-                            
-                            <li class="nolink"><span>Welcome!</span></li>
-                        </ul>
-                    </nav>
-                    <!--// Info-bar -->
-                </div>
-                <!-- // .container -->
-                <div class="learnmore sb-toggle-right">More</div>
-                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar before"></span>
-                <span class="icon-bar main"></span>
-                <span class="icon-bar after"></span>
-                </button>
-            </div>
-            <!-- // .navbar-inner -->
-        </div>
-
-        <!-- ============================ Header & Logo bar =========================== -->
-
-
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-<!-- ============================ Content =========================== -->
-
-<section id="intro">
-    <div class="container">
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/12/03/Android测试工具DDMS/">Android测试工具DDMS</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-12-03T15:15:31.000Z" itemprop="datePublished">
-          2019-12-03
-      </time>
-    
-    
-    | 
-    <a href='/tags/AutoTest/'>AutoTest</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        对于每个开发或测试Android设备的人来说，各种调试、测试工具极多，如颇有名气的ADB、DDMS、APT等等。
-DDMS是什么？DDMS 的全称是Dalvik Debug Monitor Service，是 Android 开发环境中的Dalvik虚拟机调试监控服务。
-DDMS功能（1）测试设备截屏；
-（2）查看特定进程正在运行的线程以及堆信息；
-（3）Logcat（日志查看）；
-（4）广播状态信息；
-（5）模拟电话呼叫；
-（6）模拟
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/12/03/Android测试工具DDMS/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/10/27/Yapi可视化接口管理平台/">Yapi可视化接口管理平台</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-10-27T03:30:39.000Z" itemprop="datePublished">
-          2019-10-27
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        功能介绍YApi 是高效、易用、功能强大的 api 管理平台，旨在为开发、产品、测试人员提供更优雅的接口管理服务。可以帮助开发者轻松创建、发布、维护 API，YApi 还为用户提供了优秀的交互体验，开发人员只需利用平台提供的接口数据写入工具以及简单的点击操作就可以实现接口的管理。
-一、特性
-#基于 Json5 和 Mockjs 定义接口返回数据的结构和文档，效率提升多倍
-#扁平化权限设计，即保证了大型企业级项目的管理，又保证了易用性
-#
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/10/27/Yapi可视化接口管理平台/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/10/10/Xmind2TestLink/">Xmind2TestLink</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-10-10T14:17:26.000Z" itemprop="datePublished">
-          2019-10-10
-      </time>
-    
-    
-    | 
-    <a href='/tags/AutoTest/'>AutoTest</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        前言软件测试过程中，最核心重要在用例设计，公司团队以往都是用excel维护测试用例，但缺点是在太多。
-如下：
-1、评审不够直观，开发产品对着报表评审用例打瞌睡。
-2、编写效率不够，思维不能发散，迭代用例版本维护很麻烦。
-3、excel转成xml再导入testlink。
-必须让测试小伙伴在项目紧迫周期内，快速”头脑风暴”发散思维写出用例。
-（二）解决办法：
-1、使用思维导图工具（xmind）设计测试用例。
-2、遵循转换工具xmind用例模
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/10/10/Xmind2TestLink/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/08/12/Nginx到底能做什么？/">Nginx到底能做什么？</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-08-12T10:54:03.000Z" itemprop="datePublished">
-          2019-08-12
-      </time>
-    
-    
-    | 
-    <a href='/tags/Development/'>Development</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        NginxNginx(发音同engine x)是一个高性能、跨平台的[HTTP Server]，也可以用作[反向代理]、[负载均衡]服务器和[HTTP缓存]服务器。俄罗斯人Igor Sysoev(伊戈尔·赛索耶夫)在2004年开发的，Nginx是免费的开源软件，根据类BSD许可证的条款发布。目前全球约有50%的网站都是用Nginx做Web服务器。
-
-Nginx的优点1、开源免费Nginx完全开源免费，可以轻松搭建HTTP服务。
-相对传统
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/08/12/Nginx到底能做什么？/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/">接口自动化测试持续集成解决方案（Postman+Newman+Jenkins+Git）</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-08-10T02:01:08.000Z" itemprop="datePublished">
-          2019-08-10
-      </time>
-    
-    
-    | 
-    <a href='/tags/AutoTest/'>AutoTest</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        前言有逼格很高的商业化、开源化测试框架及工具，但实际运用需很大维护成本，产生价值低。
-如何真正”高效快速”、”低成本维护”？经过调研落地、使用对比。
-最终确认这个方案（Postman+Newman+Jenkins+Git）基于restful Api、RPC等等，都可以变相解决这些困难。
-如何借助这些工具实现接口测试自动化和持续集成？1、Postman
-基于http/https协议接口，一款可视化构造客户端请求工具，虽然是商业化工具，但免
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/06/14/Nodemailer/">Nodemailer</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-06-14T09:11:49.000Z" itemprop="datePublished">
-          2019-06-14
-      </time>
-    
-    
-    | 
-    <a href='/tags/Development/'>Development</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        领导让我做一个解析测试报告的程序，将最终结果发邮件给所有相关同事，前期自动化测试都是基于jenkins+gitlab+newman，发送邮件使用的是jenkins配置邮件插件。这次需要借助非jenkins发送邮件，找了很久Nodemailer比较适合。
-1npm i nodemailer
-123456789101112131415161718192021222324252627282930313233343536373839404142
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/06/14/Nodemailer/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/06/14/测试工作管理平台/">测试工作管理平台</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-06-14T07:50:46.000Z" itemprop="datePublished">
-          2019-06-14
-      </time>
-    
-    
-    | 
-    <a href='/tags/Development/'>Development</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        为了更好的管理团队测试工作，项目测试环节风险把控、测试工作饱和度以及测试数据资料维护，自己做了一个这样的工作平台，前端基于vue、后端基于nodejs
-功能介绍
-一、测试数据统计
- 
-上线而未上线占比、测试人员本月总任务、进行中、已完成、未完成数量、测试人员每人本周目前工时（7.5*5天）
-二、上线记录管理
- 
- 
- 
-统计当前测试部，已上线、进行中、未开始的需求等信息
-三、测试用例管理
- 
   
-日常测试用例编写、执行
-四、接口文档管
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/06/14/测试工作管理平台/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+      <div class="site-meta-headline">
+        <a>
+          <img class="custom-logo-image" src="../../images/Logo/liyinchi.jpg" alt="liyinchi">
+        </a>
+      </div>
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">liyinchi</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
         
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/04/19/场景法设计测试用例/">场景法设计测试用例</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-04-19T03:17:08.000Z" itemprop="datePublished">
-          2019-04-19
-      </time>
-    
-    
-    | 
-    <a href='/tags/AutoTest/'>AutoTest</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        场景法设计测试用例定义1、分析软件应用的场景（使用场景）：
-从用户的角度出发，从场景的角度来设计测试用例，是一种面向用户的测试用例设计方法。
-2、关心用户做什么，而不是关心产品做什么。（功能测试用例相反，更关注产品功能）
-优点实用性强，贴近用户的操作。（功能测试用例相反）
-缺点可能使用的场景不一定能对事件系列进行全面的分析，设计出来的用例不完整。（功能测试用例相反，对每个页面表单控件进行全面分析）
-实例登录
-(1)场景用例：
-合法账号密
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/04/19/场景法设计测试用例/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
         
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/">解决postman无法下载xls并解析下载内容是否正确方案</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-04-13T06:16:12.000Z" itemprop="datePublished">
-          2019-04-13
-      </time>
-    
-    
-    | 
-    <a href='/tags/Development/'>Development</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        问题使用postman做restful api自动化测试，遇到下载excel报表，并需要解析报表内容是否正确？
-解决办法借助nodejs后端框架express写一个解析程序：postman客户端请求服务端接口，带上相关参数；服务端下载指定文档，解析文档内容，断言是否和客户端参数一致！
-12345678910111213141516171819202122232425262728293031323334353637383940414243
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
         
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/02/02/element-ui/">element-ui</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-02-02T08:43:00.000Z" itemprop="datePublished">
-          2019-02-02
-      </time>
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
     
-    | 
-    <a href='/tags/Development/'>Development</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        简介Element UI 是一套采用 Vue 2.0 作为基础框架实现的组件库，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的组件库，提供了配套设计资源，帮助网站快速成型
-组件分页12
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/02/02/element-ui/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
+      <header class="post-header">
+
         
-        <nav class="pagination" role="pagination">
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/03/Android测试工具DDMS/" itemprop="url">Android测试工具DDMS</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-03T23:15:31+08:00">
+                2019-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-          <a class="pull-right" href="/page/2/">Older Posts →</a>
-        </nav>
-    </div>
-</section>
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-    </div>
-</section>
-<!-- ============================ END Content =========================== -->
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-<!-- ============================ Footer =========================== -->
+      
 
-<footer>
-    <div class="container">
-            <div class="copy">
-                <p>
-                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Jack Li  QQ:233227763@qq.com. All Rights Reserved.
-                </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
-            </div>
-            <div class="social">
-                <ul>
-                    
-                    <li><a href="https://github.com/liyinchigithub" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
-                    
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
+      
+        
+          
+            <p>对于每个开发或测试Android设备的人来说，各种调试、测试工具极多，如颇有名气的ADB、DDMS、APT等等。</p>
+<h1 id="DDMS是什么？"><a href="#DDMS是什么？" class="headerlink" title="DDMS是什么？"></a>DDMS是什么？</h1><p>DDMS 的全称是Dalvik Debug Monitor Service，是 Android 开发环境中的Dalvik虚拟机调试监控服务。</p>
+<h1 id="DDMS功能"><a href="#DDMS功能" class="headerlink" title="DDMS功能"></a>DDMS功能</h1><p>（1）测试设备截屏；</p>
+<p>（2）查看特定进程正在运行的线程以及堆信息；</p>
+<p>（3）Logcat（日志查看）；</p>
+<p>（4）广播状态信息；</p>
+<p>（5）模拟电话呼叫；</p>
+<p>（6）模拟接收及发送SMS；</p>
+<p>（7）虚拟地理坐标；</p>
+<p>（8）端口重定向；</p>
+<h1 id="DDMS工作原理"><a href="#DDMS工作原理" class="headerlink" title="DDMS工作原理"></a>DDMS工作原理</h1><p>DDMS扮演了一个IDE与移动设备上的应用程序之间的”中间人”角色，在Android上，每一个应用程序都有一个自己的VM并运行在自己的进程中。因此，每个进程都有一个不同的端口用来监听debugger。</p>
+<p>1、DDMS启动时，会连接到ADB，并开启一个device监视服务，当有设备连接到ADB或与ADB断开时，DDMS都会得到通知；</p>
+<p>2、一旦一个设备连接到ADB，DDMS就会为其创建一个VM监视服务，当移动设备上有VM的启动或终止时，DDMS就会得到通知；</p>
+<p>3、一旦一个VM开始运行，DDMS就会通过ADB获取VM的PID，然后，为这个VM打开一个端口，监听来自这个VM的Debugger。为第一个VM打开的监听端口是8600，第二个是8601，依次往后排；</p>
+<p>5、DDMS还会打开一个默认为8700的本地端口，并通过这个端口监听来自IDE的Debugger。当有IDE Debugger连接上来时，DDMS查找当前选中的VM，再通过ADB转接上去。流程为：</p>
+<p>IDE Debugger–&gt;DDMS8700端口–&gt;ADB–&gt;ADBD–&gt;VM</p>
+<p>这样，Debugger就可以向VM发送信息了；</p>
+<p>而VM的Debugger抓取到的堆栈、线程等VM的运行时信息通过连接到DDMS为这个VM打开的监听端口上，就可以发送到DDMS上了。</p>
+<h1 id="DDMS如何获得版本安装"><a href="#DDMS如何获得版本安装" class="headerlink" title="DDMS如何获得版本安装"></a>DDMS如何获得版本安装</h1><p>下载官网：</p>
+<p>Android-ADT：<a href="https://dl.google.com/android/ADT-23.0.6.zip" target="_blank" rel="noopener">https://dl.google.com/android/ADT-23.0.6.zip</a></p>
+<p>Android-SDK: <a href="http://developer.android.com/sdk/index.html(可以不安装)" target="_blank" rel="noopener">http://developer.android.com/sdk/index.html(可以不安装)</a></p>
+<h1 id="DDMS如何使用"><a href="#DDMS如何使用" class="headerlink" title="DDMS如何使用"></a>DDMS如何使用</h1><p>DDMS启动</p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/0.jpg" alt="img"></p>
+<p>配置android sdk环境变量，dos执行ddms或Android sdk 目录下tools文件夹内ddms.bat、ddms.sh</p>
+<p>（1）正常启动后，界面如下：</p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/12.jpg" alt="img"></p>
+<p>左侧的面板上提供了相应功能的按钮，从左往右依次是：Debug the selected process、Update Heap、Dump HPROF File、Cause GC（Garbage Collection）、Update Threads、Start Method Profiling、Stop Process和Screen Capture，如下图：</p>
+<p>右侧显示相应的监测信息并进行文件管理，如下图：</p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/18.jpg" alt="img"></p>
+<p>DDMS测试APP</p>
+<h1 id="DDMS使用"><a href="#DDMS使用" class="headerlink" title="DDMS使用"></a>DDMS使用</h1><p>注：以下所有操作必须手机连接PC，连接时确认手机处于”USB调试”模式；</p>
+<h1 id="线程监测"><a href="#线程监测" class="headerlink" title="线程监测"></a>线程监测</h1><p>DDMS中的线程监控和评测浏览对于管理大量线程的应用很有用。</p>
+<p>要启用，点击 Update Threads（更新线程）图标即可开始，如下图：</p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/13.jpg" alt="img"></p>
+<p>右侧对应的Threads窗口会显示面向选中VM进程的所有线程的名称和其他细节</p>
+<p>utime 和stime代表了线程在瞬间运行用户代码（utime）和系统代码（STIME）所花的总时间。一瞬间的时间是由系统定义的，但通常为10毫秒。星号表示守护线程；native状态表示线程正执行原生代码。查看上述样本数据时，除了查看应用主线程花费时间，也要关注GC花费时间，便于测试中发现GC问题或观察处理对象创建，提出有助于优化性能建议。</p>
+<h1 id="内存检测"><a href="#内存检测" class="headerlink" title="内存检测"></a>内存检测</h1><p>可以使用DDMS中的Heap和Allocation tracker一起定位内存问题，如下：</p>
+<p>点击Update Heap（更新堆）按钮，获得有关选定虚拟机中堆分配的信息，如下图：</p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/14.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/15.jpg" alt="img"></p>
+<p>右侧对应的Heap，点击”Cause GC”，Heap视图中便会显示当前应用的内存使用量的详细情况；</p>
+<p>测试中如何判断程序是否有内存泄漏的可能性呢？需要关注一个值：Heap视图中部有一个Type叫做data object，即数据对象，也就是我们的程序中大量存在的类型的对象。在data object一行中有一列是”Total Size”，其值就是当前进程中所有Java数据对象的内存总量，一般情况下，这个值的大小决定了是否会有内存泄漏，可以这样判断：</p>
+<p>（1）不断的操作当前应用，同时注意观察data object的Total Size值；</p>
+<p>（2）正常情况下Total Size值都会稳定在一个有限的范围内，虽然不断的操作会不断的生成较多对象，但是虚拟机在不断的进行GC的过程中，对象都被回收了，内存占用量会会落到一个稳定的水平，也就是说程序代码良好，无内存泄露情况出现；</p>
+<p>（3）反之如果代码中存在没有释放对象引用的情况，则data object的Total Size值在每次GC后不会有明显的回落，随着操作次数的增多Total Size的值会不断增大，累加到一个极限后导致进程被kill掉。</p>
+<p>所以我们测试中可以预判下那些场景容易出现内存泄露，可以重复这个场景的操作，观察heap size值和data object”Total Size” 的变化，若发现内存泄露情况，可使用DMS另一个自带的内存分配跟踪工具Allocation tracker进行跟踪。</p>
+<p>操作步骤：</p>
+<p>（1）点击 “Start Tracking”；</p>
+<p>（2）点击”Get allocations”，更新内存分配显示；</p>
+<p>（3）filter输入应用名称进行筛选;</p>
+<p>（4）继续不断重复场景操作，再点击”Get allocations”；</p>
+<p>（5）若发现某个类占用的内存最大，且有上升的趋势，可点击该类，下方展示该类中运行的各方法，可定位到该类中的具体方法，双击method名，定位到对应的代码；</p>
+<h1 id="响应时间检测"><a href="#响应时间检测" class="headerlink" title="响应时间检测"></a>响应时间检测</h1><p>Method Profiling（方法分析）对于快速概览应用中时间的消耗分布非常有用，也可用于时间关键型函数的详细查看。</p>
+<p>响应时间测试的场景主要是在：遍历查询、递归查询等（循环判断）。</p>
+<p>点击Start Method Profiling 图标开始方法分析，操作场景测试，点击Stop Method Profiling 停止分析如下图：</p>
+<p>分析结果如下图：</p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/19.jpg" alt="img"></p>
+<p>incl cpu time%，将各方法时间消耗进行排序；</p>
+<p>Incl cpu time%: inclusive时间占总时间的百分比</p>
+<p>Excl cpu time%: 执行占总时间的白分比</p>
+<p>Calls+Recur Calls/Total: 调用和重复调用的次数</p>
+<p>Time/Call: 总的时间(ms)排序</p>
+<p>单击底部窗格中的方法调用可创建一个层级结构，显示该方法–先是调用该方法的母方法，然后是从选定方法中调用的子方法，若发现某个方法占用CPU时间过长，可定位到对应代码,查看代码逻辑，针对性发现问题。</p>
+<h1 id="UI检查"><a href="#UI检查" class="headerlink" title="UI检查"></a>UI检查</h1><p>DDMS下Dump view UI hierarchy for Automator针对程序开发中UI调试好处多多，对于测试而言该工具在UI视觉测试时也是一个利器，该工具能够定位到每个View在屏幕中的绝对位置（精确到具体的PX（像素）级别），在视觉检查测试时可以帮我们很轻松的发现UI视觉问题。</p>
+<p>启动时，点击Dump view UI hierarchy for Automator图标，如下图：</p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/9.jpg" alt="img"></p>
+<p>启动后进入正式界面，可以逐个元素的进行UI视觉稿检测，有问题立即便可知晓，如下图：</p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/10.jpg" alt="img"></p>
+<h1 id="流量统计"><a href="#流量统计" class="headerlink" title="流量统计"></a>流量统计</h1><p>测试中流量大小是1个重要测试点，而DDMS提供了流量统计工具network statistics，该工具可以实时统计查看程序使用网络的情况，也可以通过设置不同的Tag(标签)来区分不同类型的流量使用情况，数据在DDMS中通过图表显示，点击右侧视图中的network statistic，并Start即开始统计，如下图：</p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/11.jpg" alt="img"></p>
+<h1 id="CPU-Memory-FPS抓取"><a href="#CPU-Memory-FPS抓取" class="headerlink" title="CPU/Memory/FPS抓取"></a>CPU/Memory/FPS抓取</h1><p>测试中CPU、内存、帧率测试必不可少，同样DDMS针对此提供了System Information工具，可以用来对CPU、内存和帧进行抓取，可以抓取到整个系统的某个瞬间信息。使用时点击右侧视图中的System Information即可，具体使用方法比较简单，不再赘述。</p>
+<h1 id="log抓取"><a href="#log抓取" class="headerlink" title="log抓取"></a>log抓取</h1><p>日志一般用于记录程序运行信息，从而使开发者方便开发调试，便于发现问题。我们先看看android.util.Log常用的方法，共有以下六种：Log.v() 、Log.d() 、Log.i() 、Log.w()、 Log.e()以及Log.a() (android 4.0新增加的)。根据首字母对应VERBOSE、DEBUG、INFO、WARN、ERROR、Assert，重要程度排序Assert &gt; Error &gt; Warn &gt; Info &gt; Verbose。</p>
+<p>(1)Log.v 的调试颜色为黑色的，任何消息都会输出，平时使用就是Log.v(“”,””);</p>
+<p>(2)Log.d的输出颜色是蓝色的，仅输出debug调试的意思，但他会输出上层的信息，过滤起来可以通过DDMS的Logcat标签来选择.</p>
+<p>(3)Log.i的输出为绿色，一般提示性的消息information，它不会输出Log.v和Log.d的信息，但会显示i、w和e的信息</p>
+<p>(4)Log.w的意思为橙色，可以看作为warning警告，一般需要我们注意优化Android代码，同时选择它后还会输出Log.e的信息。</p>
+<p>(5)Log.e为红色，可以想到error错误，这里仅显示红色的错误信息，这些错误就需要我们认真的分析，查看栈的信息了;</p>
+<p>(6)Log.a为4.0新增加的，Assert表示断言失败后的错误消息，这类错误原本是不可能出现的错误，现在却出现了，是极其严重的错误类型;</p>
+<p>而我们平时测试Android App过程中会经常通过log定位问题，而DDMS中LogCat则是一个抓取APP运行log的利器，具体操作如下：</p>
+<p>打开LogCat窗口，Window -&gt; Show View -&gt; LogCat.</p>
+<p>手机连上本地PC，并打开usb调试模式，即可收集到app运行log了。</p>
+<p>收集中可以增加log规律规则，点击窗口右上的加号，在Filter Name中输入需要过滤的的字符串。点击OK就行了。</p>
+<h1 id="多个设备的Log查看"><a href="#多个设备的Log查看" class="headerlink" title="多个设备的Log查看"></a>多个设备的Log查看</h1><p>在模拟器、真机数量多于两个的时候，DDMS仍然适用，DDMS试图，在左上角Devices中双击想要看log的设备即可，具体适用与单设备完全一致。</p>
+<h1 id="虚拟地理坐标"><a href="#虚拟地理坐标" class="headerlink" title="虚拟地理坐标"></a>虚拟地理坐标</h1><p>如果您的应用程序依赖于位置的手机，你可以有的DDMS送您的设备或AVD一个模拟的位置。这是非常有用的，如果你想测试你的应用程序的特定位置的功能，而不必实际移动的不同方面。<br>您可以使用下面的地理位置数据类型：<br>手动设置（Manual）位置 - 通过手动指定十进制或六十进制的经度和纬度值。<br>GPX - GPS交换文件<br>KML -Keyhole标记语言文件</p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/8.jpg" alt="img"></p>
+<h1 id="进程信息"><a href="#进程信息" class="headerlink" title="进程信息"></a>进程信息</h1><p>获取进程信息需要点击左侧Update Threads按钮，然后在左侧显示相应的进程信息，包括进程的名称、ID、状态等重要信息<br>内存信息<br>需要点击Update Heap，在Heap界面下，上部显示堆的详细信息，点击Cause GC进行垃圾回收，当完成后，可以看到一组对象类型和为每种类型已分配的内存，点击列表中的一个对象类型，为该种特定内存大小的对象分配的数量。</p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/6.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/7.jpg" alt="img"></p>
+<h1 id="模拟拨入电话，模拟接收短信"><a href="#模拟拨入电话，模拟接收短信" class="headerlink" title="模拟拨入电话，模拟接收短信"></a>模拟拨入电话，模拟接收短信</h1><p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/16.jpg" alt="img"></p>
+<p>模拟器接收模拟发送短信的效果，中文乱码</p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/17.jpg" alt="img"></p>
+<h1 id="网络状态获取"><a href="#网络状态获取" class="headerlink" title="网络状态获取"></a>网络状态获取</h1><p>在Android 4.0， DDMS 具备监控详细的网络使用情况的功能，使得它可以跟踪您的应用程序的网络请求。使用这个工具，你可以监视应用程序的数据传输，并适当优化的底层代码。</p>
+<h1 id="系统信息获取"><a href="#系统信息获取" class="headerlink" title="系统信息获取"></a>系统信息获取</h1><p>包括三部分CPU相关信息（CPU load）、内存使用信息（MemoryUsage）、框架渲染时间信息（Frame Render Time）</p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/1.jpg" alt="img"></p>
+<p>CPU load</p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/2.jpg" alt="img"></p>
+<p>Memory Usage<br> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/3.jpg" alt="img"></p>
+<p>Frame Render Time<br>测试使用模拟器<br> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/4.jpg" alt="img"></p>
+<h1 id="网速设置"><a href="#网速设置" class="headerlink" title="网速设置"></a>网速设置</h1><h1 id="手机文件管理"><a href="#手机文件管理" class="headerlink" title="手机文件管理"></a>手机文件管理</h1><p>手机文件管理，如果虚拟机分配了SD卡空间或真机挂载了SD卡可以管理SD中的文件。从设备复制文件，在文件浏览器中找到该文件，然后单击“Pull file”按钮。要复制一个文件到设备上的文件资源管理器“Push file<br>”按钮。</p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/5.jpg" alt="img"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/27/Yapi可视化接口管理平台/" itemprop="url">Yapi可视化接口管理平台</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-27T11:30:39+08:00">
+                2019-10-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-</footer>
+      </header>
+    
 
-<!-- ============================ END Footer =========================== -->
-      <!-- Load our scripts -->
-<!-- Resizable 'on-demand' full-height hero -->
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h1><p>YApi 是高效、易用、功能强大的 api 管理平台，旨在为开发、产品、测试人员提供更优雅的接口管理服务。可以帮助开发者轻松创建、发布、维护 API，YApi 还为用户提供了优秀的交互体验，开发人员只需利用平台提供的接口数据写入工具以及简单的点击操作就可以实现接口的管理。</p>
+<p>一、特性</p>
+<p>#基于 Json5 和 Mockjs 定义接口返回数据的结构和文档，效率提升多倍</p>
+<p>#扁平化权限设计，即保证了大型企业级项目的管理，又保证了易用性</p>
+<p>#类似 postman 的接口调试</p>
+<p>#MockServer 除支持普通的随机 mock 外，还增加了 Mock 期望功能，根据设置的请求过滤规则，返回期望数据</p>
+<p>#支持 postman, har, swagger 数据导入</p>
+<p>#免费开源，内网部署，信息再也不怕泄露了。</p>
+<p>二、环境要求<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nodejs（7.6+)</span><br><span class="line">mongodb（2.6+）</span><br><span class="line">git</span><br></pre></td></tr></table></figure></p>
+<p>三、我的个人体验</p>
+<p>（一）优点：</p>
+<p>支持mock（postman也自带mock服务），支持导入postman工程json（但要求导出版本是V1）</p>
+<p>（二）缺点：</p>
+<p>1、在Yapi上面配置内容，导出不支持导入到postman。</p>
+<p>2、有一定学习成本，需要团队开发接口设计文档都在上面使用，测试复用接口设计文档进行接口测试才有意义。</p>
+<p>四、搭建</p>
+<p>前提：本地安装配置node、mongodb</p>
+<p>（一）自带部署脚手架</p>
+<p> <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-1.jpg" alt="img"></p>
+<p> （二）启动服务</p>
+<p> <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-3.jpg" alt="img"></p>
+<p> （三）本地化部署后，登录页面</p>
+<p> <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-2.jpg" alt="img"></p>
+<p> （四）导入postman工程</p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-4.jpg" alt="img"></p>
+<p> （五）团队协作</p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-5.jpg" alt="img"></p>
+<p>  （六）主要功能</p>
+<p>  1、接口列表</p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-6.jpg" alt="img"></p>
+<p>  2、接口设计文档详情页</p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-7.jpg" alt="img"></p>
+<p>  3、单个接口测试</p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-8.jpg" alt="img"></p>
+<p>  4、运行测试</p>
+<p>  根据接口列表，自定义添加测试集合（要测试的接口）<br>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-9.jpg" alt="img"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/10/10/Xmind2TestLink/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/10/Xmind2TestLink/" itemprop="url">Xmind2TestLink</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-10T22:17:26+08:00">
+                2019-10-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>软件测试过程中，最核心重要在用例设计，公司团队以往都是用excel维护测试用例，但缺点是在太多。</p>
+<p>如下：</p>
+<p>1、评审不够直观，开发产品对着报表评审用例打瞌睡。</p>
+<p>2、编写效率不够，思维不能发散，迭代用例版本维护很麻烦。</p>
+<p>3、excel转成xml再导入testlink。</p>
+<p>必须让测试小伙伴在项目紧迫周期内，快速”头脑风暴”发散思维写出用例。</p>
+<p>（二）解决办法：</p>
+<p>1、使用思维导图工具（xmind）设计测试用例。</p>
+<p>2、遵循转换工具xmind用例模板。</p>
+<p>3、将xmind用例转成xml再导入testlink。</p>
+<p>ps：来神州之前敏捷团队一直使用xmind作为脑图使用，应对短期、长期项目非常好用。</p>
+<h1 id="如何快速设计测试用例、高效管理测试用例？？"><a href="#如何快速设计测试用例、高效管理测试用例？？" class="headerlink" title="如何快速设计测试用例、高效管理测试用例？？"></a>如何快速设计测试用例、高效管理测试用例？？</h1><h2 id="Xmind2Testlink"><a href="#Xmind2Testlink" class="headerlink" title="Xmind2Testlink"></a>Xmind2Testlink</h2><p>Xmind2TestLink 是一款开源xmind文件转xml格式工具！</p>
+<p> 1、页面（界面）</p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/1.jpg" alt="img"></p>
+<p> 2、简单模板</p>
+<p> (1)模板示例 version 1<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">①默认的中心主题不会被转换，默认从第一层子主题开始转换。</span><br><span class="line">②第一层子主题会被识别为 TestSuite 测试集。</span><br><span class="line">③TestSuite 的子主题 会被识别为 TestCase 测试用例。</span><br><span class="line">④TestCase 的下级分支为 TestStep 测试步骤 和 Expected Result 期望结果。</span><br><span class="line">⑤你可以给 TestSuite，TestCase加上 Note，这会被识别为Summary 总结/概要 字段。</span><br><span class="line">⑥你可以给TestCase 加上 Comment 解释，这会被识别为 Preconception 预想 字段。</span><br><span class="line">⑦你可以使用数字Marker来为TestCase定义优先级。</span><br><span class="line">⑧你可以使用感叹号!来注释掉不想导入的任意分支。</span><br></pre></td></tr></table></figure></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/2.jpg" alt="img"></p>
+<p>（2）模板示例 version 2</p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/2-1.jpg" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">①根主题必须加上一个小星星，这是用来区分V1和V2的标识。</span><br><span class="line">②第一层子主题还是会被识别为 TestSuite。</span><br><span class="line">③之后的主题可以自由扩展，如果一个主题被标记了priority 优先级 那么意味着case到此结束。</span><br><span class="line">④如果没有主题被标记priority 优先级，默认case取到最后一个主题。</span><br><span class="line">⑤默认使用空格连接case子主题，你可以指定其他连接符（根主题的最后一个字符）。</span><br><span class="line">⑥TestCase 的下级分支为 TestStep 和 Expected Result。</span><br><span class="line">⑦所有case子主题的Summary 概要和Preconception 预想会被连接起来。</span><br><span class="line">⑧你可以给 TestSuite，TestCase加上 Note，这会被识别为Summary 字段。</span><br><span class="line">⑨!开头的所有主题都会被自动忽略，可以用来隐藏或者注释某些不想导入的内容。</span><br></pre></td></tr></table></figure>
+<p> 3、简单模板示例解析结果</p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/3.jpg" alt="img"></p>
+<p> 4、在TestLink上创建对应测试项目，然后导入转换后的文件</p>
+<p>  （1）登录testlink</p>
+<p>   <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-3.jpg" alt="img"></p>
+<p>  （2）点击文本【编辑测试用例】，跳转到新页面</p>
+<p>  导入包含符合TestLink系统的测试用例的xml文件</p>
+<p>   <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-1.jpg" alt="img"></p>
+<p>  （3）点击图标【导入测试用例集】，跳转到新页面</p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-2.jpg" alt="img"></p>
+<p>   （4）点击图标【导入测试用例集】，跳转到新页面</p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-4.jpg" alt="img"></p>
+<p>   （5）查看整体的上传结果</p>
+<p>   在页面左边树状图最下方有生成正确的8条用例：目录层级展示正确，用例名展示正确</p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/4-5.jpg" alt="img"></p>
+<p> 5、TestLink导入状态示例</p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/5.jpg" alt="img"></p>
+<p> 6、TestLink导入结果示例</p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/6.jpg" alt="img"></p>
+<p> 7、xmind常用小图标基本使用操作</p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7.jpg" alt="img"></p>
+<p>(1)xmind图标 对应 testlink位置</p>
+<p>①xmind “备注” 对应 testlink “详细、摘要”</p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-1.jpg" alt="img"></p>
+<p>②xmind “批注” 对应 testlink “前提”</p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-2.jpg" alt="img"></p>
+<p>另，xmind添加批注方式</p>
+<p><img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-3.jpg" alt="img"></p>
+<p>③xmind “批注” 对应 testlink “前提”</p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-4.jpg" alt="img"></p>
+<p>④在TestCase所属子主题前面的子主题，如果前一个子主题是以”+”标识符开头，就是最里层的一个目录文件名</p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-5.jpg" alt="img"></p>
+<p>⑤编写的xmind文件基本都要新建两个画布</p>
+<p>默认画布名为：画布1，画布2，保持默认画布名即可。</p>
+<p>画布2允许不用创建，表示不填测试用例相关的关键字。</p>
+<p>画布2的关键字编写规则。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">【A】根主题名称可任意取值，默认填写为【用例相关说明】</span><br><span class="line">【B】第二层主题写6个，6个名称固定为【Jira需求】【用例编写者】【手机兼容性(型号、系统版本)】【对应开发】【浏览器兼容性】【关键字】</span><br><span class="line">【C】第三层主题，填的值分别是第二层主题对应的值</span><br><span class="line">【D】特别注意：第二层主题名为【关键字】所对应第三层主题的值，如果值为多个，要以分割符&quot;|&quot;分开来写。</span><br></pre></td></tr></table></figure>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-6.jpg" alt="img"></p>
+<p> xmind”画布2” 对应TestLink用例详情页”相关字段”</p>
+<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/../images/xmind2testlink/7-7.jpg" alt="img"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/12/Nginx到底能做什么？/" itemprop="url">Nginx到底能做什么？</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-12T18:54:03+08:00">
+                2019-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><p>Nginx(发音同engine x)是一个高性能、跨平台的[HTTP Server]，也可以用作[反向代理]、[负载均衡]服务器和[HTTP缓存]服务器。俄罗斯人Igor Sysoev(伊戈尔·赛索耶夫)在2004年开发的，Nginx是免费的开源软件，根据类BSD许可证的条款发布。目前全球约有50%的网站都是用Nginx做Web服务器。</p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-12.jpg" alt="img"></p>
+<h2 id="Nginx的优点"><a href="#Nginx的优点" class="headerlink" title="Nginx的优点"></a>Nginx的优点</h2><h2 id="1、开源免费"><a href="#1、开源免费" class="headerlink" title="1、开源免费"></a>1、开源免费</h2><p>Nginx完全开源免费，可以轻松搭建HTTP服务。</p>
+<p>相对传统收费的负载均衡器F5，用Nginx搭建负载均衡服务成本比较低。</p>
+<h2 id="2、高性能"><a href="#2、高性能" class="headerlink" title="2、高性能"></a>2、高性能</h2><p>Nginx是基于C语言开发，在执行效率很高。</p>
+<p>Nginx是基于Master/Worker进程架构，Master进程管理多个Worker进程，开启多个Worker进程并发处理请求，使用CPU亲和性，充分发挥多核CPU的性能。<br>基于事件驱动处理大量并发请求，解决C10k问题。</p>
+<h2 id="3、占用资源少"><a href="#3、占用资源少" class="headerlink" title="3、占用资源少"></a>3、占用资源少</h2><p>Ngxin在设计和开发时对占用内存做了大量的优化，1w多个非活跃的HTTP Keep-Alive连接在Nginx中仅消耗2.5MB的内存。</p>
+<h2 id="4、跨平台"><a href="#4、跨平台" class="headerlink" title="4、跨平台"></a>4、跨平台</h2><p>Nginx可以在在Linux、MacOS、Windows等平台编译部署。</p>
+<h2 id="5、模块化扩展"><a href="#5、模块化扩展" class="headerlink" title="5、模块化扩展"></a>5、模块化扩展</h2><p>Nginx是高度模块化设计，可以根据抽象的模块接口开发定制相应的模块，以满足业务需求，淘宝的Tengine就是基于Nginx开发定制的，淘宝开发很多有用的模块。</p>
+<h2 id="Nginx的用途"><a href="#Nginx的用途" class="headerlink" title="Nginx的用途"></a>Nginx的用途</h2><p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-16.jpg" alt="img"></p>
+<h2 id="1、Web服务器"><a href="#1、Web服务器" class="headerlink" title="1、Web服务器"></a>1、Web服务器</h2><p>Nginx可以搭建Web服务器，由于在性能优于Apache，因此很多公司逐渐用Nginx替换Apache。<br>Nginx支持Lua，大牛章亦春基于Nginx与Lua开发高性能Web平台OpenResty，其内部集成了大量精良的 Lua 库、第三方模块以及大多数的依赖项。用于方便地搭建能够处理超高并发、扩展性极高的动态 Web 应用、Web 服务和动态网关。</p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-13.jpg" alt="img"></p>
+<h2 id="2、反向代理"><a href="#2、反向代理" class="headerlink" title="2、反向代理"></a>2、反向代理</h2><p>目前很多后端应用服务在部署时都是通过Nginx搭建反向代理，首先client端请求到Nginx的反向代理，然后再转发到后端应用服务上，这样可以很好保护后端应用服务。</p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-14.jpg" alt="img"></p>
+<p>所以我们通常在Apache、Tomcat、IIS之前加上Nginx，由Nginx反向代理到后端服务器上。</p>
+<h2 id="3、负载均衡"><a href="#3、负载均衡" class="headerlink" title="3、负载均衡"></a>3、负载均衡</h2><p>目前互联网用户成倍增长，单台服务不足以应对海量用户的请求，需要部署[多台后端应用服务]，因此需要负载均衡器将请求负载到不同后端应用服务上，实现[分布式集群]。以前都是[硬负载均衡器F5]，但是F5成本比较高，小公司很难承受起，再者F5功能比较固化，不够灵活，因此Nginx做软负载均衡器就比较流行。<br>在一线互联网公司，例如BAT公司，他们都有统一接入服务，对互联网上的请求统一分发，这个统一接入服务一般都是用Nginx搭建的。</p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-15.jpg" alt="img"></p>
+<p>Nginx[负载均衡策略]也很多，主要有：RR（轮询）、weight（权重）、ip_hash（IP Hash）、fair（后端服务器响应时间）、url_hash（URL Hash）这几种。</p>
+<p>在服务器集群中，Nginx起到一个代理服务器的角色（即反向代理），为了避免单独一个服务器压力过大，将来自用户的请求转发给不同的服务器。</p>
+<h2 id="Nginx服务器之负载均衡策略（6种）"><a href="#Nginx服务器之负载均衡策略（6种）" class="headerlink" title="Nginx服务器之负载均衡策略（6种）"></a>Nginx服务器之负载均衡策略（6种）</h2><p>负载均衡用于从“upstream”模块定义的后端服务器列表中选取一台服务器接受用户的请求。</p>
+<p>一个最基本的upstream模块是这样的，模块内的server是服务器列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#动态服务器组</span><br><span class="line">    upstream dynamic_zuoyu &#123;</span><br><span class="line">        server localhost:8080;  #tomcat 7.0</span><br><span class="line">        server localhost:8081;  #tomcat 8.0</span><br><span class="line">        server localhost:8082;  #tomcat 8.5</span><br><span class="line">        server localhost:8083;  #tomcat 9.0</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>在upstream模块配置完成后，要让指定的访问反向代理到服务器列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#其他页面反向代理到tomcat容器</span><br><span class="line">        location ~ .*$ &#123;</span><br><span class="line">            index index.jsp index.html;</span><br><span class="line">            proxy_pass http://xxx;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<p>这就是最基本的负载均衡实例，但这不足以满足实际需求；</p>
+<p>目前Nginx服务器的upstream模块支持6种方式的分配：</p>
+<table>
+<thead>
+<tr>
+<th>轮询</th>
+<th>默认方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>weight</td>
+<td>权重方式</td>
+</tr>
+<tr>
+<td>ip_hash</td>
+<td>依据ip分配方式</td>
+</tr>
+<tr>
+<td>least_conn</td>
+<td>最少连接方式</td>
+</tr>
+<tr>
+<td>fair（第三方）</td>
+<td>响应时间方式</td>
+</tr>
+<tr>
+<td>url_hash（第三方）</td>
+<td>依据URL分配方式</td>
+</tr>
+</tbody>
+</table>
+<p>(1)轮询</p>
+<p>　　最基本的配置方法，上面的例子就是轮询的方式，它是upstream模块默认的负载均衡默认策略。每个请求会按时间顺序逐一分配到不同的后端服务器。</p>
+<p>　　有如下参数：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fail_timeout</td>
+<td>与max_fails结合使用。</td>
+</tr>
+<tr>
+<td>max_fails</td>
+<td>设置在fail_timeout参数设置的时间内最大失败次数，如果在这个时间内，所有针对该服务器的请求都失败了，那么认为该服务器会被认为是停机了</td>
+</tr>
+<tr>
+<td>fail_time</td>
+<td>服务器会被认为停机的时间长度,默认为10s。</td>
+</tr>
+<tr>
+<td>backup</td>
+<td>标记该服务器为备用服务器。当主服务器停止时，请求会被发送到它这里。</td>
+</tr>
+<tr>
+<td>down</td>
+<td>标记服务器永久停机了。</td>
+</tr>
+</tbody>
+</table>
+<p>注意：</p>
+<p>在轮询中，如果服务器down掉了，会自动剔除该服务器。<br>缺省配置就是轮询策略。<br>此策略适合服务器配置相当，无状态且短平快的服务使用。</p>
+<p>(2)weight</p>
+<p>　　权重方式，在轮询策略的基础上指定轮询的几率。例子如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#动态服务器组</span><br><span class="line">upstream dynamic_zuoyu &#123;</span><br><span class="line">    server localhost:8080   weight=2;  #tomcat 7.0</span><br><span class="line">    server localhost:8081;  #tomcat 8.0</span><br><span class="line">    server localhost:8082   backup;  #tomcat 8.5</span><br><span class="line">    server localhost:8083   max_fails=3 fail_timeout=20s;  #tomcat 9.0</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在该例子中，weight参数用于指定轮询几率，weight的默认值为1,；weight的数值与访问比率成正比，比如Tomcat 7.0被访问的几率为其他服务器的两倍。</p>
+<p>注意：</p>
+<p>权重越高分配到需要处理的请求越多。<br>此策略可以与least_conn和ip_hash结合使用。<br>此策略比较适合服务器的硬件配置差别比较大的情况。</p>
+<p>(3)ip_hash</p>
+<p>　　指定负载均衡器按照基于客户端IP的分配方式，这个方法确保了相同的客户端的请求一直发送到相同的服务器，以保证session会话。这样每个访客都固定访问一个后端服务器，可以解决session不能跨服务器的问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#动态服务器组</span><br><span class="line">    upstream dynamic_zuoyu &#123;</span><br><span class="line">        ip_hash;    #保证每个访客固定访问一个后端服务器</span><br><span class="line">        server localhost:8080   weight=2;  #tomcat 7.0</span><br><span class="line">        server localhost:8081;  #tomcat 8.0</span><br><span class="line">        server localhost:8082;  #tomcat 8.5</span><br><span class="line">        server localhost:8083   max_fails=3 fail_timeout=20s;  #tomcat 9.0</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>　　注意：在nginx版本1.3.1之前，不能在ip_hash中使用权重（weight）。<br>        ip_hash不能与backup同时使用。<br>        此策略适合有状态服务，比如session。<br>        当有服务器需要剔除，必须手动down掉。</p>
+<p>(4)least_conn</p>
+<p>　　把请求转发给连接数较少的后端服务器。轮询算法是把请求平均的转发给各个后端，使它们的负载大致相同；但是，有些请求占用的时间很长，会导致其所在的后端负载较高。这种情况下，least_conn这种方式就可以达到更好的负载均衡效果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#动态服务器组</span><br><span class="line">upstream dynamic_zuoyu &#123;</span><br><span class="line">    least_conn;    #把请求转发给连接数较少的后端服务器</span><br><span class="line">    server localhost:8080   weight=2;  #tomcat 7.0</span><br><span class="line">    server localhost:8081;  #tomcat 8.0</span><br><span class="line">    server localhost:8082 backup;  #tomcat 8.5</span><br><span class="line">    server localhost:8083   max_fails=3 fail_timeout=20s;  #tomcat 9.0</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>　　注意：此负载均衡策略适合请求处理时间长短不一造成服务器过载的情况。</p>
+<p>(5)第三方策略</p>
+<p>第三方的负载均衡策略的实现需要安装第三方插件。</p>
+<p>①fair</p>
+<p>　　按照服务器端的响应时间来分配请求，响应时间短的优先分配。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#动态服务器组</span><br><span class="line">upstream dynamic_zuoyu &#123;</span><br><span class="line">    server localhost:8080;  #tomcat 7.0</span><br><span class="line">    server localhost:8081;  #tomcat 8.0</span><br><span class="line">    server localhost:8082;  #tomcat 8.5</span><br><span class="line">    server localhost:8083;  #tomcat 9.0</span><br><span class="line">    fair;    #实现响应时间短的优先分配</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>②url_hash</p>
+<p>　　按访问url的hash结果来分配请求，使每个url定向到同一个后端服务器，要配合缓存命中来使用。同一个资源多次请求，可能会到达不同的服务器上，导致不必要的多次下载，缓存命中率不高，以及一些资源时间的浪费。而使用url_hash，可以使得同一个url（也就是同一个资源请求）会到达同一台服务器，一旦缓存住了资源，再此收到请求，就可以从缓存中读取。　</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">    #动态服务器组</span><br><span class="line">    upstream dynamic_zuoyu &#123;</span><br><span class="line">        hash $request_uri;    #实现每个url定向到同一个后端服务器</span><br><span class="line">        server localhost:8080;  #tomcat 7.0</span><br><span class="line">        server localhost:8081;  #tomcat 8.0</span><br><span class="line">        server localhost:8082;  #tomcat 8.5</span><br><span class="line">        server localhost:8083;  #tomcat 9.0</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上便是6种负载均衡策略的实现方式，其中除了轮询和轮询权重外，都是Nginx根据不同的算法实现的。在实际运用中，需要根据不同的场景选择性运用，大都是多种策略结合使用以达到实际需求。</p>
+<h2 id="4、HTTP缓存服务"><a href="#4、HTTP缓存服务" class="headerlink" title="4、HTTP缓存服务"></a>4、HTTP缓存服务</h2><p>Nginx支持缓存，可以将缓存图片、js、css等，现在很多CDN厂商的CDN缓存都是用的Nginx缓存。</p>
+<p>随着互联网的迅猛发展和互联网用户数量的成倍增长，互联网公司都需要应付海量并发请求，Nginx开源免费、高性能等特点会越来越受青睐。</p>
+<h1 id="Nginx安装与配置"><a href="#Nginx安装与配置" class="headerlink" title="Nginx安装与配置"></a>Nginx安装与配置</h1><h2 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h2><p>系统平台：CentOS release 6.6 (Final) 64位。</p>
+<p>（1）安装编译工具及库文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel</span><br></pre></td></tr></table></figure>
+<p>（2）首先要安装 PCRE</p>
+<p>PCRE 作用是让 Nginx 支持 Rewrite 功能。</p>
+<p>①下载 PCRE 安装包</p>
+<p>下载地址： <a href="http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz" target="_blank" rel="noopener">http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon src]# cd /usr/local/src/</span><br><span class="line">[root@bogon src]# wget http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz</span><br></pre></td></tr></table></figure>
+<p>②解压安装包:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon src]# tar zxvf pcre-8.35.tar.gz</span><br></pre></td></tr></table></figure></p>
+<p>③、进入安装包目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon src]# cd pcre-8.35</span><br></pre></td></tr></table></figure></p>
+<p>④、编译安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon pcre-8.35]# ./configure</span><br><span class="line">[root@bogon pcre-8.35]# make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
+<p>⑤、查看pcre版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon pcre-8.35]# pcre-config --version</span><br></pre></td></tr></table></figure></p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-17.jpg" alt="img"></p>
+<p>（3）安装 Nginx</p>
+<p>①下载 Nginx</p>
+<p>下载地址：<a href="http://nginx.org/download/nginx-1.6.2.tar.gz" target="_blank" rel="noopener">http://nginx.org/download/nginx-1.6.2.tar.gz</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon src]# cd /usr/local/src/</span><br><span class="line">[root@bogon src]# wget http://nginx.org/download/nginx-1.6.2.tar.gz</span><br></pre></td></tr></table></figure>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-18.jpg" alt="img"></p>
+<p>②安装包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon src]# tar zxvf nginx-1.6.2.tar.gz</span><br></pre></td></tr></table></figure>
+<p>③进入安装包目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon src]# cd nginx-1.6.2</span><br></pre></td></tr></table></figure>
+<p>④编译安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon nginx-1.6.2]# ./configure --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=/usr/local/src/pcre-8.35</span><br><span class="line">[root@bogon nginx-1.6.2]# make</span><br><span class="line">[root@bogon nginx-1.6.2]# make install</span><br></pre></td></tr></table></figure>
+<p>⑤查看nginx版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon nginx-1.6.2]# /usr/local/webserver/nginx/sbin/nginx -v</span><br></pre></td></tr></table></figure>
+<p>到此，nginx安装完成。</p>
+<h2 id="1、Nginx-配置"><a href="#1、Nginx-配置" class="headerlink" title="1、Nginx 配置"></a>1、Nginx 配置</h2><p>创建 Nginx 运行使用的用户 www：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon conf]# /usr/sbin/groupadd www </span><br><span class="line">[root@bogon conf]# /usr/sbin/useradd -g www www</span><br></pre></td></tr></table></figure>
+<p>配置nginx.conf ，将/usr/local/webserver/nginx/conf/nginx.conf替换为以下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon conf]#  cat /usr/local/webserver/nginx/conf/nginx.conf</span><br><span class="line"></span><br><span class="line">user www www;</span><br><span class="line">worker_processes 2; #设置值和CPU核心数一致</span><br><span class="line">error_log /usr/local/webserver/nginx/logs/nginx_error.log crit; #日志位置和日志级别</span><br><span class="line">pid /usr/local/webserver/nginx/nginx.pid;</span><br><span class="line">#Specifies the value for maximum file descriptors that can be opened by this process.</span><br><span class="line">worker_rlimit_nofile 65535;</span><br><span class="line">events</span><br><span class="line">&#123;</span><br><span class="line">  use epoll;</span><br><span class="line">  worker_connections 65535;</span><br><span class="line">&#125;</span><br><span class="line">http</span><br><span class="line">&#123;</span><br><span class="line">  include mime.types;</span><br><span class="line">  default_type application/octet-stream;</span><br><span class="line">  log_format main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span><br><span class="line">               &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span><br><span class="line">               &apos;&quot;$http_user_agent&quot; $http_x_forwarded_for&apos;;</span><br><span class="line">  </span><br><span class="line">#charset gb2312;</span><br><span class="line">     </span><br><span class="line">  server_names_hash_bucket_size 128;</span><br><span class="line">  client_header_buffer_size 32k;</span><br><span class="line">  large_client_header_buffers 4 32k;</span><br><span class="line">  client_max_body_size 8m;</span><br><span class="line">     </span><br><span class="line">  sendfile on;</span><br><span class="line">  tcp_nopush on;</span><br><span class="line">  keepalive_timeout 60;</span><br><span class="line">  tcp_nodelay on;</span><br><span class="line">  fastcgi_connect_timeout 300;</span><br><span class="line">  fastcgi_send_timeout 300;</span><br><span class="line">  fastcgi_read_timeout 300;</span><br><span class="line">  fastcgi_buffer_size 64k;</span><br><span class="line">  fastcgi_buffers 4 64k;</span><br><span class="line">  fastcgi_busy_buffers_size 128k;</span><br><span class="line">  fastcgi_temp_file_write_size 128k;</span><br><span class="line">  gzip on; </span><br><span class="line">  gzip_min_length 1k;</span><br><span class="line">  gzip_buffers 4 16k;</span><br><span class="line">  gzip_http_version 1.0;</span><br><span class="line">  gzip_comp_level 2;</span><br><span class="line">  gzip_types text/plain application/x-javascript text/css application/xml;</span><br><span class="line">  gzip_vary on;</span><br><span class="line"> </span><br><span class="line">  #limit_zone crawler $binary_remote_addr 10m;</span><br><span class="line"> #下面是server虚拟主机的配置</span><br><span class="line"> server</span><br><span class="line">  &#123;</span><br><span class="line">    listen 80;#监听端口</span><br><span class="line">    server_name localhost;#域名</span><br><span class="line">    index index.html index.htm index.php;</span><br><span class="line">    root /usr/local/webserver/nginx/html;#站点目录</span><br><span class="line">      location ~ .*\.(php|php5)?$</span><br><span class="line">    &#123;</span><br><span class="line">      #fastcgi_pass unix:/tmp/php-cgi.sock;</span><br><span class="line">      fastcgi_pass 127.0.0.1:9000;</span><br><span class="line">      fastcgi_index index.php;</span><br><span class="line">      include fastcgi.conf;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ .*\.(gif|jpg|jpeg|png|bmp|swf|ico)$</span><br><span class="line">    &#123;</span><br><span class="line">      expires 30d;</span><br><span class="line">  # access_log off;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ .*\.(js|css)?$</span><br><span class="line">    &#123;</span><br><span class="line">      expires 15d;</span><br><span class="line">   # access_log off;</span><br><span class="line">    &#125;</span><br><span class="line">    access_log off;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>检查配置文件nginx.conf的正确性命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon conf]# /usr/local/webserver/nginx/sbin/nginx -t</span><br></pre></td></tr></table></figure></p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-19.jpg" alt="img"></p>
+<p>启动 Nginx</p>
+<p>Nginx 启动命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon conf]# /usr/local/webserver/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-20.jpg" alt="img"></p>
+<p>访问站点</p>
+<p>从浏览器访问我们配置的站点ip：</p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-21.jpg" alt="img"></p>
+<p>Nginx 其他命令</p>
+<p>以下包含了 Nginx 常用的几个命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/webserver/nginx/sbin/nginx -s reload            # 重新载入配置文件</span><br><span class="line">/usr/local/webserver/nginx/sbin/nginx -s reopen            # 重启 Nginx</span><br><span class="line">/usr/local/webserver/nginx/sbin/nginx -s stop              # 停止 Nginx</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/" itemprop="url">接口自动化测试持续集成解决方案（Postman+Newman+Jenkins+Git）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-10T10:01:08+08:00">
+                2019-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>有逼格很高的商业化、开源化测试框架及工具，但实际运用需很大维护成本，产生价值低。</p>
+<p>如何真正”高效快速”、”低成本维护”？经过调研落地、使用对比。</p>
+<p>最终确认这个方案（Postman+Newman+Jenkins+Git）基于restful Api、RPC等等，都可以变相解决这些困难。</p>
+<h1 id="如何借助这些工具实现接口测试自动化和持续集成？"><a href="#如何借助这些工具实现接口测试自动化和持续集成？" class="headerlink" title="如何借助这些工具实现接口测试自动化和持续集成？"></a>如何借助这些工具实现接口测试自动化和持续集成？</h1><p>1、Postman</p>
+<p>基于http/https协议接口，一款可视化构造客户端请求工具，虽然是商业化工具，但免费版提供的功能基本满足目前测试人员需求，能快速构建接口自动化测试脚本，用于场景流程回归、批量构造测试数据。</p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-1.jpg" alt="img"></p>
+<p>官方文档：<a href="https://learning.getpostman.com/" target="_blank" rel="noopener">https://learning.getpostman.com/</a></p>
+<p>下载地址：<a href="https://www.getpostman.com/downloads/" target="_blank" rel="noopener">https://www.getpostman.com/downloads/</a></p>
+<p>2、Newman</p>
+<p>Postman的脚本运行器，能够不在使用postman工具情况下，非界面化运行脚本！</p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-2.jpg" alt="img"></p>
+<p> 可以生成html、json、xml格式的测试报告，可以进一步对这些测试报告进行解析处理。</p>
+<p>3、Git</p>
+<p>开源分布式版本控制系统，比较常见开放源代码的版本控制系统：SVN、Gitlab、Github等等，可以进行代码、脚本托管。</p>
+<p>目前公司用的是gitlab</p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-3.jpg" alt="img"></p>
+<p>4、Jenkins</p>
+<p>开源 CI/CD 持续集成、持续构建系统工具。</p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-4.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-5.jpg" alt="img"></p>
+<p>通过jenkins配置job参数，可以灵活自定义配置构建，实现各种外部服务功能执行，比如发送邮件、统计结果、数据处理等等。（需要你有一定代码基础）</p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-9.jpg" alt="img"></p>
+<p>5、测试报告</p>
+<p>测试报告邮件正文显示内容。</p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-6.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-7.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-8.jpg" alt="img"></p>
+<p>6、其他</p>
+<p>爬取数据，我将接口自动化测试生成的报告，进行存储展示到前端页面。（测试工作管理后台）</p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-10.jpg" alt="img"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/06/14/Nodemailer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/14/Nodemailer/" itemprop="url">Nodemailer</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-14T17:11:49+08:00">
+                2019-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>领导让我做一个解析测试报告的程序，将最终结果发邮件给所有相关同事，前期自动化测试都是基于jenkins+gitlab+newman，发送邮件使用的是jenkins配置邮件插件。<br>这次需要借助非jenkins发送邮件，找了很久Nodemailer比较适合。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i nodemailer</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nodemailer = <span class="built_in">require</span>(<span class="string">"nodemailer"</span>);</span><br><span class="line"><span class="comment">// var smtpTransport = require('nodemailer-smtp-transport');</span></span><br><span class="line"></span><br><span class="line">describe(<span class="string">''</span>, () =&gt; &#123;</span><br><span class="line">    it.skip(<span class="string">'发送邮件'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> transport = nodemailer.createTransport(&#123;</span><br><span class="line">            host: <span class="string">"smtp.qq.com"</span>,<span class="comment">// SMTP 端口</span></span><br><span class="line">            secureConnection: <span class="literal">true</span>,<span class="comment">// 使用 SSL</span></span><br><span class="line">            port: <span class="number">465</span>,</span><br><span class="line">            auth: &#123;</span><br><span class="line">                user: <span class="string">"liyinchi@qq.com"</span>,<span class="comment">//邮箱账号</span></span><br><span class="line">                <span class="comment">//这里密码不是qq密码，是你设置的smtp密码</span></span><br><span class="line">                pass: <span class="string">""</span><span class="comment">//授权码 </span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> mailOptions = &#123;</span><br><span class="line">            <span class="keyword">from</span>: <span class="string">"liyinchi@qq.com"</span>,<span class="comment">// 发件地址</span></span><br><span class="line">            to: <span class="string">"yinchi.li@xxxx.com"</span>,<span class="comment">// 收件列表</span></span><br><span class="line">            <span class="comment">// Subject of the message 邮件主题</span></span><br><span class="line">            subject: <span class="string">'Nodemailer is unicode friendly ✔'</span> + <span class="built_in">Date</span>.now(),<span class="comment">// 标题</span></span><br><span class="line">            <span class="comment">//text和html两者只支持一种</span></span><br><span class="line">            <span class="comment">// 标题 </span></span><br><span class="line">            text: <span class="string">'Hello to myself!'</span>,</span><br><span class="line">            <span class="comment">// html 内容</span></span><br><span class="line">            html: <span class="string">`&lt;p&gt;&lt;b&gt;Hello&lt;/b&gt; to myself &lt;img src="cid:note@example.com"/&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p&gt;Here's a nyan cat for you as an embedded attachment:&lt;br/&gt;&lt;img src="https://www.baidu.com/s?rsv_idx=1&amp;wd=foreach&amp;ie=utf-8&amp;rsv_cq=js+%E6%88%AA%E5%8F%96%E6%95%B0%E7%BB%84&amp;rsv_dl=0_right_recommends_merge_28335&amp;euri=262673"/&gt;&lt;/p&gt;`</span>,</span><br><span class="line">            <span class="comment">// An array of attachments</span></span><br><span class="line">            attachments: [</span><br><span class="line">                <span class="comment">// String attachment 文本附件</span></span><br><span class="line">                &#123;</span><br><span class="line">                    filename: <span class="string">'notes.txt'</span>, <span class="comment">//附件名称，文本格式</span></span><br><span class="line">                    content: <span class="string">'这是在notes.txt的内容'</span>, <span class="comment">//文本中的内容</span></span><br><span class="line">                    contentType: <span class="string">'text/plain'</span> <span class="comment">// 可选，将从文件名中检测到</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="comment">// File Stream attachment</span></span><br><span class="line">                &#123;</span><br><span class="line">                    filename: <span class="string">'cat.jpg'</span>,</span><br><span class="line">                    path: <span class="string">'/Users/liyinchi/workspace/前端/vue/test-file-management-platform/back-end/assets/nyan.jpg'</span>,</span><br><span class="line">                &#125;</span><br><span class="line">            ],</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        transport.sendMail(mailOptions, <span class="function"><span class="keyword">function</span> (<span class="params">err, info,response</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (err) &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(err);</span><br><span class="line">                <span class="built_in">console</span>.log(info.accepted);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(response);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/06/14/测试工作管理平台/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/14/测试工作管理平台/" itemprop="url">测试工作管理平台</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-14T15:50:46+08:00">
+                2019-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>为了更好的管理团队测试工作，项目测试环节风险把控、测试工作饱和度以及测试数据资料维护，自己做了一个这样的工作平台，前端基于vue、后端基于nodejs</p>
+<h1 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/0-1.jpg" alt="img"></p>
+ 
+<p>一、测试数据统计</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/1.jpg" alt="img"></p>
+<p>上线而未上线占比、测试人员本月总任务、进行中、已完成、未完成数量、测试人员每人本周目前工时（7.5*5天）</p>
+<p>二、上线记录管理</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/2-1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/2-2.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/2-3.jpg" alt="img"></p>
+<p>统计当前测试部，已上线、进行中、未开始的需求等信息</p>
+<p>三、测试用例管理</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/3.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/3-1.jpg" alt="img"></p>
+<p>日常测试用例编写、执行</p>
+<p>四、接口文档管理</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/4-1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/4-2.jpg" alt="img"></p>
+<p>接口测试文档</p>
+<p>五、测试工具管理</p>
+<p>（一）测试数据构造</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/5.jpg" alt="img"></p>
+<p>日常测试数据构建，便于功能测试，核心封装了几个常用构造测试数据的客户端请求。</p>
+<p>（二）Xmind与testlink测试用例转换工具</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/5-1.jpg" alt="img"></p>
+<p>将xmind思维导图，编写的测试用例转成testlink导入格式（.xml）</p>
+<p>六、测试报告管理</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/6.jpg" alt="img"></p>
+<p>同步CI jenkins服务器报告数据，newman接口测试报告、mochawesome UI自动化测试报告</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/6-1.jpg" alt="img"></p>
+<p>七、测试文档管理</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/7-1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/7-2.jpg" alt="img"></p>
+<p>保存相关测试文档，目前主要是以测试工具、框架技术资料文档为主</p>
+<p>八、数据库管理</p>
+<p>（一）表结构查看</p>
+<p>通过网页配置好数据库访问参数，快速查看数据表结构（无需安装破解任何数据库客户端软件）</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/8-6.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/8-7.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/8-8.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/8-9.jpg" alt="img"></p>
+<p>（二）命令执行</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/8-1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/8-2.jpg" alt="img"></p>
+<p>日常测试经常使用的数据库命令脚本，可以放在这边管理，用于测试人员学习、使用</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/8-3.jpg" alt="img"></p>
+<p>支持页面执行数据库命令脚本</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/8-4.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/8-5.jpg" alt="img"></p>
+<p>支持保存执行配置信息</p>
+<p>九、脚本代码管理</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/9-1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/9-2.jpg" alt="img"></p>
+<p>十、产品原型管理</p>
+<p>公司产品经理，可以将原型文档压缩包，通过这个入口上传到服务器，测试、开发人员直接通过点击列表上面相应原型链接访问原型文档，无需再本地化管理原型文档</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/10-1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/10-5.jpg" alt="img"></p>
+<p> 支持上传历史记录，新旧版本都可以快速查看到</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/10-2.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/10-3.jpg" alt="img"></p>
+<p> 打开后的原型文档地址，就是平台服务器后台地址</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/10-4.jpg" alt="img"></p>
+<p>十一、工单管理</p>
+<p>管理客服、门店等线下反馈的跟进问题。</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/11-1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/11-2.jpg" alt="img"></p>
+<p>十二、系统基础数据管理</p>
+<p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/../images/test-file-manage/10.jpg" alt="img"></p>
+<p>比如：测试人员基础数据，用于其他功能进行选择分配</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/04/19/场景法设计测试用例/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/19/场景法设计测试用例/" itemprop="url">场景法设计测试用例</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-19T11:17:08+08:00">
+                2019-04-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="场景法设计测试用例"><a href="#场景法设计测试用例" class="headerlink" title="场景法设计测试用例"></a>场景法设计测试用例</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>1、分析软件应用的场景（使用场景）：</p>
+<p>从用户的角度出发，从场景的角度来设计测试用例，是一种面向用户的测试用例设计方法。</p>
+<p>2、关心用户做什么，而不是关心产品做什么。（功能测试用例相反，更关注产品功能）</p>
+<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><p>实用性强，贴近用户的操作。（功能测试用例相反）</p>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>可能使用的场景不一定能对事件系列进行全面的分析，设计出来的用例不完整。（功能测试用例相反，对每个页面表单控件进行全面分析）</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>登录</p>
+<p>(1)场景用例：</p>
+<p>合法账号密码，能够登录成功。</p>
+<p>合法账号密码，被禁用后再次启用，能够登录成功。</p>
+<p>合法账号密码，重复登录，能够登录成功。</p>
+<p>非法账号密码，无法登录，切换为合法账号密码，能够登录成功。</p>
+<p>（你会发现：从用户层面设计用例）</p>
+<p>(2)功能用例：</p>
+<p>账号输入框支持格式，是否符合需求文档要求</p>
+<p>密码输入框支持格式，是否符合需求文档要求</p>
+<p>登录成功，是否符合需求文档要求</p>
+<p>登录失败，是否符合需求文档要求</p>
+<p>错误信息提示，是否符合需求文档要求。</p>
+<p>（你会发现：从产品层面设计用例，少部分会涉及用户场景）</p>
+<p>我的理解（总结）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">场景分析是通过【描述流经用例路径】来确定的过程。</span><br><span class="line"></span><br><span class="line">这个流经过程要从【用例开始到结束遍历其中所有基本流】 。</span><br><span class="line"></span><br><span class="line">直黑线表示基本流，是最基本、最简单的路径（软件功能按照正确的事件流实现的一条正确流程无任何错，程序从开始直到结束）。</span><br></pre></td></tr></table></figure>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/../images/ScenarioCase/1.jpg" alt="img"></p>
+<p>遵循上图中每个经过用例的可能路径，可以确定不同的用例场景。</p>
+<p>从基本流开始，再将基本流和备选流结合起来，可以确定以下用例场景：</p>
+<p>场景1    基本流<br>场景2    基本流    备选流1<br>场景3    基本流    备选流1    备选流2<br>场景4    基本流    备选流3<br>场景5    基本流    备选流3    备选流1<br>场景6    基本流    备选流3    备选流1    备选流2<br>场景7    基本流    备选流4<br>场景8    基本流    备选流3    备选流4     </p>
+<h2 id="用场景分析法设计测试用例的步骤"><a href="#用场景分析法设计测试用例的步骤" class="headerlink" title="用场景分析法设计测试用例的步骤"></a>用场景分析法设计测试用例的步骤</h2><p>1.根据说明，画出流程图（确定基本流和备选流）；</p>
+<p>2.根据基本流和各项备选流确定场景；</p>
+<p>3.对每一个场景生成测试用例；</p>
+<p>4.对生成的所有测试用例重新复审，去掉多余的测试用例，测试用例确定后，对每一个测试用例确定测试数据值。</p>
+<h2 id="用例场景例子"><a href="#用例场景例子" class="headerlink" title="用例场景例子"></a>用例场景例子</h2><p>购书：用户登录到网站后，进行书籍的选择，当选好自己心仪的书籍后进行订购，这时把所需图书放进购物车，等进行结帐的时候，用户需要登录自己注册的帐号，登录成功后，进行付款交易，交易成功后，生成订购单，整个购物过程结束。</p>
+<p>第一步：画出流程图，确定基本流和备选流；</p>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/../images/ScenarioCase/2.jpg" alt="img"></p>
+<p>基本流：登录在线网站→选择书籍→放入购物车→登录账号→付款→生成订单</p>
+<p>备选流１：用户不存在→注册用户</p>
+<p>备选流２：密码不正确</p>
+<p>备选流３：账户余额不足→充值</p>
+<p>第二步：根据基本流、备选流确定场景；</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>流</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>场景１（成功购物）</td>
+<td>基本流；</td>
+<td></td>
+</tr>
+<tr>
+<td>场景２（账户不存在）</td>
+<td>基本流、备选流１</td>
+<td></td>
+</tr>
+<tr>
+<td>场景３（账户密码错误）</td>
+<td>基本流、备选流２</td>
+<td></td>
+</tr>
+<tr>
+<td>场景４（账户余额不足）</td>
+<td>基本流、备选流3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>第三步：对每一个场景生成测试用例；</p>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/../images/ScenarioCase/3.jpg" alt="img"></p>
+<p>第四步：对生成的所有测试用例重新复审，补充测试数据值；</p>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/../images/ScenarioCase/4.jpg" alt="img"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/" itemprop="url">解决postman无法下载xls并解析下载内容是否正确方案</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-13T14:16:12+08:00">
+                2019-04-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>使用postman做restful api自动化测试，遇到下载excel报表，并需要解析报表内容是否正确？</p>
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>借助nodejs后端框架express写一个解析程序：<br>postman客户端请求服务端接口，带上相关参数；<br>服务端下载指定文档，解析文档内容，断言是否和客户端参数一致！</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入接口实现模块</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line"><span class="comment">//引入sheetJS xlsx模块</span></span><br><span class="line"><span class="keyword">var</span> xl = <span class="built_in">require</span>(<span class="string">'xlsx'</span>);</span><br><span class="line"><span class="comment">//引入node-xlsx模块</span></span><br><span class="line"><span class="keyword">var</span> xlsx = <span class="built_in">require</span>(<span class="string">'node-xlsx'</span>);</span><br><span class="line"><span class="comment">//引入文件、路径、http请求模块</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>);</span><br><span class="line"><span class="keyword">var</span> request = <span class="built_in">require</span>(<span class="string">'request'</span>);</span><br><span class="line"><span class="comment">// 实例化一个express的对象app</span></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"><span class="comment">// 创建 application/x-www-form-urlencoded 编码解析</span></span><br><span class="line"><span class="keyword">var</span> urlencodedParser = bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">true</span> &#125;)</span><br><span class="line"><span class="comment">// 告诉应用程序中间件，使用外部引入的模块中间件（内置中间件、第三方中间件、自己封装js）</span></span><br><span class="line"><span class="comment">// 开放客户端请求访问public目录下的资源  express.statics()是内置中间件函数，与express.json、express.urlencoder一样都是内置中间件</span></span><br><span class="line">app.use(express.static(__dirname + <span class="string">"/public"</span>), <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"请求地址："</span> + __dirname + <span class="string">"/public"</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'请求时间:'</span>, <span class="keyword">new</span> <span class="built_in">Date</span>());</span><br><span class="line">  <span class="comment">//释放控制权</span></span><br><span class="line">  next();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 为了解析 application/json</span></span><br><span class="line">app.use(bodyParser.json());</span><br><span class="line"><span class="comment">// 跨域设置，对所有http请求均有效</span></span><br><span class="line"><span class="comment">// 自定义跨域中间件</span></span><br><span class="line">app.all(<span class="string">"*"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//响应头</span></span><br><span class="line">  <span class="comment">// res.header("Access-Control-Allow-Credentials", 'true');</span></span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Origin'</span>, <span class="string">'*'</span>);</span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Headers'</span>, <span class="string">'Content-Type,Content-Length,Authorization,Accept,X-Requested-With'</span>);</span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Methods'</span>, <span class="string">'PUT,POST,GET,DELETE,OPTIONS'</span>);</span><br><span class="line">  res.header(<span class="string">"Content-Length"</span>, <span class="string">"2000"</span>);</span><br><span class="line">  res.header(<span class="string">"X-Powered-By"</span>, <span class="string">' 3.2.1'</span>);</span><br><span class="line">  <span class="comment">//  res.header("Content-Type", "application/x-www-form-urlencoded");</span></span><br><span class="line">  res.header(<span class="string">"Content-Type"</span>, <span class="string">"application/json;charset=utf-8"</span>);</span><br><span class="line">  <span class="comment">//控制权交给下一个处理程序</span></span><br><span class="line">  <span class="keyword">if</span> (req.method == <span class="string">'OPTIONS'</span>) &#123;</span><br><span class="line">    <span class="comment">//让options请求快速返回</span></span><br><span class="line">    res.sendStatus(<span class="number">200</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    next();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @description 下载文件</span></span><br><span class="line"><span class="comment"> * @params ''</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">app.post(<span class="string">'/ExportTheDetailsAndCheckTheContent'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 第一部分：根据请求内容下载指定报表</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="comment">//创建文件夹目录，用于保存下载文件</span></span><br><span class="line">  <span class="keyword">let</span> dirPath = path.join(__dirname, <span class="string">"download_path"</span>);</span><br><span class="line">  <span class="comment">//判断文件夹是否已存在</span></span><br><span class="line">  <span class="keyword">if</span> (!fs.existsSync(dirPath)) &#123;</span><br><span class="line">    fs.mkdirSync(dirPath);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件夹创建成功"</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件夹已存在"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//创建写入流</span></span><br><span class="line">  <span class="keyword">let</span> stream = fs.createWriteStream(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>));</span><br><span class="line">  <span class="comment">//请求参数</span></span><br><span class="line">  <span class="keyword">let</span> options = &#123;</span><br><span class="line">    url: req.body.down_url + req.body.fileName + <span class="string">".xls"</span>,</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">//通过request模块，pipe方法将响应结果写入文件流stream中</span></span><br><span class="line">  request(options).pipe(stream).on(<span class="string">"close"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件["</span> + req.body.fileName + <span class="string">".xls]下载完毕"</span>);</span><br><span class="line">    <span class="comment">//此处特别说明：因为是异步，所以要放在请求下载生成文档之后，再进行解析excel报表</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 第二部分：解析下载报表方法</span></span><br><span class="line"><span class="comment">     * 使用sheetJS xlsx读取工作簿指定工作表的数据</span></span><br><span class="line"><span class="comment">     * @description 获取指定单元格数据</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//workbook 对象，指的是整份 Excel 文档。我们在使用 js-xlsx 读取 Excel 文档之后就会获得 workbook 对象。</span></span><br><span class="line">    <span class="keyword">var</span> workbook = xl.readFile(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>))</span><br><span class="line">    <span class="built_in">console</span>.log(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取 Excel 中所有表名</span></span><br><span class="line">    <span class="keyword">const</span> sheetNames = workbook.SheetNames; <span class="comment">// 返回 ['sheet1', 'sheet2']</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"sheetNames:"</span> + sheetNames);</span><br><span class="line">    <span class="comment">//获取指定工作表数据，返回json数据</span></span><br><span class="line">    <span class="keyword">var</span> first_sheet_name = workbook.SheetNames[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_A2 = <span class="string">'A2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_B2 = <span class="string">'B2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_C2 = <span class="string">'C2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_D2 = <span class="string">'D2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_E2 = <span class="string">'E2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_F2 = <span class="string">'F2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_G2 = <span class="string">'G2'</span>;</span><br><span class="line">    <span class="comment">//获取工作表</span></span><br><span class="line">    <span class="keyword">var</span> worksheet = workbook.Sheets[first_sheet_name];</span><br><span class="line">    <span class="comment">//找到所需的单元格</span></span><br><span class="line">    <span class="keyword">var</span> desired_cell_A2 = worksheet[address_of_cell_A2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_B2 = worksheet[address_of_cell_B2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_C2 = worksheet[address_of_cell_C2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_D2 = worksheet[address_of_cell_D2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_E2 = worksheet[address_of_cell_E2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_F2 = worksheet[address_of_cell_F2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_G2 = worksheet[address_of_cell_G2];</span><br><span class="line">    <span class="comment">//获取值</span></span><br><span class="line">    <span class="keyword">var</span> desired_value_A2 = (desired_cell_A2 ? desired_cell_A2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_B2 = (desired_cell_B2 ? desired_cell_B2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_C2 = (desired_cell_C2 ? desired_cell_C2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_D2 = (desired_cell_D2 ? desired_cell_D2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_E2 = (desired_cell_E2 ? desired_cell_E2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_F2 = (desired_cell_F2 ? desired_cell_F2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_G2 = (desired_cell_G2 ? desired_cell_G2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_A2);<span class="comment">//输出excel单元格A2的数据</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_B2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_C2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_D2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_E2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_F2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_G2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 第二部分：解析下载报表方法</span></span><br><span class="line"><span class="comment">     * 使用node-xlsx</span></span><br><span class="line"><span class="comment">     * @description 获取整个工作簿的数据</span></span><br><span class="line"><span class="comment">     * 格式：[&#123;"name":"表名","data":数据数据</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">var</span> list = xlsx.parse(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>));</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(list[<span class="number">0</span>].data[<span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//将读取的数据返回给客户端</span></span><br><span class="line">    <span class="keyword">if</span> (!err === <span class="literal">null</span>) &#123;</span><br><span class="line">      res.status(<span class="number">500</span>).send(&#123; <span class="attr">data</span>: list &#125;)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      res.status(<span class="number">200</span>).send(&#123; <span class="attr">data</span>: list &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//监听端口</span></span><br><span class="line"><span class="keyword">var</span> server = app.listen(<span class="number">8004</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> host = server.address().address</span><br><span class="line">  <span class="keyword">var</span> port = server.address().port</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"应用实例，访问地址为 http://%s:%s"</span>, host, port)</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>参考链接：<a href="https://blog.csdn.net/q3585914/article/details/70157938" target="_blank" rel="noopener">https://blog.csdn.net/q3585914/article/details/70157938</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/02/02/element-ui/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/02/element-ui/" itemprop="url">element-ui</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-02T16:43:00+08:00">
+                2019-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Element UI 是一套采用 Vue 2.0 作为基础框架实现的组件库，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的组件库，提供了配套设计资源，帮助网站快速成型</p>
+<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><h2 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jack Li  QQ:233227763@qq.com</p>
+              <p class="site-description motion-element" itemprop="description">liyinchi personal blog site</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jack Li  QQ:233227763@qq.com</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
 <script type="text/javascript">
-    var resizeHero = function () {
-        var hero = $(".cover,.heightblock"),
-            window1 = $(window);
-        hero.css({
-            "height": window1.height()
-        });
-    };
-
-    resizeHero();
-
-    $(window).resize(function () {
-        resizeHero();
-    });
-</script>
-<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
-<script src="/js/scripts.js"></script><!-- Theme scripts -->
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$('#intro').find('img').each(function(){
-  var alt = this.alt;
-
-  if (alt){
-    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
   }
-
-  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
-});
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
 </script>
 
 
 
-      
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
