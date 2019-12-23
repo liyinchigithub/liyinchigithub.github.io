@@ -342,24 +342,24 @@
 <p>Android-ADT：<a href="https://dl.google.com/android/ADT-23.0.6.zip" target="_blank" rel="noopener">https://dl.google.com/android/ADT-23.0.6.zip</a></p>
 <p>Android-SDK: <a href="http://developer.android.com/sdk/index.html(可以不安装)" target="_blank" rel="noopener">http://developer.android.com/sdk/index.html(可以不安装)</a></p>
 <h1 id="DDMS如何使用"><a href="#DDMS如何使用" class="headerlink" title="DDMS如何使用"></a>DDMS如何使用</h1><p>DDMS启动</p>
-<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/0.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/0.jpg" alt="img"></p>
 <p>配置android sdk环境变量，dos执行ddms或Android sdk 目录下tools文件夹内ddms.bat、ddms.sh</p>
 <p>（1）正常启动后，界面如下：</p>
-<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/12.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/12.jpg" alt="img"></p>
 <p>左侧的面板上提供了相应功能的按钮，从左往右依次是：Debug the selected process、Update Heap、Dump HPROF File、Cause GC（Garbage Collection）、Update Threads、Start Method Profiling、Stop Process和Screen Capture，如下图：</p>
 <p>右侧显示相应的监测信息并进行文件管理，如下图：</p>
-<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/18.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/18.jpg" alt="img"></p>
 <p>DDMS测试APP</p>
 <h1 id="DDMS使用"><a href="#DDMS使用" class="headerlink" title="DDMS使用"></a>DDMS使用</h1><p>注：以下所有操作必须手机连接PC，连接时确认手机处于”USB调试”模式；</p>
 <h1 id="线程监测"><a href="#线程监测" class="headerlink" title="线程监测"></a>线程监测</h1><p>DDMS中的线程监控和评测浏览对于管理大量线程的应用很有用。</p>
 <p>要启用，点击 Update Threads（更新线程）图标即可开始，如下图：</p>
-<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/13.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/13.jpg" alt="img"></p>
 <p>右侧对应的Threads窗口会显示面向选中VM进程的所有线程的名称和其他细节</p>
 <p>utime 和stime代表了线程在瞬间运行用户代码（utime）和系统代码（STIME）所花的总时间。一瞬间的时间是由系统定义的，但通常为10毫秒。星号表示守护线程；native状态表示线程正执行原生代码。查看上述样本数据时，除了查看应用主线程花费时间，也要关注GC花费时间，便于测试中发现GC问题或观察处理对象创建，提出有助于优化性能建议。</p>
 <h1 id="内存检测"><a href="#内存检测" class="headerlink" title="内存检测"></a>内存检测</h1><p>可以使用DDMS中的Heap和Allocation tracker一起定位内存问题，如下：</p>
 <p>点击Update Heap（更新堆）按钮，获得有关选定虚拟机中堆分配的信息，如下图：</p>
-<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/14.jpg" alt="img"></p>
-<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/15.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/14.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/15.jpg" alt="img"></p>
 <p>右侧对应的Heap，点击”Cause GC”，Heap视图中便会显示当前应用的内存使用量的详细情况；</p>
 <p>测试中如何判断程序是否有内存泄漏的可能性呢？需要关注一个值：Heap视图中部有一个Type叫做data object，即数据对象，也就是我们的程序中大量存在的类型的对象。在data object一行中有一列是”Total Size”，其值就是当前进程中所有Java数据对象的内存总量，一般情况下，这个值的大小决定了是否会有内存泄漏，可以这样判断：</p>
 <p>（1）不断的操作当前应用，同时注意观察data object的Total Size值；</p>
@@ -376,7 +376,7 @@
 <p>响应时间测试的场景主要是在：遍历查询、递归查询等（循环判断）。</p>
 <p>点击Start Method Profiling 图标开始方法分析，操作场景测试，点击Stop Method Profiling 停止分析如下图：</p>
 <p>分析结果如下图：</p>
-<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/19.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/19.jpg" alt="img"></p>
 <p>incl cpu time%，将各方法时间消耗进行排序；</p>
 <p>Incl cpu time%: inclusive时间占总时间的百分比</p>
 <p>Excl cpu time%: 执行占总时间的白分比</p>
@@ -385,11 +385,11 @@
 <p>单击底部窗格中的方法调用可创建一个层级结构，显示该方法–先是调用该方法的母方法，然后是从选定方法中调用的子方法，若发现某个方法占用CPU时间过长，可定位到对应代码,查看代码逻辑，针对性发现问题。</p>
 <h1 id="UI检查"><a href="#UI检查" class="headerlink" title="UI检查"></a>UI检查</h1><p>DDMS下Dump view UI hierarchy for Automator针对程序开发中UI调试好处多多，对于测试而言该工具在UI视觉测试时也是一个利器，该工具能够定位到每个View在屏幕中的绝对位置（精确到具体的PX（像素）级别），在视觉检查测试时可以帮我们很轻松的发现UI视觉问题。</p>
 <p>启动时，点击Dump view UI hierarchy for Automator图标，如下图：</p>
-<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/9.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/9.jpg" alt="img"></p>
 <p>启动后进入正式界面，可以逐个元素的进行UI视觉稿检测，有问题立即便可知晓，如下图：</p>
-<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/10.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/10.jpg" alt="img"></p>
 <h1 id="流量统计"><a href="#流量统计" class="headerlink" title="流量统计"></a>流量统计</h1><p>测试中流量大小是1个重要测试点，而DDMS提供了流量统计工具network statistics，该工具可以实时统计查看程序使用网络的情况，也可以通过设置不同的Tag(标签)来区分不同类型的流量使用情况，数据在DDMS中通过图表显示，点击右侧视图中的network statistic，并Start即开始统计，如下图：</p>
-<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/11.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/11.jpg" alt="img"></p>
 <h1 id="CPU-Memory-FPS抓取"><a href="#CPU-Memory-FPS抓取" class="headerlink" title="CPU/Memory/FPS抓取"></a>CPU/Memory/FPS抓取</h1><p>测试中CPU、内存、帧率测试必不可少，同样DDMS针对此提供了System Information工具，可以用来对CPU、内存和帧进行抓取，可以抓取到整个系统的某个瞬间信息。使用时点击右侧视图中的System Information即可，具体使用方法比较简单，不再赘述。</p>
 <h1 id="log抓取"><a href="#log抓取" class="headerlink" title="log抓取"></a>log抓取</h1><p>日志一般用于记录程序运行信息，从而使开发者方便开发调试，便于发现问题。我们先看看android.util.Log常用的方法，共有以下六种：Log.v() 、Log.d() 、Log.i() 、Log.w()、 Log.e()以及Log.a() (android 4.0新增加的)。根据首字母对应VERBOSE、DEBUG、INFO、WARN、ERROR、Assert，重要程度排序Assert &gt; Error &gt; Warn &gt; Info &gt; Verbose。</p>
 <p>(1)Log.v 的调试颜色为黑色的，任何消息都会输出，平时使用就是Log.v(“”,””);</p>
@@ -404,22 +404,22 @@
 <p>收集中可以增加log规律规则，点击窗口右上的加号，在Filter Name中输入需要过滤的的字符串。点击OK就行了。</p>
 <h1 id="多个设备的Log查看"><a href="#多个设备的Log查看" class="headerlink" title="多个设备的Log查看"></a>多个设备的Log查看</h1><p>在模拟器、真机数量多于两个的时候，DDMS仍然适用，DDMS试图，在左上角Devices中双击想要看log的设备即可，具体适用与单设备完全一致。</p>
 <h1 id="虚拟地理坐标"><a href="#虚拟地理坐标" class="headerlink" title="虚拟地理坐标"></a>虚拟地理坐标</h1><p>如果您的应用程序依赖于位置的手机，你可以有的DDMS送您的设备或AVD一个模拟的位置。这是非常有用的，如果你想测试你的应用程序的特定位置的功能，而不必实际移动的不同方面。<br>您可以使用下面的地理位置数据类型：<br>手动设置（Manual）位置 - 通过手动指定十进制或六十进制的经度和纬度值。<br>GPX - GPS交换文件<br>KML -Keyhole标记语言文件</p>
-<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/8.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/8.jpg" alt="img"></p>
 <h1 id="进程信息"><a href="#进程信息" class="headerlink" title="进程信息"></a>进程信息</h1><p>获取进程信息需要点击左侧Update Threads按钮，然后在左侧显示相应的进程信息，包括进程的名称、ID、状态等重要信息<br>内存信息<br>需要点击Update Heap，在Heap界面下，上部显示堆的详细信息，点击Cause GC进行垃圾回收，当完成后，可以看到一组对象类型和为每种类型已分配的内存，点击列表中的一个对象类型，为该种特定内存大小的对象分配的数量。</p>
-<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/6.jpg" alt="img"></p>
-<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/7.jpg" alt="img"></p>
-<h1 id="模拟拨入电话，模拟接收短信"><a href="#模拟拨入电话，模拟接收短信" class="headerlink" title="模拟拨入电话，模拟接收短信"></a>模拟拨入电话，模拟接收短信</h1><p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/16.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/6.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/7.jpg" alt="img"></p>
+<h1 id="模拟拨入电话，模拟接收短信"><a href="#模拟拨入电话，模拟接收短信" class="headerlink" title="模拟拨入电话，模拟接收短信"></a>模拟拨入电话，模拟接收短信</h1><p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/16.jpg" alt="img"></p>
 <p>模拟器接收模拟发送短信的效果，中文乱码</p>
-<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/17.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/17.jpg" alt="img"></p>
 <h1 id="网络状态获取"><a href="#网络状态获取" class="headerlink" title="网络状态获取"></a>网络状态获取</h1><p>在Android 4.0， DDMS 具备监控详细的网络使用情况的功能，使得它可以跟踪您的应用程序的网络请求。使用这个工具，你可以监视应用程序的数据传输，并适当优化的底层代码。</p>
 <h1 id="系统信息获取"><a href="#系统信息获取" class="headerlink" title="系统信息获取"></a>系统信息获取</h1><p>包括三部分CPU相关信息（CPU load）、内存使用信息（MemoryUsage）、框架渲染时间信息（Frame Render Time）</p>
-<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/1.jpg" alt="img"></p>
 <p>CPU load</p>
-<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/2.jpg" alt="img"></p>
-<p>Memory Usage<br> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/3.jpg" alt="img"></p>
-<p>Frame Render Time<br>测试使用模拟器<br> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/4.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/2.jpg" alt="img"></p>
+<p>Memory Usage<br> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/3.jpg" alt="img"></p>
+<p>Frame Render Time<br>测试使用模拟器<br> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/4.jpg" alt="img"></p>
 <h1 id="网速设置"><a href="#网速设置" class="headerlink" title="网速设置"></a>网速设置</h1><h1 id="手机文件管理"><a href="#手机文件管理" class="headerlink" title="手机文件管理"></a>手机文件管理</h1><p>手机文件管理，如果虚拟机分配了SD卡空间或真机挂载了SD卡可以管理SD中的文件。从设备复制文件，在文件浏览器中找到该文件，然后单击“Pull file”按钮。要复制一个文件到设备上的文件资源管理器“Push file<br>”按钮。</p>
-<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/../images/ddms/5.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/12/03/Android测试工具DDMS/images/5.jpg" alt="img"></p>
 
           
         
@@ -557,24 +557,24 @@
 <p>四、搭建</p>
 <p>前提：本地安装配置node、mongodb</p>
 <p>（一）自带部署脚手架</p>
-<p> <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/images/13-1.jpg" alt="img"></p>
 <p> （二）启动服务</p>
-<p> <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-3.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/images/13-3.jpg" alt="img"></p>
 <p> （三）本地化部署后，登录页面</p>
-<p> <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-2.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/images/13-2.jpg" alt="img"></p>
 <p> （四）导入postman工程</p>
-<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-4.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/images/13-4.jpg" alt="img"></p>
 <p> （五）团队协作</p>
-<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-5.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/images/13-5.jpg" alt="img"></p>
 <p>  （六）主要功能</p>
 <p>  1、接口列表</p>
-<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-6.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/images/13-6.jpg" alt="img"></p>
 <p>  2、接口设计文档详情页</p>
-<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-7.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/images/13-7.jpg" alt="img"></p>
 <p>  3、单个接口测试</p>
-<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-8.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/images/13-8.jpg" alt="img"></p>
 <p>  4、运行测试</p>
-<p>  根据接口列表，自定义添加测试集合（要测试的接口）<br>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/../images/test-file-manage/13-9.jpg" alt="img"></p>
+<p>  根据接口列表，自定义添加测试集合（要测试的接口）<br>  <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/images/13-9.jpg" alt="img"></p>
 
           
         
@@ -874,7 +874,7 @@
         
           
             <h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><p>Nginx(发音同engine x)是一个高性能、跨平台的[HTTP Server]，也可以用作[反向代理]、[负载均衡]服务器和[HTTP缓存]服务器。俄罗斯人Igor Sysoev(伊戈尔·赛索耶夫)在2004年开发的，Nginx是免费的开源软件，根据类BSD许可证的条款发布。目前全球约有50%的网站都是用Nginx做Web服务器。</p>
-<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-12.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/images/12-12.jpg" alt="img"></p>
 <h2 id="Nginx的优点"><a href="#Nginx的优点" class="headerlink" title="Nginx的优点"></a>Nginx的优点</h2><h2 id="1、开源免费"><a href="#1、开源免费" class="headerlink" title="1、开源免费"></a>1、开源免费</h2><p>Nginx完全开源免费，可以轻松搭建HTTP服务。</p>
 <p>相对传统收费的负载均衡器F5，用Nginx搭建负载均衡服务成本比较低。</p>
 <h2 id="2、高性能"><a href="#2、高性能" class="headerlink" title="2、高性能"></a>2、高性能</h2><p>Nginx是基于C语言开发，在执行效率很高。</p>
@@ -882,14 +882,14 @@
 <h2 id="3、占用资源少"><a href="#3、占用资源少" class="headerlink" title="3、占用资源少"></a>3、占用资源少</h2><p>Ngxin在设计和开发时对占用内存做了大量的优化，1w多个非活跃的HTTP Keep-Alive连接在Nginx中仅消耗2.5MB的内存。</p>
 <h2 id="4、跨平台"><a href="#4、跨平台" class="headerlink" title="4、跨平台"></a>4、跨平台</h2><p>Nginx可以在在Linux、MacOS、Windows等平台编译部署。</p>
 <h2 id="5、模块化扩展"><a href="#5、模块化扩展" class="headerlink" title="5、模块化扩展"></a>5、模块化扩展</h2><p>Nginx是高度模块化设计，可以根据抽象的模块接口开发定制相应的模块，以满足业务需求，淘宝的Tengine就是基于Nginx开发定制的，淘宝开发很多有用的模块。</p>
-<h2 id="Nginx的用途"><a href="#Nginx的用途" class="headerlink" title="Nginx的用途"></a>Nginx的用途</h2><p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-16.jpg" alt="img"></p>
+<h2 id="Nginx的用途"><a href="#Nginx的用途" class="headerlink" title="Nginx的用途"></a>Nginx的用途</h2><p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/images/12-16.jpg" alt="img"></p>
 <h2 id="1、Web服务器"><a href="#1、Web服务器" class="headerlink" title="1、Web服务器"></a>1、Web服务器</h2><p>Nginx可以搭建Web服务器，由于在性能优于Apache，因此很多公司逐渐用Nginx替换Apache。<br>Nginx支持Lua，大牛章亦春基于Nginx与Lua开发高性能Web平台OpenResty，其内部集成了大量精良的 Lua 库、第三方模块以及大多数的依赖项。用于方便地搭建能够处理超高并发、扩展性极高的动态 Web 应用、Web 服务和动态网关。</p>
-<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-13.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/images/12-13.jpg" alt="img"></p>
 <h2 id="2、反向代理"><a href="#2、反向代理" class="headerlink" title="2、反向代理"></a>2、反向代理</h2><p>目前很多后端应用服务在部署时都是通过Nginx搭建反向代理，首先client端请求到Nginx的反向代理，然后再转发到后端应用服务上，这样可以很好保护后端应用服务。</p>
-<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-14.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/images/12-14.jpg" alt="img"></p>
 <p>所以我们通常在Apache、Tomcat、IIS之前加上Nginx，由Nginx反向代理到后端服务器上。</p>
 <h2 id="3、负载均衡"><a href="#3、负载均衡" class="headerlink" title="3、负载均衡"></a>3、负载均衡</h2><p>目前互联网用户成倍增长，单台服务不足以应对海量用户的请求，需要部署[多台后端应用服务]，因此需要负载均衡器将请求负载到不同后端应用服务上，实现[分布式集群]。以前都是[硬负载均衡器F5]，但是F5成本比较高，小公司很难承受起，再者F5功能比较固化，不够灵活，因此Nginx做软负载均衡器就比较流行。<br>在一线互联网公司，例如BAT公司，他们都有统一接入服务，对互联网上的请求统一分发，这个统一接入服务一般都是用Nginx搭建的。</p>
-<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-15.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/images/12-15.jpg" alt="img"></p>
 <p>Nginx[负载均衡策略]也很多，主要有：RR（轮询）、weight（权重）、ip_hash（IP Hash）、fair（后端服务器响应时间）、url_hash（URL Hash）这几种。</p>
 <p>在服务器集群中，Nginx起到一个代理服务器的角色（即反向代理），为了避免单独一个服务器压力过大，将来自用户的请求转发给不同的服务器。</p>
 <h2 id="Nginx服务器之负载均衡策略（6种）"><a href="#Nginx服务器之负载均衡策略（6种）" class="headerlink" title="Nginx服务器之负载均衡策略（6种）"></a>Nginx服务器之负载均衡策略（6种）</h2><p>负载均衡用于从“upstream”模块定义的后端服务器列表中选取一台服务器接受用户的请求。</p>
@@ -1000,12 +1000,12 @@
 <p>③、进入安装包目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon src]# cd pcre-8.35</span><br></pre></td></tr></table></figure></p>
 <p>④、编译安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon pcre-8.35]# ./configure</span><br><span class="line">[root@bogon pcre-8.35]# make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
 <p>⑤、查看pcre版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon pcre-8.35]# pcre-config --version</span><br></pre></td></tr></table></figure></p>
-<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-17.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/images/12-17.jpg" alt="img"></p>
 <p>（3）安装 Nginx</p>
 <p>①下载 Nginx</p>
 <p>下载地址：<a href="http://nginx.org/download/nginx-1.6.2.tar.gz" target="_blank" rel="noopener">http://nginx.org/download/nginx-1.6.2.tar.gz</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon src]# cd /usr/local/src/</span><br><span class="line">[root@bogon src]# wget http://nginx.org/download/nginx-1.6.2.tar.gz</span><br></pre></td></tr></table></figure>
-<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-18.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/images/12-18.jpg" alt="img"></p>
 <p>②安装包</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon src]# tar zxvf nginx-1.6.2.tar.gz</span><br></pre></td></tr></table></figure>
 <p>③进入安装包目录</p>
@@ -1020,14 +1020,14 @@
 <p>配置nginx.conf ，将/usr/local/webserver/nginx/conf/nginx.conf替换为以下内容</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon conf]#  cat /usr/local/webserver/nginx/conf/nginx.conf</span><br><span class="line"></span><br><span class="line">user www www;</span><br><span class="line">worker_processes 2; #设置值和CPU核心数一致</span><br><span class="line">error_log /usr/local/webserver/nginx/logs/nginx_error.log crit; #日志位置和日志级别</span><br><span class="line">pid /usr/local/webserver/nginx/nginx.pid;</span><br><span class="line">#Specifies the value for maximum file descriptors that can be opened by this process.</span><br><span class="line">worker_rlimit_nofile 65535;</span><br><span class="line">events</span><br><span class="line">&#123;</span><br><span class="line">  use epoll;</span><br><span class="line">  worker_connections 65535;</span><br><span class="line">&#125;</span><br><span class="line">http</span><br><span class="line">&#123;</span><br><span class="line">  include mime.types;</span><br><span class="line">  default_type application/octet-stream;</span><br><span class="line">  log_format main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span><br><span class="line">               &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span><br><span class="line">               &apos;&quot;$http_user_agent&quot; $http_x_forwarded_for&apos;;</span><br><span class="line">  </span><br><span class="line">#charset gb2312;</span><br><span class="line">     </span><br><span class="line">  server_names_hash_bucket_size 128;</span><br><span class="line">  client_header_buffer_size 32k;</span><br><span class="line">  large_client_header_buffers 4 32k;</span><br><span class="line">  client_max_body_size 8m;</span><br><span class="line">     </span><br><span class="line">  sendfile on;</span><br><span class="line">  tcp_nopush on;</span><br><span class="line">  keepalive_timeout 60;</span><br><span class="line">  tcp_nodelay on;</span><br><span class="line">  fastcgi_connect_timeout 300;</span><br><span class="line">  fastcgi_send_timeout 300;</span><br><span class="line">  fastcgi_read_timeout 300;</span><br><span class="line">  fastcgi_buffer_size 64k;</span><br><span class="line">  fastcgi_buffers 4 64k;</span><br><span class="line">  fastcgi_busy_buffers_size 128k;</span><br><span class="line">  fastcgi_temp_file_write_size 128k;</span><br><span class="line">  gzip on; </span><br><span class="line">  gzip_min_length 1k;</span><br><span class="line">  gzip_buffers 4 16k;</span><br><span class="line">  gzip_http_version 1.0;</span><br><span class="line">  gzip_comp_level 2;</span><br><span class="line">  gzip_types text/plain application/x-javascript text/css application/xml;</span><br><span class="line">  gzip_vary on;</span><br><span class="line"> </span><br><span class="line">  #limit_zone crawler $binary_remote_addr 10m;</span><br><span class="line"> #下面是server虚拟主机的配置</span><br><span class="line"> server</span><br><span class="line">  &#123;</span><br><span class="line">    listen 80;#监听端口</span><br><span class="line">    server_name localhost;#域名</span><br><span class="line">    index index.html index.htm index.php;</span><br><span class="line">    root /usr/local/webserver/nginx/html;#站点目录</span><br><span class="line">      location ~ .*\.(php|php5)?$</span><br><span class="line">    &#123;</span><br><span class="line">      #fastcgi_pass unix:/tmp/php-cgi.sock;</span><br><span class="line">      fastcgi_pass 127.0.0.1:9000;</span><br><span class="line">      fastcgi_index index.php;</span><br><span class="line">      include fastcgi.conf;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ .*\.(gif|jpg|jpeg|png|bmp|swf|ico)$</span><br><span class="line">    &#123;</span><br><span class="line">      expires 30d;</span><br><span class="line">  # access_log off;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ .*\.(js|css)?$</span><br><span class="line">    &#123;</span><br><span class="line">      expires 15d;</span><br><span class="line">   # access_log off;</span><br><span class="line">    &#125;</span><br><span class="line">    access_log off;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>检查配置文件nginx.conf的正确性命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon conf]# /usr/local/webserver/nginx/sbin/nginx -t</span><br></pre></td></tr></table></figure></p>
-<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-19.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/images/12-19.jpg" alt="img"></p>
 <p>启动 Nginx</p>
 <p>Nginx 启动命令如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon conf]# /usr/local/webserver/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
-<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-20.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/images/12-20.jpg" alt="img"></p>
 <p>访问站点</p>
 <p>从浏览器访问我们配置的站点ip：</p>
-<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/../images/test-file-manage/12-21.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/images/12-21.jpg" alt="img"></p>
 <p>Nginx 其他命令</p>
 <p>以下包含了 Nginx 常用的几个命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/webserver/nginx/sbin/nginx -s reload            # 重新载入配置文件</span><br><span class="line">/usr/local/webserver/nginx/sbin/nginx -s reopen            # 重启 Nginx</span><br><span class="line">/usr/local/webserver/nginx/sbin/nginx -s stop              # 停止 Nginx</span><br></pre></td></tr></table></figure>
@@ -1154,31 +1154,31 @@
 <p>最终确认这个方案（Postman+Newman+Jenkins+Git）基于restful Api、RPC等等，都可以变相解决这些困难。</p>
 <h1 id="如何借助这些工具实现接口测试自动化和持续集成？"><a href="#如何借助这些工具实现接口测试自动化和持续集成？" class="headerlink" title="如何借助这些工具实现接口测试自动化和持续集成？"></a>如何借助这些工具实现接口测试自动化和持续集成？</h1><p>1、Postman</p>
 <p>基于http/https协议接口，一款可视化构造客户端请求工具，虽然是商业化工具，但免费版提供的功能基本满足目前测试人员需求，能快速构建接口自动化测试脚本，用于场景流程回归、批量构造测试数据。</p>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-1.jpg" alt="img"></p>
 <p>官方文档：<a href="https://learning.getpostman.com/" target="_blank" rel="noopener">https://learning.getpostman.com/</a></p>
 <p>下载地址：<a href="https://www.getpostman.com/downloads/" target="_blank" rel="noopener">https://www.getpostman.com/downloads/</a></p>
 <p>2、Newman</p>
 <p>Postman的脚本运行器，能够不在使用postman工具情况下，非界面化运行脚本！</p>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-2.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-2.jpg" alt="img"></p>
 <p> 可以生成html、json、xml格式的测试报告，可以进一步对这些测试报告进行解析处理。</p>
 <p>3、Git</p>
 <p>开源分布式版本控制系统，比较常见开放源代码的版本控制系统：SVN、Gitlab、Github等等，可以进行代码、脚本托管。</p>
 <p>目前公司用的是gitlab</p>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-3.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-3.jpg" alt="img"></p>
 <p>4、Jenkins</p>
 <p>开源 CI/CD 持续集成、持续构建系统工具。</p>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-4.jpg" alt="img"></p>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-5.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-4.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-5.jpg" alt="img"></p>
 <p>通过jenkins配置job参数，可以灵活自定义配置构建，实现各种外部服务功能执行，比如发送邮件、统计结果、数据处理等等。（需要你有一定代码基础）</p>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-9.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-9.jpg" alt="img"></p>
 <p>5、测试报告</p>
 <p>测试报告邮件正文显示内容。</p>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-6.jpg" alt="img"></p>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-7.jpg" alt="img"></p>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-8.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-6.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-7.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-8.jpg" alt="img"></p>
 <p>6、其他</p>
 <p>爬取数据，我将接口自动化测试生成的报告，进行存储展示到前端页面。（测试工作管理后台）</p>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/../images/test-file-manage/12-10.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-10.jpg" alt="img"></p>
 
           
         
@@ -1627,7 +1627,7 @@
 <p>（你会发现：从产品层面设计用例，少部分会涉及用户场景）</p>
 <p>我的理解（总结）：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">场景分析是通过【描述流经用例路径】来确定的过程。</span><br><span class="line"></span><br><span class="line">这个流经过程要从【用例开始到结束遍历其中所有基本流】 。</span><br><span class="line"></span><br><span class="line">直黑线表示基本流，是最基本、最简单的路径（软件功能按照正确的事件流实现的一条正确流程无任何错，程序从开始直到结束）。</span><br></pre></td></tr></table></figure>
-<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/../images/ScenarioCase/1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/images/1.jpg" alt="img"></p>
 <p>遵循上图中每个经过用例的可能路径，可以确定不同的用例场景。</p>
 <p>从基本流开始，再将基本流和备选流结合起来，可以确定以下用例场景：</p>
 <p>场景1    基本流<br>场景2    基本流    备选流1<br>场景3    基本流    备选流1    备选流2<br>场景4    基本流    备选流3<br>场景5    基本流    备选流3    备选流1<br>场景6    基本流    备选流3    备选流1    备选流2<br>场景7    基本流    备选流4<br>场景8    基本流    备选流3    备选流4     </p>
@@ -1637,7 +1637,7 @@
 <p>4.对生成的所有测试用例重新复审，去掉多余的测试用例，测试用例确定后，对每一个测试用例确定测试数据值。</p>
 <h2 id="用例场景例子"><a href="#用例场景例子" class="headerlink" title="用例场景例子"></a>用例场景例子</h2><p>购书：用户登录到网站后，进行书籍的选择，当选好自己心仪的书籍后进行订购，这时把所需图书放进购物车，等进行结帐的时候，用户需要登录自己注册的帐号，登录成功后，进行付款交易，交易成功后，生成订购单，整个购物过程结束。</p>
 <p>第一步：画出流程图，确定基本流和备选流；</p>
-<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/../images/ScenarioCase/2.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/images/2.jpg" alt="img"></p>
 <p>基本流：登录在线网站→选择书籍→放入购物车→登录账号→付款→生成订单</p>
 <p>备选流１：用户不存在→注册用户</p>
 <p>备选流２：密码不正确</p>
@@ -1674,9 +1674,9 @@
 </tbody>
 </table>
 <p>第三步：对每一个场景生成测试用例；</p>
-<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/../images/ScenarioCase/3.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/images/3.jpg" alt="img"></p>
 <p>第四步：对生成的所有测试用例重新复审，补充测试数据值；</p>
-<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/../images/ScenarioCase/4.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/images/4.jpg" alt="img"></p>
 
           
         

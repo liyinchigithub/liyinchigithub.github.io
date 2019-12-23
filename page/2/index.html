@@ -326,7 +326,7 @@
 <p>Groovy script</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//读取目录结构</span></span><br><span class="line"><span class="keyword">def</span> locat = <span class="string">"/data/jenkins/workspace/资产售后-流程脚本/脚本"</span></span><br><span class="line"><span class="keyword">def</span> dir = <span class="keyword">new</span> File(locat)</span><br><span class="line">Set&lt;String&gt; artifacts = <span class="keyword">new</span> TreeSet&lt;String&gt;()</span><br><span class="line">dir.eachDir &#123; directory -&gt;</span><br><span class="line">    <span class="keyword">if</span> (directory.absolutePath.contains(<span class="string">"postman"</span>) || directory.absolutePath.contains(<span class="string">"jmeter"</span>)) &#123;</span><br><span class="line">        <span class="keyword">for</span> (File <span class="string">f :</span> directory.listFiles()) &#123;</span><br><span class="line">            String script = f.getAbsolutePath()</span><br><span class="line">            artifacts.add(script)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">List&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;String&gt;()</span><br><span class="line">result.addAll(artifacts)</span><br><span class="line"><span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
 <p>可以获取以文件夹命名存放的脚本名称，作为jenkins参数来选择，用于构建jenkins job</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/25/持续集成之jenkins的Job配置/../images/jenkins/1.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/25/持续集成之jenkins的Job配置/images/1.jpg" alt="img"></p>
 <h2 id="shell脚本获取文件件目录"><a href="#shell脚本获取文件件目录" class="headerlink" title=" shell脚本获取文件件目录"></a> shell脚本获取文件件目录</h2><p>获取postman或jmeter下的脚本内容</p>
  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/usr/bin/env bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash">获取执行脚本集合</span></span><br><span class="line">arr=($&#123;script//,/ &#125;)</span><br><span class="line"><span class="meta">#</span><span class="bash">调试输出每个集合元素</span></span><br><span class="line">echo -----$&#123;arr[@]&#125;</span><br><span class="line"><span class="meta">#</span><span class="bash">获取集合元素个数</span></span><br><span class="line">length=$&#123;#arr[@]&#125;</span><br><span class="line"><span class="meta">#</span><span class="bash">判断个数是否大于0，相当于判断jenkins界面脚本文件夹参数<span class="variable">$script</span>是否勾选了</span></span><br><span class="line">if [ $length &gt; 0 ]</span><br><span class="line">then</span><br><span class="line"><span class="meta">  #</span><span class="bash">循环调用执行postman/jmeter脚本</span></span><br><span class="line">  for i in $&#123;arr[@]&#125;; do</span><br><span class="line">      # =~代表正则匹配</span><br><span class="line">      if [[ $i =~ postman ]]</span><br><span class="line">      then</span><br><span class="line">        # ls 返回目录下的所有文件</span><br><span class="line">        files=$(ls $i)</span><br><span class="line">        #遍历所有的文件夹</span><br><span class="line">        for j in $files</span><br><span class="line">        do</span><br><span class="line">          # if [ -z $String ] 代表如果字符串为空  这边只运行$testFilesIncluded所包含的文件（有配置的情况）和只获取后缀为postman_collection.json的文件</span><br><span class="line">          if ( [ -z "$testFilesIncluded"] || [[ $testFilesIncluded == *$j* ]] ) &amp;&amp; [[ $j == *.postman_collection.json ]]</span><br><span class="line">          then</span><br><span class="line">            # % 去除最短的向后匹配 %%去除最长的向后匹配 #去除最短的向前匹配 ##去除最长的向前匹配 eg:http://landoflinux.com/linux_bash_scripting_substring_tests.html</span><br><span class="line">            envPrefix=$&#123;j%.postman_collection.json&#125;</span><br><span class="line">            reportPrefix=$&#123;envPrefix&#125;</span><br><span class="line">            # newman 运行脚本文件 输出cli和html的测试报告</span><br><span class="line">             #切换当前目录到$WORKSPACE</span><br><span class="line">             cd $&#123;WORKSPACE&#125;</span><br><span class="line">             #执行newman命令，其中报告输出位置文件名使用到变量。当前shell脚本定义的变量：$&#123;reportPrefix&#125;；jenkins用户自定义变量：$&#123;env&#125;；jenkins系统变量：$&#123;JOB_NAME&#125;、$&#123;BUILD_ID&#125;；</span><br><span class="line">            newman run $i/$j -e $i/$&#123;env&#125;.postman_environment.json --delay-request 1000 --reporters cli,html,json,junit --reporter-json-export $&#123;BUILD_ID&#125;"-"jsonOut.json --reporter-junit-export $&#123;BUILD_ID&#125;"-"xmlOut.xml --reporter-html-export $&#123;JOB_NAME&#125;"-"$&#123;env&#125;"-"$&#123;BUILD_ID&#125;"-"index.htm</span><br><span class="line">          fi</span><br><span class="line">        done</span><br><span class="line"></span><br><span class="line">      fi</span><br><span class="line">  done</span><br><span class="line"></span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
           
@@ -479,7 +479,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install uirecorder -g</span><br></pre></td></tr></table></figure>
 <p>（2）检查uirecorder是否安装成功</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uirecorder --version</span><br></pre></td></tr></table></figure>
-<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/uirecorder--version.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/uirecorder--version.jpg" alt="img"></p>
 <h4 id="mac-1"><a href="#mac-1" class="headerlink" title="mac"></a>mac</h4><p>（1）打开终端窗口</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install uirecorder -g</span><br></pre></td></tr></table></figure>
 <p>（2）检查uirecorder是否安装成功</p>
@@ -491,7 +491,7 @@
 <p><a href="https://pc.qq.com/detail/1/detail_2661.html" target="_blank" rel="noopener">下载地址</a></p>
 <p>5.移动端录制需要安装配置环境android SDK 、ios开发工具</p>
 <p>可以参照appium-doctor</p>
-<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/appium-doctor.jpg" alt="appium-doctor"></p>
+<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/appium-doctor.jpg" alt="appium-doctor"></p>
 <h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><p>实际上UiRecorder录制生成的脚本，是一个基于nodejs+mocha+jwebdriver框架的自动化工程，回放脚本是通过执行mocha命令并附带mochawesome报告参数来生成测试报告</p>
 <h1 id="基础操作（录制与回放）"><a href="#基础操作（录制与回放）" class="headerlink" title="基础操作（录制与回放）"></a>基础操作（录制与回放）</h1><h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><p>1.录制</p>
 <p>（1）以文件夹来划分录制项目模块</p>
@@ -503,8 +503,8 @@
 <p>打开终端窗口：开始-运行-cmd 右击以管理员身份运行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd test  </span><br><span class="line">uirecorder init</span><br></pre></td></tr></table></figure>
 <p>此处说明下：uirecorder初始化会自动生成配置文件，建议使用默认配置，一路回车即可。<br>初始化完成后会自动安装相关依赖</p>
-<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/uirecorder-init.jpg" alt="初始化"></p>
-<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/uirecorder-init2.jpg" alt="自动安装浏览器驱动"></p>
+<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/uirecorder-init.jpg" alt="初始化"></p>
+<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/uirecorder-init2.jpg" alt="自动安装浏览器驱动"></p>
 <p>初始化完后当前目录下生成以下文件<br>如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">uirecorder初始化文件夹说明</span><br><span class="line">Commons:公共脚本文件夹</span><br><span class="line">Diffbase:图片对比文件夹</span><br><span class="line">node_modules:node核心文件库</span><br><span class="line">reports:测试报告文件夹</span><br><span class="line">sample:示例脚本目录</span><br><span class="line">screenshots:测试执行截图保存目录</span><br><span class="line">uploadfiles：附件保存文件夹，比如写信页上传附件，要求把附件先放入该目录；</span><br><span class="line">config.Json：运行配置文件，比如IP，浏览器</span><br><span class="line">run.bat：运行测试，执行该命令会运行所有的测试脚本</span><br></pre></td></tr></table></figure>
 <p>（3）录制脚本<br>打开终端窗口：开始-运行-cmd 右击以管理员身份运行</p>
@@ -517,17 +517,17 @@
 <p>④输入打算录制的页面地址</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例如：输入百度地址https://www.baidu.com</span><br></pre></td></tr></table></figure>
 <p>⑤点击【开始录制】按钮，进入录制模式</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/2.jpg" alt="工具面板"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/2.jpg" alt="工具面板"></p>
 <p>录制页面会显示一个uirecorder工具面板，此时你的所有操作均会被录制下来。<br>例如：鼠标（点击事件）、键盘（按键事件）等操作</p>
 <p>⑥期间，可以使用工具面板上面的功能：</p>
 <p> 属性开关、属性黑名单、添加悬停、添加断言、执行JS、添加延迟、脚本跳转、结束录制</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/4.jpg" alt="工具面板"></p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/5.jpg" alt="工具面板"><br>⑦每录制成功，屏幕右下角会弹出执行成功的提示</p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/4.jpg" alt="工具面板"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/5.jpg" alt="工具面板"><br>⑦每录制成功，屏幕右下角会弹出执行成功的提示</p>
 <p>⑧录制结束</p>
 <p>点击【结束录制】按钮，即可结束录制，自动关闭浏览器</p>
 <p>同时在test目录下生成一个脚本文件，文件名称便是在启用录制时，咱们命名的脚本名称</p>
 <p>终端窗口也会同步显示录制记录结果</p>
-<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/8.jpg" alt="终端窗口"></p>
+<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/8.jpg" alt="终端窗口"></p>
 <p>2.回放脚本</p>
 <p>此处说明下：回放脚本借助mocha框架回放js脚本，并生成mochawesome结果报告，所以需要你在之前环境准备过程中安装mochawesome node模块</p>
 <p>①安装mochawesome</p>
@@ -538,28 +538,28 @@
 <p>【第一种方式】独立包方式 (优势：可以手动更换浏览器driver)</p>
 <p>（如果你的浏览器是非安装版，双击即可直接打开，并且浏览器版本和浏览器驱动版本想要固定不变，可以采用这种方式）</p>
 <p>【A】下载selenium-standalone到本地，<a href="https://npm.taobao.org/mirrors/selenium/3.9/" target="_blank" rel="noopener">下载地址</a>(建议放置放录制脚本目录下)</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/10.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/10.jpg" alt="img"></p>
 <p>【B】启动selenium-server-standalone</p>
 <p> 打开终端窗口：开始-运行-cmd 右击以管理员身份运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd 存放selenium-server-standalone.jar包路径下</span><br></pre></td></tr></table></figure></p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar selenium-server-standalone-3.9.1.jar</span><br></pre></td></tr></table></figure>
-<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/11.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/11.jpg" alt="img"></p>
 <p> 【C】下载chromedriver到本地，<a href="https://npm.taobao.org/mirrors/chromedriver" target="_blank" rel="noopener">下载地址</a></p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/12.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/12.jpg" alt="img"></p>
 <p> 此处说明下：chromedriver版本与你本地电脑安装的chrome版本需要对应，谷歌官方对应版本查看地址<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads</a></p>
 <p> 不能翻墙可以看<a href="https://blog.csdn.net/yoyocat915/article/details/80580066" target="_blank" rel="noopener">这里</a><br> （我本地chrome浏览器版本是68, 因此下载chromedriver版本应该是2.40）</p>
 <p> 【D】下载后双击chromedriver打开服务</p>
-<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/13.jpg" alt="img"></p>
-<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/14.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/13.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/14.jpg" alt="img"></p>
 <p> 第二种方式：全局安装</p>
 <p> 此处说明：安装前需要设置淘宝镜像，因为chromedriver默认是从谷歌官网下载下来，未设置淘宝镜像会报超时。（如果你有翻墙那是最好，但建议你关闭翻墙代理，使用淘宝镜像地址进行下载）</p>
 <p> 【A】全局安装node selenium-standalone模块</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install selenium-standalone -g</span><br></pre></td></tr></table></figure>
-<p>  <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/15.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/15.jpg" alt="img"></p>
 <p> 【C】 安装selenium驱动、浏览器驱动</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selenium-standalone install</span><br></pre></td></tr></table></figure>
 <p> 【B】 启用服务</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selenium-standalone start</span><br></pre></td></tr></table></figure>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/3.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/3.jpg" alt="img"></p>
 <p> ③执行回放脚本</p>
 <p> 此处说明下：回放脚本方式有两种第一种借助mocha框架执行指定位置脚本，第二种使用bat文件</p>
 <p> 【第一种方式】推荐使用</p>
@@ -567,12 +567,12 @@
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha 脚本路径名称 --reporter mochawesome</span><br></pre></td></tr></table></figure>
 <p> 例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha C:\Users\lyc\Desktop\A\test\test.1.js --reporter mochawesome</span><br></pre></td></tr></table></figure>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/16.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/16.jpg" alt="img"></p>
 <p> 此处说明下：回放脚本前，如果你使用独立方式安装selenium-standalone，那么需要开启selenium-server-standalone服务、开启chromedriver服务，且不能关闭。</p>
 <p>【B】运行所有脚本</p>
 <p>开始-运行-cmd，以管理员身份运行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Users\lyc\Desktop\A   //目录切换至新建文件夹A</span><br><span class="line"></span><br><span class="line">mocha --reporter mochawesome</span><br></pre></td></tr></table></figure>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/20.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/20.jpg" alt="img"></p>
 <p>此处说明下：mocha框架自身默认会执行以test命名的文件夹下所有脚本。</p>
 <p>【第二种回放方式】</p>
 <p>run运行测试用例<br>开始-运行-cmd，终端进入存放脚本的文件夹A，终端输入</p>
@@ -586,7 +586,7 @@
 <p>①JDK（前面步骤我们已配置好）</p>
 <p>②安装macaca<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g macaca-cli</span><br></pre></td></tr></table></figure></p>
 <p>安装成功会显示：</p>
-<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/macaca-logo.jpg" alt="macacalogo"></p>
+<p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/macaca-logo.jpg" alt="macacalogo"></p>
 <p><a href="https://macacajs.github.io/zh/guide/recorder.html#%E7%A7%BB%E5%8A%A8%E7%AB%AF" target="_blank" rel="noopener">macaca参考</a></p>
 <p>③安装macaca-android</p>
 <p>【A】设置淘宝镜像</p>
@@ -596,18 +596,18 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i macaca-android -g</span><br></pre></td></tr></table></figure>
 <p>检查环境</p>
 <p>macaca doctor</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/35.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/35.jpg" alt="img"></p>
 <p>④启动macaca服务</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">macaca server --port 4444 --verbose</span><br></pre></td></tr></table></figure>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/24.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/24.jpg" alt="img"></p>
 <p>⑤Android sdk 环境变量配置</p>
 <p>参考：<a href="https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html</a></p>
 <p>⑥安装Gradle</p>
 <p>下载地址：<a href="https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量" target="_blank" rel="noopener">https://gradle.org/releases/在此页面下载zip包，解压并加入环境变量</a></p>
 <p>【A】PATH中加入%GRADLE_HOME%\bin</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/25.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/25.jpg" alt="img"></p>
 <p>【B】新增GRADLE_HOME变量，变量值为Gradle存放位置</p>
-<p>【C】检查是否配置成功<br> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/26.jpg" alt="img"></p>
+<p>【C】检查是否配置成功<br> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/26.jpg" alt="img"></p>
 <p>（mac直接安装即可）</p>
 <p>（2）iOS平台（需要使用Mac系统）<br>安装配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Xcode</span><br><span class="line">Xcode Command Line Tool</span><br></pre></td></tr></table></figure></p>
 <p>此处说明：<br>①iOS安装包使用格式为.app（不能用.ipa）</p>
@@ -624,46 +624,46 @@
 <p>（3）uirecorder 初始化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uirecorder init --mobile</span><br></pre></td></tr></table></figure></p>
 <p>（4）提示输入app安装包名（带格式后缀）</p>
 <p>（5）输入安装包回车后，弹出浏览器，开始录制<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uirecorder --mobile sample/test.spec.js</span><br></pre></td></tr></table></figure></p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/27.jpg" alt="img"></p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/31.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/27.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/31.jpg" alt="img"></p>
 <p>（6）开始录制</p>
 <p>①新建一个文件夹命名为test，用于存放录制的脚本</p>
 <p>②把测试包放入mobile文件夹下</p>
 <p>此处说明下：<br>【A】android使用.apk格式安装包</p>
 <p>【B】iOS使用.app格式的安装包（并不能用.ipa格式）</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/28.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/28.jpg" alt="img"></p>
 <p>③uirecorder –mobile test/test.spec.js</p>
 <p>参数说明：<br>–mobile 表示录制移动端</p>
 <p>test表示脚本位于test文件夹</p>
 <p>test.spec 表示用例脚本名称</p>
 <p>【A】输入要进行录制测试包包名</p>
 <p>【B】弹出浏览器，同时手机端弹出app安装（有些手机系统安全机制需要先输入安装密码执行安装，比如vivoX21）</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/29.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/29.jpg" alt="img"></p>
 <p> 如果你使用的是zip压缩包，会提示你选择android还是ios平台</p>
-<p>  <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/36.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/36.jpg" alt="img"></p>
 <p>【C】操作浏览器即可进行录制，录制工具使用方法和web端一样（详见第六部分介绍）</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/31.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/31.jpg" alt="img"></p>
 <p>【D】每录制成功一步，屏幕右上角会有相应提示</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/32.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/32.jpg" alt="img"></p>
 <p>【E】你还可以通过工具面板输入文字、后退、弹窗命令处理、断言、延迟等待、跳转到另一个之前录制的脚本、结束录制</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/33.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/33.jpg" alt="img"></p>
 <p>【F】录制完毕，我们还可以通过编辑器打开Mobile文件夹，修改脚本内容，删除某些录制步骤</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/34.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/34.jpg" alt="img"></p>
 <p>（7）注意事项：某些控件无法录制</p>
 <p>有时候由于控件排版问题，或其他原因导致无法识别到元素，既是uirecorder识别到了，但点击也没反应。</p>
 <p>解决办法：<br>修改脚本，直接在脚本内手动输入该元素（元素定位可以是用appium或者macaca inspect）</p>
 <p>例如：录制某个按钮点击无效</p>
 <p>通过编辑器打开并找到这个脚本位置，修改其元素选择器内容，如：xpath等，并直接执行mocha命令，通过浏览器进行调试。<br>如下图所示：</p>
 <p>修改前</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/37.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/37.jpg" alt="img"></p>
 <p>修改后</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/38.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/38.jpg" alt="img"></p>
 <p>3.回放</p>
 <p>（1）使用mocha命令<br>①全部脚本:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha --reporter mochawesome</span><br></pre></td></tr></table></figure>
 <p>②指定脚本:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha ./mobile/test/4S金融下单.js --reporter mochawesome</span><br></pre></td></tr></table></figure></p>
 <p>参数说明：–reporter mochawesome为生成报告参数，执行命令后会在根目录下生成mochawesome报告文件。<br>如下图所示：</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/39.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/39.jpg" alt="img"></p>
 <p>（2）使用批处理命令</p>
 <p>全部脚本:</p>
 <p>run.sh ( Linux|Mac )</p>
@@ -674,86 +674,86 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">run.sh sample/test.spec.js ( Linux|Mac ) </span><br><span class="line">run.bat sample/test.spec.js ( Windows )</span><br></pre></td></tr></table></figure>
 <h1 id="高级使用（工具面板）"><a href="#高级使用（工具面板）" class="headerlink" title="高级使用（工具面板）"></a>高级使用（工具面板）</h1><h2 id="属性开关"><a href="#属性开关" class="headerlink" title="属性开关"></a>属性开关</h2><p>进入录制页面后，属性开关全部为默认开启状态，因此在你点击任意DOM时，DomPath会自动选择属性并展示。<br>如下图所示：</p>
 <p>鼠标点击页面DOM“Email:”，DomPath展示为：//td[text()=”Email:”]</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/40.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/40.jpg" alt="img"></p>
 <p>若将属性开关text关闭后，DomPath会自动选择其他属性并展示。(点击属性开关text，text置灰并关闭，再次点击点亮并开启)</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/41.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/41.jpg" alt="img"></p>
 <p>此处说明下：建议都开启属性开关，避免元素无法定位。</p>
 <h2 id="属性黑名单"><a href="#属性黑名单" class="headerlink" title="属性黑名单"></a>属性黑名单</h2><p>因为某些属性值是随机或不稳定，我们无法录制出稳定的CSS选择器路径，因此我们可以使用黑名单过滤这些属性值。</p>
 <p>提示: 属性黑名单是一个正则表达式, 可以类似这样使用:/attr_\d+/</p>
 <p>a)可以在UI Recorder初始化时，属性值黑名单正则设置时，输入黑名单正则表达式，如：/attr_\d+/</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/43.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/43.jpg" alt="img"></p>
 <p>b)也可以在录制页面，属性黑名单处，输入黑名单正则表达式，如：/attr_\d+/</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/44.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/44.jpg" alt="img"></p>
 <h2 id="添加悬停"><a href="#添加悬停" class="headerlink" title="添加悬停"></a>添加悬停</h2><p>当页面中存在二级目录等类似情况时，需要鼠标悬停操作，UI Recorder就提供了添加悬停操作，可单次悬停或者多次添加悬停。依据需求可自行选择实现方式。<br>a)单次悬停，点击“添加悬停”按钮，鼠标变为绿色锁定元素，单击后结束悬停。</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/45.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/45.jpg" alt="img"></p>
 <p>b)多次添加悬停，按下Ctrl键，点击添加悬停按钮，进入悬停模式，可释放Ctrl键；点击需要悬停的DOM控件(可多次添加悬停)。<br>按下Esc键 或 点击结束悬停按钮, 退出悬停模式。<br>悬停模式下，可对元素进行断言操作，点击添加断言按钮，点击需要断言的DOM控件。</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/46.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/46.jpg" alt="img"></p>
 <h2 id="添加断言"><a href="#添加断言" class="headerlink" title="添加断言"></a>添加断言</h2><p>UI Recorder支持丰富的断言类型: val、text、displayed、enabled、selected、attr、css、url、title、cookie、localStorage、sessionStorage<br>步骤：点击添加断言按钮，点击需要断言的DOM控件。弹出添加断言的窗口，在窗口中填入相关信息。点击确认，添加断言成功。</p>
 <p>#延迟时间，默认为300ms</p>
 <p>#断言类型，支持以上列出的12种类型，根据自己的需要选择。</p>
 <p>#断言DOM，显示鼠标定位的元素</p>
 <p>#比较方式，支持7种类型：equal、notEqual、contain、notContain、above、below、match、notMatch，，根据自己的需要选择。</p>
 <p>#断言结果，填写期望结果</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/47.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/47.jpg" alt="img"></p>
 <p>脚本中设置断言的方法</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//断言是否登录成功</span><br><span class="line">it(&apos;expect: text, //*[@text=&quot;工作台&quot;], equal, 工作台&apos;, async function()&#123;</span><br><span class="line">await driver.sleep(300).wait(&apos;//*[@text=&quot;工作台&quot;]&apos;, 30000)</span><br><span class="line">.text()</span><br><span class="line">.should.not.be.a(&apos;error&apos;)</span><br><span class="line">.should.equal(_(`工作台`));</span><br><span class="line">&#125;);</span><br><span class="line">//等待</span><br></pre></td></tr></table></figure>
 <h2 id="使用变量"><a href="#使用变量" class="headerlink" title="使用变量"></a>使用变量</h2><p>（1）添加变量有2种方式，一种方式是在config.json文件中直接编辑添加，另一种方式是在录制页面，点击使用变量，选择创建变量。</p>
 <p>提示: 所有变量字符串均支持JS语法的模板字符串，例如：, ${new Date().getTime()}</p>
 <p>1）编辑config.json，设置变量。</p>
 <p>如下图：此处设置了4个变量，分别为：username、password、test、dev</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/48.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/48.jpg" alt="img"></p>
 <p>2）在录制页面，创建变量。</p>
 <p>如下图所示，在录制页面，点击使用变量，弹出使用变量弹窗，使用方式选择为插入变量，变量名，点击添加变量，即可设置变量。</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/50.jpg" alt="img"></p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/51.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/50.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/51.jpg" alt="img"></p>
 <p>（2）更新变量，在录制页面，点击使用变量，弹出使用变量弹窗，使用方式选择为更新变量。<br>选择想要更新的变量名username，选择取值方式（与断言方式一致，为12种类型），取值正则，即可更新已有变量。</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/52.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/52.jpg" alt="img"></p>
 <p>（3）使用变量，在录制页面，点击使用变量，鼠标定位需要插入变量的DOM，弹出使用变量弹窗，使用方式选择为插入变量<br>选择想要插入的已有变量名username，页面自动展示username相关信息。</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/53.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/53.jpg" alt="img"></p>
 <p>鼠标定位需要插入变量的DOM为Email的输入框，点击使用变量框的确认按钮，变量添加成功。在输入框中插入该变量username</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/54.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/54.jpg" alt="img"></p>
 <p>插入变量的DOM，若要添加断言，可使用变量字符串:</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/55.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/55.jpg" alt="img"></p>
 <h2 id="执行JS"><a href="#执行JS" class="headerlink" title="执行JS"></a>执行JS</h2><p>在录制页面，点击执行JS按钮，可输入一段js代码，并执行，例：document.title=”test”</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/56.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/56.jpg" alt="img"></p>
 <p>输入js代码后，点击确认，浏览器会立即执行该js代码，如下图，title更改为test。</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/57.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/57.jpg" alt="img"></p>
 <h2 id="添加延迟"><a href="#添加延迟" class="headerlink" title="添加延迟"></a>添加延迟</h2><p>在录制页面，点击添加延迟按钮，可在录制过程中添加延迟时间，在添加延迟弹框中，输入延迟时间，并执行，默认为1000ms。</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/58.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/58.jpg" alt="img"></p>
 <p>在脚本中设置延迟<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//等待</span><br><span class="line">  it(&apos;sleep: 3000&apos;, async function()&#123;</span><br><span class="line">   await driver.sleep(3000);</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure></p>
 <h2 id="脚本跳转"><a href="#脚本跳转" class="headerlink" title="脚本跳转"></a>脚本跳转</h2><p>录制过程中，可录制一些公用脚本，例如登录脚本、固定流程脚本等等。<br>调用公共脚本方法：在开始页面的时候输入sample/test.login.js，或者在录制中间页面时点击脚本跳转，脚本跳转弹框中输入sample/test.login.js<br>当sample/test.login.js加载完成后，继续别的步骤的录制。</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/59.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/59.jpg" alt="img"></p>
 <p>脚本中设置跳转的方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">callSpec(<span class="string">'test/脚本名称.js'</span>)</span><br></pre></td></tr></table></figure></p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/60.jpg" alt="img"></p>
-<p>控制台显示<br> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/61.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/60.jpg" alt="img"></p>
+<p>控制台显示<br> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/61.jpg" alt="img"></p>
 <h2 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h2><p>UI Recorder仅支持Native文件上传, 不支持FLASH上传<br>直接点击“选择文件”按钮或点击“Upload file”, 占位按钮必需要用role或data-role标注为upload</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/62.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/62.jpg" alt="img"></p>
 <p>上传的文件必需保存在/uploadfiles/文件夹中。</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/63.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/63.jpg" alt="img"></p>
 <h2 id="测试数据和脚本分离"><a href="#测试数据和脚本分离" class="headerlink" title="测试数据和脚本分离"></a>测试数据和脚本分离</h2><p> demo中以json来管理测试数据</p>
-<p>  <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/64.jpg" alt="img"></p>
-<p>  <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/65.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/64.jpg" alt="img"></p>
+<p>  <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/65.jpg" alt="img"></p>
 <h2 id="脚本修改"><a href="#脚本修改" class="headerlink" title="脚本修改"></a>脚本修改</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//（一）Web</span></span><br><span class="line"><span class="comment">//打开页面</span></span><br><span class="line">it(<span class="string">'url: http://adminpre.alspark.cn/#/login'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.url(_(<span class="string">'xxxxxxx'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//'xxxxxxx' 是一个网页地址,例如http:”www.baidu.com”</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//向下滚动屏幕</span></span><br><span class="line">it(<span class="string">'scrollElementTo: #app div.app-iframe-container, 0, 539'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">300</span>).wait(<span class="string">'#app div.app-iframe-container'</span>, <span class="number">30000</span>)</span><br><span class="line">.sleep(<span class="number">300</span>).scrollElementTo(<span class="number">0</span>, <span class="number">539</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//(0, 539)是滚动的幅度坐标</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//置顶滚动屏幕</span></span><br><span class="line">it(<span class="string">'scrollElementTo: #app div.app-iframe-container, 0, 0'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">300</span>).wait(<span class="string">'#app div.app-iframe-container'</span>, <span class="number">30000</span>)</span><br><span class="line">.sleep(<span class="number">300</span>).scrollElementTo(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//假设从主窗口0点击某个按钮，弹出了一个子窗口1，当前同时存在主窗口0和子窗口1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//切换至子窗口1</span></span><br><span class="line">it(<span class="string">'switchWindow: 1'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">500</span>).switchWindow(<span class="number">1</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//关闭窗口</span></span><br><span class="line">it(<span class="string">'closeWindow: '</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.closeWindow();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//切换到主窗口</span></span><br><span class="line">it(<span class="string">'switchWindow: 0'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">500</span>).switchWindow(<span class="number">0</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//0是主窗口、1是子窗口、之后打开的子窗口以此类推。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//切换到页面iframe</span></span><br><span class="line">it(<span class="string">'switchFrame: #iframe0201000000'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.switchFrame(<span class="literal">null</span>)</span><br><span class="line">.wait(<span class="string">'#iframe0201000000'</span>, <span class="number">30000</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">element</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">this</span>.switchFrame(element).wait(<span class="string">'body'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//切换出iframe 切到null即是且至主页面</span></span><br><span class="line">it(<span class="string">'switchFrame: null'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.switchFrame(<span class="literal">null</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//（二）Mobile</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//点击</span></span><br><span class="line">it(<span class="string">'tap: //*[@resource-id="com.maimaiche.dms:id/start_button"]'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.wait(<span class="string">'//*[@resource-id="com.maimaiche.dms:id/start_button"]'</span>, <span class="number">30000</span>).sendElementActions(<span class="string">'tap'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//输入账号</span></span><br><span class="line">it(<span class="string">'sendKeys: 15022676605'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sendKeys(_(<span class="string">`15022676605`</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//滑动</span></span><br><span class="line">it(<span class="string">'drag: 滑动欢迎页'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sendActions(<span class="string">'drag'</span>, &#123;<span class="attr">fromX</span>: <span class="number">1016</span>, <span class="attr">fromY</span>:<span class="number">1157</span>, <span class="attr">toX</span>:<span class="number">245</span>, <span class="attr">toY</span>:<span class="number">1134</span>, <span class="attr">duration</span>: <span class="number">0.73</span>&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//三）通用</span></span><br><span class="line"><span class="comment">//等待</span></span><br><span class="line">it(<span class="string">'sleep: 3000'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">3000</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//等待页面加载，断言是否出现页面加载错误或者超时等其他情况</span></span><br><span class="line">it(<span class="string">'waitBody: '</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">500</span>).wait(<span class="string">'body'</span>, <span class="number">30000</span>).html().then(<span class="function"><span class="keyword">function</span>(<span class="params">code</span>)</span>&#123;</span><br><span class="line">isPageError(code).should.be.false;</span><br><span class="line">&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//断言是否登录成功</span></span><br><span class="line">it(<span class="string">'expect: text, //*[@text="工作台"], equal, 工作台'</span>, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">await</span> driver.sleep(<span class="number">300</span>).wait(<span class="string">'//*[@text="工作台"]'</span>, <span class="number">30000</span>)</span><br><span class="line">.text()</span><br><span class="line">.should.not.be.a(<span class="string">'error'</span>)</span><br><span class="line">.should.equal(<span class="string">`工作台`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="注意事项与常见问题"><a href="#注意事项与常见问题" class="headerlink" title="注意事项与常见问题"></a>注意事项与常见问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">注意事项：</span><br><span class="line">（1）禁止直接手动修改地址栏中的URL</span><br><span class="line">（2）禁止使用TAB切换焦点</span><br><span class="line">（3）不要使用双击, WebDriver兼容性不好</span><br><span class="line">（4）不要使用鼠标选择部分文本, WebDriver兼容性不好</span><br><span class="line">（5）不要手动切换至背景窗口。（目前最新版貌似没有影响）</span><br><span class="line">（6）不要点击非关键区域, 仅录制关键步骤，不然增加脚本长度</span><br></pre></td></tr></table></figure>
 <h1 id="报告"><a href="#报告" class="headerlink" title="报告"></a>报告</h1><p>在目录A下会自动生成一个mochawesome-report文件夹，报告格式有两种,一种html另一种json格式</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/22.jpg" alt="img"></p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/23.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/22.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/23.jpg" alt="img"></p>
 <h2 id="故障排除"><a href="#故障排除" class="headerlink" title="故障排除"></a>故障排除</h2><p>（1）【环境与安装】【待解决】Node 版本10.13、15 uirecorder 初始化安装依赖会报错<br>解决方案：请使用低与10.13、15版本的node，比如:10.8 版本支持uirecorder<br><a href="https://nodejs.org/zh-cn/download/releases/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/download/releases/</a></p>
 <p>（2）【环境与安装】【已解决】报错SyntaxError: missing ) after argument list<br>解决方案：升级到NodeJs v7.10以上版本</p>
 <p>（3）【环境与安装】【已解决】报错session not created exception from disconnected: unable to connect to renderer<br>解决方案：系统hosts文件中添加127.0.0.1 localhost</p>
 <p>（4）【环境与安装】【已解决】已经存在旧版本部分文件，执行安装报错后，查看版本提示失败。<br>解决方法：<br>node删除文件，重新安装，重新配置node环境。</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/66.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/66.jpg" alt="img"></p>
 <p>（5）权限不够报错</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/67.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/67.jpg" alt="img"></p>
 <p>windows系统特性，需要手动授权C盘的ProgramFiles文件<br>如下图所示：勾掉只读，确定保存</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/68.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/68.jpg" alt="img"></p>
 <p>（6）【环境与安装】【已解决】安装中提示编译失败 缺少websocket</p>
 <p>解决方法：npm i websocket -g </p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/69.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/69.jpg" alt="img"></p>
 <p>（7）【环境与安装】【已解决】初始化页面卡住</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/70.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/70.jpg" alt="img"></p>
 <p>解决方法：把node 卸载重装（v.10.8.0）</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/71.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/71.jpg" alt="img"></p>
 <p>目前最新版node（v10.13）和最新版uirecorder（2.5.46）不兼容，需要安装node版本低于10.12版本。</p>
 <p>（8）【环境与安装】【已解决】安装npm i selenium-sandalone -g  超时报错</p>
 <p>解决方案：</p>
@@ -762,11 +762,11 @@
 <p>【A】卸载之前安装 npm uninstall selenium-sandalone -g</p>
 <p>【B】清缓存 npm cache verify</p>
 <p>【C】重新执行安装 npm install selenium-standalone -g</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/72.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/72.jpg" alt="img"></p>
 <p>（9）Selenium-standalone install 过一会报错</p>
 <p>执行安装命令后</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/73.jpg" alt="img"></p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/74.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/73.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/74.jpg" alt="img"></p>
 <p>原因：设置淘宝镜像没有生效，从第一图看出还是在谷歌上面下载驱动，所以超时报错。</p>
 <p>解决方案：</p>
 <p>①将下载链接设置为淘宝镜像，执行：</p>
@@ -775,7 +775,7 @@
 <p>执行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selenium-standalone install --drivers.chrome.version=2.46 --drivers.chrome.baseURL=http://npm.taobao.org/mirrors/chromedriver</span><br></pre></td></tr></table></figure>
 <p>注意chromedriver版本号2.46要和你本地谷歌浏览器对应。<br>（chromedriver版本与chrome浏览器版本对应，参考：<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads</a><br>）</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/75.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/75.jpg" alt="img"></p>
 <p>③执行</p>
 <p>【A】卸载之前安装 npm uninstall selenium-sandalone -g</p>
 <p>【B】清缓存 npm cache verify</p>
@@ -795,30 +795,30 @@
 <p>【A】chromedriver下载地址:<br><a href="https://npm.taobao.org/mirrors/chromedriver/" target="_blank" rel="noopener">https://npm.taobao.org/mirrors/chromedriver/</a></p>
 <p>【B】chromedriver与chrome版本对应地址:<br><a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads</a></p>
 <p>②下载一个独立的chromedriver并设置为本地系统全局变量。</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/76.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/76.jpg" alt="img"></p>
 <p>（13）【web端】【已解决】selenium-standalone 服务未启动便开始录制。</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/77.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/77.jpg" alt="img"></p>
 <p>（14）【web端】【已解决】web录制遇到切换至iframe如果手动更改，需要执行iframe切出，await driver.switchFrame(null);</p>
 <p>（15）【web端】【已解决】web录制弹出子窗口，关闭子窗口会退出录制状态。因此子窗口在录制过程中不要关闭（一旦关闭，之前录的都不会保存）</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/78.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/78.jpg" alt="img"></p>
 <p>（16）【web端】【已解决】web上传文件的附件需要放置在目录uploadfiles下。录制后的脚本会通过这个文件夹去查找是否有这个待上传的文件</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/79.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/79.jpg" alt="img"></p>
 <p>脚本中读取的路径也是从uploadfiles目录中查找</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/80.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/80.jpg" alt="img"></p>
 <p>（17）【web端】【已解决】web上传文件的附件需要放置在目录uploadfiles下。录制后的脚本会通过这个文件夹去查找是否有这个待上传的文件</p>
 <p>（18）【web端】【已解决】web下载文件，浏览器使用chrome不会弹出保存文件弹窗，使用firefox会弹出保存文件弹窗，可以通过firefox设置页修改下载文件保存位置来解决。</p>
 <p>（参考：<a href="https://jingyan.baidu.com/article/9f63fb9171e81bc8400f0e07.html）" target="_blank" rel="noopener">https://jingyan.baidu.com/article/9f63fb9171e81bc8400f0e07.html）</a></p>
 <p>（19）【web端】【已解决】默认录制等待时间最长30秒，有时下载步骤可能会超过30秒，可以修改脚本这边的等待时长，如下图所示：</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/81.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/81.jpg" alt="img"></p>
 <p>（20）【移动端】【已解决】macaca server没有启动起来或者启动端口非4444</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/82.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/82.jpg" alt="img"></p>
 <p>（21）【移动端】【已解决】macaca server没有启动，录制、回放都要开启macaca server 端口指向4444</p>
 <p>macaca server –port 4444 –verbose</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/83.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/83.jpg" alt="img"></p>
 <p>（22）【移动端】【待解决】无法输入中文（车码头APP 4S金融下单输入客户名称）</p>
 <p>（23）【移动端】【待解决】移动端无法输入特殊符号。（车码头APP登录账号使用邮箱 ）</p>
 <p>（24）【移动端】【已解决】安装iOS .app测试包报错提示手动安装。（使用.app格式包）</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/84.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/84.jpg" alt="img"></p>
 <p>iOS测试包必须是.app格式，如果使用.ipa会报这个错</p>
 <p>解决办法：将.ipa改成.app格式。</p>
 <p>①将.ipa格式后缀改成.rar或.zip</p>
@@ -826,7 +826,7 @@
 <p>③进入文件夹，应该是一个.app格式的文件</p>
 <p>④将这个.app格式的文件压缩成.zip </p>
 <p>⑤重命名testapp.app.zip</p>
-<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/../images/Uirecorder_images/85.jpg" alt="img"></p>
+<p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/85.jpg" alt="img"></p>
 <h1 id="中文手册"><a href="#中文手册" class="headerlink" title="中文手册"></a>中文手册</h1><p><a href="https://github.com/alibaba/uirecorder/blob/master/doc/zh-cn/readme.md" target="_blank" rel="noopener">中文手册</a></p>
 <h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
 
@@ -2030,10 +2030,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dist:win</span><br></pre></td></tr></table></figure>
 <p>package.json设置==》scripts==》dist:mac、dist:win</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;start&quot;: &quot;electron .&quot;,</span><br><span class="line">  &quot;dist:mac&quot;: &quot;electron-builder --mac&quot;,</span><br><span class="line">  &quot;dist:win&quot;: &quot;electron-builder --win --x64&quot;,</span><br><span class="line">  &quot;dist:linux&quot;:&quot;electron-builder --linux&quot;,</span><br><span class="line">   &quot;pack&quot;: &quot;electron-packager . monkeyGUI --all --out ./打包monkeyGUI --app-version=2.0.0 --electron-version=3.0.10 --overwrite --icon=./other/image/logo.ico&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/../images/Monkey_GUI/WechatIMG1.jpg" alt="img"></p>
-<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/../images/Monkey_GUI/WechatIMG2.jpg" alt="img"></p>
-<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/../images/Monkey_GUI/WechatIMG3.jpg" alt="img"></p>
-<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/../images/Monkey_GUI/WechatIMG4.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG1.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG2.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG3.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG4.jpg" alt="img"></p>
 <h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
 
           
