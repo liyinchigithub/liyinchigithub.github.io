@@ -321,13 +321,23 @@
         
           
             <h1 id="常用配置"><a href="#常用配置" class="headerlink" title="常用配置"></a>常用配置</h1><h2 id="邮件正文配置"><a href="#邮件正文配置" class="headerlink" title="邮件正文配置"></a>邮件正文配置</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">&lt;!DOCTYPE html&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>$&#123;ENV, var="JOB_NAME"&#125;-第$&#123;BUILD_NUMBER&#125;次构建日志<span class="tag">&lt;/<span class="name">title</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>    </span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">leftmargin</span>=<span class="string">"8"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">topmargin</span>=<span class="string">"8"</span> <span class="attr">marginheight</span>=<span class="string">"4"</span>    </span></span><br><span class="line"><span class="tag">    <span class="attr">offset</span>=<span class="string">"0"</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">width</span>=<span class="string">"95%"</span> <span class="attr">cellpadding</span>=<span class="string">"0"</span> <span class="attr">cellspacing</span>=<span class="string">"0"</span>  <span class="attr">style</span>=<span class="string">"font-size: 11pt; font-family: Tahoma, Arial, Helvetica, sans-serif"</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span>    </span><br><span class="line">            本邮件由系统自动发出，无需回复！<span class="tag">&lt;<span class="name">br</span>/&gt;</span>            </span><br><span class="line">            各位同事，大家好，以下为$&#123;PROJECT_NAME &#125;项目构建信息<span class="tag">&lt;/<span class="name">br</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"#000000"</span>&gt;</span>构建结果 - $&#123;BUILD_STATUS&#125;<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span>   </span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span>    </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span>    </span><br><span class="line">            <span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"#0B610B"</span>&gt;</span>构建信息<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span>    </span><br><span class="line">            <span class="tag">&lt;<span class="name">hr</span> <span class="attr">size</span>=<span class="string">"2"</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">align</span>=<span class="string">"center"</span> /&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span>    </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>    </span><br><span class="line">                <span class="tag">&lt;<span class="name">ul</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>项目名称 ： $&#123;PROJECT_NAME&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>构建编号 ： 第$&#123;BUILD_NUMBER&#125;次构建<span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>触发原因： $&#123;CAUSE&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>构建状态： $&#123;BUILD_STATUS&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>构建日志： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/$&#123;BUILD_ID&#125;/console"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/$&#123;BUILD_ID&#125;/console<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>构建  Url ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>工作目录 ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;、ws"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/ws<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>    </span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>项目  Url ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;"</span>&gt;</span>$&#123;JENKINS_URL&#125;jenkins/job/$&#123;JOB_NAME&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>本次构建脚本：$&#123;script&#125; <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>本次构建环境：$&#123;env&#125; <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span>具体报告内容  Url ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/HTML_20Report/$&#123;JOB_NAME&#125;-$&#123;env&#125;-$&#123;BUILD_ID&#125;-index.htm"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/HTML_20Report/$&#123;JOB_NAME&#125;-$&#123;env&#125;-$&#123;BUILD_ID&#125;-index.htm<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </span><br><span class="line">               <span class="tag">&lt;<span class="name">li</span>&gt;</span>聚合报告  Url ： <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://10.104.113.228:8080/system/#/"</span>&gt;</span>http://10.104.113.228:8080/system/#/<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </span><br><span class="line">                <span class="tag">&lt;/<span class="name">ul</span>&gt;</span>    </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"#0B610B"</span>&gt;</span>失败用例<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> <span class="attr">size</span>=<span class="string">"2"</span> <span class="attr">width</span>=<span class="string">"100%"</span> /&gt;</span></span><br><span class="line">详见附件build.log<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"#0B610B"</span>&gt;</span>最近提交(#GITLAB_REVISION)<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> <span class="attr">size</span>=<span class="string">"2"</span> <span class="attr">width</span>=<span class="string">"100%"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">$&#123;CHANGES_SINCE_LAST_SUCCESS, reverse=true, format="%c", changesFormat="<span class="tag">&lt;<span class="name">li</span>&gt;</span>%d [%a] %m<span class="tag">&lt;/<span class="name">li</span>&gt;</span>"&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">详细提交: <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;changes"</span>&gt;</span>$&#123;JENKINS_URL&#125;/job/$&#123;JOB_NAME&#125;/changes<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
 <p>参数化构建使用扩展参数插件（Extended choice parameter)</p>
+</blockquote>
+<blockquote>
 <p>Choose Source for Value </p>
+</blockquote>
+<blockquote>
 <p>Groovy script</p>
+</blockquote>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//读取目录结构</span></span><br><span class="line"><span class="keyword">def</span> locat = <span class="string">"/data/jenkins/workspace/资产售后-流程脚本/脚本"</span></span><br><span class="line"><span class="keyword">def</span> dir = <span class="keyword">new</span> File(locat)</span><br><span class="line">Set&lt;String&gt; artifacts = <span class="keyword">new</span> TreeSet&lt;String&gt;()</span><br><span class="line">dir.eachDir &#123; directory -&gt;</span><br><span class="line">    <span class="keyword">if</span> (directory.absolutePath.contains(<span class="string">"postman"</span>) || directory.absolutePath.contains(<span class="string">"jmeter"</span>)) &#123;</span><br><span class="line">        <span class="keyword">for</span> (File <span class="string">f :</span> directory.listFiles()) &#123;</span><br><span class="line">            String script = f.getAbsolutePath()</span><br><span class="line">            artifacts.add(script)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">List&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;String&gt;()</span><br><span class="line">result.addAll(artifacts)</span><br><span class="line"><span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
+<blockquote>
 <p>可以获取以文件夹命名存放的脚本名称，作为jenkins参数来选择，用于构建jenkins job</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/01/25/持续集成之jenkins的Job配置/images/1.jpg" alt="img"></p>
-<h2 id="shell脚本获取文件件目录"><a href="#shell脚本获取文件件目录" class="headerlink" title=" shell脚本获取文件件目录"></a> shell脚本获取文件件目录</h2><p>获取postman或jmeter下的脚本内容</p>
+<h2 id="shell脚本获取文件件目录"><a href="#shell脚本获取文件件目录" class="headerlink" title=" shell脚本获取文件件目录"></a> shell脚本获取文件件目录</h2><blockquote>
+<p>获取postman或jmeter下的脚本内容</p>
+</blockquote>
  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/usr/bin/env bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash">获取执行脚本集合</span></span><br><span class="line">arr=($&#123;script//,/ &#125;)</span><br><span class="line"><span class="meta">#</span><span class="bash">调试输出每个集合元素</span></span><br><span class="line">echo -----$&#123;arr[@]&#125;</span><br><span class="line"><span class="meta">#</span><span class="bash">获取集合元素个数</span></span><br><span class="line">length=$&#123;#arr[@]&#125;</span><br><span class="line"><span class="meta">#</span><span class="bash">判断个数是否大于0，相当于判断jenkins界面脚本文件夹参数<span class="variable">$script</span>是否勾选了</span></span><br><span class="line">if [ $length &gt; 0 ]</span><br><span class="line">then</span><br><span class="line"><span class="meta">  #</span><span class="bash">循环调用执行postman/jmeter脚本</span></span><br><span class="line">  for i in $&#123;arr[@]&#125;; do</span><br><span class="line">      # =~代表正则匹配</span><br><span class="line">      if [[ $i =~ postman ]]</span><br><span class="line">      then</span><br><span class="line">        # ls 返回目录下的所有文件</span><br><span class="line">        files=$(ls $i)</span><br><span class="line">        #遍历所有的文件夹</span><br><span class="line">        for j in $files</span><br><span class="line">        do</span><br><span class="line">          # if [ -z $String ] 代表如果字符串为空  这边只运行$testFilesIncluded所包含的文件（有配置的情况）和只获取后缀为postman_collection.json的文件</span><br><span class="line">          if ( [ -z "$testFilesIncluded"] || [[ $testFilesIncluded == *$j* ]] ) &amp;&amp; [[ $j == *.postman_collection.json ]]</span><br><span class="line">          then</span><br><span class="line">            # % 去除最短的向后匹配 %%去除最长的向后匹配 #去除最短的向前匹配 ##去除最长的向前匹配 eg:http://landoflinux.com/linux_bash_scripting_substring_tests.html</span><br><span class="line">            envPrefix=$&#123;j%.postman_collection.json&#125;</span><br><span class="line">            reportPrefix=$&#123;envPrefix&#125;</span><br><span class="line">            # newman 运行脚本文件 输出cli和html的测试报告</span><br><span class="line">             #切换当前目录到$WORKSPACE</span><br><span class="line">             cd $&#123;WORKSPACE&#125;</span><br><span class="line">             #执行newman命令，其中报告输出位置文件名使用到变量。当前shell脚本定义的变量：$&#123;reportPrefix&#125;；jenkins用户自定义变量：$&#123;env&#125;；jenkins系统变量：$&#123;JOB_NAME&#125;、$&#123;BUILD_ID&#125;；</span><br><span class="line">            newman run $i/$j -e $i/$&#123;env&#125;.postman_environment.json --delay-request 1000 --reporters cli,html,json,junit --reporter-json-export $&#123;BUILD_ID&#125;"-"jsonOut.json --reporter-junit-export $&#123;BUILD_ID&#125;"-"xmlOut.xml --reporter-html-export $&#123;JOB_NAME&#125;"-"$&#123;env&#125;"-"$&#123;BUILD_ID&#125;"-"index.htm</span><br><span class="line">          fi</span><br><span class="line">        done</span><br><span class="line"></span><br><span class="line">      fi</span><br><span class="line">  done</span><br><span class="line"></span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
           
         
@@ -447,13 +457,27 @@
       
         
           
-            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>你想象过可以让任何一个完全没有自动化经验的人，可以1分钟录制出可读性高，且强大的自动化脚本工具吗？</p>
+            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><blockquote>
+<p>你想象过可以让任何一个完全没有自动化经验的人，可以1分钟录制出可读性高，且强大的自动化脚本工具吗？</p>
+</blockquote>
+<blockquote>
 <p>还真存在这么一款UI自动化录制工具,它就是由alibaba Macaca团队开源的UiRecorder。</p>
+</blockquote>
+<blockquote>
 <p>这是一款基于WebDriver、Chrome浏览器、NodeJs等方案共同打造的零成本自动化解决方案。</p>
+</blockquote>
+<blockquote>
 <p>基于几乎零成本的【录制方案】，让所有开发和测试能够最低成本的获得自动化测试的能力，把重复又枯燥的测试工作全部交给计算机，彻底的提高测试效率，解放我们的生产力。</p>
+</blockquote>
+<blockquote>
 <p>跨平台：适用于Windows、linux、mac</p>
+</blockquote>
+<blockquote>
 <p>三端录制：PC、移动端（android、iOS）</p>
+</blockquote>
+<blockquote>
 <p>（也许你看到标题第一反应是Selenium IDE，但实际上Selenium IDE已停止维护好多年了，UI Recorder 要比Selenium IDE更加强大，支持多端录制）</p>
+</blockquote>
 <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>安装配置JDK环境变量</p>
 <p><a href="https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html" target="_blank" rel="noopener">JDK 8.0</a></p>
 <p>安装配置Node环境变量</p>
@@ -469,8 +493,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mocha -g</span><br></pre></td></tr></table></figure>
 <p>（2）检查mocha是否安装成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha -V</span><br></pre></td></tr></table></figure></p>
 <p>2.全局安装uirecorder</p>
+<blockquote>
 <p>此处说明下：安装uirecorder时，需要下载chrome浏览器驱动会超时报错，因为这边下载默认从谷歌官方。</p>
+</blockquote>
+<blockquote>
 <p>解决办法：设置淘宝镜像下载路径 </p>
+</blockquote>
 <p>windows执行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set CHROMEDRIVER_CDNURL=http://npm.taobao.org/mirrors/chromedriver</span><br></pre></td></tr></table></figure>
 <p>mac执行</p>
@@ -485,14 +513,18 @@
 <p>（2）检查uirecorder是否安装成功</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uirecorder --version</span><br></pre></td></tr></table></figure>
 <p>3.全局安装mochawesome</p>
+<blockquote>
 <p>Uirecorder报告是借助mochawesome来展示脚本执行结果，再回放录制脚本的时候使用只要带入参数mochawesome</p>
+</blockquote>
 <p>（1）打开终端窗口：开始-运行-cmd 右击以管理员身份运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mochawesome -g</span><br></pre></td></tr></table></figure></p>
 <p>4.chrome浏览器安装（如果已安装要升级到最新版）</p>
 <p><a href="https://pc.qq.com/detail/1/detail_2661.html" target="_blank" rel="noopener">下载地址</a></p>
 <p>5.移动端录制需要安装配置环境android SDK 、ios开发工具</p>
 <p>可以参照appium-doctor</p>
 <p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/appium-doctor.jpg" alt="appium-doctor"></p>
-<h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><p>实际上UiRecorder录制生成的脚本，是一个基于nodejs+mocha+jwebdriver框架的自动化工程，回放脚本是通过执行mocha命令并附带mochawesome报告参数来生成测试报告</p>
+<h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><blockquote>
+<p>实际上UiRecorder录制生成的脚本，是一个基于nodejs+mocha+jwebdriver框架的自动化工程，回放脚本是通过执行mocha命令并附带mochawesome报告参数来生成测试报告</p>
+</blockquote>
 <h1 id="基础操作（录制与回放）"><a href="#基础操作（录制与回放）" class="headerlink" title="基础操作（录制与回放）"></a>基础操作（录制与回放）</h1><h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><p>1.录制</p>
 <p>（1）以文件夹来划分录制项目模块</p>
 <p>①新建一个文件夹A，用来放录制脚本存放位置</p>
@@ -502,12 +534,19 @@
 <p>②执行初始化</p>
 <p>打开终端窗口：开始-运行-cmd 右击以管理员身份运行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd test  </span><br><span class="line">uirecorder init</span><br></pre></td></tr></table></figure>
+<blockquote>
 <p>此处说明下：uirecorder初始化会自动生成配置文件，建议使用默认配置，一路回车即可。<br>初始化完成后会自动安装相关依赖</p>
+</blockquote>
 <p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/uirecorder-init.jpg" alt="初始化"></p>
 <p><img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/uirecorder-init2.jpg" alt="自动安装浏览器驱动"></p>
+<blockquote>
 <p>初始化完后当前目录下生成以下文件<br>如下所示：</p>
+</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">uirecorder初始化文件夹说明</span><br><span class="line">Commons:公共脚本文件夹</span><br><span class="line">Diffbase:图片对比文件夹</span><br><span class="line">node_modules:node核心文件库</span><br><span class="line">reports:测试报告文件夹</span><br><span class="line">sample:示例脚本目录</span><br><span class="line">screenshots:测试执行截图保存目录</span><br><span class="line">uploadfiles：附件保存文件夹，比如写信页上传附件，要求把附件先放入该目录；</span><br><span class="line">config.Json：运行配置文件，比如IP，浏览器</span><br><span class="line">run.bat：运行测试，执行该命令会运行所有的测试脚本</span><br></pre></td></tr></table></figure>
-<p>（3）录制脚本<br>打开终端窗口：开始-运行-cmd 右击以管理员身份运行</p>
+<p>（3）录制脚本</p>
+<blockquote>
+<p>打开终端窗口：开始-运行-cmd 右击以管理员身份运行</p>
+</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uirecorder start</span><br></pre></td></tr></table></figure>
 <p>①Uirecorder配置向导会提示输入要使用的测试脚本名称：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例如：输入test/test.1.js</span><br><span class="line">表示录制的脚本要存放在test文件夹下的test.1.js</span><br></pre></td></tr></table></figure>
@@ -828,7 +867,9 @@
 <p>⑤重命名testapp.app.zip</p>
 <p> <img src="//liyinchigithub.github.io/2019/01/15/自动化录制工具/images/85.jpg" alt="img"></p>
 <h1 id="中文手册"><a href="#中文手册" class="headerlink" title="中文手册"></a>中文手册</h1><p><a href="https://github.com/alibaba/uirecorder/blob/master/doc/zh-cn/readme.md" target="_blank" rel="noopener">中文手册</a></p>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><blockquote>
+<p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+</blockquote>
 
           
         
@@ -948,16 +989,25 @@
       
         
           
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自动化测试框架很多，测试人都知道有<a href="https://junit.org/" target="_blank" rel="noopener">JUnit</a>、<a href="https://testng.org/" target="_blank" rel="noopener">TestNG</a>、<a href="https://www.seleniumhq.org/" target="_blank" rel="noopener">Selenium+WebDriver</a>、<a href="http://appium.io/" target="_blank" rel="noopener">Appium等</a>。再具体点，如果说通用的测试框架，您可能会想到STAF+STAX；如果说Android App自动化测试框架，除了Appium，您可能还会想到Robotium、Selendroid、ATAF等；如果说API自动化测试框架，您可能会说Postman没有竞争对手；如果说验收测试框架，您可能会想到Fitnesse；如果要说流行的BDD自动化测试框架，<a href="https://cucumber.io/" target="_blank" rel="noopener">Cucumber</a>、<a href="http://calaba.sh/" target="_blank" rel="noopener">Calabash</a>、<a href="https://jbehave.org/" target="_blank" rel="noopener">Jbehave</a>也鼎鼎有名。究竟哪家自动化测试框架最强呢？</p>
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>自动化测试框架很多，测试人都知道有<a href="https://junit.org/" target="_blank" rel="noopener">JUnit</a>、<a href="https://testng.org/" target="_blank" rel="noopener">TestNG</a>、<a href="https://www.seleniumhq.org/" target="_blank" rel="noopener">Selenium+WebDriver</a>、<a href="http://appium.io/" target="_blank" rel="noopener">Appium等</a>。再具体点，如果说通用的测试框架，您可能会想到STAF+STAX；如果说Android App自动化测试框架，除了Appium，您可能还会想到Robotium、Selendroid、ATAF等；如果说API自动化测试框架，您可能会说Postman没有竞争对手；如果说验收测试框架，您可能会想到Fitnesse；如果要说流行的BDD自动化测试框架，<a href="https://cucumber.io/" target="_blank" rel="noopener">Cucumber</a>、<a href="http://calaba.sh/" target="_blank" rel="noopener">Calabash</a>、<a href="https://jbehave.org/" target="_blank" rel="noopener">Jbehave</a>也鼎鼎有名。究竟哪家自动化测试框架最强呢？</p>
+</blockquote>
+<blockquote>
 <p>答案是Node.js你一定很惊讶，这哪是测试工具啊，这不就是一个JavaScript引擎吗。其实这指的是Node.js生态（未来趋势）。你可以在Node.js中找到各类强大的自动化框架，开源库，能够满足一个精力充沛的IT男对自动化测试的所有狂野的想象。测试的类型从API、Web、手机移动端和Windows应用。其实我们为什么为一些测试工具争个你高我低呢，博采众长、取万物之精华不是更有利吗？Node.js就是这样一个环境，所有优秀的工具都愿意在Node.js社区贡献自己的力量。</p>
-<p>cucumber</p>
-<p>下面我们来看个究竟。</p>
-<h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><p>例如，如果你要做RESTful API测试，Node.js提供了很多框架，例如Request、Axios、got等，从功能完备的到轻量级的都有。这些框架都有着非常高的人气，例如有图为证，got库最近7天就有300万的下载量，而Request库只会更高：</p>
+</blockquote>
+<h1 id="cucumber"><a href="#cucumber" class="headerlink" title="cucumber"></a>cucumber</h1><p>下面我们来看个究竟。</p>
+<h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><blockquote>
+<p>例如，如果你要做RESTful API测试，Node.js提供了很多框架，例如Request、Axios、got等，从功能完备的到轻量级的都有。这些框架都有着非常高的人气，例如有图为证，got库最近7天就有300万的下载量，而Request库只会更高：</p>
+</blockquote>
 <h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><p>如果你要做Web UI测试，那可选的就更多了。经典的<a href="https://github.com/SeleniumHQ/selenium" target="_blank" rel="noopener">selenium-webdriver</a>，最近7天也达到了近100万的下载量。还有很多类似于selenium-webdriver的库，如<a href="https://webdriver.io/" target="_blank" rel="noopener">webdriverio</a>，<a href="https://github.com/admc/wd" target="_blank" rel="noopener">wd</a>等，提供了不同程度的简化。</p>
 <p>还有一个最近很火的<a href="https://github.com/GoogleChrome/puppeteer" target="_blank" rel="noopener">Puppupteer</a> ，是Google Chrome团队开源的端到端自动化测试框架，可以做UI自动化测试，也可以做为爬虫工具。作为Headless方式运行，Puppupteer更快，更省资源，它主要支持nodejs开发脚本。</p>
 <p>（你可能会好奇爬虫不是用python吗？其实Java、JavaScript也都可以实现爬虫，爬虫爬的是前端页面的元素内容，而前端页面是由JavaScript构成，当然谁更适合爬虫一目了然，nodejs生态的领域会超出你们的想象，关于node爬虫你可以参照<a href="http://csbun.github.io/blog/2017/09/puppeteer/" target="_blank" rel="noopener">这里</a>玩下）</p>
+<blockquote>
 <p>selenium-webdriver</p>
+</blockquote>
+<blockquote>
 <p>webdriverIO</p>
+</blockquote>
 <h1 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h1><p>手机移动端测试，就不能不说应用的最广泛的Appium。Appium很大，包含了iOS、Android等系统的自动化测试库。你只要象其它的库一样，在命令行输入”npm install appium”就有了。</p>
 <p>阿里对Node.js有特别的偏爱，做了很多Node.js的开源库，其中Macaca就是阿里发布的针对移动端测试的工具。它也包括Node.js的客户端。可以测试 Native, Hybrid, H5 等多种应用类型，提供客户端工具和持续集成服务。</p>
 <p>实际上webdriverIO也可以应用到移动端，并且也被Appium纳入了官方demo中。</p>
@@ -976,21 +1026,17 @@
 <p>综上看来Node.js完全可以满足各类自动化测试的需求。但是还是有很多同学觉得为难，这么多开源工具要整合起来有点难，而且Node.js作为纯命令行工具，也对初学者也不够友好。这种担心是很合理的，这是很多开源工具的都有的问题。</p>
 <h2 id="CukeTest"><a href="#CukeTest" class="headerlink" title="CukeTest"></a>CukeTest</h2><p>现在有了一个将所有这些开源工具在一起使用的机会。一个对个人用户都免费的工具，CukeTest，可以将所有这些框架都整合在一起使用。</p>
 <p>不仅因为它具有易于编写测试用例的可视化界面，根据测试用例一键生成自动化测试代码框架，运行完成后自动生成测试报告、web自动化支持屏幕录制功能，同时也支持使用csv文件导入导出功能支持数据驱动。下面就呈上证据：</p>
-<p>1.可视化界面</p>
-<p>不仅可以很方便的编写用例，同时也可以很方便的管理测试用例集；<br>最重要的是可以直接根据测试用例生成自动化代码样例，<br>并且能在自动化代码与测试用例可以自由的相互跳转：</p>
-<p>2.详细的测试报告</p>
-<p>你几乎可以不用定义任何测试报告，运行完项目自动生成测试报告；<br>同时支持多种测试报告模板供选择；测试报告支持导出PDF，邮件发送常用功能：</p>
-<p>3.屏幕录制功能</p>
-<p>Web自动化过程中，只需要在运行配置中开启屏幕录制功能，项目运行中即可自动录制屏幕：</p>
-<p>4.可以与其它框架优雅的结合起来</p>
-<p>CukeTest可以与selenium，appium这些常用的测试框架结合起来一起使用。也可以使用nodejs流行的第三方HTTP库函数进行API自动化测试。<br>所以CukeTest在web，手机端，API的自动化都可以进行。</p>
-<p>5.可以很方便持续集成</p>
-<p>CukeTest支持命令行方式运行脚本，所以可以与所有CI工具一起使用。</p>
-<p>6.CukeTest可以让团队更加敏捷</p>
-<p>使用行为驱动开发，能够开发出大家都看得懂的测试脚本，不管懂不懂编程。而且。使用自然语言将我们的测试用例与自动化代码结合，可以在团队中以用例设计为测试准则，减少团队直接的沟通成本，同时又可以让团队中更多的成员参与进来。</p>
+<h1 id="可视化界面"><a href="#可视化界面" class="headerlink" title="可视化界面"></a>可视化界面</h1><p>不仅可以很方便的编写用例，同时也可以很方便的管理测试用例集；<br>最重要的是可以直接根据测试用例生成自动化代码样例，<br>并且能在自动化代码与测试用例可以自由的相互跳转：</p>
+<h1 id="详细的测试报告"><a href="#详细的测试报告" class="headerlink" title="详细的测试报告"></a>详细的测试报告</h1><p>你几乎可以不用定义任何测试报告，运行完项目自动生成测试报告；<br>同时支持多种测试报告模板供选择；测试报告支持导出PDF，邮件发送常用功能：</p>
+<h1 id="屏幕录制功能"><a href="#屏幕录制功能" class="headerlink" title="屏幕录制功能"></a>屏幕录制功能</h1><p>Web自动化过程中，只需要在运行配置中开启屏幕录制功能，项目运行中即可自动录制屏幕：</p>
+<h1 id="可以与其它框架优雅的结合起来"><a href="#可以与其它框架优雅的结合起来" class="headerlink" title="可以与其它框架优雅的结合起来"></a>可以与其它框架优雅的结合起来</h1><p>CukeTest可以与selenium，appium这些常用的测试框架结合起来一起使用。也可以使用nodejs流行的第三方HTTP库函数进行API自动化测试。<br>所以CukeTest在web，手机端，API的自动化都可以进行。</p>
+<h1 id="可以很方便持续集成"><a href="#可以很方便持续集成" class="headerlink" title="可以很方便持续集成"></a>可以很方便持续集成</h1><p>CukeTest支持命令行方式运行脚本，所以可以与所有CI工具一起使用。</p>
+<h1 id="xCukeTest可以让团队更加敏捷"><a href="#xCukeTest可以让团队更加敏捷" class="headerlink" title="xCukeTest可以让团队更加敏捷"></a>xCukeTest可以让团队更加敏捷</h1><p>使用行为驱动开发，能够开发出大家都看得懂的测试脚本，不管懂不懂编程。而且。使用自然语言将我们的测试用例与自动化代码结合，可以在团队中以用例设计为测试准则，减少团队直接的沟通成本，同时又可以让团队中更多的成员参与进来。</p>
 <p>几乎不用重新造轮子，测试报告，屏幕录像这些操作都给我们提供了，我们只需要关注我们的业务，实现对应的代码既可。最重要的一点，CukeTest还是对所有开源社区和个人使用者是免费的。是的，免费！</p>
 <p>请记住CukeTest只是一个编辑工具、帮助你提高你在Node.js上的开发效率。你开发的自动化脚本仍旧是基于开源框架的，这意味着你仍旧可以不用这个编辑工具，也能运行你的脚本，保持了脚本的独立性。CukeTest可以在cuketest.com网站免费下载，或是在Windows10应用商店免费安装。</p>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><blockquote>
+<p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+</blockquote>
 
           
         
@@ -1244,18 +1290,42 @@
       
         
           
-            <p>最近对它的README.md文件颇为感兴趣。</p>
+            <blockquote>
+<p>最近对它的README.md文件颇为感兴趣。</p>
+</blockquote>
+<blockquote>
 <p>帮助更多的还不会编写README文件的同学们。</p>
+</blockquote>
+<blockquote>
 <p>README文件后缀名为md</p>
+</blockquote>
+<blockquote>
 <p>md是markdown的缩写，markdown是一种编辑博客的语言。用惯了可视化的博客编辑器（比如CSDN博客，囧），这种编程式的博客编辑方案着实让人眼前一亮。不过GitHub支持的语法在标准markdown语法的基础上做了修改，称为Github Flavored Markdown，简称GFM。可不是GFW呀偷笑。</p>
-<p>开始编辑README<br>打开你的GitHub的某个项目，我们可以直接在线编辑你的README文件，如果你已经有了这个文件，则在文件目录中直接点击它，如果你还没有这个文件那么点击项目名称右边的一个按钮，来添加新文件：</p>
+</blockquote>
+<blockquote>
+<p>开始编辑README</p>
+</blockquote>
+<blockquote>
+<p>打开你的GitHub的某个项目，我们可以直接在线编辑你的README文件，如果你已经有了这个文件，则在文件目录中直接点击它，如果你还没有这个文件那么点击项目名称右边的一个按钮，来添加新文件：</p>
+</blockquote>
+<blockquote>
 <p>然后你就打开了编辑页面，编辑区的左上角有填写文件名的区域，注意加上后缀.md</p>
+</blockquote>
+<blockquote>
 <p>如果你本来就有这个文件要重新编辑它的话，那么在点击了文件目录中的该文件后，在上方有工具栏，选择Edit</p>
+</blockquote>
+<blockquote>
 <p>然后滚动屏幕到下面，如果是新文件会有一个Commit new file的按钮，若没有内容是不能点击的。如果是旧文件重修编辑，那么这个按钮显示的是 Commit changes</p>
-<p>//顺便吐槽一句如果是360或搜狗浏览器的话，这个按钮是永远都无法点击的，囧。。</p>
+</blockquote>
+<blockquote>
 <p>先随便写的东西把这个新文件提交，然后再点击 Edit 重新打开它。你会发现编辑区左上角有了变化。</p>
+</blockquote>
+<blockquote>
 <p>默认选中Code，即我们的编辑模式。若点击 Preview（预览）就能实时显示当前的显示效果了。</p>
+</blockquote>
+<blockquote>
 <p>好了，下面正式开始编辑这个文件</p>
+</blockquote>
 <h1 id="大标题"><a href="#大标题" class="headerlink" title="大标题  "></a>大标题  </h1><p>规范的README文件开头都写上一个标题，这被称为大标题。</p>
 <p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
 <h1 id="大标题-1"><a href="#大标题-1" class="headerlink" title="大标题  "></a>大标题  </h1><p>在文本下面加上 等于号 = ，那么上方的文本就变成了大标题。等于号的个数无限制，但一定要大于0个哦。。<br>比大标题低一级的是中标题，也就是显示出来比大标题小点。</p>
@@ -1673,16 +1743,36 @@
 <p>这种剧本文件，客户、项目经理、业务分析师，QA都能看懂，因为其就是一个故事点或者需求点。而且通过特定的工具，比如Cucumber，<br>或CukeTest等工具，能够把其自动转换成为代码。开发人员根据自动生成的代码，断言一些预期的行为，并根据这些行为，完成相应的代码实现。<br>这样的自动化脚本，为一个项目中的各个人员了解项目的需求，实现提供了一个很好的交互桥梁。</p>
 <p>下面是其一个交互的过程：<br><img src="http://thyrsi.com/t6/645/1546154825x2728278644.jpg" alt></p>
 <p>如果是传统的方式，其交互方式，应该是：<br><img src="http://thyrsi.com/t6/645/1546154898x2728278644.jpg" alt></p>
-<h1 id="为什么要行为驱动开发-BDD"><a href="#为什么要行为驱动开发-BDD" class="headerlink" title="为什么要行为驱动开发(BDD)"></a>为什么要行为驱动开发(BDD)</h1><p>理想情况下，每个场景应该是单个测试用例，因此When步骤的数量应该保持很少。</p>
+<h1 id="为什么要行为驱动开发-BDD"><a href="#为什么要行为驱动开发-BDD" class="headerlink" title="为什么要行为驱动开发(BDD)"></a>为什么要行为驱动开发(BDD)</h1><blockquote>
+<p>理想情况下，每个场景应该是单个测试用例，因此When步骤的数量应该保持很少。</p>
+</blockquote>
+<blockquote>
 <p>步骤都是可选的。例如，如果你完全不需要在测试开始前设置任何内容，你可以不设置Given步骤。</p>
+</blockquote>
+<blockquote>
 <p>Gherkin文件是为人类可读设计的，并为参与产品开发的任何人带来益处。由于参与人员包括非技术人员，因此Gherkin文件应始终使用商业语言而不是技术语言编写。这意味着，例如，编写测试时，你不需要去引用某个UI组件，而是要去描述你想要测试的产品的功能。</p>
+</blockquote>
+<blockquote>
 <p>行为驱动开发是一个软件工程的系列实践，能够帮助团队快速构建和交付更多价值和质量的软件产品。其和敏捷已经精益的开发实践，特别是测试驱动开发(TDD)和领域驱动开发(DDD)，是一脉相承的。但是最重要的是BDD提供了一种通用的，简单的，结构化的描述语言，这种语言既可以是英语也可以是其他本地的语言，通过他能够很方便让项目成员和业务干系人非常顺畅的沟通需求，即使这些成员不懂的任何编程语言。</p>
+</blockquote>
+<blockquote>
 <p>通过对比，可以发现BDD的这种方式，把用户或者客户真正的通过Feature文件联系在一起了，其沟通是顺畅的，各个角色，包括QA，BA，开发，测试，客户，用户可以通过这一媒介，进行高效无障碍的沟通，而不是像传统的方式，通过BA进行二次转达，从而丢失了很多重要的需求。 </p>
+</blockquote>
+<blockquote>
 <p>由此可见，其BDD的好处如下：</p>
+</blockquote>
+<blockquote>
 <p>减少浪费！</p>
+</blockquote>
+<blockquote>
 <p>节省成本！</p>
+</blockquote>
+<blockquote>
 <p>容易并且安全的适应变化！</p>
+</blockquote>
+<blockquote>
 <p>因为少了中间的转达环节，从而能够快速交付产品！</p>
+</blockquote>
 <p>我们来看下面这个流程：</p>
 <p><img src="http://thyrsi.com/t6/645/1546155203x2728278644.jpg" alt><br>从上图可以看出，当一个需求过来的时候，先通过项目干系人都能理解的Feature文件，描述项目的User Story，有的里面还有详细生动的数据示例(example)，从而能够让所有的人更加容易理解其需求，比如：<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Scenario</span> <span class="keyword">Outline</span>: Earning interest</span><br><span class="line">  <span class="keyword">Given</span> I have an account of type <span class="variable">&lt;account-type&gt;</span> with a balance of <span class="variable">&lt;initial-balance&gt;</span></span><br><span class="line">  <span class="keyword">When</span> the monthly interest is calculated</span><br><span class="line">  <span class="keyword">Then</span> I should have earned at an annual interest rate of <span class="variable">&lt;interest-rate&gt;</span></span><br><span class="line">  <span class="keyword">And</span> I should have a new balance of <span class="variable">&lt;new-balance&gt;</span></span><br><span class="line">  Example:</span><br><span class="line">  |<span class="string"> initial-balance </span>|<span class="string"> account-type </span>|<span class="string"> interest-rate </span>|<span class="string"> new-balance </span>|</span><br><span class="line">  |<span class="string"> 10000           </span>|<span class="string"> current      </span>|<span class="string"> 1             </span>|<span class="string"> 10008.33    </span>|</span><br><span class="line">  |<span class="string"> 10000           </span>|<span class="string"> savings      </span>|<span class="string"> 3             </span>|<span class="string"> 10025       </span>|</span><br><span class="line">  |<span class="string"> 10000           </span>|<span class="string"> supersaver   </span>|<span class="string"> 5             </span>|<span class="string"> 10041.67    </span>|</span><br></pre></td></tr></table></figure></p>
 <p>通过上面的示例表(example)的表格可以更加容易的理解当前用例的意图了。<br>当Feature和Example文件都完成后，借助于第三方的开源框架实现，比如Cucumber，CukeTest、jBehave，SpecFlow等把Feature和Example转换成代码，<br>然后通过底层次的单元测试框架，比如JUnit，mocha，NUnit，Spock，RSpec，结合测试驱动开发，从而把业务代码的逻辑实现一举多得。</p>
@@ -1994,7 +2084,9 @@
       
         
           
-            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>android monkey界面工具，快速为测试机界面压力测试。</p>
+            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><blockquote>
+<p>android monkey界面工具，快速为测试机界面压力测试。</p>
+</blockquote>
 <p>你可以从这里下载使用</p>
 <p><a href="https://github.com/liyinchigithub/monkeyGUI" target="_blank" rel="noopener">monkeyGUI</a></p>
 <p><a href="https://github.com/liyinchigithub/monkeyGUI/releases" target="_blank" rel="noopener">下载安装包</a></p>
@@ -2004,12 +2096,11 @@
 <h1 id="Run-Environment-运行环境依赖"><a href="#Run-Environment-运行环境依赖" class="headerlink" title="Run Environment 运行环境依赖"></a>Run Environment 运行环境依赖</h1><p>本地电脑已配置android SDK及其环境</p>
 <p>参考：</p>
 <p><a href="https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html</a></p>
-<p><strong>安装依赖</strong></p>
-<p>npm install</p>
-<p><strong>运行程序</strong></p>
-<p>npm start 或npm run start</p>
+<p><strong>安装依赖</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
+<p><strong>运行程序</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure></p>
+<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run start</span><br></pre></td></tr></table></figure></p>
 <p><strong>打包</strong></p>
-<p>#electron-packager<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run pack</span><br></pre></td></tr></table></figure></p>
+<h3 id="electron-packager"><a href="#electron-packager" class="headerlink" title="electron-packager"></a>electron-packager</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run pack</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;pack&quot;: &quot;electron-packager . monkeyGUI --all --out ./打包monkeyGUI --app-version=2.0.0 --electron-version=3.0.10 --overwrite --icon=./other/image/logo.ico&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>package.json设置==》scripts==》pack<br>electron-packager . monkeyGUI –all –out ./打包monkeyGUI –app-version=2.0.0 –electron-version=3.0.10</p>
 <p>参数说明：</p>
@@ -2146,65 +2237,46 @@
       
         
           
-            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>【服务诞生原因】功能测试人员、开发人员均使用postman进行接口测试，但postman自身无法对mongoDB数据库进行操作，为了方便测试人员使用postman，进行接口自动化测试时，可以调用操作数据库清除测试数据，由此诞生OMongoDB。</p>
-<p>###使用方式</p>
-<p>如果你电脑已经安装配置Git、node环境，可以直接按下面步骤进行操作：</p>
-<p>1、从github拉取工程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:liyinchigithub/OMongoDB.git</span><br></pre></td></tr></table></figure>
-<p>2、切换到目录下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd OMongoDB</span><br></pre></td></tr></table></figure>
-<p>3、安装依赖包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<p>4、启动OMongoDB服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node server.js</span><br></pre></td></tr></table></figure>
-<p>5、如果你的电脑还没有node环境，具体配置方法可以参考下面两个链接：</p>
+            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><blockquote>
+<p>【服务诞生原因】功能测试人员、开发人员均使用postman进行接口测试，但postman自身无法对mongoDB数据库进行操作，为了方便测试人员使用postman，进行接口自动化测试时，可以调用操作数据库清除测试数据，由此诞生OMongoDB。</p>
+</blockquote>
+<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>如果你电脑已经安装配置Git、node环境，可以直接按下面步骤进行操作：</p>
+<h1 id="从github拉取工程"><a href="#从github拉取工程" class="headerlink" title="从github拉取工程"></a>从github拉取工程</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:liyinchigithub/OMongoDB.git</span><br></pre></td></tr></table></figure>
+<h1 id="切换到目录下"><a href="#切换到目录下" class="headerlink" title="切换到目录下"></a>切换到目录下</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd OMongoDB</span><br></pre></td></tr></table></figure>
+<h1 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h1 id="启动OMongoDB服务"><a href="#启动OMongoDB服务" class="headerlink" title="启动OMongoDB服务"></a>启动OMongoDB服务</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node server.js</span><br></pre></td></tr></table></figure>
+<p>如果你的电脑还没有node环境，具体配置方法可以参考下面两个链接：</p>
 <p>windows <a href="https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html</a></p>
 <p>mac <a href="https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html</a></p>
-<p>##API接口文档</p>
-<p>###中文</p>
-<ol>
-<li>功能   创建集合</li>
-</ol>
-<p>请求方法：POST</p>
+<h2 id="API接口文档"><a href="#API接口文档" class="headerlink" title="API接口文档"></a>API接口文档</h2><h3 id="中文"><a href="#中文" class="headerlink" title="中文"></a>中文</h3><h1 id="功能-创建集合"><a href="#功能-创建集合" class="headerlink" title="功能   创建集合"></a>功能   创建集合</h1><p>请求方法：POST</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/CreateCollection/" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/CreateCollection/</a></p>
 <p>请求body：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"db_url"</span>:<span class="string">"mongodb://localhost:27017/"</span>,</span><br><span class="line">	<span class="attr">"db_name"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"collection_name"</span>:<span class="string">"Express_API_Collection1"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>功能   删除数据库集合中的数据</li>
-</ol>
-<p>请求方法：DELETE</p>
+<h1 id="功能-删除数据库集合中的数据"><a href="#功能-删除数据库集合中的数据" class="headerlink" title="功能   删除数据库集合中的数据"></a>功能   删除数据库集合中的数据</h1><p>请求方法：DELETE</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/delete" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/delete</a></p>
 <p>请求body：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"db_url"</span>:<span class="string">"mongodb://localhost:27017/"</span>,</span><br><span class="line">	<span class="attr">"db_name"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"collection_name"</span>:<span class="string">"Express_API_Collection1"</span>,</span><br><span class="line">	<span class="attr">"whereStr"</span>:</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">"name"</span>:<span class="string">"网易"</span></span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>功能   删除集合</li>
-</ol>
-<p>请求方法：DELETE</p>
+<h1 id="功能-删除集合"><a href="#功能-删除集合" class="headerlink" title="功能   删除集合"></a>功能   删除集合</h1><p>请求方法：DELETE</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/drop" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/drop</a></p>
 <p>请求body：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;db_url&quot;:&quot;mongodb://localhost:27017/&quot;,</span><br><span class="line">	&quot;db_name&quot;:&quot;Express_API_DB&quot;,</span><br><span class="line">	&quot;collection_name&quot;:&quot;Express_API_Collection5&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>功能   插入数据到数据库集合中</li>
-</ol>
-<p>请求方法：PUT</p>
+<h1 id="功能-插入数据到数据库集合中"><a href="#功能-插入数据到数据库集合中" class="headerlink" title="功能   插入数据到数据库集合中"></a>功能   插入数据到数据库集合中</h1><p>请求方法：PUT</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/insert_data/" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/insert_data/</a></p>
 <p>请求body：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"db_url"</span>:<span class="string">"mongodb://localhost:27017/"</span>,</span><br><span class="line">	<span class="attr">"db_name"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"collection_name"</span>:<span class="string">"Express_API_Collection1"</span>,</span><br><span class="line">	<span class="attr">"obj"</span>:&#123;</span><br><span class="line">		<span class="attr">"name"</span>: <span class="string">"网易"</span>,</span><br><span class="line">		<span class="attr">"url"</span>: <span class="string">"www.162.com"</span></span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>功能   查询数据库集合中的数据</li>
-</ol>
-<p>请求方法：POST</p>
+<h1 id="功能-查询数据库集合中的数据"><a href="#功能-查询数据库集合中的数据" class="headerlink" title="功能   查询数据库集合中的数据"></a>功能   查询数据库集合中的数据</h1><p>请求方法：POST</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/find" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/find</a></p>
 <p>请求body：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">		<span class="attr">"db_url"</span>:<span class="string">"mongodb://localhost:27017/"</span>,</span><br><span class="line">		<span class="attr">"db_name"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">		<span class="attr">"collection_name"</span>:<span class="string">"Express_API_Collection1"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>6 功能   查询数据库集合中的数据</p>
-<p>请求方法：GET</p>
+<h1 id="功能-查询数据库集合中的数据-1"><a href="#功能-查询数据库集合中的数据-1" class="headerlink" title="功能   查询数据库集合中的数据"></a>功能   查询数据库集合中的数据</h1><p>请求方法：GET</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/find" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/find</a></p>
 <p>请求参数：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db_name数据库名称</span><br><span class="line"></span><br><span class="line">collection_name集合名称</span><br></pre></td></tr></table></figure>
-<p>7.备注<br>如果你的mongoDB设置了账号密码，url参数可以使用此格式：</p>
+<h1 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h1><p>如果你的mongoDB设置了账号密码，url参数可以使用此格式：</p>
 <p>mongoose.connect(‘mongodb://账号:密码@localhost:27017/‘);</p>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><blockquote>
+<p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+</blockquote>
 
           
         
@@ -2493,19 +2565,31 @@
         
           
             <hr>
-<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>WebdriverIO是Webdriver Node.js模块，API非常丰富，同时支持PC web、Mobile原生页面和WebView页面，WebdriverIO底层协议使用的是selenium，<br>你可以参考我的工程<a href="https://github.com/liyinchigithub/mocha-demo" target="_blank" rel="noopener">mocha-demo</a>（结合了JavaScript单元测试框架mocha）</p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><blockquote>
+<p>WebdriverIO是Webdriver Node.js模块，API非常丰富，同时支持PC web、Mobile原生页面和WebView页面，WebdriverIO底层协议使用的是selenium，<br>你可以参考我的工程<a href="https://github.com/liyinchigithub/mocha-demo" target="_blank" rel="noopener">mocha-demo</a>（结合了JavaScript单元测试框架mocha）</p>
+</blockquote>
 <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JDK 8.0</span><br><span class="line">Node.js 10</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://webdriver.io/" target="_blank" rel="noopener">webdriverIO官网</a></p>
 <h1 id="依赖配置"><a href="#依赖配置" class="headerlink" title="依赖配置"></a>依赖配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;devDependencies&quot;: &#123;</span><br><span class="line">  &quot;assert&quot;: &quot;^1.4.1&quot;,</span><br><span class="line">  &quot;chai&quot;: &quot;^4.1.2&quot;,</span><br><span class="line">  &quot;mocha&quot;: &quot;^5.0.0&quot;,</span><br><span class="line">  &quot;wdio-appium-service&quot;: &quot;^0.2.3&quot;,</span><br><span class="line">  &quot;wdio-jasmine-framework&quot;: &quot;^0.3.6&quot;,</span><br><span class="line">  &quot;wdio-mocha-framework&quot;: &quot;^0.6.3&quot;,</span><br><span class="line">  &quot;webdriverio&quot;: &quot;^4.12.0&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><h2 id="api"><a href="#api" class="headerlink" title="api"></a>api</h2><p>http、request、</p>
-<h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><p>webdriverIO、selenium</p>
-<h2 id="mobile"><a href="#mobile" class="headerlink" title="mobile"></a>mobile</h2><p>appium之webdriverIO</p>
-<h2 id="unit-test"><a href="#unit-test" class="headerlink" title="unit test"></a>unit test</h2><p>mocha</p>
+<h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><h2 id="api"><a href="#api" class="headerlink" title="api"></a>api</h2><blockquote>
+<p>http、request、</p>
+</blockquote>
+<h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><blockquote>
+<p>webdriverIO、selenium</p>
+</blockquote>
+<h2 id="mobile"><a href="#mobile" class="headerlink" title="mobile"></a>mobile</h2><blockquote>
+<p>appium之webdriverIO</p>
+</blockquote>
+<h2 id="unit-test"><a href="#unit-test" class="headerlink" title="unit test"></a>unit test</h2><blockquote>
+<p>mocha</p>
+</blockquote>
 <p>###或者你也可以使用webdriverIO官方推荐运行容器wdio</p>
 <h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><h3 id="restful-api-测试"><a href="#restful-api-测试" class="headerlink" title="restful api 测试"></a>restful api 测试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
 <h3 id="浏览器UI自动化测试"><a href="#浏览器UI自动化测试" class="headerlink" title="浏览器UI自动化测试"></a>浏览器UI自动化测试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">启动selenium-standalone-server</span><br><span class="line"></span><br><span class="line">$ selenium-standalone start</span><br><span class="line"></span><br><span class="line">启动测试脚本</span><br><span class="line"></span><br><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
 <h3 id="移动端UI自动化测试"><a href="#移动端UI自动化测试" class="headerlink" title="移动端UI自动化测试"></a>移动端UI自动化测试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">启动appium服务</span><br><span class="line"></span><br><span class="line">$ appium -u 设备号 -p 4781 -bp 4782</span><br><span class="line"></span><br><span class="line">启动测试脚本</span><br><span class="line"></span><br><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合s</p>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><blockquote>
+<p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+</blockquote>
 
           
         

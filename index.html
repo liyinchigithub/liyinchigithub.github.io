@@ -540,23 +540,20 @@
         
           
             <h1 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h1><p>YApi 是高效、易用、功能强大的 api 管理平台，旨在为开发、产品、测试人员提供更优雅的接口管理服务。可以帮助开发者轻松创建、发布、维护 API，YApi 还为用户提供了优秀的交互体验，开发人员只需利用平台提供的接口数据写入工具以及简单的点击操作就可以实现接口的管理。</p>
-<p>一、特性</p>
-<p>#基于 Json5 和 Mockjs 定义接口返回数据的结构和文档，效率提升多倍</p>
+<h1 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h1><p>#基于 Json5 和 Mockjs 定义接口返回数据的结构和文档，效率提升多倍</p>
 <p>#扁平化权限设计，即保证了大型企业级项目的管理，又保证了易用性</p>
 <p>#类似 postman 的接口调试</p>
 <p>#MockServer 除支持普通的随机 mock 外，还增加了 Mock 期望功能，根据设置的请求过滤规则，返回期望数据</p>
 <p>#支持 postman, har, swagger 数据导入</p>
 <p>#免费开源，内网部署，信息再也不怕泄露了。</p>
-<p>二、环境要求<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nodejs（7.6+)</span><br><span class="line">mongodb（2.6+）</span><br><span class="line">git</span><br></pre></td></tr></table></figure></p>
-<p>三、我的个人体验</p>
-<p>（一）优点：</p>
+<h1 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nodejs（7.6+)</span><br><span class="line">mongodb（2.6+）</span><br><span class="line">git</span><br></pre></td></tr></table></figure>
+<h1 id="我的个人体验"><a href="#我的个人体验" class="headerlink" title="我的个人体验"></a>我的个人体验</h1><p>（一）优点：</p>
 <p>支持mock（postman也自带mock服务），支持导入postman工程json（但要求导出版本是V1）</p>
 <p>（二）缺点：</p>
 <p>1、在Yapi上面配置内容，导出不支持导入到postman。</p>
 <p>2、有一定学习成本，需要团队开发接口设计文档都在上面使用，测试复用接口设计文档进行接口测试才有意义。</p>
-<p>四、搭建</p>
-<p>前提：本地安装配置node、mongodb</p>
-<p>（一）自带部署脚手架</p>
+<h1 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h1><p>前提：本地安装配置node、mongodb</p>
+<p> （一）自带部署脚手架</p>
 <p> <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/images/13-1.jpg" alt="img"></p>
 <p> （二）启动服务</p>
 <p> <img src="//liyinchigithub.github.io/2019/10/27/Yapi可视化接口管理平台/images/13-3.jpg" alt="img"></p>
@@ -694,8 +691,12 @@
       
         
           
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>软件测试过程中，最核心重要在用例设计，公司团队以往都是用excel维护测试用例，但缺点是在太多。</p>
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>软件测试过程中，最核心重要在用例设计，公司团队以往都是用excel维护测试用例，但缺点是在太多。</p>
+</blockquote>
+<blockquote>
 <p>如下：</p>
+</blockquote>
 <p>1、评审不够直观，开发产品对着报表评审用例打瞌睡。</p>
 <p>2、编写效率不够，思维不能发散，迭代用例版本维护很麻烦。</p>
 <p>3、excel转成xml再导入testlink。</p>
@@ -704,8 +705,12 @@
 <p>1、使用思维导图工具（xmind）设计测试用例。</p>
 <p>2、遵循转换工具xmind用例模板。</p>
 <p>3、将xmind用例转成xml再导入testlink。</p>
-<p>ps：来神州之前敏捷团队一直使用xmind作为脑图使用，应对短期、长期项目非常好用。</p>
-<h1 id="如何快速设计测试用例、高效管理测试用例？？"><a href="#如何快速设计测试用例、高效管理测试用例？？" class="headerlink" title="如何快速设计测试用例、高效管理测试用例？？"></a>如何快速设计测试用例、高效管理测试用例？？</h1><h2 id="Xmind2Testlink"><a href="#Xmind2Testlink" class="headerlink" title="Xmind2Testlink"></a>Xmind2Testlink</h2><p>Xmind2TestLink 是一款开源xmind文件转xml格式工具！</p>
+<blockquote>
+<p>ps：来神州之前我所在敏捷团队scrum master 一直使用xmind作为脑图使用，应对短期、长期项目非常好用。</p>
+</blockquote>
+<h1 id="如何快速设计测试用例、高效管理测试用例？？"><a href="#如何快速设计测试用例、高效管理测试用例？？" class="headerlink" title="如何快速设计测试用例、高效管理测试用例？？"></a>如何快速设计测试用例、高效管理测试用例？？</h1><h2 id="Xmind2Testlink"><a href="#Xmind2Testlink" class="headerlink" title="Xmind2Testlink"></a>Xmind2Testlink</h2><blockquote>
+<p>Xmind2TestLink 是一款开源xmind文件转xml格式工具！</p>
+</blockquote>
 <p> 1、页面（界面）</p>
 <p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/1.jpg" alt="img"></p>
 <p> 2、简单模板</p>
@@ -873,9 +878,9 @@
       
         
           
-            <h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><p>Nginx(发音同engine x)是一个高性能、跨平台的[HTTP Server]，也可以用作[反向代理]、[负载均衡]服务器和[HTTP缓存]服务器。俄罗斯人Igor Sysoev(伊戈尔·赛索耶夫)在2004年开发的，Nginx是免费的开源软件，根据类BSD许可证的条款发布。目前全球约有50%的网站都是用Nginx做Web服务器。</p>
+            <h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><p>Nginx(发音同engine x)是一个高性能、跨平台的[HTTP Server]，也可以用作[反向代理]、[负载均衡]服务器和[HTTP缓存]服务器。俄罗斯人Igor Sysoev(伊戈尔·赛索耶夫)在2004年开发的，Nginx是免费的开源软件，根据类BSD许可证的条款发布。目前全球约有50%的网站都是用Nginx做Web服务器。</p>
 <p><img src="//liyinchigithub.github.io/2019/08/12/Nginx到底能做什么？/images/12-12.jpg" alt="img"></p>
-<h2 id="Nginx的优点"><a href="#Nginx的优点" class="headerlink" title="Nginx的优点"></a>Nginx的优点</h2><h2 id="1、开源免费"><a href="#1、开源免费" class="headerlink" title="1、开源免费"></a>1、开源免费</h2><p>Nginx完全开源免费，可以轻松搭建HTTP服务。</p>
+<h3 id="Nginx的优点"><a href="#Nginx的优点" class="headerlink" title="Nginx的优点"></a>Nginx的优点</h3><h2 id="1、开源免费"><a href="#1、开源免费" class="headerlink" title="1、开源免费"></a>1、开源免费</h2><p>Nginx完全开源免费，可以轻松搭建HTTP服务。</p>
 <p>相对传统收费的负载均衡器F5，用Nginx搭建负载均衡服务成本比较低。</p>
 <h2 id="2、高性能"><a href="#2、高性能" class="headerlink" title="2、高性能"></a>2、高性能</h2><p>Nginx是基于C语言开发，在执行效率很高。</p>
 <p>Nginx是基于Master/Worker进程架构，Master进程管理多个Worker进程，开启多个Worker进程并发处理请求，使用CPU亲和性，充分发挥多核CPU的性能。<br>基于事件驱动处理大量并发请求，解决C10k问题。</p>
@@ -1149,35 +1154,57 @@
       
         
           
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>有逼格很高的商业化、开源化测试框架及工具，但实际运用需很大维护成本，产生价值低。</p>
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>有逼格很高的商业化、开源化测试框架及工具，但实际运用需很大维护成本，产生价值低。</p>
+</blockquote>
+<blockquote>
 <p>如何真正”高效快速”、”低成本维护”？经过调研落地、使用对比。</p>
+</blockquote>
+<blockquote>
 <p>最终确认这个方案（Postman+Newman+Jenkins+Git）基于restful Api、RPC等等，都可以变相解决这些困难。</p>
-<h1 id="如何借助这些工具实现接口测试自动化和持续集成？"><a href="#如何借助这些工具实现接口测试自动化和持续集成？" class="headerlink" title="如何借助这些工具实现接口测试自动化和持续集成？"></a>如何借助这些工具实现接口测试自动化和持续集成？</h1><p>1、Postman</p>
+</blockquote>
+<h1 id="如何借助这些工具实现接口测试自动化和持续集成？"><a href="#如何借助这些工具实现接口测试自动化和持续集成？" class="headerlink" title="如何借助这些工具实现接口测试自动化和持续集成？"></a>如何借助这些工具实现接口测试自动化和持续集成？</h1><h1 id="1、Postman"><a href="#1、Postman" class="headerlink" title="1、Postman"></a>1、Postman</h1><blockquote>
 <p>基于http/https协议接口，一款可视化构造客户端请求工具，虽然是商业化工具，但免费版提供的功能基本满足目前测试人员需求，能快速构建接口自动化测试脚本，用于场景流程回归、批量构造测试数据。</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-1.jpg" alt="img"></p>
+<blockquote>
 <p>官方文档：<a href="https://learning.getpostman.com/" target="_blank" rel="noopener">https://learning.getpostman.com/</a></p>
+</blockquote>
+<blockquote>
 <p>下载地址：<a href="https://www.getpostman.com/downloads/" target="_blank" rel="noopener">https://www.getpostman.com/downloads/</a></p>
-<p>2、Newman</p>
+</blockquote>
+<h1 id="2、Newman"><a href="#2、Newman" class="headerlink" title="2、Newman"></a>2、Newman</h1><blockquote>
 <p>Postman的脚本运行器，能够不在使用postman工具情况下，非界面化运行脚本！</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-2.jpg" alt="img"></p>
-<p> 可以生成html、json、xml格式的测试报告，可以进一步对这些测试报告进行解析处理。</p>
-<p>3、Git</p>
+<blockquote>
+<p>可以生成html、json、xml格式的测试报告，可以进一步对这些测试报告进行解析处理。</p>
+</blockquote>
+<h1 id="3、Git"><a href="#3、Git" class="headerlink" title="3、Git"></a>3、Git</h1><blockquote>
 <p>开源分布式版本控制系统，比较常见开放源代码的版本控制系统：SVN、Gitlab、Github等等，可以进行代码、脚本托管。</p>
+</blockquote>
+<blockquote>
 <p>目前公司用的是gitlab</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-3.jpg" alt="img"></p>
-<p>4、Jenkins</p>
+<h1 id="4、Jenkins"><a href="#4、Jenkins" class="headerlink" title="4、Jenkins"></a>4、Jenkins</h1><blockquote>
 <p>开源 CI/CD 持续集成、持续构建系统工具。</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-4.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-5.jpg" alt="img"></p>
+<blockquote>
 <p>通过jenkins配置job参数，可以灵活自定义配置构建，实现各种外部服务功能执行，比如发送邮件、统计结果、数据处理等等。（需要你有一定代码基础）</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-9.jpg" alt="img"></p>
-<p>5、测试报告</p>
+<h1 id="5、测试报告"><a href="#5、测试报告" class="headerlink" title="5、测试报告"></a>5、测试报告</h1><blockquote>
 <p>测试报告邮件正文显示内容。</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-6.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-7.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-8.jpg" alt="img"></p>
-<p>6、其他</p>
+<h1 id="6、其他"><a href="#6、其他" class="headerlink" title="6、其他"></a>6、其他</h1><blockquote>
 <p>爬取数据，我将接口自动化测试生成的报告，进行存储展示到前端页面。（测试工作管理后台）</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-10.jpg" alt="img"></p>
 
           
@@ -1298,9 +1325,11 @@
       
         
           
-            <p>领导让我做一个解析测试报告的程序，将最终结果发邮件给所有相关同事，前期自动化测试都是基于jenkins+gitlab+newman，发送邮件使用的是jenkins配置邮件插件。<br>这次需要借助非jenkins发送邮件，找了很久Nodemailer比较适合。</p>
+            <blockquote>
+<p>团队需要我做一个解析测试报告的程序，将最终结果发邮件给所有相关同事，前期自动化测试都是基于jenkins+gitlab+newman，发送邮件使用的是jenkins配置邮件插件。<br>这次需要借助非jenkins发送邮件，找了很久Nodemailer比较适合。</p>
+</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i nodemailer</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nodemailer = <span class="built_in">require</span>(<span class="string">"nodemailer"</span>);</span><br><span class="line"><span class="comment">// var smtpTransport = require('nodemailer-smtp-transport');</span></span><br><span class="line"></span><br><span class="line">describe(<span class="string">''</span>, () =&gt; &#123;</span><br><span class="line">    it.skip(<span class="string">'发送邮件'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> transport = nodemailer.createTransport(&#123;</span><br><span class="line">            host: <span class="string">"smtp.qq.com"</span>,<span class="comment">// SMTP 端口</span></span><br><span class="line">            secureConnection: <span class="literal">true</span>,<span class="comment">// 使用 SSL</span></span><br><span class="line">            port: <span class="number">465</span>,</span><br><span class="line">            auth: &#123;</span><br><span class="line">                user: <span class="string">"liyinchi@qq.com"</span>,<span class="comment">//邮箱账号</span></span><br><span class="line">                <span class="comment">//这里密码不是qq密码，是你设置的smtp密码</span></span><br><span class="line">                pass: <span class="string">""</span><span class="comment">//授权码 </span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> mailOptions = &#123;</span><br><span class="line">            <span class="keyword">from</span>: <span class="string">"liyinchi@qq.com"</span>,<span class="comment">// 发件地址</span></span><br><span class="line">            to: <span class="string">"yinchi.li@xxxx.com"</span>,<span class="comment">// 收件列表</span></span><br><span class="line">            <span class="comment">// Subject of the message 邮件主题</span></span><br><span class="line">            subject: <span class="string">'Nodemailer is unicode friendly ✔'</span> + <span class="built_in">Date</span>.now(),<span class="comment">// 标题</span></span><br><span class="line">            <span class="comment">//text和html两者只支持一种</span></span><br><span class="line">            <span class="comment">// 标题 </span></span><br><span class="line">            text: <span class="string">'Hello to myself!'</span>,</span><br><span class="line">            <span class="comment">// html 内容</span></span><br><span class="line">            html: <span class="string">`&lt;p&gt;&lt;b&gt;Hello&lt;/b&gt; to myself &lt;img src="cid:note@example.com"/&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p&gt;Here's a nyan cat for you as an embedded attachment:&lt;br/&gt;&lt;img src="https://www.baidu.com/s?rsv_idx=1&amp;wd=foreach&amp;ie=utf-8&amp;rsv_cq=js+%E6%88%AA%E5%8F%96%E6%95%B0%E7%BB%84&amp;rsv_dl=0_right_recommends_merge_28335&amp;euri=262673"/&gt;&lt;/p&gt;`</span>,</span><br><span class="line">            <span class="comment">// An array of attachments</span></span><br><span class="line">            attachments: [</span><br><span class="line">                <span class="comment">// String attachment 文本附件</span></span><br><span class="line">                &#123;</span><br><span class="line">                    filename: <span class="string">'notes.txt'</span>, <span class="comment">//附件名称，文本格式</span></span><br><span class="line">                    content: <span class="string">'这是在notes.txt的内容'</span>, <span class="comment">//文本中的内容</span></span><br><span class="line">                    contentType: <span class="string">'text/plain'</span> <span class="comment">// 可选，将从文件名中检测到</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="comment">// File Stream attachment</span></span><br><span class="line">                &#123;</span><br><span class="line">                    filename: <span class="string">'cat.jpg'</span>,</span><br><span class="line">                    path: <span class="string">'/Users/liyinchi/workspace/前端/vue/test-file-management-platform/back-end/assets/nyan.jpg'</span>,</span><br><span class="line">                &#125;</span><br><span class="line">            ],</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        transport.sendMail(mailOptions, <span class="function"><span class="keyword">function</span> (<span class="params">err, info,response</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (err) &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(err);</span><br><span class="line">                <span class="built_in">console</span>.log(info.accepted);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(response);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nodemailer = <span class="built_in">require</span>(<span class="string">"nodemailer"</span>);</span><br><span class="line"><span class="comment">// var smtpTransport = require('nodemailer-smtp-transport');</span></span><br><span class="line"></span><br><span class="line">describe(<span class="string">''</span>, () =&gt; &#123;</span><br><span class="line">    it.skip(<span class="string">'发送邮件'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> transport = nodemailer.createTransport(&#123;</span><br><span class="line">            host: <span class="string">"smtp.qq.com"</span>,<span class="comment">// SMTP 端口</span></span><br><span class="line">            secureConnection: <span class="literal">true</span>,<span class="comment">// 使用 SSL</span></span><br><span class="line">            port: <span class="number">465</span>,</span><br><span class="line">            auth: &#123;</span><br><span class="line">                user: <span class="string">"liyinchi@qq.com"</span>,<span class="comment">//邮箱账号</span></span><br><span class="line">                <span class="comment">//这里密码不是qq密码，是你设置的smtp密码</span></span><br><span class="line">                pass: <span class="string">""</span><span class="comment">//授权码 </span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> mailOptions = &#123;</span><br><span class="line">            <span class="keyword">from</span>: <span class="string">"liyinchi@qq.com"</span>,<span class="comment">// 发件地址</span></span><br><span class="line">            to: <span class="string">"yinchi.li@xxxx.com"</span>,<span class="comment">// 收件列表</span></span><br><span class="line">            <span class="comment">// Subject of the message 邮件主题</span></span><br><span class="line">            subject: <span class="string">'Nodemailer is unicode friendly ✔'</span> + <span class="built_in">Date</span>.now(),<span class="comment">// 标题</span></span><br><span class="line">            <span class="comment">//text和html两者只支持一种</span></span><br><span class="line">            <span class="comment">// 标题 </span></span><br><span class="line">            text: <span class="string">'Hello to myself!'</span>,</span><br><span class="line">            <span class="comment">// html 内容</span></span><br><span class="line">            html: <span class="string">`&lt;p&gt;&lt;b&gt;Hello&lt;/b&gt; to myself &lt;img src="cid:note@example.com"/&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p&gt;Here's a nyan cat for you as an embedded attachment:&lt;br/&gt;&lt;img src="https://www.baidu.com/s?rsv_idx=1&amp;wd=foreach&amp;ie=utf-8&amp;rsv_cq=js+%E6%88%AA%E5%8F%96%E6%95%B0%E7%BB%84&amp;rsv_dl=0_right_recommends_merge_28335&amp;euri=262673"/&gt;&lt;/p&gt;`</span>,</span><br><span class="line">            <span class="comment">// An array of attachments</span></span><br><span class="line">            attachments: [</span><br><span class="line">                <span class="comment">// String attachment 文本附件</span></span><br><span class="line">                &#123;</span><br><span class="line">                    filename: <span class="string">'notes.txt'</span>, <span class="comment">//附件名称，文本格式</span></span><br><span class="line">                    content: <span class="string">'这是在notes.txt的内容'</span>, <span class="comment">//文本中的内容</span></span><br><span class="line">                    contentType: <span class="string">'text/plain'</span> <span class="comment">// 可选，将从文件名中检测到</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="comment">// File Stream attachment</span></span><br><span class="line">                &#123;</span><br><span class="line">                    filename: <span class="string">'cat.jpg'</span>,</span><br><span class="line">                    path: <span class="string">'/Users/liyinchi/workspace/前端/vue/test-file-management-platform/back-end/assets/nyan.jpg'</span>,</span><br><span class="line">                &#125;</span><br><span class="line">            ],</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        transport.sendMail(mailOptions, <span class="function"><span class="keyword">function</span> (<span class="params">err, info,response</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (err) &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(err);</span><br><span class="line">                <span class="built_in">console</span>.log(info.accepted);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(response);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1419,67 +1448,116 @@
       
         
           
-            <p>为了更好的管理团队测试工作，项目测试环节风险把控、测试工作饱和度以及测试数据资料维护，自己做了一个这样的工作平台，前端基于vue、后端基于nodejs</p>
+            <blockquote>
+<p>为了更好的管理团队测试工作，项目测试环节风险把控、测试工作饱和度以及测试数据资料维护，自己做了一个这样的工作平台，前端基于vue、后端基于nodejs</p>
+</blockquote>
 <h1 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/0-1.jpg" alt="img"></p>
 <h1 id="测试数据统计"><a href="#测试数据统计" class="headerlink" title="测试数据统计"></a>测试数据统计</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/1.jpg" alt="img"></p>
+<blockquote>
 <p>上线而未上线占比、测试人员本月总任务、进行中、已完成、未完成数量、测试人员每人本周目前工时（7.5*5天）</p>
+</blockquote>
 <h1 id="上线记录管理"><a href="#上线记录管理" class="headerlink" title="上线记录管理"></a>上线记录管理</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/2-1.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/2-2.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/2-3.jpg" alt="img"></p>
+<blockquote>
 <p>统计当前测试部，已上线、进行中、未开始的需求等信息</p>
+</blockquote>
 <h1 id="测试用例管理"><a href="#测试用例管理" class="headerlink" title="测试用例管理"></a>测试用例管理</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/3.jpg" alt="img"></p>
 <p>  <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/3-1.jpg" alt="img"></p>
+<blockquote>
 <p>日常测试用例编写、执行</p>
+</blockquote>
 <h1 id="接口文档管理"><a href="#接口文档管理" class="headerlink" title="接口文档管理"></a>接口文档管理</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/4-1.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/4-2.jpg" alt="img"></p>
+<blockquote>
 <p>接口测试文档</p>
+</blockquote>
 <h1 id="测试工具管理"><a href="#测试工具管理" class="headerlink" title="测试工具管理"></a>测试工具管理</h1><h1 id="测试数据构造"><a href="#测试数据构造" class="headerlink" title="测试数据构造"></a>测试数据构造</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/5.jpg" alt="img"></p>
+<blockquote>
 <p>日常测试数据构建，便于功能测试，核心封装了几个常用构造测试数据的客户端请求。</p>
+</blockquote>
 <h1 id="Xmind与testlink测试用例转换工具"><a href="#Xmind与testlink测试用例转换工具" class="headerlink" title="Xmind与testlink测试用例转换工具"></a>Xmind与testlink测试用例转换工具</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/5-1.jpg" alt="img"></p>
+<blockquote>
 <p>将xmind思维导图，编写的测试用例转成testlink导入格式（.xml）</p>
+</blockquote>
 <h1 id="二维码生成、解析"><a href="#二维码生成、解析" class="headerlink" title="二维码生成、解析"></a>二维码生成、解析</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/12-2-3.jpg" alt="img"></p>
-<p> 常用于将文本内容、特别是APP下载地址，转成二维码图片，供手机扫描直接使用</p>
+<blockquote>
+<p>常用于将文本内容、特别是APP下载地址，转成二维码图片，供手机扫描直接使用</p>
+</blockquote>
 <h1 id="接口测试"><a href="#接口测试" class="headerlink" title="接口测试"></a>接口测试</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/12-2-2.jpg" alt="img"></p>
+<blockquote>
 <p>支持基于http/https、websocket、GraphQl协议接口</p>
+</blockquote>
 <h1 id="sop服务分支使用管理"><a href="#sop服务分支使用管理" class="headerlink" title="sop服务分支使用管理"></a>sop服务分支使用管理</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/12-3-4.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/12-3-5.png" alt="img"></p>
-<p> 多个业务线、多个测试环境，时长用于多个不同分支使用，便于记录当前每个环境使用哪个分支代码</p>
+<blockquote>
+<p>多个业务线、多个测试环境，时长用于多个不同分支使用，便于记录当前每个环境使用哪个分支代码</p>
+</blockquote>
 <h1 id="测试报告管理"><a href="#测试报告管理" class="headerlink" title="测试报告管理"></a>测试报告管理</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/6.jpg" alt="img"></p>
+<blockquote>
 <p>同步CI jenkins服务器报告数据，newman接口测试报告、mochawesome UI自动化测试报告</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/6-1.jpg" alt="img"></p>
+<blockquote>
 <h1 id="测试文档管理"><a href="#测试文档管理" class="headerlink" title="测试文档管理"></a>测试文档管理</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/7-1.jpg" alt="img"></p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/7-2.jpg" alt="img"></p>
+<blockquote>
 <p>保存相关测试文档，目前主要是以测试工具、框架技术资料文档为主</p>
-<h1 id="数据库管理"><a href="#数据库管理" class="headerlink" title="数据库管理"></a>数据库管理</h1><h1 id="表结构查看"><a href="#表结构查看" class="headerlink" title="表结构查看"></a>表结构查看</h1><p>通过网页配置好数据库访问参数，快速查看数据表结构（无需安装破解任何数据库客户端软件）</p>
+</blockquote>
+<h1 id="数据库管理"><a href="#数据库管理" class="headerlink" title="数据库管理"></a>数据库管理</h1><h1 id="表结构查看"><a href="#表结构查看" class="headerlink" title="表结构查看"></a>表结构查看</h1><blockquote>
+<p>通过网页配置好数据库访问参数，快速查看数据表结构（无需安装破解任何数据库客户端软件）</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/8-6.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/8-7.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/8-8.jpg" alt="img"></p>
 <p>  <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/8-9.jpg" alt="img"></p>
 <h1 id="数据库命令执行"><a href="#数据库命令执行" class="headerlink" title="数据库命令执行"></a>数据库命令执行</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/8-1.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/8-2.jpg" alt="img"></p>
+<blockquote>
 <p>日常测试经常使用的数据库命令脚本，可以放在这边管理，用于测试人员学习、使用</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/8-3.jpg" alt="img"></p>
+<blockquote>
 <p>支持页面执行数据库命令脚本</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/8-4.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/8-5.jpg" alt="img"></p>
+<blockquote>
 <p>支持保存执行配置信息</p>
+</blockquote>
 <h1 id="脚本代码管理"><a href="#脚本代码管理" class="headerlink" title="脚本代码管理"></a>脚本代码管理</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/9-1.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/9-2.jpg" alt="img"></p>
-<h1 id="产品原型管理"><a href="#产品原型管理" class="headerlink" title="产品原型管理"></a>产品原型管理</h1><p>公司产品经理，可以将原型文档压缩包，通过这个入口上传到服务器，测试、开发人员直接通过点击列表上面相应原型链接访问原型文档，无需再本地化管理原型文档</p>
+<h1 id="产品原型管理"><a href="#产品原型管理" class="headerlink" title="产品原型管理"></a>产品原型管理</h1><blockquote>
+<p>公司产品经理，可以将原型文档压缩包，通过这个入口上传到服务器，测试、开发人员直接通过点击列表上面相应原型链接访问原型文档，无需再本地化管理原型文档</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/10-1.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/10-5.jpg" alt="img"></p>
-<p> 支持上传历史记录，新旧版本都可以快速查看到</p>
+<blockquote>
+<p>支持上传历史记录，新旧版本都可以快速查看到</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/10-2.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/10-3.jpg" alt="img"></p>
-<p> 打开后的原型文档地址，就是平台服务器后台地址</p>
+<blockquote>
+<p>打开后的原型文档地址，就是平台服务器后台地址</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/10-4.jpg" alt="img"></p>
-<h1 id="工单管理"><a href="#工单管理" class="headerlink" title="工单管理"></a>工单管理</h1><p>管理客服、门店等线下反馈的跟进问题。</p>
+<h1 id="工单管理"><a href="#工单管理" class="headerlink" title="工单管理"></a>工单管理</h1><blockquote>
+<p>管理客服、门店等线下反馈的跟进问题。</p>
+</blockquote>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/11-1.jpg" alt="img"></p>
 <p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/11-2.jpg" alt="img"></p>
 <h1 id="网址导航"><a href="#网址导航" class="headerlink" title="网址导航"></a>网址导航</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/12-1-2.jpg" alt="img"></p>
-<p> 常用测试网址，统一记录管理</p>
+<blockquote>
+<p>常用测试网址，统一记录管理</p>
+</blockquote>
 <h1 id="系统基础数据管理"><a href="#系统基础数据管理" class="headerlink" title="系统基础数据管理"></a>系统基础数据管理</h1><p> <img src="//liyinchigithub.github.io/2019/06/14/测试工作管理平台/images/10.jpg" alt="img"></p>
+<blockquote>
 <p>比如：测试人员基础数据，用于其他功能进行选择分配</p>
+</blockquote>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><blockquote>
+<p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+</blockquote>
 
           
         
@@ -1789,8 +1867,12 @@
       
         
           
-            <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>使用postman做restful api自动化测试，遇到下载excel报表，并需要解析报表内容是否正确？</p>
-<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>借助nodejs后端框架express写一个解析程序：<br>postman客户端请求服务端接口，带上相关参数；<br>服务端下载指定文档，解析文档内容，断言是否和客户端参数一致！</p>
+            <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><blockquote>
+<p>使用postman做restful api自动化测试，遇到下载excel报表，并需要解析报表内容是否正确？</p>
+</blockquote>
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><blockquote>
+<p>借助nodejs后端框架express写一个解析程序：<br>postman客户端请求服务端接口，带上相关参数；<br>服务端下载指定文档，解析文档内容，断言是否和客户端参数一致！</p>
+</blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入接口实现模块</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line"><span class="comment">//引入sheetJS xlsx模块</span></span><br><span class="line"><span class="keyword">var</span> xl = <span class="built_in">require</span>(<span class="string">'xlsx'</span>);</span><br><span class="line"><span class="comment">//引入node-xlsx模块</span></span><br><span class="line"><span class="keyword">var</span> xlsx = <span class="built_in">require</span>(<span class="string">'node-xlsx'</span>);</span><br><span class="line"><span class="comment">//引入文件、路径、http请求模块</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>);</span><br><span class="line"><span class="keyword">var</span> request = <span class="built_in">require</span>(<span class="string">'request'</span>);</span><br><span class="line"><span class="comment">// 实例化一个express的对象app</span></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"><span class="comment">// 创建 application/x-www-form-urlencoded 编码解析</span></span><br><span class="line"><span class="keyword">var</span> urlencodedParser = bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">true</span> &#125;)</span><br><span class="line"><span class="comment">// 告诉应用程序中间件，使用外部引入的模块中间件（内置中间件、第三方中间件、自己封装js）</span></span><br><span class="line"><span class="comment">// 开放客户端请求访问public目录下的资源  express.statics()是内置中间件函数，与express.json、express.urlencoder一样都是内置中间件</span></span><br><span class="line">app.use(express.static(__dirname + <span class="string">"/public"</span>), <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"请求地址："</span> + __dirname + <span class="string">"/public"</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'请求时间:'</span>, <span class="keyword">new</span> <span class="built_in">Date</span>());</span><br><span class="line">  <span class="comment">//释放控制权</span></span><br><span class="line">  next();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 为了解析 application/json</span></span><br><span class="line">app.use(bodyParser.json());</span><br><span class="line"><span class="comment">// 跨域设置，对所有http请求均有效</span></span><br><span class="line"><span class="comment">// 自定义跨域中间件</span></span><br><span class="line">app.all(<span class="string">"*"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//响应头</span></span><br><span class="line">  <span class="comment">// res.header("Access-Control-Allow-Credentials", 'true');</span></span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Origin'</span>, <span class="string">'*'</span>);</span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Headers'</span>, <span class="string">'Content-Type,Content-Length,Authorization,Accept,X-Requested-With'</span>);</span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Methods'</span>, <span class="string">'PUT,POST,GET,DELETE,OPTIONS'</span>);</span><br><span class="line">  res.header(<span class="string">"Content-Length"</span>, <span class="string">"2000"</span>);</span><br><span class="line">  res.header(<span class="string">"X-Powered-By"</span>, <span class="string">' 3.2.1'</span>);</span><br><span class="line">  <span class="comment">//  res.header("Content-Type", "application/x-www-form-urlencoded");</span></span><br><span class="line">  res.header(<span class="string">"Content-Type"</span>, <span class="string">"application/json;charset=utf-8"</span>);</span><br><span class="line">  <span class="comment">//控制权交给下一个处理程序</span></span><br><span class="line">  <span class="keyword">if</span> (req.method == <span class="string">'OPTIONS'</span>) &#123;</span><br><span class="line">    <span class="comment">//让options请求快速返回</span></span><br><span class="line">    res.sendStatus(<span class="number">200</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    next();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @description 下载文件</span></span><br><span class="line"><span class="comment"> * @params ''</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">app.post(<span class="string">'/ExportTheDetailsAndCheckTheContent'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 第一部分：根据请求内容下载指定报表</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="comment">//创建文件夹目录，用于保存下载文件</span></span><br><span class="line">  <span class="keyword">let</span> dirPath = path.join(__dirname, <span class="string">"download_path"</span>);</span><br><span class="line">  <span class="comment">//判断文件夹是否已存在</span></span><br><span class="line">  <span class="keyword">if</span> (!fs.existsSync(dirPath)) &#123;</span><br><span class="line">    fs.mkdirSync(dirPath);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件夹创建成功"</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件夹已存在"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//创建写入流</span></span><br><span class="line">  <span class="keyword">let</span> stream = fs.createWriteStream(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>));</span><br><span class="line">  <span class="comment">//请求参数</span></span><br><span class="line">  <span class="keyword">let</span> options = &#123;</span><br><span class="line">    url: req.body.down_url + req.body.fileName + <span class="string">".xls"</span>,</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">//通过request模块，pipe方法将响应结果写入文件流stream中</span></span><br><span class="line">  request(options).pipe(stream).on(<span class="string">"close"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件["</span> + req.body.fileName + <span class="string">".xls]下载完毕"</span>);</span><br><span class="line">    <span class="comment">//此处特别说明：因为是异步，所以要放在请求下载生成文档之后，再进行解析excel报表</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 第二部分：解析下载报表方法</span></span><br><span class="line"><span class="comment">     * 使用sheetJS xlsx读取工作簿指定工作表的数据</span></span><br><span class="line"><span class="comment">     * @description 获取指定单元格数据</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//workbook 对象，指的是整份 Excel 文档。我们在使用 js-xlsx 读取 Excel 文档之后就会获得 workbook 对象。</span></span><br><span class="line">    <span class="keyword">var</span> workbook = xl.readFile(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>))</span><br><span class="line">    <span class="built_in">console</span>.log(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取 Excel 中所有表名</span></span><br><span class="line">    <span class="keyword">const</span> sheetNames = workbook.SheetNames; <span class="comment">// 返回 ['sheet1', 'sheet2']</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"sheetNames:"</span> + sheetNames);</span><br><span class="line">    <span class="comment">//获取指定工作表数据，返回json数据</span></span><br><span class="line">    <span class="keyword">var</span> first_sheet_name = workbook.SheetNames[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_A2 = <span class="string">'A2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_B2 = <span class="string">'B2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_C2 = <span class="string">'C2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_D2 = <span class="string">'D2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_E2 = <span class="string">'E2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_F2 = <span class="string">'F2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_G2 = <span class="string">'G2'</span>;</span><br><span class="line">    <span class="comment">//获取工作表</span></span><br><span class="line">    <span class="keyword">var</span> worksheet = workbook.Sheets[first_sheet_name];</span><br><span class="line">    <span class="comment">//找到所需的单元格</span></span><br><span class="line">    <span class="keyword">var</span> desired_cell_A2 = worksheet[address_of_cell_A2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_B2 = worksheet[address_of_cell_B2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_C2 = worksheet[address_of_cell_C2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_D2 = worksheet[address_of_cell_D2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_E2 = worksheet[address_of_cell_E2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_F2 = worksheet[address_of_cell_F2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_G2 = worksheet[address_of_cell_G2];</span><br><span class="line">    <span class="comment">//获取值</span></span><br><span class="line">    <span class="keyword">var</span> desired_value_A2 = (desired_cell_A2 ? desired_cell_A2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_B2 = (desired_cell_B2 ? desired_cell_B2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_C2 = (desired_cell_C2 ? desired_cell_C2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_D2 = (desired_cell_D2 ? desired_cell_D2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_E2 = (desired_cell_E2 ? desired_cell_E2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_F2 = (desired_cell_F2 ? desired_cell_F2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_G2 = (desired_cell_G2 ? desired_cell_G2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_A2);<span class="comment">//输出excel单元格A2的数据</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_B2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_C2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_D2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_E2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_F2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_G2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 第二部分：解析下载报表方法</span></span><br><span class="line"><span class="comment">     * 使用node-xlsx</span></span><br><span class="line"><span class="comment">     * @description 获取整个工作簿的数据</span></span><br><span class="line"><span class="comment">     * 格式：[&#123;"name":"表名","data":数据数据</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">var</span> list = xlsx.parse(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>));</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(list[<span class="number">0</span>].data[<span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//将读取的数据返回给客户端</span></span><br><span class="line">    <span class="keyword">if</span> (!err === <span class="literal">null</span>) &#123;</span><br><span class="line">      res.status(<span class="number">500</span>).send(&#123; <span class="attr">data</span>: list &#125;)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      res.status(<span class="number">200</span>).send(&#123; <span class="attr">data</span>: list &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//监听端口</span></span><br><span class="line"><span class="keyword">var</span> server = app.listen(<span class="number">8004</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> host = server.address().address</span><br><span class="line">  <span class="keyword">var</span> port = server.address().port</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"应用实例，访问地址为 http://%s:%s"</span>, host, port)</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>参考链接：<a href="https://blog.csdn.net/q3585914/article/details/70157938" target="_blank" rel="noopener">https://blog.csdn.net/q3585914/article/details/70157938</a></p>
 
