@@ -2329,76 +2329,50 @@
 </blockquote>
 <p>你可以从这里下载使用<a href="https://github.com/liyinchigithub/Omysql" target="_blank" rel="noopener">Omysql</a></p>
 <p><img src="//liyinchigithub.github.io/2018/12/27/Omysql/images/omysql.jpg" alt="img"></p>
-<p>###使用方式</p>
-<p>如果你电脑已经安装配置Git、node环境，可以直接按下面步骤进行操作：</p>
-<p>1、从github拉取工程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:liyinchigithub/express-mysql-restfulAPI.git</span><br></pre></td></tr></table></figure>
-<p>2、切换到目录下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd Omysql</span><br></pre></td></tr></table></figure>
-<p>3、安装依赖包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<p>4、启动omysql服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node server.js</span><br></pre></td></tr></table></figure>
-<p>5、如果你的电脑还没有node环境，具体配置方法可以参考下面两个链接：</p>
+<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>如果你电脑已经安装配置Git、node环境，可以直接按下面步骤进行操作：</p>
+<h1 id="从github拉取工程"><a href="#从github拉取工程" class="headerlink" title="从github拉取工程"></a>从github拉取工程</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:liyinchigithub/express-mysql-restfulAPI.git</span><br></pre></td></tr></table></figure>
+<h1 id="切换到目录下"><a href="#切换到目录下" class="headerlink" title="切换到目录下"></a>切换到目录下</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd Omysql</span><br></pre></td></tr></table></figure>
+<h1 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h1 id="启动omysql服务"><a href="#启动omysql服务" class="headerlink" title="启动omysql服务"></a>启动omysql服务</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node server.js</span><br></pre></td></tr></table></figure>
+<p>如果你的电脑还没有node环境，具体配置方法可以参考下面两个链接：</p>
 <p>windows <a href="https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html</a></p>
 <p>mac <a href="https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html</a></p>
-<p>##API接口文档</p>
-<p>###中文</p>
-<ol>
-<li>功能   创建数据库</li>
-</ol>
-<p>请求方法：POST</p>
+<h2 id="API接口文档"><a href="#API接口文档" class="headerlink" title="API接口文档"></a>API接口文档</h2><h3 id="中文"><a href="#中文" class="headerlink" title="中文"></a>中文</h3><h1 id="功能-创建数据库"><a href="#功能-创建数据库" class="headerlink" title="功能   创建数据库"></a>功能   创建数据库</h1><p>请求方法：POST</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/CreateDB/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/CreateDB/</a></p>
 <p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"query"</span>:<span class="string">"CREATE DATABASE Express_API_DB;"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ol start="2">
-<li>功能   创建表</li>
-</ol>
-<p>请求方法：POST</p>
+<h1 id="功能-创建表"><a href="#功能-创建表" class="headerlink" title="功能   创建表"></a>功能   创建表</h1><p>请求方法：POST</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/CreateTable/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/CreateTable/</a></p>
 <p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"query"</span>:<span class="string">"CREATE TABLE table4(name VARCHAR(100),id VARCHAR(100),age INT,address VARCHAR(100),tel INT,PRIMARY KEY ( id ))ENGINE=InnoDB DEFAULT CHARSET=utf8;"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ol start="3">
-<li>功能   插入数据</li>
-</ol>
-<p>请求方法：PUT</p>
+<h1 id="功能-插入数据"><a href="#功能-插入数据" class="headerlink" title="功能   插入数据"></a>功能   插入数据</h1><p>请求方法：PUT</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/insert_data/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/insert_data/</a></p>
 <p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"addSql"</span>:<span class="string">"INSERT INTO table4(address,age,id,name,tel) VALUES('福建省泉州市丰泽区',19,225,'刘丽丽','159115');"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ol start="4">
-<li>功能   更新数据</li>
-</ol>
-<p>请求方法：PUT</p>
+<h1 id="功能-更新数据"><a href="#功能-更新数据" class="headerlink" title="功能   更新数据"></a>功能   更新数据</h1><p>请求方法：PUT</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/update/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/update/</a></p>
 <p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"UpdateSql"</span>:<span class="string">"UPDATE table4 SET address='福建省厦门市',age='17',id='123',name='赵柳',tel='123123' WHERE name='刘丽丽';"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ol start="5">
-<li>功能   删除表数据</li>
-</ol>
-<p>请求方法：DELETE</p>
+<h1 id="功能-删除表数据"><a href="#功能-删除表数据" class="headerlink" title="功能   删除表数据"></a>功能   删除表数据</h1><p>请求方法：DELETE</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/delete/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/delete/</a></p>
 <p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"delSql"</span>:<span class="string">"DELETE FROM table4 where name='王老五';"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>6.功能   删除表</p>
-<p>请求方法：DELETE</p>
+<h1 id="功能-删除表"><a href="#功能-删除表" class="headerlink" title="功能   删除表"></a>功能   删除表</h1><p>请求方法：DELETE</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/drop" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/drop</a></p>
 <p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"DropSql"</span>:<span class="string">"DROP TABLE table4;"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>7.功能   删除数据库</p>
-<p>请求方法：DELETE</p>
+<h1 id="功能-删除数据库"><a href="#功能-删除数据库" class="headerlink" title="功能   删除数据库"></a>功能   删除数据库</h1><p>请求方法：DELETE</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/drop" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/drop</a></p>
 <p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"DropSql"</span>:<span class="string">"DROP DATABASE Express_API_DB;"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>8.功能   查询条件</p>
-<p>请求方法：POST</p>
+<h1 id="功能-查询条件"><a href="#功能-查询条件" class="headerlink" title="功能   查询条件"></a>功能   查询条件</h1><p>请求方法：POST</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/find" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/find</a></p>
 <p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"findSql"</span>:<span class="string">"SELECT * FROM table4 WHERE name='赵柳';"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>9.功能   查询表内所有数据</p>
-<p>请求方法：POST</p>
+<h1 id="功能-查询表内所有数据"><a href="#功能-查询表内所有数据" class="headerlink" title="功能   查询表内所有数据"></a>功能   查询表内所有数据</h1><p>请求方法：POST</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/find" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/find</a></p>
 <p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"findSql"</span>:<span class="string">"SELECT * FROM table4;"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>10.功能   查询所有数据库</p>
-<p>请求方法：POST</p>
+<h1 id="功能-查询所有数据库"><a href="#功能-查询所有数据库" class="headerlink" title="功能   查询所有数据库"></a>功能   查询所有数据库</h1><p>请求方法：POST</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/show_databases" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/show_databases</a></p>
 <p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"findSql"</span>:<span class="string">"show databases"</span></span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>11.功能   查询数据库所有表</p>
-<p>请求方法：POST</p>
+<h1 id="功能-查询数据库所有表"><a href="#功能-查询数据库所有表" class="headerlink" title="功能   查询数据库所有表"></a>功能   查询数据库所有表</h1><p>请求方法：POST</p>
 <p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/show_databases" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/show_databases</a></p>
 <p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"findSql"</span>:<span class="string">"show tables"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><blockquote>
+<p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+</blockquote>
 
           
         
