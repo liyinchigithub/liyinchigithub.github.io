@@ -249,6 +249,176 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2020/03/30/Postman2Testlink/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/30/Postman2Testlink/" itemprop="url">Postman2Testlink</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-30T23:39:55+08:00">
+                2020-03-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Postman2Testlink"><a href="#Postman2Testlink" class="headerlink" title="Postman2Testlink"></a>Postman2Testlink</h1><blockquote>
+<p>工具地址 <a href="https://github.com/liyinchigithub/Postman2Testlink" target="_blank" rel="noopener">https://github.com/liyinchigithub/Postman2Testlink</a></p>
+</blockquote>
+<h3 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h3><blockquote>
+<p>团队使用testlink对测试用例管理维护，大家习惯用Xmind、Excel编写测试用例，将其转成testlink xml格式，再导入testlink。但testlink修改用例操作体验比较不舒服，比如：页面不断刷新，或者市面上普遍方案是将用例导出xml转成excel，修改完再转格式导入testlink，烦躁的过程。</p>
+</blockquote>
+<blockquote>
+<p>postman2Testlink诞生了，直接通过postman请求body配置testlink_info参数值即可。<br> 比如：你所在公司testlink域名（IP）、端口、API Key就能快速创建测试用例套件、测试用例、测试计划等等操作。</p>
+</blockquote>
+<h3 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h3><blockquote>
+<p>Nodejs</p>
+</blockquote>
+<blockquote>
+<p>Git</p>
+</blockquote>
+<h3 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h3><table>
+<thead>
+<tr>
+<th>tool</th>
+<th>version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> nodejs</td>
+<td>&gt;8.17.0</td>
+</tr>
+<tr>
+<td> testlink</td>
+<td>1.9.17</td>
+</tr>
+<tr>
+<td> postman</td>
+<td>all</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://note.youdao.com/ynoteshare1/index.html?id=1b64f29437a77f86f0e22ac412987c54&amp;type=note" target="_blank" rel="noopener">API Document</a></p>
+<p><a href="https://note.youdao.com/ynoteshare1/index.html?id=1b64f29437a77f86f0e22ac412987c54&amp;type=note" target="_blank" rel="noopener">FAQ</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node test/server.js</span><br></pre></td></tr></table></figure>
+<h3 id="postman-Script"><a href="#postman-Script" class="headerlink" title="postman Script"></a>postman Script</h3><h5 id="工程目录下有postman脚本示例，可以直接导入postman"><a href="#工程目录下有postman脚本示例，可以直接导入postman" class="headerlink" title="工程目录下有postman脚本示例，可以直接导入postman"></a>工程目录下有postman脚本示例，可以直接导入postman</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">postman_script_demo\Postman2Testlink.postman_collection.json</span><br></pre></td></tr></table></figure>
+<h2 id="createTestCase"><a href="#createTestCase" class="headerlink" title="createTestCase"></a>createTestCase</h2><p><img src="//liyinchigithub.github.io/2020/03/30/Postman2Testlink/images/createTestCase.png" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2020/03/30/Postman2Testlink/images/addTestCaseKeywordsTestlinkUI.png" alt="img"></p>
+<h2 id="addTestCaseKeywords"><a href="#addTestCaseKeywords" class="headerlink" title="addTestCaseKeywords"></a>addTestCaseKeywords</h2><p><img src="//liyinchigithub.github.io/2020/03/30/Postman2Testlink/images/addTestCaseKeywords.png" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2020/03/30/Postman2Testlink/images/addTestCaseKeywordsTestlinkUI.png" alt="img"></p>
+<h2 id="updateTestCaseCustomFieldDesignValue"><a href="#updateTestCaseCustomFieldDesignValue" class="headerlink" title="updateTestCaseCustomFieldDesignValue"></a>updateTestCaseCustomFieldDesignValue</h2><p><img src="//liyinchigithub.github.io/2020/03/30/Postman2Testlink/images/updateTestCaseCustomFieldDesignValue.png" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2020/03/30/Postman2Testlink/images/updateTestCaseCustomFieldDesignValueTestlinkUI.png" alt="img"></p>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><blockquote>
+<p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/12/24/vue-qrcode前端生成二维码/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1889,196 +2059,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/04/19/场景法设计测试用例/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liyinchi">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/19/场景法设计测试用例/" itemprop="url">场景法设计测试用例</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-19T11:17:08+08:00">
-                2019-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="场景法设计测试用例"><a href="#场景法设计测试用例" class="headerlink" title="场景法设计测试用例"></a>场景法设计测试用例</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>1、分析软件应用的场景（使用场景）：</p>
-<p>从用户的角度出发，从场景的角度来设计测试用例，是一种面向用户的测试用例设计方法。</p>
-<p>2、关心用户做什么，而不是关心产品做什么。（功能测试用例相反，更关注产品功能）</p>
-<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><p>实用性强，贴近用户的操作。（功能测试用例相反）</p>
-<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>可能使用的场景不一定能对事件系列进行全面的分析，设计出来的用例不完整。（功能测试用例相反，对每个页面表单控件进行全面分析）</p>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>登录</p>
-<p>(1)场景用例：</p>
-<p>合法账号密码，能够登录成功。</p>
-<p>合法账号密码，被禁用后再次启用，能够登录成功。</p>
-<p>合法账号密码，重复登录，能够登录成功。</p>
-<p>非法账号密码，无法登录，切换为合法账号密码，能够登录成功。</p>
-<p>（你会发现：从用户层面设计用例）</p>
-<p>(2)功能用例：</p>
-<p>账号输入框支持格式，是否符合需求文档要求</p>
-<p>密码输入框支持格式，是否符合需求文档要求</p>
-<p>登录成功，是否符合需求文档要求</p>
-<p>登录失败，是否符合需求文档要求</p>
-<p>错误信息提示，是否符合需求文档要求。</p>
-<p>（你会发现：从产品层面设计用例，少部分会涉及用户场景）</p>
-<p>我的理解（总结）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">场景分析是通过【描述流经用例路径】来确定的过程。</span><br><span class="line"></span><br><span class="line">这个流经过程要从【用例开始到结束遍历其中所有基本流】 。</span><br><span class="line"></span><br><span class="line">直黑线表示基本流，是最基本、最简单的路径（软件功能按照正确的事件流实现的一条正确流程无任何错，程序从开始直到结束）。</span><br></pre></td></tr></table></figure>
-<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/images/1.jpg" alt="img"></p>
-<p>遵循上图中每个经过用例的可能路径，可以确定不同的用例场景。</p>
-<p>从基本流开始，再将基本流和备选流结合起来，可以确定以下用例场景：</p>
-<p>场景1    基本流<br>场景2    基本流    备选流1<br>场景3    基本流    备选流1    备选流2<br>场景4    基本流    备选流3<br>场景5    基本流    备选流3    备选流1<br>场景6    基本流    备选流3    备选流1    备选流2<br>场景7    基本流    备选流4<br>场景8    基本流    备选流3    备选流4     </p>
-<h2 id="用场景分析法设计测试用例的步骤"><a href="#用场景分析法设计测试用例的步骤" class="headerlink" title="用场景分析法设计测试用例的步骤"></a>用场景分析法设计测试用例的步骤</h2><p>1.根据说明，画出流程图（确定基本流和备选流）；</p>
-<p>2.根据基本流和各项备选流确定场景；</p>
-<p>3.对每一个场景生成测试用例；</p>
-<p>4.对生成的所有测试用例重新复审，去掉多余的测试用例，测试用例确定后，对每一个测试用例确定测试数据值。</p>
-<h2 id="用例场景例子"><a href="#用例场景例子" class="headerlink" title="用例场景例子"></a>用例场景例子</h2><p>购书：用户登录到网站后，进行书籍的选择，当选好自己心仪的书籍后进行订购，这时把所需图书放进购物车，等进行结帐的时候，用户需要登录自己注册的帐号，登录成功后，进行付款交易，交易成功后，生成订购单，整个购物过程结束。</p>
-<p>第一步：画出流程图，确定基本流和备选流；</p>
-<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/images/2.jpg" alt="img"></p>
-<p>基本流：登录在线网站→选择书籍→放入购物车→登录账号→付款→生成订单</p>
-<p>备选流１：用户不存在→注册用户</p>
-<p>备选流２：密码不正确</p>
-<p>备选流３：账户余额不足→充值</p>
-<p>第二步：根据基本流、备选流确定场景；</p>
-<table>
-<thead>
-<tr>
-<th>场景</th>
-<th>流</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>场景１（成功购物）</td>
-<td>基本流；</td>
-<td></td>
-</tr>
-<tr>
-<td>场景２（账户不存在）</td>
-<td>基本流、备选流１</td>
-<td></td>
-</tr>
-<tr>
-<td>场景３（账户密码错误）</td>
-<td>基本流、备选流２</td>
-<td></td>
-</tr>
-<tr>
-<td>场景４（账户余额不足）</td>
-<td>基本流、备选流3</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>第三步：对每一个场景生成测试用例；</p>
-<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/images/3.jpg" alt="img"></p>
-<p>第四步：对生成的所有测试用例重新复审，补充测试数据值；</p>
-<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/images/4.jpg" alt="img"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2129,7 +2109,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2179,7 +2159,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
