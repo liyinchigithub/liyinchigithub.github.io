@@ -79,24 +79,29 @@
 
 
 
-<meta name="description" content="简介 android monkey界面工具，快速为测试机界面压力测试。  你可以从这里下载使用 monkeyGUI 下载安装包  说明：windows需要使用右击以管理员身份运行 Version 版本V2.0.0 Run Environment 运行环境依赖本地电脑已配置android SDK及其环境 参考： https://jingyan.baidu.com/article/15622f2434">
+<meta name="description" content="背景 传统互联网企业，测试部门测试用例管理一般用excel、word、xmind、禅道、Teambition、Testlink。   经过这几年总结，testlink优点可以说最全面，主要体现在一下几点：用例复用、维护、筛选过滤、关联自动化测试、统计测试数据和报告等等。但有些操作testlink前端没有实现，测试小伙伴实际工作中还是经常需要用到，比如：批量添加关键字、批量修改测试用例、批量添加用例">
 <meta name="keywords" content="Development">
 <meta property="og:type" content="article">
-<meta property="og:title" content="monkeyGUI">
-<meta property="og:url" content="http://liyinchigithub.github.io/2018/12/27/monkeyGUI/index.html">
+<meta property="og:title" content="实现Testlink不具备的功能操作">
+<meta property="og:url" content="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/index.html">
 <meta property="og:site_name" content="liyinchi">
-<meta property="og:description" content="简介 android monkey界面工具，快速为测试机界面压力测试。  你可以从这里下载使用 monkeyGUI 下载安装包  说明：windows需要使用右击以管理员身份运行 Version 版本V2.0.0 Run Environment 运行环境依赖本地电脑已配置android SDK及其环境 参考： https://jingyan.baidu.com/article/15622f2434">
+<meta property="og:description" content="背景 传统互联网企业，测试部门测试用例管理一般用excel、word、xmind、禅道、Teambition、Testlink。   经过这几年总结，testlink优点可以说最全面，主要体现在一下几点：用例复用、维护、筛选过滤、关联自动化测试、统计测试数据和报告等等。但有些操作testlink前端没有实现，测试小伙伴实际工作中还是经常需要用到，比如：批量添加关键字、批量修改测试用例、批量添加用例">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://thyrsi.com/t6/660/1548085896x2890211845.jpg">
-<meta property="og:image" content="http://liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG1.jpg">
-<meta property="og:image" content="http://liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG2.jpg">
-<meta property="og:image" content="http://liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG3.jpg">
-<meta property="og:image" content="http://liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG4.jpg">
-<meta property="og:updated_time" content="2019-12-24T14:28:19.109Z">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase1.png">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase2.png">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase3.png">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase4.png">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase5.png">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase1.png">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase2.png">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase3.png">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase4.png">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/createTestCase.png">
+<meta property="og:updated_time" content="2020-04-02T02:55:58.741Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="monkeyGUI">
-<meta name="twitter:description" content="简介 android monkey界面工具，快速为测试机界面压力测试。  你可以从这里下载使用 monkeyGUI 下载安装包  说明：windows需要使用右击以管理员身份运行 Version 版本V2.0.0 Run Environment 运行环境依赖本地电脑已配置android SDK及其环境 参考： https://jingyan.baidu.com/article/15622f2434">
-<meta name="twitter:image" content="http://thyrsi.com/t6/660/1548085896x2890211845.jpg">
+<meta name="twitter:title" content="实现Testlink不具备的功能操作">
+<meta name="twitter:description" content="背景 传统互联网企业，测试部门测试用例管理一般用excel、word、xmind、禅道、Teambition、Testlink。   经过这几年总结，testlink优点可以说最全面，主要体现在一下几点：用例复用、维护、筛选过滤、关联自动化测试、统计测试数据和报告等等。但有些操作testlink前端没有实现，测试小伙伴实际工作中还是经常需要用到，比如：批量添加关键字、批量修改测试用例、批量添加用例">
+<meta name="twitter:image" content="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase1.png">
 
 
 
@@ -126,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://liyinchigithub.github.io/2018/12/27/monkeyGUI/">
+  <link rel="canonical" href="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/">
 
 
 
 
 
-  <title>monkeyGUI | liyinchi</title>
+  <title>实现Testlink不具备的功能操作 | liyinchi</title>
   
 
 
@@ -255,7 +260,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2018/12/27/monkeyGUI/">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
@@ -272,7 +277,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">monkeyGUI</h1>
+          <h1 class="post-title" itemprop="name headline">实现Testlink不具备的功能操作</h1>
         
 
         <div class="post-meta">
@@ -284,8 +289,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-27T22:02:33+08:00">
-                2018-12-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-02T10:31:35+08:00">
+                2020-04-02
               </time>
             
 
@@ -322,40 +327,51 @@
       
 
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><blockquote>
-<p>android monkey界面工具，快速为测试机界面压力测试。</p>
+        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><blockquote>
+<p>传统互联网企业，测试部门测试用例管理一般用excel、word、xmind、禅道、Teambition、Testlink。</p>
 </blockquote>
-<p>你可以从这里下载使用</p>
-<p><a href="https://github.com/liyinchigithub/monkeyGUI" target="_blank" rel="noopener">monkeyGUI</a></p>
-<p><a href="https://github.com/liyinchigithub/monkeyGUI/releases" target="_blank" rel="noopener">下载安装包</a></p>
-<p><img src="http://thyrsi.com/t6/660/1548085896x2890211845.jpg" alt="img"></p>
-<p>说明：windows需要使用右击以管理员身份运行</p>
-<h1 id="Version-版本"><a href="#Version-版本" class="headerlink" title="Version 版本"></a>Version 版本</h1><p>V2.0.0</p>
-<h1 id="Run-Environment-运行环境依赖"><a href="#Run-Environment-运行环境依赖" class="headerlink" title="Run Environment 运行环境依赖"></a>Run Environment 运行环境依赖</h1><p>本地电脑已配置android SDK及其环境</p>
-<p>参考：</p>
-<p><a href="https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html</a></p>
-<p><strong>安装依赖</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
-<p><strong>运行程序</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure></p>
-<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run start</span><br></pre></td></tr></table></figure></p>
-<p><strong>打包</strong></p>
-<h3 id="electron-packager"><a href="#electron-packager" class="headerlink" title="electron-packager"></a>electron-packager</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run pack</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;pack&quot;: &quot;electron-packager . monkeyGUI --all --out ./打包monkeyGUI --app-version=2.0.0 --electron-version=3.0.10 --overwrite --icon=./other/image/logo.ico&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>package.json设置==》scripts==》pack<br>electron-packager . monkeyGUI –all –out ./打包monkeyGUI –app-version=2.0.0 –electron-version=3.0.10</p>
-<p>参数说明：</p>
-<p>–all表示打包所有平台的包（含linux、windows、mac）</p>
-<p>–out打包后输出路径</p>
-<p>–app-version当前应用的版本号</p>
-<p>–electron-version打包环境的electron版本号</p>
-<p>#electron-builder</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dist:mac</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dist:win</span><br></pre></td></tr></table></figure>
-<p>package.json设置==》scripts==》dist:mac、dist:win</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;start&quot;: &quot;electron .&quot;,</span><br><span class="line">  &quot;dist:mac&quot;: &quot;electron-builder --mac&quot;,</span><br><span class="line">  &quot;dist:win&quot;: &quot;electron-builder --win --x64&quot;,</span><br><span class="line">  &quot;dist:linux&quot;:&quot;electron-builder --linux&quot;,</span><br><span class="line">   &quot;pack&quot;: &quot;electron-packager . monkeyGUI --all --out ./打包monkeyGUI --app-version=2.0.0 --electron-version=3.0.10 --overwrite --icon=./other/image/logo.ico&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG1.jpg" alt="img"></p>
-<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG2.jpg" alt="img"></p>
-<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG3.jpg" alt="img"></p>
-<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG4.jpg" alt="img"></p>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+<blockquote>
+<p>经过这几年总结，testlink优点可以说最全面，主要体现在一下几点：<br>用例复用、维护、筛选过滤、关联自动化测试、统计测试数据和报告等等。但有些操作testlink前端没有实现，测试小伙伴实际工作中还是经常需要用到，比如：批量添加关键字、批量修改测试用例、批量添加用例自定义字段等等。</p>
+</blockquote>
+<h1 id="技术方案"><a href="#技术方案" class="headerlink" title="技术方案"></a>技术方案</h1><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> vue 2.x</td>
+<td>前端</td>
+</tr>
+<tr>
+<td> nodejs</td>
+<td>后端</td>
+</tr>
+<tr>
+<td> postman2testlink</td>
+<td>testlink api</td>
+</tr>
+</tbody>
+</table>
+<h2 id="testlink-api"><a href="#testlink-api" class="headerlink" title="testlink api"></a>testlink api</h2><p>使用JavaScript封装了一些常用testlink api</p>
+<blockquote>
+<p><a href="https://github.com/liyinchigithub/Charles2Postman" target="_blank" rel="noopener">https://github.com/liyinchigithub/Charles2Postman</a></p>
+</blockquote>
+<h2 id="vue"><a href="#vue" class="headerlink" title="vue"></a>vue</h2><p>前端用vue写页面</p>
+<h1 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h1><h4 id="更新测试用例"><a href="#更新测试用例" class="headerlink" title="更新测试用例"></a>更新测试用例</h4><p>筛选用例：项目名称 &gt; 测试计划 &gt; 测试套件 &gt; 测试用例</p>
+<p>/<strong> 1.编辑用例 </strong>/</p>
+<p><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase1.png" alt="img"></p>
+<p>添加用例自定义字段<br><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase2.png" alt="img"></p>
+<p>添加用例关键字<br><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase3.png" alt="img"></p>
+<p>其他配置<br><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase4.png" alt="img"></p>
+<p>testlink<br><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase5.png" alt="img"></p>
+<h4 id="批量添加关键字"><a href="#批量添加关键字" class="headerlink" title="批量添加关键字"></a>批量添加关键字</h4><p><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase1.png" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase2.png" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase3.png" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase4.png" alt="img"></p>
+<h4 id="批量添加用例自定义字段"><a href="#批量添加用例自定义字段" class="headerlink" title="批量添加用例自定义字段"></a>批量添加用例自定义字段</h4><p><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/createTestCase.png" alt="img"></p>
 
       
     </div>
@@ -415,8 +431,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/27/OMongoDB/" rel="next" title="OMongoDB">
-                <i class="fa fa-chevron-left"></i> OMongoDB
+              <a href="/2020/03/30/Postman2Testlink/" rel="next" title="Postman2Testlink">
+                <i class="fa fa-chevron-left"></i> Postman2Testlink
               </a>
             
           </div>
@@ -424,10 +440,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/28/cucumber-js/" rel="prev" title="cucumber.js">
-                cucumber.js <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -550,7 +562,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Version-版本"><span class="nav-number">2.</span> <span class="nav-text">Version 版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Run-Environment-运行环境依赖"><span class="nav-number">3.</span> <span class="nav-text">Run Environment 运行环境依赖</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#electron-packager"><span class="nav-number">3.0.1.</span> <span class="nav-text">electron-packager</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#声明"><span class="nav-number">4.</span> <span class="nav-text">声明</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技术方案"><span class="nav-number">2.</span> <span class="nav-text">技术方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#testlink-api"><span class="nav-number">2.1.</span> <span class="nav-text">testlink api</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue"><span class="nav-number">2.2.</span> <span class="nav-text">vue</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现效果"><span class="nav-number">3.</span> <span class="nav-text">实现效果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#更新测试用例"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">更新测试用例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#批量添加关键字"><span class="nav-number">3.0.0.2.</span> <span class="nav-text">批量添加关键字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#批量添加用例自定义字段"><span class="nav-number">3.0.0.3.</span> <span class="nav-text">批量添加用例自定义字段</span></a></li></ol></li></ol></div>
             
 
           </div>
