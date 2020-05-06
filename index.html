@@ -527,8 +527,8 @@
 </blockquote>
 <p>我将近期整理一版单独组建，作为开源工具分享给大家，将其命名为【MindMake】</p>
 <h1 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h1><p>利用思维导图编写测试用例，直接生成testlink用例数据</p>
-<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>我所带测试部小伙伴，使用Xmind（思维导图、脑图）编写测试用例，公司以testlink对测试用例进行管理，Xmind无法直接导入testlink，市面上常见方法<br>将Xmind转成xml文件格式，再将其导入到testlink，比如：Xmind2testlink、xmind2testcase。每次创建测试用例、修改用例都要经历转换格式，而且必须时刻保持Xmind<br>和testlink数据一致性。</p>
-<h1 id="设计方案"><a href="#设计方案" class="headerlink" title="设计方案"></a>设计方案</h1><p>前几周，写了一个工具 <a href="https://github.com/liyinchigithub/Postman2Testlink" target="_blank" rel="noopener">Postman2Testlink</a>，利用api向testlink发起请求，进行编写测试用例。<br>再次技术方案基础上，再自己做的测试平台上面做了一个页面。</p>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>公司测试伙伴们比较喜欢使用Xmind（思维导图、脑图）编写测试用例，公司以testlink对测试用例进行管理，Xmind无法直接导入testlink，市面上常见方法<br>将Xmind转成xml文件格式，再将其导入到testlink，比如：Xmind2testlink、xmind2testcase。每次创建测试用例、修改用例都要经历转换格式，而且必须时刻保持Xmind<br>和testlink数据一致性。</p>
+<h1 id="设计方案"><a href="#设计方案" class="headerlink" title="设计方案"></a>设计方案</h1><p>前几周，写了一个工具，可以通过api来访问testlink <a href="https://github.com/liyinchigithub/Postman2Testlink" target="_blank" rel="noopener">Postman2Testlink</a>，利用api向testlink发起请求，进行编写测试用例。<br>再次技术方案基础上，再自己做的测试平台上面做了一个页面。</p>
 <h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p><img src="//liyinchigithub.github.io/2020/04/15/思维导图直接生成testlink测试用例（无需转格式）/images/CreateTestCase1.jpg" alt="img"></p>
 <p><img src="//liyinchigithub.github.io/2020/04/15/思维导图直接生成testlink测试用例（无需转格式）/images/CreateTestCase2.jpg" alt="img"></p>
 <p><img src="//liyinchigithub.github.io/2020/04/15/思维导图直接生成testlink测试用例（无需转格式）/images/CreateTestCase3.jpg" alt="img"></p>
