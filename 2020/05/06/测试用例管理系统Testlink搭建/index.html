@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="AutoTest,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="测试用例重要性 测试用例是一个测试质量体系根基，直接影响bug覆盖是否全面，测试人员需要在短时间内效率工作。   从用例编写、执行、修改、筛选、复用，这些都是测试每期迭代中核心内容，但付出与效果有时很难成正比，这就要求把测试精力放在思考发散写用例，而不是在维护、修改等文档操作上面。   用例工具千千万，像是word、excel、xmind、禅道、teambition、bugfree、testlin">
+<meta name="keywords" content="AutoTest">
+<meta property="og:type" content="article">
+<meta property="og:title" content="测试用例管理系统Testlink搭建">
+<meta property="og:url" content="http://liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/index.html">
+<meta property="og:site_name" content="liyinchi">
+<meta property="og:description" content="测试用例重要性 测试用例是一个测试质量体系根基，直接影响bug覆盖是否全面，测试人员需要在短时间内效率工作。   从用例编写、执行、修改、筛选、复用，这些都是测试每期迭代中核心内容，但付出与效果有时很难成正比，这就要求把测试精力放在思考发散写用例，而不是在维护、修改等文档操作上面。   用例工具千千万，像是word、excel、xmind、禅道、teambition、bugfree、testlin">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/images/home.jpg">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/images/home.jpg">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/images/testlinkinstall.jpg">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/images/home.jpg">
+<meta property="og:updated_time" content="2020-05-06T14:25:18.437Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="测试用例管理系统Testlink搭建">
+<meta name="twitter:description" content="测试用例重要性 测试用例是一个测试质量体系根基，直接影响bug覆盖是否全面，测试人员需要在短时间内效率工作。   从用例编写、执行、修改、筛选、复用，这些都是测试每期迭代中核心内容，但付出与效果有时很难成正比，这就要求把测试精力放在思考发散写用例，而不是在维护、修改等文档操作上面。   用例工具千千万，像是word、excel、xmind、禅道、teambition、bugfree、testlin">
+<meta name="twitter:image" content="http://liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/images/home.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/">
+
+
+
+
+
+  <title>测试用例管理系统Testlink搭建 | liyinchi</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+      <div class="site-meta-headline">
+        <a>
+          <img class="custom-logo-image" src="../../images/Logo/liyinchi.jpg" alt="liyinchi">
+        </a>
+      </div>
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">liyinchi</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">测试用例管理系统Testlink搭建</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-06T21:42:11+08:00">
+                2020-05-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="测试用例重要性"><a href="#测试用例重要性" class="headerlink" title="测试用例重要性"></a>测试用例重要性</h1><blockquote>
+<p>测试用例是一个测试质量体系根基，直接影响bug覆盖是否全面，测试人员需要在短时间内效率工作。</p>
+</blockquote>
+<blockquote>
+<p>从用例编写、执行、修改、筛选、复用，这些都是测试每期迭代中核心内容，但付出与效果有时很难成正比，这就要求把测试精力放在思考发散写用例，而不是在维护、修改等文档操作上面。</p>
+</blockquote>
+<blockquote>
+<p>用例工具千千万，像是word、excel、xmind、禅道、teambition、bugfree、testlink等等</p>
+</blockquote>
+<blockquote>
+<p>但只有testlink能满足快速编写、执行、修改、筛选、复用、测试报告、自动化测试对接</p>
+</blockquote>
+<blockquote>
+<p>总结下最近搭建testlink过程和踩坑</p>
+</blockquote>
+<p><img src="//liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/images/home.jpg" alt="img"></p>
+<h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><table>
+<thead>
+<tr>
+<th>工具</th>
+<th>版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Linux centOS</td>
+<td>7.6</td>
+</tr>
+<tr>
+<td> TestLink</td>
+<td>1.9.20</td>
+</tr>
+<tr>
+<td> Apache</td>
+<td>2.4.43</td>
+</tr>
+<tr>
+<td> MySQL</td>
+<td>8.0.18</td>
+</tr>
+<tr>
+<td> PHP</td>
+<td>7.3.16</td>
+</tr>
+<tr>
+<td> phpMyAdmin</td>
+<td>5.0.2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h2><h3 id="1-查看服务器是否已安装过mysql"><a href="#1-查看服务器是否已安装过mysql" class="headerlink" title="1.查看服务器是否已安装过mysql"></a>1.查看服务器是否已安装过mysql</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum list installed mysql*</span><br><span class="line">rpm -qa | grep mysql*</span><br></pre></td></tr></table></figure>
+<h3 id="2-查看安装包信息"><a href="#2-查看安装包信息" class="headerlink" title="2.查看安装包信息"></a>2.查看安装包信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list mysql*</span><br></pre></td></tr></table></figure>
+<h3 id="3-安装mysql客户端"><a href="#3-安装mysql客户端" class="headerlink" title="3.安装mysql客户端"></a>3.安装mysql客户端</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql</span><br></pre></td></tr></table></figure>
+<h3 id="4-安装mysql服务器端"><a href="#4-安装mysql服务器端" class="headerlink" title="4.安装mysql服务器端"></a>4.安装mysql服务器端</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql-server</span><br><span class="line">yum install mysql-devel</span><br></pre></td></tr></table></figure>
+<h3 id="5-启动mysql服务"><a href="#5-启动mysql服务" class="headerlink" title="5.启动mysql服务"></a>5.启动mysql服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld start</span><br></pre></td></tr></table></figure>
+<h2 id="安装Apache-httpd"><a href="#安装Apache-httpd" class="headerlink" title="安装Apache httpd"></a>安装Apache httpd</h2><h3 id="1-执行安装命令"><a href="#1-执行安装命令" class="headerlink" title="1.执行安装命令"></a>1.执行安装命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install httpd</span><br></pre></td></tr></table></figure>
+<h3 id="2-执行启动httpd服务"><a href="#2-执行启动httpd服务" class="headerlink" title="2.执行启动httpd服务"></a>2.执行启动httpd服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd start</span><br></pre></td></tr></table></figure>
+<h2 id="php"><a href="#php" class="headerlink" title="php"></a>php</h2><p>testlink后端api使用php语言开发，因此php也是必须安装配置的环节</p>
+<h3 id="1-查看php版本信息"><a href="#1-查看php版本信息" class="headerlink" title="1.查看php版本信息"></a>1.查看php版本信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list php* |grep php-devel</span><br></pre></td></tr></table></figure>
+<h3 id="2-安装php"><a href="#2-安装php" class="headerlink" title="2.安装php"></a>2.安装php</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install php</span><br></pre></td></tr></table></figure>
+<h3 id="3-重启apache"><a href="#3-重启apache" class="headerlink" title="3.重启apache"></a>3.重启apache</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd restart</span><br></pre></td></tr></table></figure>
+<h3 id="4-测试php信息"><a href="#4-测试php信息" class="headerlink" title="4.测试php信息"></a>4.测试php信息</h3><p>在/var/www/html/下新建一个phpinfo.phpvim<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/var/www/html/phpinfo.php</span><br></pre></td></tr></table></figure></p>
+<p>内容写入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php phpinfo();?&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="//liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/images/home.jpg" alt="img"></p>
+<h3 id="5-地址访问"><a href="#5-地址访问" class="headerlink" title="5.地址访问"></a>5.地址访问</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localhost:8088/info.php</span><br></pre></td></tr></table></figure>
+<h2 id="testlink"><a href="#testlink" class="headerlink" title="testlink"></a>testlink</h2><h3 id="1-下载testlink"><a href="#1-下载testlink" class="headerlink" title="1.下载testlink"></a>1.下载testlink</h3><blockquote>
+<p>下载地址：<a href="https://github.com/TestLinkOpenSourceTRMS/testlink-code/releases" target="_blank" rel="noopener">https://github.com/TestLinkOpenSourceTRMS/testlink-code/releases</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/TestLinkOpenSourceTRMS/testlink-code/archive/1.9.20.tar.gz</span><br></pre></td></tr></table></figure>
+<h3 id="2-解压"><a href="#2-解压" class="headerlink" title="2.解压"></a>2.解压</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span></span><br><span class="line">mv 1.9.20.tar.gz testlink-1.9.20.tar.gz</span><br></pre></td></tr></table></figure>
+<h3 id="4-重启httpd"><a href="#4-重启httpd" class="headerlink" title="4.重启httpd"></a>4.重启httpd</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd restart</span><br></pre></td></tr></table></figure>
+<h3 id="5-testlink初始化配置"><a href="#5-testlink初始化配置" class="headerlink" title="5.testlink初始化配置"></a>5.testlink初始化配置</h3><p><img src="//liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/images/testlinkinstall.jpg" alt="img"></p>
+<h3 id="6-testlink登录"><a href="#6-testlink登录" class="headerlink" title="6.testlink登录"></a>6.testlink登录</h3><p><img src="//liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/images/home.jpg" alt="img"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Jack Li  QQ:233227763@qq.com WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Jack Li  QQ:233227763@qq.com Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AutoTest/" rel="tag"># AutoTest</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/15/思维导图直接生成testlink测试用例（无需转格式）/" rel="next" title="思维导图直接生成testlink测试用例（无需转格式）">
+                <i class="fa fa-chevron-left"></i> 思维导图直接生成testlink测试用例（无需转格式）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jack Li  QQ:233227763@qq.com</p>
+              <p class="site-description motion-element" itemprop="description">liyinchi personal blog site</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#测试用例重要性"><span class="nav-number">1.</span> <span class="nav-text">测试用例重要性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#环境搭建"><span class="nav-number">2.</span> <span class="nav-text">环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Mysql"><span class="nav-number">2.1.</span> <span class="nav-text">安装Mysql</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-查看服务器是否已安装过mysql"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.查看服务器是否已安装过mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-查看安装包信息"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.查看安装包信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-安装mysql客户端"><span class="nav-number">2.1.3.</span> <span class="nav-text">3.安装mysql客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-安装mysql服务器端"><span class="nav-number">2.1.4.</span> <span class="nav-text">4.安装mysql服务器端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-启动mysql服务"><span class="nav-number">2.1.5.</span> <span class="nav-text">5.启动mysql服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Apache-httpd"><span class="nav-number">2.2.</span> <span class="nav-text">安装Apache httpd</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-执行安装命令"><span class="nav-number">2.2.1.</span> <span class="nav-text">1.执行安装命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-执行启动httpd服务"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.执行启动httpd服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#php"><span class="nav-number">2.3.</span> <span class="nav-text">php</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-查看php版本信息"><span class="nav-number">2.3.1.</span> <span class="nav-text">1.查看php版本信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装php"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.安装php</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-重启apache"><span class="nav-number">2.3.3.</span> <span class="nav-text">3.重启apache</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-测试php信息"><span class="nav-number">2.3.4.</span> <span class="nav-text">4.测试php信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-地址访问"><span class="nav-number">2.3.5.</span> <span class="nav-text">5.地址访问</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#testlink"><span class="nav-number">2.4.</span> <span class="nav-text">testlink</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-下载testlink"><span class="nav-number">2.4.1.</span> <span class="nav-text">1.下载testlink</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-解压"><span class="nav-number">2.4.2.</span> <span class="nav-text">2.解压</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-重启httpd"><span class="nav-number">2.4.3.</span> <span class="nav-text">4.重启httpd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-testlink初始化配置"><span class="nav-number">2.4.4.</span> <span class="nav-text">5.testlink初始化配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-testlink登录"><span class="nav-number">2.4.5.</span> <span class="nav-text">6.testlink登录</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jack Li  QQ:233227763@qq.com</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

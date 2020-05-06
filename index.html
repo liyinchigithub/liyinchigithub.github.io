@@ -249,6 +249,199 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/05/06/测试用例管理系统Testlink搭建/" itemprop="url">测试用例管理系统Testlink搭建</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-06T21:42:11+08:00">
+                2020-05-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="测试用例重要性"><a href="#测试用例重要性" class="headerlink" title="测试用例重要性"></a>测试用例重要性</h1><blockquote>
+<p>测试用例是一个测试质量体系根基，直接影响bug覆盖是否全面，测试人员需要在短时间内效率工作。</p>
+</blockquote>
+<blockquote>
+<p>从用例编写、执行、修改、筛选、复用，这些都是测试每期迭代中核心内容，但付出与效果有时很难成正比，这就要求把测试精力放在思考发散写用例，而不是在维护、修改等文档操作上面。</p>
+</blockquote>
+<blockquote>
+<p>用例工具千千万，像是word、excel、xmind、禅道、teambition、bugfree、testlink等等</p>
+</blockquote>
+<blockquote>
+<p>但只有testlink能满足快速编写、执行、修改、筛选、复用、测试报告、自动化测试对接</p>
+</blockquote>
+<blockquote>
+<p>总结下最近搭建testlink过程和踩坑</p>
+</blockquote>
+<p><img src="//liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/images/home.jpg" alt="img"></p>
+<h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><table>
+<thead>
+<tr>
+<th>工具</th>
+<th>版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Linux centOS</td>
+<td>7.6</td>
+</tr>
+<tr>
+<td> TestLink</td>
+<td>1.9.20</td>
+</tr>
+<tr>
+<td> Apache</td>
+<td>2.4.43</td>
+</tr>
+<tr>
+<td> MySQL</td>
+<td>8.0.18</td>
+</tr>
+<tr>
+<td> PHP</td>
+<td>7.3.16</td>
+</tr>
+<tr>
+<td> phpMyAdmin</td>
+<td>5.0.2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h2><h3 id="1-查看服务器是否已安装过mysql"><a href="#1-查看服务器是否已安装过mysql" class="headerlink" title="1.查看服务器是否已安装过mysql"></a>1.查看服务器是否已安装过mysql</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum list installed mysql*</span><br><span class="line">rpm -qa | grep mysql*</span><br></pre></td></tr></table></figure>
+<h3 id="2-查看安装包信息"><a href="#2-查看安装包信息" class="headerlink" title="2.查看安装包信息"></a>2.查看安装包信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list mysql*</span><br></pre></td></tr></table></figure>
+<h3 id="3-安装mysql客户端"><a href="#3-安装mysql客户端" class="headerlink" title="3.安装mysql客户端"></a>3.安装mysql客户端</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql</span><br></pre></td></tr></table></figure>
+<h3 id="4-安装mysql服务器端"><a href="#4-安装mysql服务器端" class="headerlink" title="4.安装mysql服务器端"></a>4.安装mysql服务器端</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql-server</span><br><span class="line">yum install mysql-devel</span><br></pre></td></tr></table></figure>
+<h3 id="5-启动mysql服务"><a href="#5-启动mysql服务" class="headerlink" title="5.启动mysql服务"></a>5.启动mysql服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld start</span><br></pre></td></tr></table></figure>
+<h2 id="安装Apache-httpd"><a href="#安装Apache-httpd" class="headerlink" title="安装Apache httpd"></a>安装Apache httpd</h2><h3 id="1-执行安装命令"><a href="#1-执行安装命令" class="headerlink" title="1.执行安装命令"></a>1.执行安装命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install httpd</span><br></pre></td></tr></table></figure>
+<h3 id="2-执行启动httpd服务"><a href="#2-执行启动httpd服务" class="headerlink" title="2.执行启动httpd服务"></a>2.执行启动httpd服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd start</span><br></pre></td></tr></table></figure>
+<h2 id="php"><a href="#php" class="headerlink" title="php"></a>php</h2><p>testlink后端api使用php语言开发，因此php也是必须安装配置的环节</p>
+<h3 id="1-查看php版本信息"><a href="#1-查看php版本信息" class="headerlink" title="1.查看php版本信息"></a>1.查看php版本信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list php* |grep php-devel</span><br></pre></td></tr></table></figure>
+<h3 id="2-安装php"><a href="#2-安装php" class="headerlink" title="2.安装php"></a>2.安装php</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install php</span><br></pre></td></tr></table></figure>
+<h3 id="3-重启apache"><a href="#3-重启apache" class="headerlink" title="3.重启apache"></a>3.重启apache</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd restart</span><br></pre></td></tr></table></figure>
+<h3 id="4-测试php信息"><a href="#4-测试php信息" class="headerlink" title="4.测试php信息"></a>4.测试php信息</h3><p>在/var/www/html/下新建一个phpinfo.phpvim<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/var/www/html/phpinfo.php</span><br></pre></td></tr></table></figure></p>
+<p>内容写入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php phpinfo();?&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="//liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/images/home.jpg" alt="img"></p>
+<h3 id="5-地址访问"><a href="#5-地址访问" class="headerlink" title="5.地址访问"></a>5.地址访问</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localhost:8088/info.php</span><br></pre></td></tr></table></figure>
+<h2 id="testlink"><a href="#testlink" class="headerlink" title="testlink"></a>testlink</h2><h3 id="1-下载testlink"><a href="#1-下载testlink" class="headerlink" title="1.下载testlink"></a>1.下载testlink</h3><blockquote>
+<p>下载地址：<a href="https://github.com/TestLinkOpenSourceTRMS/testlink-code/releases" target="_blank" rel="noopener">https://github.com/TestLinkOpenSourceTRMS/testlink-code/releases</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/TestLinkOpenSourceTRMS/testlink-code/archive/1.9.20.tar.gz</span><br></pre></td></tr></table></figure>
+<h3 id="2-解压"><a href="#2-解压" class="headerlink" title="2.解压"></a>2.解压</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span></span><br><span class="line">mv 1.9.20.tar.gz testlink-1.9.20.tar.gz</span><br></pre></td></tr></table></figure>
+<h3 id="4-重启httpd"><a href="#4-重启httpd" class="headerlink" title="4.重启httpd"></a>4.重启httpd</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd restart</span><br></pre></td></tr></table></figure>
+<h3 id="5-testlink初始化配置"><a href="#5-testlink初始化配置" class="headerlink" title="5.testlink初始化配置"></a>5.testlink初始化配置</h3><p><img src="//liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/images/testlinkinstall.jpg" alt="img"></p>
+<h3 id="6-testlink登录"><a href="#6-testlink登录" class="headerlink" title="6.testlink登录"></a>6.testlink登录</h3><p><img src="//liyinchigithub.github.io/2020/05/06/测试用例管理系统Testlink搭建/images/home.jpg" alt="img"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2020/04/15/思维导图直接生成testlink测试用例（无需转格式）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1836,177 +2029,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liyinchi">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/" itemprop="url">接口自动化测试持续集成解决方案（Postman+Newman+Jenkins+Git）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-10T10:01:08+08:00">
-                2019-08-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
-<p>有逼格很高的商业化、开源化测试框架及工具，但实际运用需很大维护成本，产生价值低。</p>
-</blockquote>
-<blockquote>
-<p>如何真正”高效快速”、”低成本维护”？经过调研落地、使用对比。</p>
-</blockquote>
-<blockquote>
-<p>最终确认这个方案（Postman+Newman+Jenkins+Git）基于restful Api、RPC等等，都可以变相解决这些困难。</p>
-</blockquote>
-<h1 id="如何借助这些工具实现接口测试自动化和持续集成？"><a href="#如何借助这些工具实现接口测试自动化和持续集成？" class="headerlink" title="如何借助这些工具实现接口测试自动化和持续集成？"></a>如何借助这些工具实现接口测试自动化和持续集成？</h1><h1 id="1、Postman"><a href="#1、Postman" class="headerlink" title="1、Postman"></a>1、Postman</h1><blockquote>
-<p>基于http/https协议接口，一款可视化构造客户端请求工具，虽然是商业化工具，但免费版提供的功能基本满足目前测试人员需求，能快速构建接口自动化测试脚本，用于场景流程回归、批量构造测试数据。</p>
-</blockquote>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-1.jpg" alt="img"></p>
-<blockquote>
-<p>官方文档：<a href="https://learning.getpostman.com/" target="_blank" rel="noopener">https://learning.getpostman.com/</a></p>
-</blockquote>
-<blockquote>
-<p>下载地址：<a href="https://www.getpostman.com/downloads/" target="_blank" rel="noopener">https://www.getpostman.com/downloads/</a></p>
-</blockquote>
-<h1 id="2、Newman"><a href="#2、Newman" class="headerlink" title="2、Newman"></a>2、Newman</h1><blockquote>
-<p>Postman的脚本运行器，能够不在使用postman工具情况下，非界面化运行脚本！</p>
-</blockquote>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-2.jpg" alt="img"></p>
-<blockquote>
-<p>可以生成html、json、xml格式的测试报告，可以进一步对这些测试报告进行解析处理。</p>
-</blockquote>
-<h1 id="3、Git"><a href="#3、Git" class="headerlink" title="3、Git"></a>3、Git</h1><blockquote>
-<p>开源分布式版本控制系统，比较常见开放源代码的版本控制系统：SVN、Gitlab、Github等等，可以进行代码、脚本托管。</p>
-</blockquote>
-<blockquote>
-<p>目前公司用的是gitlab</p>
-</blockquote>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-3.jpg" alt="img"></p>
-<h1 id="4、Jenkins"><a href="#4、Jenkins" class="headerlink" title="4、Jenkins"></a>4、Jenkins</h1><blockquote>
-<p>开源 CI/CD 持续集成、持续构建系统工具。</p>
-</blockquote>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-4.jpg" alt="img"></p>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-5.jpg" alt="img"></p>
-<blockquote>
-<p>通过jenkins配置job参数，可以灵活自定义配置构建，实现各种外部服务功能执行，比如发送邮件、统计结果、数据处理等等。（需要你有一定代码基础）</p>
-</blockquote>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-9.jpg" alt="img"></p>
-<h1 id="5、测试报告"><a href="#5、测试报告" class="headerlink" title="5、测试报告"></a>5、测试报告</h1><blockquote>
-<p>测试报告邮件正文显示内容。</p>
-</blockquote>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-6.jpg" alt="img"></p>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-7.jpg" alt="img"></p>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-8.jpg" alt="img"></p>
-<h1 id="6、其他"><a href="#6、其他" class="headerlink" title="6、其他"></a>6、其他</h1><blockquote>
-<p>爬取数据，我将接口自动化测试生成的报告，进行存储展示到前端页面。（测试工作管理后台）</p>
-</blockquote>
-<p> <img src="//liyinchigithub.github.io/2019/08/10/接口自动化测试持续集成解决方案（Postman-Newman-Jenkins-Git-Nodejs）/images/12-10.jpg" alt="img"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2057,7 +2079,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

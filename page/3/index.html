@@ -249,6 +249,433 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2018/12/28/如何编写README-md？/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/28/如何编写README-md？/" itemprop="url">如何编写README.md？</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-28T11:12:50+08:00">
+                2018-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>最近对它的README.md文件颇为感兴趣。</p>
+</blockquote>
+<blockquote>
+<p>帮助更多的还不会编写README文件的同学们。</p>
+</blockquote>
+<blockquote>
+<p>README文件后缀名为md</p>
+</blockquote>
+<blockquote>
+<p>md是markdown的缩写，markdown是一种编辑博客的语言。用惯了可视化的博客编辑器（比如CSDN博客，囧），这种编程式的博客编辑方案着实让人眼前一亮。不过GitHub支持的语法在标准markdown语法的基础上做了修改，称为Github Flavored Markdown，简称GFM。可不是GFW呀偷笑。</p>
+</blockquote>
+<blockquote>
+<p>开始编辑README</p>
+</blockquote>
+<blockquote>
+<p>打开你的GitHub的某个项目，我们可以直接在线编辑你的README文件，如果你已经有了这个文件，则在文件目录中直接点击它，如果你还没有这个文件那么点击项目名称右边的一个按钮，来添加新文件：</p>
+</blockquote>
+<blockquote>
+<p>然后你就打开了编辑页面，编辑区的左上角有填写文件名的区域，注意加上后缀.md</p>
+</blockquote>
+<blockquote>
+<p>如果你本来就有这个文件要重新编辑它的话，那么在点击了文件目录中的该文件后，在上方有工具栏，选择Edit</p>
+</blockquote>
+<blockquote>
+<p>然后滚动屏幕到下面，如果是新文件会有一个Commit new file的按钮，若没有内容是不能点击的。如果是旧文件重修编辑，那么这个按钮显示的是 Commit changes</p>
+</blockquote>
+<blockquote>
+<p>先随便写的东西把这个新文件提交，然后再点击 Edit 重新打开它。你会发现编辑区左上角有了变化。</p>
+</blockquote>
+<blockquote>
+<p>默认选中Code，即我们的编辑模式。若点击 Preview（预览）就能实时显示当前的显示效果了。</p>
+</blockquote>
+<blockquote>
+<p>好了，下面正式开始编辑这个文件</p>
+</blockquote>
+<h1 id="大标题"><a href="#大标题" class="headerlink" title="大标题  "></a>大标题  </h1><p>规范的README文件开头都写上一个标题，这被称为大标题。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<h1 id="大标题-1"><a href="#大标题-1" class="headerlink" title="大标题  "></a>大标题  </h1><p>在文本下面加上 等于号 = ，那么上方的文本就变成了大标题。等于号的个数无限制，但一定要大于0个哦。。<br>比大标题低一级的是中标题，也就是显示出来比大标题小点。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<h1 id="中标题"><a href="#中标题" class="headerlink" title="中标题  "></a>中标题  </h1><p>在文本下面加上 下划线 - ，那么上方的文本就变成了中标题，同样的 下划线个数无限制。</p>
+<p>除此之外，你也会发现大，中标题下面都有一条横线，没错这就是 = 和 - 的显示结果。</p>
+<p>如果你只输入了等于号=，但其上方无文字，那么就只会显示一条直线。如果上方有了文字，但你又只想显示一条横线，而不想把上方的文字转义成大标题的话，那么你就要在等于号=和文字直接补一个空行。</p>
+<p>补空行：是很常用的用法，当你不想上下两个不同的布局方式交错到一起的时候，就要在两种布局之间补一个空行。</p>
+<p>如果你只输入了短横线（减号）-，其上方无文字，那么要显示直线，必须要写三个减号以上。不过与等于号的显示效果不同，它显示出来时虚线而不是实线。同减号作用相同的还有星号*和下划线_，同样的这两者符号也要写三个以上才能显示一条虚横线。</p>
+<p>除此以外，关于标题还有等级表示法，分为六个等级，显示的文本大小依次减小。不同等级之间是以井号  #  的个数来标识的。一级标题有一个 #，二级标题有两个# ，以此类推。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p>#一级标题  </p>
+<p>##二级标题  </p>
+<p>###三级标题  </p>
+<p>####四级标题  </p>
+<p>#####五级标题  </p>
+<p>######六级标题<br>注意井号#和标题名称要并排写作一行，显示效果如图：</p>
+<p>实际上，前文所述的大标题和中标题是分别和一级标题和二级标题对应的。即大标题大小和一级标题相同，中标题大小和二级标题相同。</p>
+<h1 id="显示文本"><a href="#显示文本" class="headerlink" title="显示文本  "></a>显示文本  </h1><p>普通文本<br>直接输入的文字就是普通文本。需要注意的是要换行的时候不能直接通过回车来换行，需要使用<br>(或者<br>)。也就是html里面的标签。事实上，markdown支持一些html标签，你可以试试。当然如果你完全使用html来写的话，就丧失意义了，毕竟markdown并非专门做前端的，然而仅实现一般效果的话，它会比html写起来要简洁得多得多啦。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p>这是一段普通的文本，<br>直接回车不能换行，<br><br>要使用\<br><br>注意第三行的<br>前加了反斜杠 \ 。目的就是像其他语言那样实现转义，也就是 &lt;  的转义。<br>效果如图：</p>
+<p>此外，要显示一个超链接的话，就直接输入这个链接的URL就好了。显示出来会自动变成可链接的形式的。</p>
+<p>显示空格的小Tip<br>默认的文本行首空格都会被忽略的，但是如果你想用空格来排一下版的话怎么办呢，有个小技巧，那就是把你的输入法由半角改成全角就OK啦。<br>单行文本<br>使用两个Tab符实现单行文本。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p>Hello,大家好，我是方块银。<br>注意前面有两个Tab。在GitHub上单行文本显示效果如图：</p>
+<p>多行文本<br>多行文本和单行文本异曲同工，只要在每行行首加两个Tab</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p>欢迎到访<br>很高兴见到您<br>祝您，早上好，中午好，下午好，晚安  </p>
+<p>部分文字的高亮<br>如果你想使一段话中部分文字高亮显示，来起到突出强调的作用，那么可以把它用 <code></code> 包围起来。注意这不是单引号，而是Tab上方，数字1左边的按键（注意使用英文输入法）。</p>
+<p>Thank <code>You</code> . Please <code>Call</code> Me <code>Coder</code></p>
+<h1 id="文字超链接"><a href="#文字超链接" class="headerlink" title="文字超链接"></a>文字超链接</h1><p>给一段文字加入超链接的格式是这样的 <a href="链接的地址"> 要显示的文字 </a>。比如：</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p><a href="https://liyinchigithub.github.io">我的博客</a><br>显示效果：</p>
+<p>你还可以给他加上一个鼠标悬停显示的文本。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p><a href="https://liyinchigithub.github.io" title="悬停显示">我的博客</a><br>即在URL之后 用双引号括起来一个字符串。同样要注意这里是英文双引号。</p>
+<p>插入符号<br>圆点符<br>这是一个圆点符<br>这也是一个圆点符<br>上面这段的圆点是CSDN博客编辑器里面的符号列表。写文章在列出条目时经常用到。在GitHub的markdown语法里也支持使用圆点符。编辑的时候使用的是星号 *</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<ul>
+<li>昵称：liyinchi </li>
+<li>别名：方块银</li>
+<li>英文名：Jack li<br>要注意的是星号* 后面要有一个空格。否则显示为普通星号。上文的显示效果如图：</li>
+</ul>
+<p>此外还有二级圆点和三级圆点。就是多加一个Tab。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<ul>
+<li>编程语言  <ul>
+<li>脚本语言  <ul>
+<li>Python<br>第二行一个Tab，第三行两个Tab。这样用来表示层级结构就更清晰了吧，看效果：</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>如果你觉得三级的结构还不够表达清楚的话，我们可以试着换一种形式，请看字符包围</p>
+<p>缩进<br>缩进的含义是很容易理解的。。</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<blockquote>
+<p>数据结构  </p>
+<blockquote>
+<p>树  </p>
+<blockquote>
+<p>二叉树  </p>
+<blockquote>
+<p>平衡二叉树  </p>
+<blockquote>
+<p>满二叉树<br>显示效果：</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>当然比这个更一般的用法是这样。常常能在书籍里面看到的效果，比如引用别人的文章。直接看效果。</p>
+<p>具体这个“缩进”的用法。大家自己摸索吧。</p>
+<p>插入图片</p>
+<p>来源于网络的图片</p>
+<p>网上有很多README插入图片的教程了，经我自己多次测试呢，发现可以使用的最简单，最基本的语法是：</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p><img src="http://www.baidu.com/img/bdlogo.gif" alt><br>即 叹号! + 方括号[ ] + 括号( ) 其中叹号里是图片的URL。</p>
+<p>如果不加叹号! ,就会变成普通文本baidu了。</p>
+<p>在方括号里可以加入一些 标识性的信息，比如</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p><img src="http://www.baidu.com/img/bdlogo.gif" alt="baidu"><br>这个方括号里的baidu并不会对图像显示造成任何改动，如果你想达到鼠标悬停显示提示信息，那么可以仿照前面介绍的文本中的方法，就是这样：</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p><img src="http://www.baidu.com/img/bdlogo.gif" alt="baidu" title="百度logo"><br>在URL后面，加一个双引号包围的字符串，显示效果如图：</p>
+<p>GitHub仓库里的图片<br>有时候我们想显示一个GitHub仓库(或者说项目)里的图片而不是一张其他来源网络图片，因为其他来源的URL很可能会失效。那么如何显示一个GitHub项目里的图片呢？</p>
+<p>其实与上面的格式基本一致的，所不同的就是括号里的URL该怎么写。</p>
+<pre><code>https://github.com/ 你的用户名 / 你的项目名 / raw / 分支名 / 存放图片的文件夹 / 该文件夹下的图片
+</code></pre><p>这样一目了然了吧。比如：</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p><img src alt>  </p>
+<p>给图片加上超链接<br>如果你想使图片带有超链接的功能，即点击一个图片进入一个指定的网页。那么可以这样写：</p>
+<p>[plain] view plaincopy在CODE上查看代码片派生到我的代码片</p>
+<p><a href="http://baidu.com" target="_blank" rel="noopener">![baidu]</a><br>[baidu]:<a href="http://www.baidu.com/img/bdlogo.gif" target="_blank" rel="noopener">http://www.baidu.com/img/bdlogo.gif</a> “百度Logo”<br>这两句和前面的写法差异较大，但是也极易模仿着写出，就不过多介绍了。只需注意上下文中的 baidu 是你自己起的标识的名称，可以随意，但是一定要保证上下两行的 标识 是一致的。<br>这样就能实现 点击图片进入网页的功能了。</p>
+<p>插入代码片段<br>我们需要在代码的上一行和下一行用<code>`</code> 标记。<figure class="highlight plain"><figcaption><span>``` 之后加上你的编程语言即可（忽略大小写）。c++语言可以写成c++也可以是cpp。看代码：</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">实际显示效果</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[题外话]在GitHub上用Gist写日记吧</span><br><span class="line">看了这么多markdown的语法，你一定不满足于仅仅写一个README文件了，开始跃跃欲试想实际用markdown语法来编写博客或文章了吧。的确，网上也有依托或者支持markdown语法的博客。但是呢，更方便的是，你可以借助GitHub本身就有的一个功能——Gist。</span><br><span class="line"></span><br><span class="line">Gist是以文件为单位的，不是以项目为单位的。而且与普通的GitHub上建的仓库不同，Gist是private的哦。普通的项目默认都是public的，要想弄成private貌似还要交钱的样子。既然是private那么用来写写日记，是极好的。</span><br><span class="line"></span><br><span class="line">GitHub网页的顶部有：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">点进去:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">这就是你可以编辑的私有文件，它不仅支持Text文本，还支持各种编程语言呢！当然也包括markdown。输入文件名：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">最后保存，选中 Create Secret Gist 就是私有的喽。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-----------下面是一个README.md例子</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">README</span><br><span class="line">====</span><br><span class="line">该文件用来测试和展示书写README的各种markdown语法。GitHub的markdown语法在标准的markdown语法基础上做了扩充，称之为`GitHub Flavored Markdown`。简称`GFM`，GFM在GitHub上有广泛应用，除了README文件外，issues和wiki均支持markdown语法。</span><br><span class="line"></span><br><span class="line">****</span><br><span class="line">	</span><br><span class="line">|Author|JackLi|</span><br><span class="line">|---|---</span><br><span class="line">|E-mail|liyinchi@qq.com</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">****</span><br><span class="line">## 目录</span><br><span class="line">* [横线](#横线)</span><br><span class="line">* [标题](#标题)</span><br><span class="line">* [文本](#文本)</span><br><span class="line">    * 普通文本</span><br><span class="line">    * 单行文本</span><br><span class="line">    * 多行文本</span><br><span class="line">    * 文字高亮</span><br><span class="line">    * 换行</span><br><span class="line">    * 斜体</span><br><span class="line">    * 粗体</span><br><span class="line">    * 删除线</span><br><span class="line">* [图片](#图片)</span><br><span class="line">    * 来源于网络的图片</span><br><span class="line">    * GitHub仓库中的图片</span><br><span class="line">* [链接](#链接) </span><br><span class="line">    * 文字超链接</span><br><span class="line">        *  链接外部URL</span><br><span class="line">        *  链接本仓库里的URL</span><br><span class="line">    *  锚点</span><br><span class="line">    * [图片链接](#图片链接)</span><br><span class="line">* [列表](#列表)</span><br><span class="line">    * 无序列表</span><br><span class="line">    * 有序列表</span><br><span class="line">    * 复选框列表</span><br><span class="line">* [块引用](#块引用)</span><br><span class="line">* [代码高亮](#代码高亮)</span><br><span class="line">* [表格](#表格) </span><br><span class="line">* [表情](#表情)</span><br><span class="line">* [diff语法](#diff语法)</span><br><span class="line"></span><br><span class="line">### 横线</span><br><span class="line">-----------</span><br><span class="line">***、---、___可以显示横线效果</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line">---</span><br><span class="line">___</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">标题</span><br><span class="line">====</span><br><span class="line"></span><br><span class="line"># 一级标题  </span><br><span class="line">## 二级标题  </span><br><span class="line">### 三级标题  </span><br><span class="line">#### 四级标题  </span><br><span class="line">##### 五级标题  </span><br><span class="line">###### 六级标题  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">文本</span><br><span class="line">====</span><br><span class="line">### 普通文本</span><br><span class="line">这是一段普通的文本</span><br><span class="line">### 单行文本</span><br><span class="line">    Hello,大家好，我是Jack li。</span><br><span class="line">在一行开头加入1个Tab或者4个空格。</span><br><span class="line">### 文本块</span><br><span class="line">#### 语法1</span><br><span class="line">在连续几行的文本开头加入1个Tab或者4个空格。</span><br><span class="line"></span><br><span class="line">    欢迎到访</span><br><span class="line">    很高兴见到您</span><br><span class="line">    祝您，早上好，中午好，下午好，晚安</span><br><span class="line"></span><br><span class="line">#### 语法2</span><br><span class="line">使用一对各三个的反引号：</span><br></pre></td></tr></table></figure></p>
+<p>欢迎到访<br>我是JavaScript、Java码农<br>你可以在github搜索【liyinchi】找到我<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">该语法也可以实现代码高亮，见[代码高亮](#代码高亮)</span><br><span class="line">### 文字高亮</span><br><span class="line">文字高亮功能能使行内部分文字高亮，使用一对反引号。</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure></p>
+<p><code>linux</code> <code>网络编程</code> <code>socket</code> <code>epoll</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">效果：`linux` `网络编程` `socket` `epoll`</span><br><span class="line"></span><br><span class="line">也适合做一篇文章的tag</span><br><span class="line">#### 换行</span><br><span class="line">直接回车不能换行，  </span><br><span class="line">可以在上一行文本后面补两个空格，  </span><br><span class="line">这样下一行的文本就换行了。</span><br><span class="line"></span><br><span class="line">或者就是在两行文本直接加一个空行。</span><br><span class="line"></span><br><span class="line">也能实现换行效果，不过这个行间距有点大。</span><br><span class="line">#### 斜体、粗体、删除线</span><br><span class="line"></span><br><span class="line">|语法|效果|</span><br><span class="line">|----|-----|</span><br><span class="line">|`*斜体1*`|*斜体1*|</span><br><span class="line">|`_斜体2_`| _斜体2_|</span><br><span class="line">|`**粗体1**`|**粗体1**|</span><br><span class="line">|`__粗体2__`|__粗体2__|</span><br><span class="line">|`这是一个 ~~删除线~~`|这是一个 ~~删除线~~|</span><br><span class="line">|`***斜粗体1***`|***斜粗体1***|</span><br><span class="line">|`___斜粗体2___`|___斜粗体2___|</span><br><span class="line">|`***~~斜粗体删除线1~~***`|***~~斜粗体删除线1~~***|</span><br><span class="line">|`~~***斜粗体删除线2***~~`|~~***斜粗体删除线2***~~|</span><br><span class="line"></span><br><span class="line">    斜体、粗体、删除线可混合使用</span><br><span class="line"></span><br><span class="line">图片</span><br><span class="line">====</span><br><span class="line">基本格式：</span><br></pre></td></tr></table></figure></p>
+<p><img src="//liyinchigithub.github.io/2018/12/28/如何编写README-md？/URL title" alt="alt"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">alt和title即对应HTML中的alt和title属性（都可省略）：</span><br><span class="line">- alt表示图片显示失败时的替换文本</span><br><span class="line">- title表示鼠标悬停在图片时的显示文本（注意这里要加引号）</span><br><span class="line"></span><br><span class="line">URL即图片的url地址，如果引用本仓库中的图片，直接使用**相对路径**就可了，如果引用其他github仓库中的图片要注意格式，即：`仓库地址/raw/分支名/图片路径`，如：</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/xxx/ImageCache/raw/master/Logo/foryou.gif" target="_blank" rel="noopener">https://github.com/xxx/ImageCache/raw/master/Logo/foryou.gif</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">|#|语法|效果|</span><br><span class="line">|---|---|----</span><br><span class="line">|1|`![baidu](http://www.baidu.com/img/bdlogo.gif &quot;百度logo&quot;)`|![baidu](http://www.baidu.com/img/bdlogo.gif &quot;百度logo&quot;)</span><br><span class="line">|2|`![][foryou]`|![][foryou]</span><br><span class="line"></span><br><span class="line">注意例2的写法使用了**URL标识符**的形式，在[链接](#链接)一节有介绍。</span><br><span class="line">&gt;在文末有foryou的定义：</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">链接</span><br><span class="line">====</span><br><span class="line">### 链接外部URL</span><br><span class="line"></span><br><span class="line">|#|语法|效果|</span><br><span class="line">|---|----|-----|</span><br><span class="line">|1|`[我的博客](https://liyinchigithub.github.io/ &quot;悬停显示&quot;)`|[我的博客](https://liyinchigithub.github.io/ &quot;悬停显示&quot;)|</span><br><span class="line"></span><br><span class="line">语法2由两部分组成：</span><br><span class="line">- 第一部分使用两个中括号，[ ]里的标识符（本例中zhihu），可以是数字，字母等的组合，标识符上下对应就行了（**姑且称之为URL标识符**）</span><br><span class="line">- 第二部分标记实际URL。</span><br><span class="line"></span><br><span class="line">&gt;使用URL标识符能达到复用的目的，一般把全文所有的URL标识符统一放在文章末尾，这样看起来比较干净。</span><br><span class="line">&gt;&gt;URL标识符是我起的名字，不知道是否准确。囧。。</span><br><span class="line"></span><br><span class="line">### 链接本仓库里的URL</span><br><span class="line"></span><br><span class="line">|语法|效果|</span><br><span class="line">|----|-----|</span><br><span class="line">|`[我的简介](/example/profile.md)`|[我的简介](/example/profile.md)|</span><br><span class="line">|`[example](./example)`|[example](./example)|</span><br><span class="line"></span><br><span class="line">### 图片链接</span><br><span class="line">给图片加链接的本质是混合图片显示语法和普通的链接语法。普通的链接中[ ]内部是链接要显示的文本，而图片链接[ ]里面则是要显示的图片。  </span><br><span class="line">直接混合两种语法当然可以，但是十分啰嗦，为此我们可以使用URL标识符的形式。</span><br><span class="line"></span><br><span class="line">|#|语法|效果|</span><br><span class="line">|---|----|:---:|</span><br><span class="line">|1|`[![weibo-logo]](http://weibo.com)`|[![weibo-logo]](http://weibo.com/)|</span><br><span class="line">|2|`[![](/img/zhihu.png &quot;我的知乎，欢迎关注&quot;)][zhihu]`|[![](/img/zhihu.png &quot;我的知乎，欢迎关注&quot;)][zhihu]|</span><br><span class="line">|3|`[![csdn-logo]][csdn]`|[![csdn-logo]][csdn]|</span><br><span class="line"></span><br><span class="line">因为图片本身和链接本身都支持URL标识符的形式，所以图片链接也可以很简洁（见例3）。  </span><br><span class="line">注意，此时鼠标悬停时显示的文字是图片的title，而非链接本身的title了。</span><br><span class="line">&gt; 本文URL标识符都放置于文末</span><br><span class="line"></span><br><span class="line">### 锚点</span><br><span class="line">其实呢，每一个标题都是一个锚点，和HTML的锚点（`#`）类似，比如我们 </span><br><span class="line"></span><br><span class="line">|语法|效果|</span><br><span class="line">|---|---|</span><br><span class="line">|`[回到顶部](#readme)`|[回到顶部](#readme)|</span><br><span class="line"></span><br><span class="line">不过要注意，标题中的英文字母都被转化为**小写字母**了。</span><br><span class="line">&gt; 以前GitHub对中文支持的不好，所以中文标题不能正确识别为锚点，但是现在已经没问题啦！</span><br><span class="line"></span><br><span class="line">## 列表</span><br><span class="line">### 无序列表</span><br><span class="line">#### 语法</span><br></pre></td></tr></table></figure>
+<ul>
+<li>昵称：liyinchi</li>
+</ul>
+<ul>
+<li>别名：方块银</li>
+</ul>
+<ul>
+<li><p>英文名：Jack Li</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#### 效果</span><br><span class="line">* 昵称：liyinchi</span><br><span class="line">- 别名：方块银</span><br><span class="line">* 英文名：Jack Li</span><br><span class="line"></span><br><span class="line">### 多级无序列表</span><br><span class="line">#### 语法</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编程语言</p>
+<ul>
+<li>脚本语言<ul>
+<li>JAVA<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#### 效果</span><br><span class="line">* 编程语言</span><br><span class="line">    * 脚本语言</span><br><span class="line">        * JAVA</span><br><span class="line"></span><br><span class="line">### 一级有序列表</span><br><span class="line">#### 语法</span><br><span class="line">就是在数字后面加一个点，再加一个空格。不过看起来起来可能不够明显。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>面向对象的三个基本特征：</p>
+<ol>
+<li>封装</li>
+<li>继承</li>
+<li><p>多态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 效果</span><br><span class="line">面向对象的三个基本特征：</span><br><span class="line"></span><br><span class="line">1. 封装</span><br><span class="line">2. 继承</span><br><span class="line">3. 多态</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 多级有序列表</span><br><span class="line">和无序列表一样，有序列表也有多级结构。</span><br><span class="line">#### 语法</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这是一级的有序列表，数字1还是1</p>
+<ol>
+<li>这是二级的有序列表，阿拉伯数字在显示的时候变成了罗马数字<ol>
+<li>这是三级的有序列表，数字在显示的时候变成了英文字母<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 效果</span><br><span class="line"></span><br><span class="line">1. 这是一级的有序列表，数字1还是1</span><br><span class="line">   1. 这是二级的有序列表，阿拉伯数字在显示的时候变成了罗马数字</span><br><span class="line">      1. 这是三级的有序列表，数字在显示的时候变成了英文字母</span><br><span class="line">	 </span><br><span class="line"></span><br><span class="line">### 复选框列表</span><br><span class="line">#### 语法</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> 需求分析</li>
+<li style="list-style: none"><input type="checkbox" checked> 系统设计</li>
+<li style="list-style: none"><input type="checkbox" checked> 详细设计</li>
+<li style="list-style: none"><input type="checkbox"> 编码</li>
+<li style="list-style: none"><input type="checkbox"> 测试</li>
+<li style="list-style: none"><input type="checkbox"> 交付<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#### 效果</span><br><span class="line"></span><br><span class="line">- [x] 需求分析</span><br><span class="line">- [x] 系统设计</span><br><span class="line">- [x] 详细设计</span><br><span class="line">- [ ] 编码</span><br><span class="line">- [ ] 测试</span><br><span class="line">- [ ] 交付</span><br><span class="line"></span><br><span class="line">您可以使用这个功能来标注某个项目各项任务的完成情况。</span><br><span class="line">&gt; Tip:</span><br><span class="line">&gt;&gt; 在GitHub的**issue**中使用该语法是可以实时点击复选框来勾选或解除勾选的，而无需修改issue原文。</span><br><span class="line"></span><br><span class="line">## 块引用</span><br><span class="line"></span><br><span class="line">### 常用于引用文本</span><br><span class="line">#### 文本摘自《深入理解计算机系统》P27</span><br><span class="line">　令人吃惊的是，在哪种字节顺序是合适的这个问题上，人们表现得非常情绪化。实际上术语“little endian”（小端）和“big endian”（大端）出自Jonathan Swift的《格利佛游记》一书，其中交战的两个派别无法就应该从哪一端打开一个半熟的鸡蛋达成一致。因此，争论沦为关于社会政治的争论。只要选择了一种规则并且始终如一的坚持，其实对于哪种字节排序的选择都是任意的。</span><br><span class="line">&gt; **“端”（endian）的起源**  </span><br><span class="line">以下是Jonathan Swift在1726年关于大小端之争历史的描述：  </span><br><span class="line">“……下面我要告诉你的是，Lilliput和Blefuscu这两大强国在过去36个月里一直在苦战。战争开始是由于以下的原因：我们大家都认为，吃鸡蛋前，原始的方法是打破鸡蛋较大的一端，可是当今的皇帝的祖父小时候吃鸡蛋，一次按古法打鸡蛋时碰巧将一个手指弄破了，因此他的父亲，当时的皇帝，就下了一道敕令，命令全体臣民吃鸡蛋时打破较小的一端，违令者重罚。”</span><br><span class="line"></span><br><span class="line">### 块引用有多级结构</span><br><span class="line">#### 语法</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>数据结构</p>
+<blockquote>
+<p>树</p>
+<blockquote>
+<p>二叉树</p>
+<blockquote>
+<p>平衡二叉树</p>
+<blockquote>
+<p>满二叉树<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#### 效果</span><br><span class="line">&gt; 数据结构</span><br><span class="line">&gt;&gt; 树</span><br><span class="line">&gt;&gt;&gt; 二叉树</span><br><span class="line">&gt;&gt;&gt;&gt; 平衡二叉树</span><br><span class="line">&gt;&gt;&gt;&gt;&gt; 满二叉树</span><br><span class="line"></span><br><span class="line">代码高亮</span><br><span class="line">====</span><br><span class="line"></span><br><span class="line">### 语法</span><br><span class="line">在三个反引号后面加上编程语言的名字，另起一行开始写代码，最后一行再加上三个反引号。</span><br><span class="line"></span><br><span class="line">### 效果</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>public static void main(String[]args){} //Java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```c</span><br><span class="line">int main(int argc, char *argv[]) //C</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"hello GitHub"</span> <span class="comment">#Bash</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myH1"</span>).innerHTML=<span class="string">"Welcome to my Homepage"</span>; <span class="comment">//javascipt</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> &amp;<span class="keyword">operator</span>+(<span class="keyword">const</span> <span class="built_in">string</span>&amp; A,<span class="keyword">const</span> <span class="built_in">string</span>&amp; B) <span class="comment">//cpp</span></span><br></pre></td></tr></table></figure>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表格单元</td>
+<td>表格单元</td>
+<td></td>
+</tr>
+<tr>
+<td>表格单元</td>
+<td>表格单元</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表格单元</td>
+<td>表格单元</td>
+</tr>
+<tr>
+<td>表格单元</td>
+<td>表格单元</td>
+</tr>
+</tbody>
+</table>
+<h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><p>表格可以指定对齐方式</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:center">居中</th>
+<th style="text-align:right">右对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">col 3 is</td>
+<td style="text-align:center">some wordy text</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td style="text-align:left">col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td style="text-align:left">zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="混合其他语法"><a href="#混合其他语法" class="headerlink" title="混合其他语法"></a>混合其他语法</h3><p>表格单元中的内容可以和其他大多数GFM语法配合使用，如：  </p>
+<h4 id="使用普通文本的删除线，斜体等效果"><a href="#使用普通文本的删除线，斜体等效果" class="headerlink" title="使用普通文本的删除线，斜体等效果"></a>使用普通文本的删除线，斜体等效果</h4><table>
+<thead>
+<tr>
+<th>名字</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Help</td>
+<td><del>Display the</del> help window.</td>
+</tr>
+<tr>
+<td>Close</td>
+<td><em>Closes</em> a window</td>
+</tr>
+</tbody>
+</table>
+<h4 id="表格中嵌入图片（链接）"><a href="#表格中嵌入图片（链接）" class="headerlink" title="表格中嵌入图片（链接）"></a>表格中嵌入图片（链接）</h4><p>其实前面介绍图片显示、图片链接的时候为了清晰就是放在在表格中显示的。</p>
+<table>
+<thead>
+<tr>
+<th>图片</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>![baidu][baidu-logo]</td>
+<td>百度</td>
+</tr>
+</tbody>
+</table>
+<h2 id="表情"><a href="#表情" class="headerlink" title="表情"></a>表情</h2><p>Github的Markdown语法支持添加emoji表情，输入不同的符号码（两个冒号包围的字符）可以显示出不同的表情。</p>
+<p>比如<code>:blush:</code>，可以显示:blush:。</p>
+<p>具体每一个表情的符号码，可以查询GitHub的官方网页<a href="http://www.emoji-cheat-sheet.com" target="_blank" rel="noopener">http://www.emoji-cheat-sheet.com</a>。</p>
+<p>但是这个网页每次都打开<strong>奇慢</strong>。。所以我整理到了本repo中，大家可以直接在此查看<a href="./emoji.md">emoji</a>。</p>
+<h2 id="diff语法"><a href="#diff语法" class="headerlink" title="diff语法"></a>diff语法</h2><p>版本控制的系统中都少不了diff的功能，即展示一个文件内容的增加与删除。<br>GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示删除。</p>
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>其语法与代码高亮类似，只是在三个反引号后面写diff，<br>并且其内容中，以 <code>+</code>开头表示新增，<code>-</code>开头表示删除。</p>
+<h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="addition">+ 鸟宿池边树，僧敲月下门</span></span><br><span class="line"><span class="deletion">- 鸟宿池边树，僧推月下门</span></span><br></pre></td></tr></table></figure>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2018/12/28/cucumber-js/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1278,7 +1705,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
