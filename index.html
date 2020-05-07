@@ -268,7 +268,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/05/07/atxserver2/" itemprop="url">atxserver2</a></h1>
+                <a class="post-title-link" href="/2020/05/07/atxserver2/" itemprop="url">【atxserver2】移动设备管理平台搭建</a></h1>
         
 
         <div class="post-meta">
@@ -320,23 +320,15 @@
       
         
           
-            <h1 id="测试用例重要性"><a href="#测试用例重要性" class="headerlink" title="测试用例重要性"></a>测试用例重要性</h1><blockquote>
-<p>测试用例是一个测试质量体系根基，直接影响bug覆盖是否全面，测试人员需要在短时间内效率工作。</p>
+            <h1 id="移动设备管理平台"><a href="#移动设备管理平台" class="headerlink" title="移动设备管理平台"></a>移动设备管理平台</h1><blockquote>
+<p>atx-server2 是一款开源移动设备集群管理平台，支持Android和iOS。</p>
 </blockquote>
 <blockquote>
-<p>从用例编写、执行、修改、筛选、复用，这些都是测试每期迭代中核心内容，但付出与效果有时很难成正比，这就要求把测试精力放在思考发散写用例，而不是在维护、修改等文档操作上面。</p>
+<p>将移动设备统一通过浏览器页面进行管理操作、日志导出、adb命令等操作。</p>
 </blockquote>
-<blockquote>
-<p>用例工具千千万，像是word、excel、xmind、禅道、teambition、bugfree、testlink等等</p>
-</blockquote>
-<blockquote>
-<p>唯独testlink能解决这些痛点，帮助快速编写、执行、修改、筛选、复用、测试报告、自动化测试对接</p>
-</blockquote>
-<blockquote>
-<p>总结下最近搭建testlink过程和踩坑</p>
-</blockquote>
-<p><img src="//liyinchigithub.github.io/2020/05/07/atxserver2/images/home.jpg" alt="img"></p>
-<h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><table>
+<p><img src="//liyinchigithub.github.io/2020/05/07/atxserver2/images/axtserver-home.jpg" alt="img"></p>
+<h1 id="整体架构"><a href="#整体架构" class="headerlink" title="整体架构"></a>整体架构</h1><p><img src="//liyinchigithub.github.io/2020/05/07/atxserver2/images/framework.jpg" alt="img"></p>
+<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><table>
 <thead>
 <tr>
 <th>工具</th>
@@ -345,24 +337,24 @@
 </thead>
 <tbody>
 <tr>
-<td> Linux centOS</td>
-<td>7.6</td>
+<td> CentOS</td>
+<td>7.X</td>
 </tr>
 <tr>
-<td> TestLink</td>
-<td>1.9.20</td>
+<td> Python3</td>
+<td>3.7.4</td>
 </tr>
 <tr>
-<td> Apache</td>
-<td>2.4.43</td>
+<td> Docker</td>
+<td>17.03.1-ce-rc1, build 3476dbf</td>
 </tr>
 <tr>
-<td> MySQL</td>
-<td>8.0.18</td>
+<td> rethinkdb</td>
+<td>2.3.6 (CLANG 10.0.0 (clang-1000.10.43.1))</td>
 </tr>
 <tr>
-<td> PHP</td>
-<td>7.3.16</td>
+<td> nodejs</td>
+<td>8.11.4</td>
 </tr>
 <tr>
 <td> phpMyAdmin</td>
@@ -370,7 +362,51 @@
 </tr>
 </tbody>
 </table>
-<h2 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h2>
+<h2 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>最快捷的方式脚本一键安装,国内设置镜像为Aliyun<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun</span><br></pre></td></tr></table></figure></p>
+<p>或</p>
+<p> 使用yum安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install docker</span><br></pre></td></tr></table></figure></p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>启动docker<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service docker start</span><br></pre></td></tr></table></figure></p>
+<h3 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h3><p>设置开机启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig docker on</span><br></pre></td></tr></table></figure></p>
+<p>或 </p>
+<p>CentOS 7中支持的新式 systemd 语法，如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl  start docker.service</span><br></pre></td></tr></table></figure></p>
+<h2 id="rethinkdb"><a href="#rethinkdb" class="headerlink" title="rethinkdb"></a>rethinkdb</h2><h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo wget https://download.rethinkdb.com/centos/7/`uname -m`/rethinkdb.repo \</span><br><span class="line">          -O /etc/yum.repos.d/rethinkdb.repo</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install rethinkdb</span><br></pre></td></tr></table></figure>
+<h2 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h2><h3 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h3><blockquote>
+<p><a href="https://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">https://www.runoob.com/nodejs/nodejs-install-setup.html</a></p>
+</blockquote>
+<h1 id="Android设备接入"><a href="#Android设备接入" class="headerlink" title="Android设备接入"></a>Android设备接入</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/openatx/atxserver2-android-provider</span><br></pre></td></tr></table></figure>
+<h1 id="iOS设备接入"><a href="#iOS设备接入" class="headerlink" title="iOS设备接入"></a>iOS设备接入</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/openatx/atxserver2-ios-provider</span><br></pre></td></tr></table></figure>
+<h1 id="启动atx-server2"><a href="#启动atx-server2" class="headerlink" title="启动atx-server2"></a>启动atx-server2</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up</span><br></pre></td></tr></table></figure>
+<h1 id="启动设备接入"><a href="#启动设备接入" class="headerlink" title="启动设备接入"></a>启动设备接入</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python3 -m venv venv</span><br><span class="line">. venv/bin/activate</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 main.py --server localhost:4000</span><br></pre></td></tr></table></figure>
+<h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><blockquote>
+<p>系统内置功能</p>
+</blockquote>
+<p><img src="//liyinchigithub.github.io/2020/05/07/atxserver2/images/system.jpg" alt="img"></p>
+<blockquote>
+<p>支持Android、iOS 命令行操作</p>
+</blockquote>
+<p><img src="//liyinchigithub.github.io/2020/05/07/atxserver2/images/terminal.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2020/05/07/atxserver2/images/terminal2.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2020/05/07/atxserver2/images/atx2_iOS_action.gif" alt="img"></p>
+<blockquote>
+<p>支持多设备远程操作（日志导出等等）</p>
+</blockquote>
+<p><img src="//liyinchigithub.github.io/2020/05/07/atxserver2/images/devices.jpg" alt="img"></p>
+<blockquote>
+<p>支持截屏</p>
+</blockquote>
+<p><img src="//liyinchigithub.github.io/2020/05/07/atxserver2/images/screen.jpg" alt="img"></p>
+<blockquote>
+<p>应用管理（安装、卸载应用）</p>
+</blockquote>
+<p><img src="//liyinchigithub.github.io/2020/05/07/atxserver2/images/install.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2020/05/07/atxserver2/images/install2.jpg" alt="img"></p>
+<blockquote>
+<p>文件管理</p>
+</blockquote>
+<p><img src="//liyinchigithub.github.io/2020/05/07/atxserver2/images/filemanage.jpg" alt="img"></p>
+
           
         
       
