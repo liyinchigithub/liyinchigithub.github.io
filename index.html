@@ -249,6 +249,220 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2020/07/18/网址导航工具/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/18/网址导航工具/" itemprop="url">网址导航工具</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-18T18:16:54+08:00">
+                2020-07-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Navigation"><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation</h1><p><a href="https://www.npmjs.com/package/vue-lowdb" target="_blank" rel="noopener"><img src="https://img.shields.io/npm/v/vue-lowdb.svg" alt="npm"></a> <a href="https://vuejs.org/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/vue-2.x-brightgreen.svg" alt="vue2"></a></p>
+<blockquote>
+<p>导航网址</p>
+</blockquote>
+<p>最近各业务线频繁更换测试环境地址，造成各自业务线不知道最新测试环境、预生产环境地址，新加入开发、产品小伙伴不知道有哪些产品线，项目进展不顺畅。</p>
+<p>萌生做一个网址管理工具，让各个业务线负责人，负责管理更新自己测试环境地址、账号、密码，这就诞生了Navigation.</p>
+<p><a href="https://github.com/Musule/Navigation" target="_blank" rel="noopener">Navigation</a></p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
+<li>新增分类</li>
+<li>删除分类</li>
+<li>编辑分类</li>
+<li>查询分类</li>
+<li>新增网址</li>
+<li>删除网址</li>
+<li>编辑网址</li>
+<li>查询网址</li>
+<li>新建管理员账号、菜单权限</li>
+<li>编辑管理员账号、菜单权限</li>
+<li>导出xls</li>
+</ul>
+<h3 id="【管理员】"><a href="#【管理员】" class="headerlink" title="【管理员】"></a>【管理员】</h3><p><img src="//liyinchigithub.github.io/2020/07/18/网址导航工具/images/demo.png" alt="img"></p>
+<h3 id="【访客】"><a href="#【访客】" class="headerlink" title="【访客】"></a>【访客】</h3><p><img src="//liyinchigithub.github.io/2020/07/18/网址导航工具/images/demo2.png" alt="img"></p>
+<h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nodejs</td>
+<td>8.11.4</td>
+</tr>
+<tr>
+<td>vue</td>
+<td>2.X</td>
+</tr>
+</tbody>
+</table>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>1.下载Nodejs</p>
+<blockquote>
+<p><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">http://nodejs.cn/download/</a></p>
+</blockquote>
+<p>2.安装Nodejs</p>
+<p>（1）检查版本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure></p>
+<p>（2）设置淘宝镜像（提升安装速度）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry http://registry.npm.taobao.org/</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>如果你已安装Nodejs环境，可跳过1和2步骤</p>
+</blockquote>
+<p>3.安装与使用</p>
+<p>（1）服务端</p>
+<p>① 打开终端窗口，进入目录/Navigation/server下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Navigation/server</span><br></pre></td></tr></table></figure>
+<p>② 执行安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>③启动后端<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node server</span><br></pre></td></tr></table></figure></p>
+<p><img src="//liyinchigithub.github.io/2020/07/18/网址导航工具/images/back-end-server.png" alt="img"></p>
+<p>（2）前端</p>
+<p>第一种：你可以直接打开目录下/dist/index.html直接使用，或者将dist放入tomcat的webapp中实现web服务器让其他小伙伴也能通过ip地址访问</p>
+<p>第二种：你可以启动开发模式，步骤如下所示。</p>
+<p>①再次打开新的终端窗口，进入目录/Navigation下，执行命令行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Navigation</span><br></pre></td></tr></table></figure>
+<p>②安装</p>
+<ul>
+<li><p>安装cnpm</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装node-sass</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install node-sass --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>③启动前端<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure></p>
+<p><img src="//liyinchigithub.github.io/2020/07/18/网址导航工具/images/front-end-server.png" alt="img"></p>
+<p>（3）浏览器地址访问</p>
+<blockquote>
+<p><a href="http://localhost:8088" target="_blank" rel="noopener">http://localhost:8088</a></p>
+</blockquote>
+<p>（4）建议，使用另外一种办法是将根目录下/dist整个文件夹放入tomcat中供外网其他人员使用</p>
+<h1 id="操作手册"><a href="#操作手册" class="headerlink" title="操作手册"></a>操作手册</h1><h2 id="登录管理员"><a href="#登录管理员" class="headerlink" title="登录管理员"></a>登录管理员</h2><p>账号：admin<br>密码：123456</p>
+<p><img src="//liyinchigithub.github.io/2020/07/18/网址导航工具/images/login.jpg" alt="img"></p>
+<blockquote>
+<p>访客无需登录，仅有查看权限</p>
+</blockquote>
+<h2 id="新增网页"><a href="#新增网页" class="headerlink" title="新增网页"></a>新增网页</h2><p><img src="//liyinchigithub.github.io/2020/07/18/网址导航工具/images/add_url.jpg" alt="img"></p>
+<h2 id="新增分类"><a href="#新增分类" class="headerlink" title="新增分类"></a>新增分类</h2><p><img src="//liyinchigithub.github.io/2020/07/18/网址导航工具/images/add_category.jpg" alt="img"></p>
+<h2 id="筛选分类"><a href="#筛选分类" class="headerlink" title="筛选分类"></a>筛选分类</h2><p><img src="//liyinchigithub.github.io/2020/07/18/网址导航工具/images/add_category2.jpg" alt="img"></p>
+<h2 id="新增账号"><a href="#新增账号" class="headerlink" title="新增账号"></a>新增账号</h2><p><img src="//liyinchigithub.github.io/2020/07/18/网址导航工具/images/add_username.jpg" alt="img"></p>
+<h2 id="导出数据"><a href="#导出数据" class="headerlink" title="导出数据"></a>导出数据</h2><p><img src="//liyinchigithub.github.io/2020/07/18/网址导航工具/images/add_output.jpg" alt="img"></p>
+<h1 id="修复记录"><a href="#修复记录" class="headerlink" title="修复记录"></a>修复记录</h1><ul>
+<li>2020-07-12 修复node-sass版本4.11.0因版本过低导致的报错</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2020/05/07/atxserver2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1782,193 +1996,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/10/10/Xmind2TestLink/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liyinchi">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/10/Xmind2TestLink/" itemprop="url">Xmind2TestLink</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-10T22:17:26+08:00">
-                2019-10-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
-<p>软件测试过程中，最核心重要在用例设计，公司团队以往都是用excel维护测试用例，但缺点是在太多。</p>
-</blockquote>
-<blockquote>
-<p>如下：</p>
-</blockquote>
-<p>1、评审不够直观，开发产品对着报表评审用例打瞌睡。</p>
-<p>2、编写效率不够，思维不能发散，迭代用例版本维护很麻烦。</p>
-<p>3、excel转成xml再导入testlink。</p>
-<p>必须让测试小伙伴在项目紧迫周期内，快速”头脑风暴”发散思维写出用例。</p>
-<p>（二）解决办法：</p>
-<p>1、使用思维导图工具（xmind）设计测试用例。</p>
-<p>2、遵循转换工具xmind用例模板。</p>
-<p>3、将xmind用例转成xml再导入testlink。</p>
-<blockquote>
-<p>ps：来神州之前我所在敏捷团队scrum master 一直使用xmind作为脑图使用，应对短期、长期项目非常好用。</p>
-</blockquote>
-<h1 id="如何快速设计测试用例、高效管理测试用例？？"><a href="#如何快速设计测试用例、高效管理测试用例？？" class="headerlink" title="如何快速设计测试用例、高效管理测试用例？？"></a>如何快速设计测试用例、高效管理测试用例？？</h1><h2 id="Xmind2Testlink"><a href="#Xmind2Testlink" class="headerlink" title="Xmind2Testlink"></a>Xmind2Testlink</h2><blockquote>
-<p>Xmind2TestLink 是一款开源xmind文件转xml格式工具！</p>
-</blockquote>
-<p> 1、页面（界面）</p>
-<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/1.jpg" alt="img"></p>
-<p> 2、简单模板</p>
-<p> (1)模板示例 version 1<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">①默认的中心主题不会被转换，默认从第一层子主题开始转换。</span><br><span class="line">②第一层子主题会被识别为 TestSuite 测试集。</span><br><span class="line">③TestSuite 的子主题 会被识别为 TestCase 测试用例。</span><br><span class="line">④TestCase 的下级分支为 TestStep 测试步骤 和 Expected Result 期望结果。</span><br><span class="line">⑤你可以给 TestSuite，TestCase加上 Note，这会被识别为Summary 总结/概要 字段。</span><br><span class="line">⑥你可以给TestCase 加上 Comment 解释，这会被识别为 Preconception 预想 字段。</span><br><span class="line">⑦你可以使用数字Marker来为TestCase定义优先级。</span><br><span class="line">⑧你可以使用感叹号!来注释掉不想导入的任意分支。</span><br></pre></td></tr></table></figure></p>
-<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/2.jpg" alt="img"></p>
-<p>（2）模板示例 version 2</p>
-<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/2-1.jpg" alt="img"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">①根主题必须加上一个小星星，这是用来区分V1和V2的标识。</span><br><span class="line">②第一层子主题还是会被识别为 TestSuite。</span><br><span class="line">③之后的主题可以自由扩展，如果一个主题被标记了priority 优先级 那么意味着case到此结束。</span><br><span class="line">④如果没有主题被标记priority 优先级，默认case取到最后一个主题。</span><br><span class="line">⑤默认使用空格连接case子主题，你可以指定其他连接符（根主题的最后一个字符）。</span><br><span class="line">⑥TestCase 的下级分支为 TestStep 和 Expected Result。</span><br><span class="line">⑦所有case子主题的Summary 概要和Preconception 预想会被连接起来。</span><br><span class="line">⑧你可以给 TestSuite，TestCase加上 Note，这会被识别为Summary 字段。</span><br><span class="line">⑨!开头的所有主题都会被自动忽略，可以用来隐藏或者注释某些不想导入的内容。</span><br></pre></td></tr></table></figure>
-<p> 3、简单模板示例解析结果</p>
-<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/3.jpg" alt="img"></p>
-<p> 4、在TestLink上创建对应测试项目，然后导入转换后的文件</p>
-<p>  （1）登录testlink</p>
-<p>   <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/4-3.jpg" alt="img"></p>
-<p>  （2）点击文本【编辑测试用例】，跳转到新页面</p>
-<p>  导入包含符合TestLink系统的测试用例的xml文件</p>
-<p>   <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/4-1.jpg" alt="img"></p>
-<p>  （3）点击图标【导入测试用例集】，跳转到新页面</p>
-<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/4-2.jpg" alt="img"></p>
-<p>   （4）点击图标【导入测试用例集】，跳转到新页面</p>
-<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/4-4.jpg" alt="img"></p>
-<p>   （5）查看整体的上传结果</p>
-<p>   在页面左边树状图最下方有生成正确的8条用例：目录层级展示正确，用例名展示正确</p>
-<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/4-5.jpg" alt="img"></p>
-<p> 5、TestLink导入状态示例</p>
-<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/5.jpg" alt="img"></p>
-<p> 6、TestLink导入结果示例</p>
-<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/6.jpg" alt="img"></p>
-<p> 7、xmind常用小图标基本使用操作</p>
-<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/7.jpg" alt="img"></p>
-<p>(1)xmind图标 对应 testlink位置</p>
-<p>①xmind “备注” 对应 testlink “详细、摘要”</p>
-<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/7-1.jpg" alt="img"></p>
-<p>②xmind “批注” 对应 testlink “前提”</p>
-<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/7-2.jpg" alt="img"></p>
-<p>另，xmind添加批注方式</p>
-<p><img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/7-3.jpg" alt="img"></p>
-<p>③xmind “批注” 对应 testlink “前提”</p>
-<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/7-4.jpg" alt="img"></p>
-<p>④在TestCase所属子主题前面的子主题，如果前一个子主题是以”+”标识符开头，就是最里层的一个目录文件名</p>
-<p>  <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/7-5.jpg" alt="img"></p>
-<p>⑤编写的xmind文件基本都要新建两个画布</p>
-<p>默认画布名为：画布1，画布2，保持默认画布名即可。</p>
-<p>画布2允许不用创建，表示不填测试用例相关的关键字。</p>
-<p>画布2的关键字编写规则。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">【A】根主题名称可任意取值，默认填写为【用例相关说明】</span><br><span class="line">【B】第二层主题写6个，6个名称固定为【Jira需求】【用例编写者】【手机兼容性(型号、系统版本)】【对应开发】【浏览器兼容性】【关键字】</span><br><span class="line">【C】第三层主题，填的值分别是第二层主题对应的值</span><br><span class="line">【D】特别注意：第二层主题名为【关键字】所对应第三层主题的值，如果值为多个，要以分割符&quot;|&quot;分开来写。</span><br></pre></td></tr></table></figure>
-<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/7-6.jpg" alt="img"></p>
-<p> xmind”画布2” 对应TestLink用例详情页”相关字段”</p>
-<p> <img src="//liyinchigithub.github.io/2019/10/10/Xmind2TestLink/images/7-7.jpg" alt="img"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2019,7 +2046,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

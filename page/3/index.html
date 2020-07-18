@@ -249,6 +249,173 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/01/03/自动化测试框架究竟哪家强？/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/03/自动化测试框架究竟哪家强？/" itemprop="url">自动化测试框架究竟哪家强？</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-03T14:13:33+08:00">
+                2019-01-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>自动化测试框架很多，测试人都知道有<a href="https://junit.org/" target="_blank" rel="noopener">JUnit</a>、<a href="https://testng.org/" target="_blank" rel="noopener">TestNG</a>、<a href="https://www.seleniumhq.org/" target="_blank" rel="noopener">Selenium+WebDriver</a>、<a href="http://appium.io/" target="_blank" rel="noopener">Appium等</a>。再具体点，如果说通用的测试框架，您可能会想到STAF+STAX；如果说Android App自动化测试框架，除了Appium，您可能还会想到Robotium、Selendroid、ATAF等；如果说API自动化测试框架，您可能会说Postman没有竞争对手；如果说验收测试框架，您可能会想到Fitnesse；如果要说流行的BDD自动化测试框架，<a href="https://cucumber.io/" target="_blank" rel="noopener">Cucumber</a>、<a href="http://calaba.sh/" target="_blank" rel="noopener">Calabash</a>、<a href="https://jbehave.org/" target="_blank" rel="noopener">Jbehave</a>也鼎鼎有名。究竟哪家自动化测试框架最强呢？</p>
+</blockquote>
+<blockquote>
+<p>答案是Node.js你一定很惊讶，这哪是测试工具啊，这不就是一个JavaScript引擎吗。其实这指的是Node.js生态（未来趋势）。你可以在Node.js中找到各类强大的自动化框架，开源库，能够满足一个精力充沛的IT男对自动化测试的所有狂野的想象。测试的类型从API、Web、手机移动端和Windows应用。其实我们为什么为一些测试工具争个你高我低呢，博采众长、取万物之精华不是更有利吗？Node.js就是这样一个环境，所有优秀的工具都愿意在Node.js社区贡献自己的力量。</p>
+</blockquote>
+<h1 id="cucumber"><a href="#cucumber" class="headerlink" title="cucumber"></a>cucumber</h1><p>下面我们来看个究竟。</p>
+<h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><blockquote>
+<p>例如，如果你要做RESTful API测试，Node.js提供了很多框架，例如Request、Axios、got等，从功能完备的到轻量级的都有。这些框架都有着非常高的人气，例如有图为证，got库最近7天就有300万的下载量，而Request库只会更高：</p>
+</blockquote>
+<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><p>如果你要做Web UI测试，那可选的就更多了。经典的<a href="https://github.com/SeleniumHQ/selenium" target="_blank" rel="noopener">selenium-webdriver</a>，最近7天也达到了近100万的下载量。还有很多类似于selenium-webdriver的库，如<a href="https://webdriver.io/" target="_blank" rel="noopener">webdriverio</a>，<a href="https://github.com/admc/wd" target="_blank" rel="noopener">wd</a>等，提供了不同程度的简化。</p>
+<p>还有一个最近很火的<a href="https://github.com/GoogleChrome/puppeteer" target="_blank" rel="noopener">Puppupteer</a> ，是Google Chrome团队开源的端到端自动化测试框架，可以做UI自动化测试，也可以做为爬虫工具。作为Headless方式运行，Puppupteer更快，更省资源，它主要支持nodejs开发脚本。</p>
+<p>（你可能会好奇爬虫不是用python吗？其实Java、JavaScript也都可以实现爬虫，爬虫爬的是前端页面的元素内容，而前端页面是由JavaScript构成，当然谁更适合爬虫一目了然，nodejs生态的领域会超出你们的想象，关于node爬虫你可以参照<a href="http://csbun.github.io/blog/2017/09/puppeteer/" target="_blank" rel="noopener">这里</a>玩下）</p>
+<blockquote>
+<p>selenium-webdriver</p>
+</blockquote>
+<blockquote>
+<p>webdriverIO</p>
+</blockquote>
+<h1 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h1><p>手机移动端测试，就不能不说应用的最广泛的Appium。Appium很大，包含了iOS、Android等系统的自动化测试库。你只要象其它的库一样，在命令行输入”npm install appium”就有了。</p>
+<p>阿里对Node.js有特别的偏爱，做了很多Node.js的开源库，其中Macaca就是阿里发布的针对移动端测试的工具。它也包括Node.js的客户端。可以测试 Native, Hybrid, H5 等多种应用类型，提供客户端工具和持续集成服务。</p>
+<p>实际上webdriverIO也可以应用到移动端，并且也被Appium纳入了官方demo中。</p>
+<p>对于Windows 应用，微软也来支援，发布了<a href="https://github.com/Microsoft/WinAppDriver" target="_blank" rel="noopener">WinAppDriver</a>它可以在Node.js通过WebDriver端直接调用，测试Windows应用。</p>
+<h1 id="其它框架"><a href="#其它框架" class="headerlink" title="其它框架"></a>其它框架</h1><p>除了这些提供自动化技术的库，还有一个很重要的部分就是自动化驱动的框架。Node.js提供了很多框架，包括mocha、jasmine、cucumber.js。其中mocha、jasmine既可以适用于自动化单元测试，也可以驱动TDD（测试驱动）、BDD（行为驱动）的开发。而cucumber.js是专业做行为驱动的自动化测试的工具，最近在开源社区很活跃，已经更新到最新的4.0版本。</p>
+<p>测试完了要显示报表，不要急，也有做的足够专业的开源报表显示工具<a href="https://www.npmjs.com/package/cucumber-html-reporter" target="_blank" rel="noopener">cucumber-html-reporter</a>，能够针对Cucumber.js生成多种格式的报告。</p>
+<h1 id="JavaScript生态"><a href="#JavaScript生态" class="headerlink" title="JavaScript生态"></a>JavaScript生态</h1><p>在整个Github项目中，用的编程语言最多的就是JavaScript，下面是Github项目中的语言排名。</p>
+<p>俗话说的好，女怕嫁错郎，男怕入错行，而IT男最怕的就是选错技术，选错了技术不但意味着工作选择、薪资都有可能被限制，而且意味着巨大的学习成本的浪费。</p>
+<p>从学习编程以来，本人学了很多的技术都被淘汰了：大学里学asp.net，现在几乎不用了，后来自学了C，也很少人用了，毕业的时候感潮流学了VB，现在连微软自己都不用了。网站开发的时候学了ASP、后来用的Silverlight都逐渐被淘汰。测试开发的时候用VBScript（QTP）、C (LoadRunner)现在都越来越不流行。只能苦逼的不断的学习。</p>
+<p>而JavaScript从十几年前开始用到现在仍旧不光流行，而且是越来越火，从网页、后端，到跨Windows、Linux平台应用的开发，到开发原生移动端应用都可以用JavaScript搞定。所以现在它成为了全栈工程师的首选。不管你现在是全栈工程师、还是仅仅在做测试，选择JavaScript都能满足需要。如果你对Node.js还有怀疑可以看看这篇文章，了解一下Node.js的强大：</p>
+<p>不只是Web：十大令人振奋的Node.js项目<br><a href="https://cloud.tencent.com/developer/article/1064884" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1064884</a></p>
+<h1 id="工具整合"><a href="#工具整合" class="headerlink" title="工具整合"></a>工具整合</h1><p>PC客户端开发可以使用<a href="https://electronjs.org/" target="_blank" rel="noopener">electron</a></p>
+<p>移动端开发可以使用<a href="http://weex.apache.org/cn/guide/" target="_blank" rel="noopener">weex</a></p>
+<p>前端web、H5可以使用<a href="https://cn.vuejs.org/" target="_blank" rel="noopener">Vue</a>和<a href="http://element.eleme.io/" target="_blank" rel="noopener">Element-ui</a></p>
+<p>自动化测试框架那就更多了。。。</p>
+<p>综上看来Node.js完全可以满足各类自动化测试的需求。但是还是有很多同学觉得为难，这么多开源工具要整合起来有点难，而且Node.js作为纯命令行工具，也对初学者也不够友好。这种担心是很合理的，这是很多开源工具的都有的问题。</p>
+<h2 id="CukeTest"><a href="#CukeTest" class="headerlink" title="CukeTest"></a>CukeTest</h2><p>现在有了一个将所有这些开源工具在一起使用的机会。一个对个人用户都免费的工具，CukeTest，可以将所有这些框架都整合在一起使用。</p>
+<p>不仅因为它具有易于编写测试用例的可视化界面，根据测试用例一键生成自动化测试代码框架，运行完成后自动生成测试报告、web自动化支持屏幕录制功能，同时也支持使用csv文件导入导出功能支持数据驱动。下面就呈上证据：</p>
+<h1 id="可视化界面"><a href="#可视化界面" class="headerlink" title="可视化界面"></a>可视化界面</h1><p>不仅可以很方便的编写用例，同时也可以很方便的管理测试用例集；<br>最重要的是可以直接根据测试用例生成自动化代码样例，<br>并且能在自动化代码与测试用例可以自由的相互跳转：</p>
+<h1 id="详细的测试报告"><a href="#详细的测试报告" class="headerlink" title="详细的测试报告"></a>详细的测试报告</h1><p>你几乎可以不用定义任何测试报告，运行完项目自动生成测试报告；<br>同时支持多种测试报告模板供选择；测试报告支持导出PDF，邮件发送常用功能：</p>
+<h1 id="屏幕录制功能"><a href="#屏幕录制功能" class="headerlink" title="屏幕录制功能"></a>屏幕录制功能</h1><p>Web自动化过程中，只需要在运行配置中开启屏幕录制功能，项目运行中即可自动录制屏幕：</p>
+<h1 id="可以与其它框架优雅的结合起来"><a href="#可以与其它框架优雅的结合起来" class="headerlink" title="可以与其它框架优雅的结合起来"></a>可以与其它框架优雅的结合起来</h1><p>CukeTest可以与selenium，appium这些常用的测试框架结合起来一起使用。也可以使用nodejs流行的第三方HTTP库函数进行API自动化测试。<br>所以CukeTest在web，手机端，API的自动化都可以进行。</p>
+<h1 id="可以很方便持续集成"><a href="#可以很方便持续集成" class="headerlink" title="可以很方便持续集成"></a>可以很方便持续集成</h1><p>CukeTest支持命令行方式运行脚本，所以可以与所有CI工具一起使用。</p>
+<h1 id="xCukeTest可以让团队更加敏捷"><a href="#xCukeTest可以让团队更加敏捷" class="headerlink" title="xCukeTest可以让团队更加敏捷"></a>xCukeTest可以让团队更加敏捷</h1><p>使用行为驱动开发，能够开发出大家都看得懂的测试脚本，不管懂不懂编程。而且。使用自然语言将我们的测试用例与自动化代码结合，可以在团队中以用例设计为测试准则，减少团队直接的沟通成本，同时又可以让团队中更多的成员参与进来。</p>
+<p>几乎不用重新造轮子，测试报告，屏幕录像这些操作都给我们提供了，我们只需要关注我们的业务，实现对应的代码既可。最重要的一点，CukeTest还是对所有开源社区和个人使用者是免费的。是的，免费！</p>
+<p>请记住CukeTest只是一个编辑工具、帮助你提高你在Node.js上的开发效率。你开发的自动化脚本仍旧是基于开源框架的，这意味着你仍旧可以不用这个编辑工具，也能运行你的脚本，保持了脚本的独立性。CukeTest可以在cuketest.com网站免费下载，或是在Windows10应用商店免费安装。</p>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><blockquote>
+<p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/01/01/mock.js/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1839,7 +2006,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
