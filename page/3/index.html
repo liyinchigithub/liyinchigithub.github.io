@@ -249,6 +249,133 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/" itemprop="url">解决postman无法下载xls并解析下载内容是否正确方案</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-13T14:16:12+08:00">
+                2019-04-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><blockquote>
+<p>使用postman做restful api自动化测试，遇到下载excel报表，并需要解析报表内容是否正确？</p>
+</blockquote>
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><blockquote>
+<p>借助nodejs后端框架express写一个解析程序：<br>postman客户端请求服务端接口，带上相关参数；<br>服务端下载指定文档，解析文档内容，断言是否和客户端参数一致！</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入接口实现模块</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line"><span class="comment">//引入sheetJS xlsx模块</span></span><br><span class="line"><span class="keyword">var</span> xl = <span class="built_in">require</span>(<span class="string">'xlsx'</span>);</span><br><span class="line"><span class="comment">//引入node-xlsx模块</span></span><br><span class="line"><span class="keyword">var</span> xlsx = <span class="built_in">require</span>(<span class="string">'node-xlsx'</span>);</span><br><span class="line"><span class="comment">//引入文件、路径、http请求模块</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>);</span><br><span class="line"><span class="keyword">var</span> request = <span class="built_in">require</span>(<span class="string">'request'</span>);</span><br><span class="line"><span class="comment">// 实例化一个express的对象app</span></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"><span class="comment">// 创建 application/x-www-form-urlencoded 编码解析</span></span><br><span class="line"><span class="keyword">var</span> urlencodedParser = bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">true</span> &#125;)</span><br><span class="line"><span class="comment">// 告诉应用程序中间件，使用外部引入的模块中间件（内置中间件、第三方中间件、自己封装js）</span></span><br><span class="line"><span class="comment">// 开放客户端请求访问public目录下的资源  express.statics()是内置中间件函数，与express.json、express.urlencoder一样都是内置中间件</span></span><br><span class="line">app.use(express.static(__dirname + <span class="string">"/public"</span>), <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"请求地址："</span> + __dirname + <span class="string">"/public"</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'请求时间:'</span>, <span class="keyword">new</span> <span class="built_in">Date</span>());</span><br><span class="line">  <span class="comment">//释放控制权</span></span><br><span class="line">  next();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 为了解析 application/json</span></span><br><span class="line">app.use(bodyParser.json());</span><br><span class="line"><span class="comment">// 跨域设置，对所有http请求均有效</span></span><br><span class="line"><span class="comment">// 自定义跨域中间件</span></span><br><span class="line">app.all(<span class="string">"*"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//响应头</span></span><br><span class="line">  <span class="comment">// res.header("Access-Control-Allow-Credentials", 'true');</span></span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Origin'</span>, <span class="string">'*'</span>);</span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Headers'</span>, <span class="string">'Content-Type,Content-Length,Authorization,Accept,X-Requested-With'</span>);</span><br><span class="line">  res.header(<span class="string">'Access-Control-Allow-Methods'</span>, <span class="string">'PUT,POST,GET,DELETE,OPTIONS'</span>);</span><br><span class="line">  res.header(<span class="string">"Content-Length"</span>, <span class="string">"2000"</span>);</span><br><span class="line">  res.header(<span class="string">"X-Powered-By"</span>, <span class="string">' 3.2.1'</span>);</span><br><span class="line">  <span class="comment">//  res.header("Content-Type", "application/x-www-form-urlencoded");</span></span><br><span class="line">  res.header(<span class="string">"Content-Type"</span>, <span class="string">"application/json;charset=utf-8"</span>);</span><br><span class="line">  <span class="comment">//控制权交给下一个处理程序</span></span><br><span class="line">  <span class="keyword">if</span> (req.method == <span class="string">'OPTIONS'</span>) &#123;</span><br><span class="line">    <span class="comment">//让options请求快速返回</span></span><br><span class="line">    res.sendStatus(<span class="number">200</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    next();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @description 下载文件</span></span><br><span class="line"><span class="comment"> * @params ''</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">app.post(<span class="string">'/ExportTheDetailsAndCheckTheContent'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 第一部分：根据请求内容下载指定报表</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="comment">//创建文件夹目录，用于保存下载文件</span></span><br><span class="line">  <span class="keyword">let</span> dirPath = path.join(__dirname, <span class="string">"download_path"</span>);</span><br><span class="line">  <span class="comment">//判断文件夹是否已存在</span></span><br><span class="line">  <span class="keyword">if</span> (!fs.existsSync(dirPath)) &#123;</span><br><span class="line">    fs.mkdirSync(dirPath);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件夹创建成功"</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件夹已存在"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//创建写入流</span></span><br><span class="line">  <span class="keyword">let</span> stream = fs.createWriteStream(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>));</span><br><span class="line">  <span class="comment">//请求参数</span></span><br><span class="line">  <span class="keyword">let</span> options = &#123;</span><br><span class="line">    url: req.body.down_url + req.body.fileName + <span class="string">".xls"</span>,</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">//通过request模块，pipe方法将响应结果写入文件流stream中</span></span><br><span class="line">  request(options).pipe(stream).on(<span class="string">"close"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件["</span> + req.body.fileName + <span class="string">".xls]下载完毕"</span>);</span><br><span class="line">    <span class="comment">//此处特别说明：因为是异步，所以要放在请求下载生成文档之后，再进行解析excel报表</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 第二部分：解析下载报表方法</span></span><br><span class="line"><span class="comment">     * 使用sheetJS xlsx读取工作簿指定工作表的数据</span></span><br><span class="line"><span class="comment">     * @description 获取指定单元格数据</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//workbook 对象，指的是整份 Excel 文档。我们在使用 js-xlsx 读取 Excel 文档之后就会获得 workbook 对象。</span></span><br><span class="line">    <span class="keyword">var</span> workbook = xl.readFile(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>))</span><br><span class="line">    <span class="built_in">console</span>.log(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取 Excel 中所有表名</span></span><br><span class="line">    <span class="keyword">const</span> sheetNames = workbook.SheetNames; <span class="comment">// 返回 ['sheet1', 'sheet2']</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"sheetNames:"</span> + sheetNames);</span><br><span class="line">    <span class="comment">//获取指定工作表数据，返回json数据</span></span><br><span class="line">    <span class="keyword">var</span> first_sheet_name = workbook.SheetNames[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_A2 = <span class="string">'A2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_B2 = <span class="string">'B2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_C2 = <span class="string">'C2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_D2 = <span class="string">'D2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_E2 = <span class="string">'E2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_F2 = <span class="string">'F2'</span>;</span><br><span class="line">    <span class="keyword">var</span> address_of_cell_G2 = <span class="string">'G2'</span>;</span><br><span class="line">    <span class="comment">//获取工作表</span></span><br><span class="line">    <span class="keyword">var</span> worksheet = workbook.Sheets[first_sheet_name];</span><br><span class="line">    <span class="comment">//找到所需的单元格</span></span><br><span class="line">    <span class="keyword">var</span> desired_cell_A2 = worksheet[address_of_cell_A2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_B2 = worksheet[address_of_cell_B2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_C2 = worksheet[address_of_cell_C2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_D2 = worksheet[address_of_cell_D2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_E2 = worksheet[address_of_cell_E2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_F2 = worksheet[address_of_cell_F2];</span><br><span class="line">    <span class="keyword">var</span> desired_cell_G2 = worksheet[address_of_cell_G2];</span><br><span class="line">    <span class="comment">//获取值</span></span><br><span class="line">    <span class="keyword">var</span> desired_value_A2 = (desired_cell_A2 ? desired_cell_A2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_B2 = (desired_cell_B2 ? desired_cell_B2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_C2 = (desired_cell_C2 ? desired_cell_C2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_D2 = (desired_cell_D2 ? desired_cell_D2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_E2 = (desired_cell_E2 ? desired_cell_E2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_F2 = (desired_cell_F2 ? desired_cell_F2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="keyword">var</span> desired_value_G2 = (desired_cell_G2 ? desired_cell_G2.v : <span class="literal">undefined</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_A2);<span class="comment">//输出excel单元格A2的数据</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_B2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_C2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_D2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_E2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_F2);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ddesired_valueata:"</span> + desired_value_G2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 第二部分：解析下载报表方法</span></span><br><span class="line"><span class="comment">     * 使用node-xlsx</span></span><br><span class="line"><span class="comment">     * @description 获取整个工作簿的数据</span></span><br><span class="line"><span class="comment">     * 格式：[&#123;"name":"表名","data":数据数据</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">var</span> list = xlsx.parse(path.join(dirPath, req.body.fileName + <span class="string">".xls"</span>));</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(list[<span class="number">0</span>].data[<span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//将读取的数据返回给客户端</span></span><br><span class="line">    <span class="keyword">if</span> (!err === <span class="literal">null</span>) &#123;</span><br><span class="line">      res.status(<span class="number">500</span>).send(&#123; <span class="attr">data</span>: list &#125;)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      res.status(<span class="number">200</span>).send(&#123; <span class="attr">data</span>: list &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//监听端口</span></span><br><span class="line"><span class="keyword">var</span> server = app.listen(<span class="number">8004</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> host = server.address().address</span><br><span class="line">  <span class="keyword">var</span> port = server.address().port</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"应用实例，访问地址为 http://%s:%s"</span>, host, port)</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>参考链接：<a href="https://blog.csdn.net/q3585914/article/details/70157938" target="_blank" rel="noopener">https://blog.csdn.net/q3585914/article/details/70157938</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/02/02/element-ui/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2433,174 +2560,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2018/12/27/Omysql/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liyinchi">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/27/Omysql/" itemprop="url">Omysql</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-27T21:29:39+08:00">
-                2018-12-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>【服务诞生原因】目前团队测试、开发使用postman进行接口调试，但postman自身未提供操作数据库的功能，为方便测试人员使用postman，进行接口自动化测试时，可以直接请求操作数据库。网上使用比较多的是xmysql，但xmysql并不完美，当你在启用xmysql时，需要固定环境、账号、密码，特别是切换环境及其不方便，并且一旦接口地址外泄，对测试环境数据库有很大影响。由此诞生express-mysql-restfulAPI，我为其命名为omysql（o表示正确）</p>
-</blockquote>
-<p>你可以从这里下载使用<a href="https://github.com/liyinchigithub/Omysql" target="_blank" rel="noopener">Omysql</a></p>
-<p><img src="//liyinchigithub.github.io/2018/12/27/Omysql/images/omysql.jpg" alt="img"></p>
-<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>如果你电脑已经安装配置Git、node环境，可以直接按下面步骤进行操作：</p>
-<h1 id="从github拉取工程"><a href="#从github拉取工程" class="headerlink" title="从github拉取工程"></a>从github拉取工程</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:liyinchigithub/express-mysql-restfulAPI.git</span><br></pre></td></tr></table></figure>
-<h1 id="切换到目录下"><a href="#切换到目录下" class="headerlink" title="切换到目录下"></a>切换到目录下</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd Omysql</span><br></pre></td></tr></table></figure>
-<h1 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<h1 id="启动omysql服务"><a href="#启动omysql服务" class="headerlink" title="启动omysql服务"></a>启动omysql服务</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node server.js</span><br></pre></td></tr></table></figure>
-<p>如果你的电脑还没有node环境，具体配置方法可以参考下面两个链接：</p>
-<p>windows <a href="https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html</a></p>
-<p>mac <a href="https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html</a></p>
-<h2 id="API接口文档"><a href="#API接口文档" class="headerlink" title="API接口文档"></a>API接口文档</h2><h3 id="中文"><a href="#中文" class="headerlink" title="中文"></a>中文</h3><h1 id="功能-创建数据库"><a href="#功能-创建数据库" class="headerlink" title="功能   创建数据库"></a>功能   创建数据库</h1><p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/CreateDB/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/CreateDB/</a></p>
-<p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"query"</span>:<span class="string">"CREATE DATABASE Express_API_DB;"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="功能-创建表"><a href="#功能-创建表" class="headerlink" title="功能   创建表"></a>功能   创建表</h1><p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/CreateTable/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/CreateTable/</a></p>
-<p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"query"</span>:<span class="string">"CREATE TABLE table4(name VARCHAR(100),id VARCHAR(100),age INT,address VARCHAR(100),tel INT,PRIMARY KEY ( id ))ENGINE=InnoDB DEFAULT CHARSET=utf8;"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="功能-插入数据"><a href="#功能-插入数据" class="headerlink" title="功能   插入数据"></a>功能   插入数据</h1><p>请求方法：PUT</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/insert_data/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/insert_data/</a></p>
-<p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"addSql"</span>:<span class="string">"INSERT INTO table4(address,age,id,name,tel) VALUES('福建省泉州市丰泽区',19,225,'刘丽丽','159115');"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="功能-更新数据"><a href="#功能-更新数据" class="headerlink" title="功能   更新数据"></a>功能   更新数据</h1><p>请求方法：PUT</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/update/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/update/</a></p>
-<p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"UpdateSql"</span>:<span class="string">"UPDATE table4 SET address='福建省厦门市',age='17',id='123',name='赵柳',tel='123123' WHERE name='刘丽丽';"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="功能-删除表数据"><a href="#功能-删除表数据" class="headerlink" title="功能   删除表数据"></a>功能   删除表数据</h1><p>请求方法：DELETE</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/delete/" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/delete/</a></p>
-<p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"delSql"</span>:<span class="string">"DELETE FROM table4 where name='王老五';"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="功能-删除表"><a href="#功能-删除表" class="headerlink" title="功能   删除表"></a>功能   删除表</h1><p>请求方法：DELETE</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/drop" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/drop</a></p>
-<p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"DropSql"</span>:<span class="string">"DROP TABLE table4;"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="功能-删除数据库"><a href="#功能-删除数据库" class="headerlink" title="功能   删除数据库"></a>功能   删除数据库</h1><p>请求方法：DELETE</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/drop" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/drop</a></p>
-<p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"DropSql"</span>:<span class="string">"DROP DATABASE Express_API_DB;"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="功能-查询条件"><a href="#功能-查询条件" class="headerlink" title="功能   查询条件"></a>功能   查询条件</h1><p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/find" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/find</a></p>
-<p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"findSql"</span>:<span class="string">"SELECT * FROM table4 WHERE name='赵柳';"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="功能-查询表内所有数据"><a href="#功能-查询表内所有数据" class="headerlink" title="功能   查询表内所有数据"></a>功能   查询表内所有数据</h1><p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/find" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/find</a></p>
-<p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"findSql"</span>:<span class="string">"SELECT * FROM table4;"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="功能-查询所有数据库"><a href="#功能-查询所有数据库" class="headerlink" title="功能   查询所有数据库"></a>功能   查询所有数据库</h1><p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/show_databases" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/show_databases</a></p>
-<p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"findSql"</span>:<span class="string">"show databases"</span></span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="功能-查询数据库所有表"><a href="#功能-查询数据库所有表" class="headerlink" title="功能   查询数据库所有表"></a>功能   查询数据库所有表</h1><p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mysql_demo/show_databases" target="_blank" rel="noopener">http://127.0.0.1:8004/mysql_demo/show_databases</a></p>
-<p>请求body：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"host"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">	<span class="attr">"port"</span>:<span class="string">"3306"</span>,</span><br><span class="line">	<span class="attr">"user"</span>:<span class="string">"root"</span>,</span><br><span class="line">	<span class="attr">"password"</span>:<span class="string">"12345678"</span>,</span><br><span class="line">	<span class="attr">"database"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"findSql"</span>:<span class="string">"show tables"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><blockquote>
-<p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2651,7 +2610,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
