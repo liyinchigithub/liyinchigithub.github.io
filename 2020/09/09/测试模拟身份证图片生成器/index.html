@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="AutoTest,">
 
 
 
@@ -79,18 +79,25 @@
 
 
 
-<meta name="description" content="liyinchi personal blog site">
-<meta name="keywords" content="test autotest java JavaScript">
+<meta name="description" content="背景由于在某个需求迭代中，业务要求对司机人员进行审核身份证、驾驶证信息，且审核对接第三方接口，造成测试环境必须使用真实身份证信息。测试人员一开始用自己身份证，再而用家人身份证信息进行测试，但始终不够用。 由此我花了两天时间，做了一个用于软件研发期间，测试环境使用身份证图片信息生成工具。 身份证号码哪里来呢？通过通缉犯、或百度网上找的信息来模拟构造测试数据，借助此工具生成身份证图片信息来解决测试过程">
+<meta name="keywords" content="AutoTest">
 <meta property="og:type" content="article">
 <meta property="og:title" content="测试模拟身份证图片生成器">
 <meta property="og:url" content="http://liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/index.html">
 <meta property="og:site_name" content="liyinchi">
-<meta property="og:description" content="liyinchi personal blog site">
+<meta property="og:description" content="背景由于在某个需求迭代中，业务要求对司机人员进行审核身份证、驾驶证信息，且审核对接第三方接口，造成测试环境必须使用真实身份证信息。测试人员一开始用自己身份证，再而用家人身份证信息进行测试，但始终不够用。 由此我花了两天时间，做了一个用于软件研发期间，测试环境使用身份证图片信息生成工具。 身份证号码哪里来呢？通过通缉犯、或百度网上找的信息来模拟构造测试数据，借助此工具生成身份证图片信息来解决测试过程">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-09-09T14:22:36.015Z">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/images/PC端1.jpg">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/images/PC端2.jpg">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/images/PC端3.jpg">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/images/PC端4.jpg">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/images/移动端1.jpg">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/images/移动端2.jpg">
+<meta property="og:updated_time" content="2020-09-09T15:05:47.654Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="测试模拟身份证图片生成器">
-<meta name="twitter:description" content="liyinchi personal blog site">
+<meta name="twitter:description" content="背景由于在某个需求迭代中，业务要求对司机人员进行审核身份证、驾驶证信息，且审核对接第三方接口，造成测试环境必须使用真实身份证信息。测试人员一开始用自己身份证，再而用家人身份证信息进行测试，但始终不够用。 由此我花了两天时间，做了一个用于软件研发期间，测试环境使用身份证图片信息生成工具。 身份证号码哪里来呢？通过通缉犯、或百度网上找的信息来模拟构造测试数据，借助此工具生成身份证图片信息来解决测试过程">
+<meta name="twitter:image" content="http://liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/images/PC端1.jpg">
 
 
 
@@ -316,7 +323,17 @@
       
 
       
-        
+        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>由于在某个需求迭代中，业务要求对司机人员进行审核身份证、驾驶证信息，且审核对接第三方接口，造成测试环境必须使用真实身份证信息。<br>测试人员一开始用自己身份证，再而用家人身份证信息进行测试，但始终不够用。</p>
+<p>由此我花了两天时间，做了一个用于软件研发期间，测试环境使用身份证图片信息生成工具。</p>
+<p>身份证号码哪里来呢？通过通缉犯、或百度网上找的信息来模拟构造测试数据，借助此工具生成身份证图片信息来解决测试过程中的痛点。</p>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><h3 id="PC端"><a href="#PC端" class="headerlink" title="PC端"></a>PC端</h3><p><img src="//liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/images/PC端1.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/images/PC端2.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/images/PC端3.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/images/PC端4.jpg" alt="img"></p>
+<h3 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h3><p><img src="//liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/images/移动端1.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/images/移动端2.jpg" alt="img"></p>
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>此工具仅用于软件研发期间测试软件系统业务，并不用于真实生产环境，也不会对社会造成危害或违反法律法规。<br>避免被不法分子使用，因此不进行开源分享。</p>
+
       
     </div>
     
@@ -359,6 +376,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AutoTest/" rel="tag"># AutoTest</a>
+          
+        </div>
       
 
       
@@ -429,8 +452,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -481,6 +513,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#效果"><span class="nav-number">1.1.</span> <span class="nav-text">效果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PC端"><span class="nav-number">1.1.1.</span> <span class="nav-text">PC端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端"><span class="nav-number">1.1.2.</span> <span class="nav-text">移动端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">1.2.</span> <span class="nav-text">声明</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
