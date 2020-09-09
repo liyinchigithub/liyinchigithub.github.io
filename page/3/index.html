@@ -249,6 +249,196 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/04/19/场景法设计测试用例/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/19/场景法设计测试用例/" itemprop="url">场景法设计测试用例</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-19T11:17:08+08:00">
+                2019-04-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="场景法设计测试用例"><a href="#场景法设计测试用例" class="headerlink" title="场景法设计测试用例"></a>场景法设计测试用例</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>1、分析软件应用的场景（使用场景）：</p>
+<p>从用户的角度出发，从场景的角度来设计测试用例，是一种面向用户的测试用例设计方法。</p>
+<p>2、关心用户做什么，而不是关心产品做什么。（功能测试用例相反，更关注产品功能）</p>
+<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><p>实用性强，贴近用户的操作。（功能测试用例相反）</p>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>可能使用的场景不一定能对事件系列进行全面的分析，设计出来的用例不完整。（功能测试用例相反，对每个页面表单控件进行全面分析）</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>登录</p>
+<p>(1)场景用例：</p>
+<p>合法账号密码，能够登录成功。</p>
+<p>合法账号密码，被禁用后再次启用，能够登录成功。</p>
+<p>合法账号密码，重复登录，能够登录成功。</p>
+<p>非法账号密码，无法登录，切换为合法账号密码，能够登录成功。</p>
+<p>（你会发现：从用户层面设计用例）</p>
+<p>(2)功能用例：</p>
+<p>账号输入框支持格式，是否符合需求文档要求</p>
+<p>密码输入框支持格式，是否符合需求文档要求</p>
+<p>登录成功，是否符合需求文档要求</p>
+<p>登录失败，是否符合需求文档要求</p>
+<p>错误信息提示，是否符合需求文档要求。</p>
+<p>（你会发现：从产品层面设计用例，少部分会涉及用户场景）</p>
+<p>我的理解（总结）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">场景分析是通过【描述流经用例路径】来确定的过程。</span><br><span class="line"></span><br><span class="line">这个流经过程要从【用例开始到结束遍历其中所有基本流】 。</span><br><span class="line"></span><br><span class="line">直黑线表示基本流，是最基本、最简单的路径（软件功能按照正确的事件流实现的一条正确流程无任何错，程序从开始直到结束）。</span><br></pre></td></tr></table></figure>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/images/1.jpg" alt="img"></p>
+<p>遵循上图中每个经过用例的可能路径，可以确定不同的用例场景。</p>
+<p>从基本流开始，再将基本流和备选流结合起来，可以确定以下用例场景：</p>
+<p>场景1    基本流<br>场景2    基本流    备选流1<br>场景3    基本流    备选流1    备选流2<br>场景4    基本流    备选流3<br>场景5    基本流    备选流3    备选流1<br>场景6    基本流    备选流3    备选流1    备选流2<br>场景7    基本流    备选流4<br>场景8    基本流    备选流3    备选流4     </p>
+<h2 id="用场景分析法设计测试用例的步骤"><a href="#用场景分析法设计测试用例的步骤" class="headerlink" title="用场景分析法设计测试用例的步骤"></a>用场景分析法设计测试用例的步骤</h2><p>1.根据说明，画出流程图（确定基本流和备选流）；</p>
+<p>2.根据基本流和各项备选流确定场景；</p>
+<p>3.对每一个场景生成测试用例；</p>
+<p>4.对生成的所有测试用例重新复审，去掉多余的测试用例，测试用例确定后，对每一个测试用例确定测试数据值。</p>
+<h2 id="用例场景例子"><a href="#用例场景例子" class="headerlink" title="用例场景例子"></a>用例场景例子</h2><p>购书：用户登录到网站后，进行书籍的选择，当选好自己心仪的书籍后进行订购，这时把所需图书放进购物车，等进行结帐的时候，用户需要登录自己注册的帐号，登录成功后，进行付款交易，交易成功后，生成订购单，整个购物过程结束。</p>
+<p>第一步：画出流程图，确定基本流和备选流；</p>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/images/2.jpg" alt="img"></p>
+<p>基本流：登录在线网站→选择书籍→放入购物车→登录账号→付款→生成订单</p>
+<p>备选流１：用户不存在→注册用户</p>
+<p>备选流２：密码不正确</p>
+<p>备选流３：账户余额不足→充值</p>
+<p>第二步：根据基本流、备选流确定场景；</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>流</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>场景１（成功购物）</td>
+<td>基本流；</td>
+<td></td>
+</tr>
+<tr>
+<td>场景２（账户不存在）</td>
+<td>基本流、备选流１</td>
+<td></td>
+</tr>
+<tr>
+<td>场景３（账户密码错误）</td>
+<td>基本流、备选流２</td>
+<td></td>
+</tr>
+<tr>
+<td>场景４（账户余额不足）</td>
+<td>基本流、备选流3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>第三步：对每一个场景生成测试用例；</p>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/images/3.jpg" alt="img"></p>
+<p>第四步：对生成的所有测试用例重新复审，补充测试数据值；</p>
+<p> <img src="//liyinchigithub.github.io/2019/04/19/场景法设计测试用例/images/4.jpg" alt="img"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2019/04/13/解决postman无法下载xls并解析下载内容是否正确方案/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2401,165 +2591,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2018/12/27/OMongoDB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liyinchi">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/27/OMongoDB/" itemprop="url">OMongoDB</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-27T21:43:20+08:00">
-                2018-12-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><blockquote>
-<p>【服务诞生原因】功能测试人员、开发人员均使用postman进行接口测试，但postman自身无法对mongoDB数据库进行操作，为了方便测试人员使用postman，进行接口自动化测试时，可以调用操作数据库清除测试数据，由此诞生OMongoDB。</p>
-</blockquote>
-<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>如果你电脑已经安装配置Git、node环境，可以直接按下面步骤进行操作：</p>
-<h1 id="从github拉取工程"><a href="#从github拉取工程" class="headerlink" title="从github拉取工程"></a>从github拉取工程</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:liyinchigithub/OMongoDB.git</span><br></pre></td></tr></table></figure>
-<h1 id="切换到目录下"><a href="#切换到目录下" class="headerlink" title="切换到目录下"></a>切换到目录下</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd OMongoDB</span><br></pre></td></tr></table></figure>
-<h1 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<h1 id="启动OMongoDB服务"><a href="#启动OMongoDB服务" class="headerlink" title="启动OMongoDB服务"></a>启动OMongoDB服务</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node server.js</span><br></pre></td></tr></table></figure>
-<p>如果你的电脑还没有node环境，具体配置方法可以参考下面两个链接：</p>
-<p>windows <a href="https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/1876c8529c79e2890b1376dd.html</a></p>
-<p>mac <a href="https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/6b1823098bdd9fba59e1597a.html</a></p>
-<h2 id="API接口文档"><a href="#API接口文档" class="headerlink" title="API接口文档"></a>API接口文档</h2><h3 id="中文"><a href="#中文" class="headerlink" title="中文"></a>中文</h3><h1 id="功能-创建集合"><a href="#功能-创建集合" class="headerlink" title="功能   创建集合"></a>功能   创建集合</h1><p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/CreateCollection/" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/CreateCollection/</a></p>
-<p>请求body：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"db_url"</span>:<span class="string">"mongodb://localhost:27017/"</span>,</span><br><span class="line">	<span class="attr">"db_name"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"collection_name"</span>:<span class="string">"Express_API_Collection1"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="功能-删除数据库集合中的数据"><a href="#功能-删除数据库集合中的数据" class="headerlink" title="功能   删除数据库集合中的数据"></a>功能   删除数据库集合中的数据</h1><p>请求方法：DELETE</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/delete" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/delete</a></p>
-<p>请求body：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"db_url"</span>:<span class="string">"mongodb://localhost:27017/"</span>,</span><br><span class="line">	<span class="attr">"db_name"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"collection_name"</span>:<span class="string">"Express_API_Collection1"</span>,</span><br><span class="line">	<span class="attr">"whereStr"</span>:</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">"name"</span>:<span class="string">"网易"</span></span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="功能-删除集合"><a href="#功能-删除集合" class="headerlink" title="功能   删除集合"></a>功能   删除集合</h1><p>请求方法：DELETE</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/drop" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/drop</a></p>
-<p>请求body：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;db_url&quot;:&quot;mongodb://localhost:27017/&quot;,</span><br><span class="line">	&quot;db_name&quot;:&quot;Express_API_DB&quot;,</span><br><span class="line">	&quot;collection_name&quot;:&quot;Express_API_Collection5&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="功能-插入数据到数据库集合中"><a href="#功能-插入数据到数据库集合中" class="headerlink" title="功能   插入数据到数据库集合中"></a>功能   插入数据到数据库集合中</h1><p>请求方法：PUT</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/insert_data/" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/insert_data/</a></p>
-<p>请求body：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"db_url"</span>:<span class="string">"mongodb://localhost:27017/"</span>,</span><br><span class="line">	<span class="attr">"db_name"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">	<span class="attr">"collection_name"</span>:<span class="string">"Express_API_Collection1"</span>,</span><br><span class="line">	<span class="attr">"obj"</span>:&#123;</span><br><span class="line">		<span class="attr">"name"</span>: <span class="string">"网易"</span>,</span><br><span class="line">		<span class="attr">"url"</span>: <span class="string">"www.162.com"</span></span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="功能-查询数据库集合中的数据"><a href="#功能-查询数据库集合中的数据" class="headerlink" title="功能   查询数据库集合中的数据"></a>功能   查询数据库集合中的数据</h1><p>请求方法：POST</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/find" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/find</a></p>
-<p>请求body：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">		<span class="attr">"db_url"</span>:<span class="string">"mongodb://localhost:27017/"</span>,</span><br><span class="line">		<span class="attr">"db_name"</span>:<span class="string">"Express_API_DB"</span>,</span><br><span class="line">		<span class="attr">"collection_name"</span>:<span class="string">"Express_API_Collection1"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="功能-查询数据库集合中的数据-1"><a href="#功能-查询数据库集合中的数据-1" class="headerlink" title="功能   查询数据库集合中的数据"></a>功能   查询数据库集合中的数据</h1><p>请求方法：GET</p>
-<p>请求地址：<a href="http://127.0.0.1:8004/mongoDB_demo/find" target="_blank" rel="noopener">http://127.0.0.1:8004/mongoDB_demo/find</a></p>
-<p>请求参数：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db_name数据库名称</span><br><span class="line"></span><br><span class="line">collection_name集合名称</span><br></pre></td></tr></table></figure>
-<h1 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h1><p>如果你的mongoDB设置了账号密码，url参数可以使用此格式：</p>
-<p>mongoose.connect(‘mongodb://账号:密码@localhost:27017/‘);</p>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><blockquote>
-<p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2610,7 +2641,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

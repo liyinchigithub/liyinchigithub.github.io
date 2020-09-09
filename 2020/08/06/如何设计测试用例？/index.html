@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="高品质测试用例设计模板框架，能发头脑风暴、补全各种测试场景、能避免出现漏测情况。做了七八年测试岗位，分享下自己设计模板，已在实践中使用多年并得到推广。 用例框架用例类型UI检查 功能校验 流程校验 功能权限（菜单权限） 数据权限 历史数据 影响范围 示例TODO 用例因素TestSuite &amp;gt; TestCase TestCase：优先级、用例类型、前置条件、用例标题、执行步骤、期望结果、实际">
+<meta name="description" content="高品质测试用例设计模板框架，能发头脑风暴、补全各种测试场景、能避免出现漏测情况。做了七八年测试岗位，分享下自己设计模板，已在实践中使用多年并得到推广。 用例框架用例类型UI检查（核对与原型文档要求是否一致，交互、表单控件等） 字段校验（列表字段、表单字段规则） 功能校验（单功能 新增、修改、删除、查询） 流程校验（功能之间数据扭转） 功能权限（菜单权限） 数据权限（账号角色展示不同数据） 历史数据">
 <meta name="keywords" content="AutoTest">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何设计测试用例？">
 <meta property="og:url" content="http://liyinchigithub.github.io/2020/08/06/如何设计测试用例？/index.html">
 <meta property="og:site_name" content="liyinchi">
-<meta property="og:description" content="高品质测试用例设计模板框架，能发头脑风暴、补全各种测试场景、能避免出现漏测情况。做了七八年测试岗位，分享下自己设计模板，已在实践中使用多年并得到推广。 用例框架用例类型UI检查 功能校验 流程校验 功能权限（菜单权限） 数据权限 历史数据 影响范围 示例TODO 用例因素TestSuite &amp;gt; TestCase TestCase：优先级、用例类型、前置条件、用例标题、执行步骤、期望结果、实际">
+<meta property="og:description" content="高品质测试用例设计模板框架，能发头脑风暴、补全各种测试场景、能避免出现漏测情况。做了七八年测试岗位，分享下自己设计模板，已在实践中使用多年并得到推广。 用例框架用例类型UI检查（核对与原型文档要求是否一致，交互、表单控件等） 字段校验（列表字段、表单字段规则） 功能校验（单功能 新增、修改、删除、查询） 流程校验（功能之间数据扭转） 功能权限（菜单权限） 数据权限（账号角色展示不同数据） 历史数据">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-08-06T15:36:19.392Z">
+<meta property="og:updated_time" content="2020-09-09T14:21:55.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何设计测试用例？">
-<meta name="twitter:description" content="高品质测试用例设计模板框架，能发头脑风暴、补全各种测试场景、能避免出现漏测情况。做了七八年测试岗位，分享下自己设计模板，已在实践中使用多年并得到推广。 用例框架用例类型UI检查 功能校验 流程校验 功能权限（菜单权限） 数据权限 历史数据 影响范围 示例TODO 用例因素TestSuite &amp;gt; TestCase TestCase：优先级、用例类型、前置条件、用例标题、执行步骤、期望结果、实际">
+<meta name="twitter:description" content="高品质测试用例设计模板框架，能发头脑风暴、补全各种测试场景、能避免出现漏测情况。做了七八年测试岗位，分享下自己设计模板，已在实践中使用多年并得到推广。 用例框架用例类型UI检查（核对与原型文档要求是否一致，交互、表单控件等） 字段校验（列表字段、表单字段规则） 功能校验（单功能 新增、修改、删除、查询） 流程校验（功能之间数据扭转） 功能权限（菜单权限） 数据权限（账号角色展示不同数据） 历史数据">
 
 
 
@@ -317,16 +317,20 @@
 
       
         <p>高品质测试用例设计模板框架，能发头脑风暴、补全各种测试场景、能避免出现漏测情况。<br>做了七八年测试岗位，分享下自己设计模板，已在实践中使用多年并得到推广。</p>
-<h1 id="用例框架"><a href="#用例框架" class="headerlink" title="用例框架"></a>用例框架</h1><h2 id="用例类型"><a href="#用例类型" class="headerlink" title="用例类型"></a>用例类型</h2><p>UI检查</p>
-<p>功能校验</p>
-<p>流程校验</p>
+<h1 id="用例框架"><a href="#用例框架" class="headerlink" title="用例框架"></a>用例框架</h1><h2 id="用例类型"><a href="#用例类型" class="headerlink" title="用例类型"></a>用例类型</h2><p>UI检查（核对与原型文档要求是否一致，交互、表单控件等）</p>
+<p>字段校验（列表字段、表单字段规则）</p>
+<p>功能校验（单功能 新增、修改、删除、查询）</p>
+<p>流程校验（功能之间数据扭转）</p>
 <p>功能权限（菜单权限）</p>
-<p>数据权限</p>
-<p>历史数据</p>
-<p>影响范围</p>
+<p>数据权限（账号角色展示不同数据）</p>
+<p>历史数据（新旧数据兼容性）</p>
+<p>影响范围（不再本次需求迭代中，但可能受到影响的功能）</p>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>TODO</p>
 <h1 id="用例因素"><a href="#用例因素" class="headerlink" title="用例因素"></a>用例因素</h1><p>TestSuite &gt; TestCase</p>
 <p>TestCase：优先级、用例类型、前置条件、用例标题、执行步骤、期望结果、实际结果</p>
+<blockquote>
+<p>优先级重要性：用例优先级，决定哪些用例优先执行（在有限时间内），冒烟流程用例1级，不会出现测试半天才发现流程走不通，导致其他模块用例无法执行！</p>
+</blockquote>
 <h1 id="因果图、流程图"><a href="#因果图、流程图" class="headerlink" title="因果图、流程图"></a>因果图、流程图</h1><p>个人觉得这两种图最直观，能够快速帮助分析本次需求影响范围、历史数据处理，避免上线之后出现兼容性bug</p>
 <h2 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h2><p>TODO</p>
 
@@ -477,7 +481,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
