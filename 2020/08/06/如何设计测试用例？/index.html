@@ -87,12 +87,15 @@
 <meta property="og:site_name" content="liyinchi">
 <meta property="og:description" content="高品质测试用例设计模板框架，能发头脑风暴、补全各种测试场景、能避免出现漏测情况。做了七八年测试岗位，分享下自己设计模板，已在实践中使用多年并得到推广。 用例框架用例类型UI检查（核对与原型文档要求是否一致，交互、表单控件等） 字段校验（列表字段、表单字段规则） 功能校验（单功能 新增、修改、删除、查询） 流程校验（功能之间数据扭转） 功能权限（菜单权限） 数据权限（账号角色展示不同数据） 历史数据">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://liyinchigithub.github.io/2020/08/06/如何设计测试用例？/..">
-<meta property="og:updated_time" content="2020-09-11T15:12:37.920Z">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/08/06/如何设计测试用例？/images/用例示例1.png">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/08/06/如何设计测试用例？/images/流程图.png">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/08/06/如何设计测试用例？/images状态扭转图/.png">
+<meta property="og:image" content="http://liyinchigithub.github.io/2020/08/06/如何设计测试用例？/images/产品验收用例.png">
+<meta property="og:updated_time" content="2020-09-11T15:31:16.368Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何设计测试用例？">
 <meta name="twitter:description" content="高品质测试用例设计模板框架，能发头脑风暴、补全各种测试场景、能避免出现漏测情况。做了七八年测试岗位，分享下自己设计模板，已在实践中使用多年并得到推广。 用例框架用例类型UI检查（核对与原型文档要求是否一致，交互、表单控件等） 字段校验（列表字段、表单字段规则） 功能校验（单功能 新增、修改、删除、查询） 流程校验（功能之间数据扭转） 功能权限（菜单权限） 数据权限（账号角色展示不同数据） 历史数据">
-<meta name="twitter:image" content="http://liyinchigithub.github.io/2020/08/06/如何设计测试用例？/..">
+<meta name="twitter:image" content="http://liyinchigithub.github.io/2020/08/06/如何设计测试用例？/images/用例示例1.png">
 
 
 
@@ -327,14 +330,17 @@
 <p>数据权限（账号角色展示不同数据）</p>
 <p>历史数据（新旧数据兼容性）</p>
 <p>影响范围（不再本次需求迭代中，但可能受到影响的功能）</p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><img src="//liyinchigithub.github.io/2020/08/06/如何设计测试用例？/.." alt="img"></p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><img src="//liyinchigithub.github.io/2020/08/06/如何设计测试用例？/images/用例示例1.png" alt="img"></p>
 <h1 id="用例因素"><a href="#用例因素" class="headerlink" title="用例因素"></a>用例因素</h1><p>TestSuite &gt; TestCase</p>
 <p>TestCase：优先级、用例类型、前置条件、用例标题、执行步骤、期望结果、实际结果</p>
 <blockquote>
 <p>优先级重要性：用例优先级，决定哪些用例优先执行（在有限时间内），冒烟流程用例1级，不会出现测试半天才发现流程走不通，导致其他模块用例无法执行！</p>
 </blockquote>
-<h1 id="因果图、流程图"><a href="#因果图、流程图" class="headerlink" title="因果图、流程图"></a>因果图、流程图</h1><p>个人觉得这两种图最直观，能够快速帮助分析本次需求影响范围、历史数据处理，避免上线之后出现兼容性bug</p>
-<h2 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h2><p>TODO</p>
+<p>流程图、状态扭转图，每个分支流程都是一个用例场景，前提是要求产品在设计需求时，必须产出这两种图，以便于用例场景覆盖。<br>产品可先梳理出雏形版本，需求评审在一起讨论补全流程。</p>
+<h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h1><p><img src="//liyinchigithub.github.io/2020/08/06/如何设计测试用例？/images/流程图.png" alt="img"></p>
+<h1 id="状态扭转图"><a href="#状态扭转图" class="headerlink" title="状态扭转图"></a>状态扭转图</h1><p><img src="//liyinchigithub.github.io/2020/08/06/如何设计测试用例？/images状态扭转图/.png" alt="img"></p>
+<p>这两种图最直观，能够快速帮助分析本次需求影响范围、历史数据处理，避免上线之后出现用例覆盖补全、旧数据兼容性的bug</p>
+<h2 id="产品验收用例"><a href="#产品验收用例" class="headerlink" title="产品验收用例"></a>产品验收用例</h2><p><img src="//liyinchigithub.github.io/2020/08/06/如何设计测试用例？/images/产品验收用例.png" alt="img"></p>
 
       
     </div>
@@ -529,7 +535,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#用例框架"><span class="nav-number">1.</span> <span class="nav-text">用例框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#用例类型"><span class="nav-number">1.1.</span> <span class="nav-text">用例类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">1.2.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用例因素"><span class="nav-number">2.</span> <span class="nav-text">用例因素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#因果图、流程图"><span class="nav-number">3.</span> <span class="nav-text">因果图、流程图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例-1"><span class="nav-number">3.1.</span> <span class="nav-text">示例</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#用例框架"><span class="nav-number">1.</span> <span class="nav-text">用例框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#用例类型"><span class="nav-number">1.1.</span> <span class="nav-text">用例类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">1.2.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用例因素"><span class="nav-number">2.</span> <span class="nav-text">用例因素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流程图"><span class="nav-number">3.</span> <span class="nav-text">流程图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#状态扭转图"><span class="nav-number">4.</span> <span class="nav-text">状态扭转图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#产品验收用例"><span class="nav-number">4.1.</span> <span class="nav-text">产品验收用例</span></a></li></ol></li></ol></div>
             
 
           </div>
