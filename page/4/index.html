@@ -249,6 +249,159 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2018/12/27/monkeyGUI/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/27/monkeyGUI/" itemprop="url">monkeyGUI</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-27T22:02:33+08:00">
+                2018-12-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><blockquote>
+<p>android monkey界面工具，快速为测试机界面压力测试。</p>
+</blockquote>
+<p>你可以从这里下载使用</p>
+<p><a href="https://github.com/liyinchigithub/monkeyGUI" target="_blank" rel="noopener">monkeyGUI</a></p>
+<p><a href="https://github.com/liyinchigithub/monkeyGUI/releases" target="_blank" rel="noopener">下载安装包</a></p>
+<p><img src="http://thyrsi.com/t6/660/1548085896x2890211845.jpg" alt="img"></p>
+<p>说明：windows需要使用右击以管理员身份运行</p>
+<h1 id="Version-版本"><a href="#Version-版本" class="headerlink" title="Version 版本"></a>Version 版本</h1><p>V2.0.0</p>
+<h1 id="Run-Environment-运行环境依赖"><a href="#Run-Environment-运行环境依赖" class="headerlink" title="Run Environment 运行环境依赖"></a>Run Environment 运行环境依赖</h1><p>本地电脑已配置android SDK及其环境</p>
+<p>参考：</p>
+<p><a href="https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/15622f2434bc5cfdfcbea51c.html</a></p>
+<p><strong>安装依赖</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
+<p><strong>运行程序</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure></p>
+<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run start</span><br></pre></td></tr></table></figure></p>
+<p><strong>打包</strong></p>
+<h3 id="electron-packager"><a href="#electron-packager" class="headerlink" title="electron-packager"></a>electron-packager</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run pack</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;pack&quot;: &quot;electron-packager . monkeyGUI --all --out ./打包monkeyGUI --app-version=2.0.0 --electron-version=3.0.10 --overwrite --icon=./other/image/logo.ico&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>package.json设置==》scripts==》pack<br>electron-packager . monkeyGUI –all –out ./打包monkeyGUI –app-version=2.0.0 –electron-version=3.0.10</p>
+<p>参数说明：</p>
+<p>–all表示打包所有平台的包（含linux、windows、mac）</p>
+<p>–out打包后输出路径</p>
+<p>–app-version当前应用的版本号</p>
+<p>–electron-version打包环境的electron版本号</p>
+<p>#electron-builder</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dist:mac</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dist:win</span><br></pre></td></tr></table></figure>
+<p>package.json设置==》scripts==》dist:mac、dist:win</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;start&quot;: &quot;electron .&quot;,</span><br><span class="line">  &quot;dist:mac&quot;: &quot;electron-builder --mac&quot;,</span><br><span class="line">  &quot;dist:win&quot;: &quot;electron-builder --win --x64&quot;,</span><br><span class="line">  &quot;dist:linux&quot;:&quot;electron-builder --linux&quot;,</span><br><span class="line">   &quot;pack&quot;: &quot;electron-packager . monkeyGUI --all --out ./打包monkeyGUI --app-version=2.0.0 --electron-version=3.0.10 --overwrite --icon=./other/image/logo.ico&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG1.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG2.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG3.jpg" alt="img"></p>
+<p><img src="//liyinchigithub.github.io/2018/12/27/monkeyGUI/images/WechatIMG4.jpg" alt="img"></p>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>转载请注明出处：<a href="https://liyinchigithub.github.io/">https://liyinchigithub.github.io/</a>  谢谢您的配合</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2018/12/27/OMongoDB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -758,7 +911,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

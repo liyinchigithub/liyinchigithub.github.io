@@ -249,6 +249,125 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2020/11/29/产品原型压缩包管理工具/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liyinchi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/11/29/产品原型压缩包管理工具/" itemprop="url">产品原型压缩包管理工具</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-11-29T23:22:50+08:00">
+                2020-11-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2020/09/09/测试模拟身份证图片生成器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1981,177 +2100,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jack Li  QQ:233227763@qq.com">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liyinchi">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/02/实现Testlink不具备的功能操作/" itemprop="url">实现Testlink不具备的功能操作</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-02T10:31:35+08:00">
-                2020-04-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><blockquote>
-<p>传统互联网企业，测试部门测试用例管理一般用excel、word、xmind、禅道、Teambition、Testlink。</p>
-</blockquote>
-<blockquote>
-<p>经过这几年总结，testlink优点可以说最全面，主要体现在一下几点：<br>用例复用、维护、筛选过滤、关联自动化测试、统计测试数据和报告等等。但有些操作testlink前端没有实现，测试小伙伴实际工作中还是经常需要用到，比如：批量添加关键字、批量修改测试用例、批量添加用例自定义字段等等。</p>
-</blockquote>
-<h1 id="技术方案"><a href="#技术方案" class="headerlink" title="技术方案"></a>技术方案</h1><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> vue 2.x</td>
-<td>前端</td>
-</tr>
-<tr>
-<td> nodejs</td>
-<td>后端</td>
-</tr>
-<tr>
-<td> postman2testlink</td>
-<td>testlink api</td>
-</tr>
-</tbody>
-</table>
-<h2 id="testlink-api"><a href="#testlink-api" class="headerlink" title="testlink api"></a>testlink api</h2><p>使用JavaScript封装了一些常用testlink api</p>
-<blockquote>
-<p><a href="https://github.com/liyinchigithub/Charles2Postman" target="_blank" rel="noopener">https://github.com/liyinchigithub/Charles2Postman</a></p>
-</blockquote>
-<h2 id="vue"><a href="#vue" class="headerlink" title="vue"></a>vue</h2><p>前端用vue写页面</p>
-<h1 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h1><h4 id="更新测试用例"><a href="#更新测试用例" class="headerlink" title="更新测试用例"></a>更新测试用例</h4><p>筛选用例：项目名称 &gt; 测试计划 &gt; 测试套件 &gt; 测试用例</p>
-<p>1.思维导图创建用例</p>
-<p><a href="https://liyinchigithub.github.io/2020/04/15/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E7%9B%B4%E6%8E%A5%E7%94%9F%E6%88%90testlink%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%EF%BC%88%E6%97%A0%E9%9C%80%E8%BD%AC%E6%A0%BC%E5%BC%8F%EF%BC%89/">看这篇文章</a></p>
-<p>2.编辑用例</p>
-<p><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase1.jpg" alt="img"></p>
-<p>2.批量添加、更新用例自定义字段</p>
-<p><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateCustomerWord1.jpg" alt="img"></p>
-<p><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateCustomerWord2.jpg" alt="img"></p>
-<p><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateCustomerWord3.jpg" alt="img"></p>
-<p><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateCustomerWord4.jpg" alt="img"></p>
-<p>3.批量添加、更新用例关键字<br><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase3.jpg" alt="img"></p>
-<p>4.其他配置<br><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase4.jpg" alt="img"></p>
-<p>5.testlink页面效果<br><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateTestCase5.jpg" alt="img"></p>
-<h4 id="批量添加关键字"><a href="#批量添加关键字" class="headerlink" title="批量添加关键字"></a>批量添加关键字</h4><p>筛选用例：项目名称 &gt; 测试计划 &gt; 测试套件 &gt; 测试用例<br>1.选择用例<br><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateKeyWord1.jpg" alt="img"></p>
-<p>2.输入关键字<br><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateKeyWord2.jpg" alt="img"></p>
-<p>3.testlink页面效果<br><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateKeyWord3.jpg" alt="img"></p>
-<h4 id="批量添加用例自定义字段"><a href="#批量添加用例自定义字段" class="headerlink" title="批量添加用例自定义字段"></a>批量添加用例自定义字段</h4><p>筛选用例：项目名称 &gt; 测试计划 &gt; 测试套件 &gt; 测试用例<br>1.选择用例<br><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateCustomerWord1.jpg" alt="img"></p>
-<p>2.输入自定义字段<br><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateCustomerWord2.jpg" alt="img"></p>
-<p>3.testlink页面效果<br><img src="//liyinchigithub.github.io/2020/04/02/实现Testlink不具备的功能操作/images/updateCustomerWord3.jpg" alt="img"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2202,7 +2150,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
